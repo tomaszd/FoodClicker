@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.tomaszek.foodclicker.MainActivity">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
 
     <LinearLayout
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-2dp"
         android:layout_width="fill_parent"
         android:layout_height="120dp"
         android:layout_margin="0dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-2dp">
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnWoda"
@@ -34,15 +32,99 @@
             android:text="0"
             android:textAlignment="center" />
 
+
+    </LinearLayout>
+    <LinearLayout
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-2dp"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:layout_margin="0dp"
+        android:orientation="horizontal">
+
         <Button
-            android:id="@+id/btnDelete"
+            android:id="@+id/btnWarzywa"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_weight="1"
-            android:text="KOSZ" />
+            android:text="Warzywa" />
+
+        <EditText
+            android:id="@+id/editWarzywa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textAlignment="center" />
+
+
     </LinearLayout>
+    <LinearLayout
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-2dp"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:layout_margin="0dp"
+        android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/btnOwoce"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:text="Owoce" />
 
-</android.support.constraint.ConstraintLayout>
+        <EditText
+            android:id="@+id/editOwoce"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+    <LinearLayout
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-2dp"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:layout_margin="0dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnOrzechy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:text="Orzechy" />
+
+        <EditText
+            android:id="@+id/editOrzechy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_weight="1"
+        android:text="KOSZ" />
+</LinearLayout>
