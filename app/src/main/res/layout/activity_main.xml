@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <LinearLayout
@@ -30,6 +30,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@drawable/woda"
             android:text="Woda" />
 
         <Button
@@ -39,6 +40,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@drawable/posilki"
             android:text="Inne" />
 
         <TextView
@@ -79,6 +81,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@drawable/warzywa"
             android:text="Warzywa" />
 
         <Button
@@ -88,6 +91,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@drawable/banan"
             android:text="Owoce" />
 
         <TextView
@@ -125,19 +129,22 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@drawable/ryba"
             android:text="Ryby" />
 
+
         <Button
-            android:id="@+id/btnMieso"
+            android:id="@+id/btnOrzechy"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:text="Mieso" />
+            android:background="@drawable/olejorzech"
+            android:text="Orzechy" />
 
         <TextView
-            android:id="@+id/editMieso"
+            android:id="@+id/editOrzechy"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -145,7 +152,6 @@
             android:layout_weight="0.5"
             android:text="0"
             android:textAlignment="center" />
-
 
     </LinearLayout>
 
@@ -172,6 +178,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@drawable/zboza"
             android:text="Zboza" />
 
         <Button
@@ -181,6 +188,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@drawable/nabial"
             android:text="Nabial" />
 
         <TextView
@@ -196,53 +204,6 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="0dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-2dp">
-
-        <TextView
-            android:id="@+id/editOrzechy"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="0.5"
-            android:text="0"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/btnOrzechy"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:text="Orzechy" />
-
-        <Button
-            android:id="@+id/btnSlodycze"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:text="Slodycze" />
-
-        <TextView
-            android:id="@+id/editSlodycze"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="0.5"
-            android:text="0"
-            android:textAlignment="center" />
-
-    </LinearLayout>
 
     <Button
         android:id="@+id/btnDelete"
