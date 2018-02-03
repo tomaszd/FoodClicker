@@ -29,9 +29,14 @@ public class MainActivity extends AppCompatActivity {
         final TextView editRyby = (TextView) findViewById(R.id.editRyby);
         final Button btnMieso = (Button) findViewById(R.id.btnMieso);
         final TextView editMieso = (TextView) findViewById(R.id.editMieso);
-
+        final Button btnZboza = (Button) findViewById(R.id.btnZboza);
+        final TextView editZboza = (TextView) findViewById(R.id.editZboza);
+        final Button btnNabial = (Button) findViewById(R.id.btnNabial);
+        final TextView editNabial = (TextView) findViewById(R.id.editNabial);
         final Button btnOrzechy = (Button) findViewById(R.id.btnOrzechy);
         final TextView editOrzechy = (TextView) findViewById(R.id.editOrzechy);
+        final Button btnSlodycze = (Button) findViewById(R.id.btnSlodycze);
+        final TextView editSlodycze = (TextView) findViewById(R.id.editSlodycze);
 
         btnWoda.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -151,6 +156,47 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        btnZboza.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                int actualValue = Integer.parseInt(String.valueOf(editZboza.getText()));
+                editZboza.setText(String.valueOf(actualValue + 1));
+            }
+        });
+        btnZboza.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                int actualValue = Integer.parseInt(String.valueOf(editZboza.getText()));
+                if (actualValue > 0) {
+                    editZboza.setText(String.valueOf(actualValue - 1));
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        btnNabial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                int actualValue = Integer.parseInt(String.valueOf(editNabial.getText()));
+                editNabial.setText(String.valueOf(actualValue + 1));
+            }
+        });
+        btnNabial.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                int actualValue = Integer.parseInt(String.valueOf(editNabial.getText()));
+                if (actualValue > 0) {
+                    editNabial.setText(String.valueOf(actualValue - 1));
+                    return true;
+                }
+                return false;
+            }
+        });
+        
         btnOrzechy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -170,7 +216,25 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+        btnSlodycze.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                int actualValue = Integer.parseInt(String.valueOf(editSlodycze.getText()));
+                editSlodycze.setText(String.valueOf(actualValue + 1));
+            }
+        });
+        btnSlodycze.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                int actualValue = Integer.parseInt(String.valueOf(editSlodycze.getText()));
+                if (actualValue > 0) {
+                    editSlodycze.setText(String.valueOf(actualValue - 1));
+                    return true;
+                }
+                return false;
+            }
+        });
 
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -181,7 +245,11 @@ public class MainActivity extends AppCompatActivity {
                 editOwoce.setText("0");
                 editRyby.setText("0");
                 editMieso.setText("0");
+                editZboza.setText("0");
+                editNabial.setText("0");
                 editOrzechy.setText("0");
+                editSlodycze.setText("0");
+
 
             }
 
