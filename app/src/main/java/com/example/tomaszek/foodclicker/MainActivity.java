@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,13 +18,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final Button btnDelete = (Button) findViewById(R.id.btnDelete);
         final Button btnWoda = (Button) findViewById(R.id.btnWoda);
-        final EditText editWoda = (EditText) findViewById(R.id.editWoda);
+        final TextView editWoda = (TextView) findViewById(R.id.editWoda);
+        final Button btnInne = (Button) findViewById(R.id.btnInne);
+        final TextView editInne = (TextView) findViewById(R.id.editInne);
         final Button btnWarzywa = (Button) findViewById(R.id.btnWarzywa);
-        final EditText editWarzywa = (EditText) findViewById(R.id.editWarzywa);
+        final TextView editWarzywa = (TextView) findViewById(R.id.editWarzywa);
         final Button btnOwoce = (Button) findViewById(R.id.btnOwoce);
-        final EditText editOwoce = (EditText) findViewById(R.id.editOwoce);
+        final TextView editOwoce = (TextView) findViewById(R.id.editOwoce);
+        final Button btnRyby = (Button) findViewById(R.id.btnRyby);
+        final TextView editRyby = (TextView) findViewById(R.id.editRyby);
+        final Button btnMieso = (Button) findViewById(R.id.btnMieso);
+        final TextView editMieso = (TextView) findViewById(R.id.editMieso);
+
         final Button btnOrzechy = (Button) findViewById(R.id.btnOrzechy);
-        final EditText editOrzechy = (EditText) findViewById(R.id.editOrzechy);
+        final TextView editOrzechy = (TextView) findViewById(R.id.editOrzechy);
 
         btnWoda.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +47,26 @@ public class MainActivity extends AppCompatActivity {
                 int actualValue = Integer.parseInt(String.valueOf(editWoda.getText()));
                 if (actualValue > 0) {
                     editWoda.setText(String.valueOf(actualValue - 1));
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        btnInne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                int actualValue = Integer.parseInt(String.valueOf(editInne.getText()));
+                editInne.setText(String.valueOf(actualValue + 1));
+            }
+        });
+        btnInne.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                int actualValue = Integer.parseInt(String.valueOf(editInne.getText()));
+                if (actualValue > 0) {
+                    editInne.setText(String.valueOf(actualValue - 1));
                     return true;
                 }
                 return false;
@@ -86,7 +113,44 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnRyby.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                int actualValue = Integer.parseInt(String.valueOf(editRyby.getText()));
+                editRyby.setText(String.valueOf(actualValue + 1));
+            }
+        });
+        btnRyby.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                int actualValue = Integer.parseInt(String.valueOf(editRyby.getText()));
+                if (actualValue > 0) {
+                    editRyby.setText(String.valueOf(actualValue - 1));
+                    return true;
+                }
+                return false;
+            }
+        });
+        btnMieso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                int actualValue = Integer.parseInt(String.valueOf(editMieso.getText()));
+                editMieso.setText(String.valueOf(actualValue + 1));
+            }
+        });
+        btnMieso.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                int actualValue = Integer.parseInt(String.valueOf(editMieso.getText()));
+                if (actualValue > 0) {
+                    editMieso.setText(String.valueOf(actualValue - 1));
+                    return true;
+                }
+                return false;
+            }
+        });
         btnOrzechy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -112,9 +176,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 editWoda.setText("0");
+                editInne.setText("0");
                 editWarzywa.setText("0");
                 editOwoce.setText("0");
+                editRyby.setText("0");
+                editMieso.setText("0");
                 editOrzechy.setText("0");
+
             }
 
         });

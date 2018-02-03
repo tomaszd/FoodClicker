@@ -12,26 +12,42 @@
         android:layout_height="120dp"
         android:layout_margin="0dp"
         android:orientation="horizontal">
-
+        <TextView
+            android:id="@+id/editWoda"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
+            android:text="0"
+            android:textAlignment="center" />
         <Button
             android:id="@+id/btnWoda"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="Woda" />
 
-        <EditText
-            android:id="@+id/editWoda"
+        <Button
+            android:id="@+id/btnInne"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:text="Inne" />
+
+        <TextView
+            android:id="@+id/editInne"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
             android:text="0"
             android:textAlignment="center" />
-
 
     </LinearLayout>
     <LinearLayout
@@ -42,25 +58,43 @@
         android:layout_margin="0dp"
         android:orientation="horizontal">
 
+
+
+        <TextView
+            android:id="@+id/editWarzywa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
+            android:text="0"
+            android:textAlignment="center" />
         <Button
             android:id="@+id/btnWarzywa"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="Warzywa" />
-
-        <EditText
-            android:id="@+id/editWarzywa"
+        <Button
+            android:id="@+id/btnOwoce"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:text="Owoce" />
+
+        <TextView
+            android:id="@+id/editOwoce"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
             android:text="0"
             android:textAlignment="center" />
-
 
     </LinearLayout>
     <LinearLayout
@@ -70,25 +104,42 @@
         android:layout_height="120dp"
         android:layout_margin="0dp"
         android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnOwoce"
+        <TextView
+            android:id="@+id/editRyby"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_weight="1"
-            android:text="Owoce" />
-
-        <EditText
-            android:id="@+id/editOwoce"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
             android:text="0"
             android:textAlignment="center" />
+        <Button
+            android:id="@+id/btnRyby"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:text="Ryby" />
+        <Button
+            android:id="@+id/btnMieso"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:text="Mieso" />
+
+        <TextView
+            android:id="@+id/editMieso"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
+            android:text="0"
+            android:textAlignment="center" />
+
 
     </LinearLayout>
     <LinearLayout
@@ -103,17 +154,17 @@
             android:id="@+id/btnOrzechy"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="Orzechy" />
 
-        <EditText
+        <TextView
             android:id="@+id/editOrzechy"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:text="0"
             android:textAlignment="center" />
@@ -123,8 +174,8 @@
         android:id="@+id/btnDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_weight="1"
         android:text="KOSZ" />
 </LinearLayout>
