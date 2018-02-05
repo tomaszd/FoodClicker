@@ -29,24 +29,26 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end|center"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+
+
             android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:text="0"
             android:textAlignment="textEnd"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="36sp"
             android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/btnWoda"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
 
+
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:src="@drawable/woda"
             android:text="Woda" />
 
@@ -54,10 +56,12 @@
             android:id="@+id/btnInne"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
 
+
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:src="@drawable/posilki"
             android:text="Inne" />
 
@@ -66,14 +70,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="start|center"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+
+
             android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:text="0"
             android:textAlignment="textStart"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="36sp"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -92,34 +96,39 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end|center"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+
+
             android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:text="0"
             android:textAlignment="textEnd"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="36sp"
             android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/btnWarzywa"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+            android:layout_gravity="center"
+
 
             android:layout_weight="1"
             android:src="@drawable/warzywa"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:text="Warzywa" />
 
         <ImageView
             android:id="@+id/btnOwoce"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+
+
             android:layout_weight="1"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:src="@drawable/banan"
             android:text="Owoce" />
 
@@ -128,14 +137,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="start|center"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+
+
             android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:text="0"
             android:textAlignment="textStart"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="36sp"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -152,23 +161,27 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end|center"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+
+
             android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:text="0"
             android:textAlignment="textEnd"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="36sp"
             android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/btnRyby"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+
+
             android:layout_weight="1"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            
             android:src="@drawable/ryba"
             android:text="Ryby" />
 
@@ -177,10 +190,13 @@
             android:id="@+id/btnOrzechy"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+
+
             android:layout_weight="1"
+            android:layout_gravity="center"
             android:src="@drawable/olejorzech"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:text="Orzechy" />
 
         <TextView
@@ -188,14 +204,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="start|center"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+
+
             android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:text="0"
             android:textAlignment="textStart"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="36sp"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -210,9 +226,10 @@
             android:id="@+id/btnPiramida"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="3.5"
+
+
+            android:layout_gravity="center"
+            android:layout_weight="2"
             android:src="@drawable/piramida_logo"
             android:text="KOSZ" />
 
@@ -221,23 +238,26 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end|center"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="0.5"
+
+
+            android:layout_weight="2"
             android:fontFamily="sans-serif"
             android:text="0"
             android:textAlignment="textEnd"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="36sp"
             android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/btnZboza"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+            android:layout_gravity="center"
+
+
             android:layout_weight="4"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:src="@drawable/zboza"
             android:text="Zboza" />
 
@@ -245,9 +265,14 @@
             android:id="@+id/btnNabial"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+
+
+            android:layout_gravity="center"
             android:layout_weight="4"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+
+
             android:src="@drawable/nabial"
             android:text="Nabial" />
 
@@ -256,23 +281,24 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="start|center"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="0.5"
+
+
+            android:layout_weight="2"
             android:fontFamily="sans-serif"
             android:text="0"
             android:textAlignment="textStart"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="36sp"
             android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/btnDelete"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="3.5"
+
+
+            android:layout_gravity="center"
+            android:layout_weight="2"
             android:src="@drawable/kosz"
             android:text="KOSZ" />
 
