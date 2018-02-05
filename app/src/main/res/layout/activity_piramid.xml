@@ -10,7 +10,7 @@
         android:id="@+id/appCompatImageButton"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-
+        android:layout_weight="1"
         android:background="@drawable/ribeye"
         android:text="Piramida"
         android:textAlignment="center"
@@ -21,18 +21,19 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="0dp"
-
+        android:layout_weight="1"
         android:orientation="horizontal">
 
 
-        <Button
+        <ImageView
             android:id="@+id/btnOwoce"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/ananas"
-            android:text="Woda" />
 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_weight="1"
+            android:src="@drawable/ananas" />
 
     </LinearLayout>
 
@@ -41,22 +42,27 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="0dp"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
-        <Button
+        <ImageView
             android:id="@+id/btnRyby1"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:layout_weight="1"
-            android:background="@drawable/ryba"
+            android:src="@drawable/ryba"
             android:text="Woda" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnOlejorzech"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:layout_weight="1"
-            android:background="@drawable/olejorzech"
+            android:src="@drawable/olejorzech"
             android:text="Woda" />
 
 
@@ -67,22 +73,27 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="0dp"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
-        <Button
+        <ImageView
             android:id="@+id/btnNabial1"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:layout_weight="1"
-            android:background="@drawable/nabial"
+            android:src="@drawable/nabial"
             android:text="Woda" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnNabial2"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:layout_weight="1"
-            android:background="@drawable/nabial"
+            android:src="@drawable/nabial"
             android:text="Woda" />
 
 
@@ -93,30 +104,37 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="0dp"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
-        <Button
+        <ImageView
             android:id="@+id/btnZboza1"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:layout_weight="1"
-            android:background="@drawable/zboza"
+            android:src="@drawable/zboza"
             android:text="Woda" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnZboza2"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:layout_weight="1"
-            android:background="@drawable/zboza"
+            android:src="@drawable/zboza"
             android:text="Woda" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnZboza3"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:layout_weight="1"
-            android:background="@drawable/zboza"
+            android:src="@drawable/zboza"
             android:text="Woda" />
 
 
@@ -127,161 +145,175 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="0dp"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
-        <Button
+        <ImageView
             android:id="@+id/btnWarzywa1"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:layout_weight="1"
-            android:background="@drawable/warzywa"
+            android:src="@drawable/warzywa"
             android:text="Woda" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnWarzywa2"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:layout_weight="1"
-            android:background="@drawable/warzywa"
+            android:src="@drawable/warzywa"
             android:text="Woda" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnWarzywa3"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:layout_weight="1"
-            android:background="@drawable/warzywa"
+            android:src="@drawable/warzywa"
             android:text="Woda" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnWarzywa4"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:layout_weight="1"
-            android:background="@drawable/warzywa"
+            android:src="@drawable/warzywa"
             android:text="Woda" />
 
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
 
         android:orientation="horizontal">
 
-        <Button
+        <ImageView
             android:id="@+id/btnInne1"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:layout_weight="1"
-            android:background="@drawable/posilki"
+            android:src="@drawable/posilki"
             android:text="Woda" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnInne2"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:layout_weight="1"
-            android:background="@drawable/posilki"
+            android:src="@drawable/posilki"
             android:text="Woda" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnInne3"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:layout_weight="1"
-            android:background="@drawable/posilki"
+            android:src="@drawable/posilki"
             android:text="Woda" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnInne4"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:layout_weight="1"
-            android:background="@drawable/posilki"
+            android:src="@drawable/posilki"
             android:text="Woda" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnInne5"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             android:layout_weight="1"
-
-
-            android:background="@drawable/posilki"
+            android:src="@drawable/posilki"
             android:text="Woda" />
 
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_margin="0dp"
-
+        android:layout_weight="1"
         android:orientation="horizontal">
 
-        <Button
+        <ImageView
             android:id="@+id/btnWoda1"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-
-
-            android:layout_weight="1"
-            android:background="@drawable/woda"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/woda"
             android:text="Woda" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnWoda2"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-
-
-            android:layout_weight="1"
-            android:background="@drawable/woda"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/woda"
             android:text="Woda" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnWoda3"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-
-
-            android:layout_weight="1"
-            android:background="@drawable/woda"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/woda"
             android:text="Woda" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnWoda4"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-
-
-            android:layout_weight="1"
-            android:background="@drawable/woda"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/woda"
             android:text="Woda" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnWoda5"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-
-
-            android:layout_weight="1"
-            android:background="@drawable/woda"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/woda"
             android:text="Woda" />
-
-        <Button
+        <ImageView
             android:id="@+id/btnWoda6"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-
-
-            android:layout_weight="1"
-            android:background="@drawable/woda"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/woda"
             android:text="Woda" />
+
     </LinearLayout>
 
 

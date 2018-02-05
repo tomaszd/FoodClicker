@@ -39,7 +39,7 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnWoda"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -47,10 +47,10 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
 
-            android:background="@drawable/woda"
+            android:src="@drawable/woda"
             android:text="Woda" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnInne"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
 
-            android:background="@drawable/posilki"
+            android:src="@drawable/posilki"
             android:text="Inne" />
 
         <TextView
@@ -102,7 +102,7 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnWarzywa"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -110,17 +110,17 @@
             android:layout_marginRight="5dp"
 
             android:layout_weight="1"
-            android:background="@drawable/warzywa"
+            android:src="@drawable/warzywa"
             android:text="Warzywa" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnOwoce"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:background="@drawable/banan"
+            android:src="@drawable/banan"
             android:text="Owoce" />
 
         <TextView
@@ -162,25 +162,25 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnRyby"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:background="@drawable/ryba"
+            android:src="@drawable/ryba"
             android:text="Ryby" />
 
 
-        <Button
+        <ImageView
             android:id="@+id/btnOrzechy"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:background="@drawable/olejorzech"
+            android:src="@drawable/olejorzech"
             android:text="Orzechy" />
 
         <TextView
@@ -206,14 +206,14 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <Button
+        <ImageView
             android:id="@+id/btnPiramida"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="3.5"
-            android:background="@drawable/piramida_logo"
+            android:src="@drawable/piramida_logo"
             android:text="KOSZ" />
 
         <TextView
@@ -231,24 +231,24 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnZboza"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="4"
-            android:background="@drawable/zboza"
+            android:src="@drawable/zboza"
             android:text="Zboza" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnNabial"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="4"
-            android:background="@drawable/nabial"
+            android:src="@drawable/nabial"
             android:text="Nabial" />
 
         <TextView
@@ -266,14 +266,14 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <Button
+        <ImageView
             android:id="@+id/btnDelete"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="3.5"
-            android:background="@drawable/kosz"
+            android:src="@drawable/kosz"
             android:text="KOSZ" />
 
 
