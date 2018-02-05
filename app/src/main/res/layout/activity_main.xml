@@ -11,32 +11,32 @@
         android:id="@+id/appCompatImageButton"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-
+        android:layout_weight="1"
         android:background="@drawable/chmurka"
         android:text="Gdy jesz lub pijesz\nKliknij w ikonki"
         android:textAlignment="center"
-        android:textSize="20sp" />
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="0dp"
-
+        android:layout_weight="1"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/editWoda"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_weight="0.5"
+            android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:text="0"
             android:textAlignment="textEnd"
-            android:layout_gravity="end|center"
             android:textColor="@android:color/black"
-            android:textSize="36sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -46,6 +46,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
+
             android:background="@drawable/woda"
             android:text="Woda" />
 
@@ -56,6 +57,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
+
             android:background="@drawable/posilki"
             android:text="Inne" />
 
@@ -63,15 +65,15 @@
             android:id="@+id/editInne"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_weight="0.5"
+            android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:text="0"
             android:textAlignment="textStart"
-            android:layout_gravity="start|center"
             android:textColor="@android:color/black"
-            android:textSize="36sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -79,8 +81,8 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-
         android:layout_margin="0dp"
+        android:layout_weight="1"
 
         android:orientation="horizontal">
 
@@ -89,15 +91,15 @@
             android:id="@+id/editWarzywa"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_weight="0.5"
+            android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:text="0"
             android:textAlignment="textEnd"
-            android:layout_gravity="end|center"
             android:textColor="@android:color/black"
-            android:textSize="36sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -124,15 +126,15 @@
             android:id="@+id/editOwoce"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_weight="0.5"
+            android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:text="0"
             android:textAlignment="textStart"
-            android:layout_gravity="start|center"
             android:textColor="@android:color/black"
-            android:textSize="36sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -141,22 +143,22 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="0dp"
-
+        android:layout_weight="1"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/editRyby"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_weight="0.5"
+            android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:text="0"
             android:textAlignment="textEnd"
-            android:layout_gravity="end|center"
             android:textColor="@android:color/black"
-            android:textSize="36sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -184,15 +186,15 @@
             android:id="@+id/editOrzechy"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_weight="0.5"
+            android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:text="0"
             android:textAlignment="textStart"
-            android:layout_gravity="start|center"
             android:textColor="@android:color/black"
-            android:textSize="36sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -200,22 +202,32 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-
+        android:layout_weight="1"
         android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnPiramida"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="3.5"
+            android:background="@drawable/piramida_logo"
+            android:text="KOSZ" />
 
         <TextView
             android:id="@+id/editZboza"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="0.5"
             android:fontFamily="sans-serif"
             android:text="0"
             android:textAlignment="textEnd"
-            android:layout_gravity="end|center"
             android:textColor="@android:color/black"
-            android:textSize="36sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
@@ -224,7 +236,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_weight="1"
+            android:layout_weight="4"
             android:background="@drawable/zboza"
             android:text="Zboza" />
 
@@ -234,7 +246,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_weight="1"
+            android:layout_weight="4"
             android:background="@drawable/nabial"
             android:text="Nabial" />
 
@@ -242,27 +254,29 @@
             android:id="@+id/editNabial"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="0.5"
             android:fontFamily="sans-serif"
             android:text="0"
             android:textAlignment="textStart"
-            android:layout_gravity="start|center"
             android:textColor="@android:color/black"
-            android:textSize="36sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="3.5"
+            android:background="@drawable/kosz"
+            android:text="KOSZ" />
 
 
     </LinearLayout>
 
 
-    <Button
-        android:id="@+id/btnDelete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-
-        android:text="KOSZ" />
 </LinearLayout>
