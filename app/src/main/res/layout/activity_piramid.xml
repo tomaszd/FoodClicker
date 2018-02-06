@@ -27,14 +27,15 @@
         android:orientation="horizontal">
 
 
-        <ImageView
-            android:id="@+id/btnOwoce"
+        <ImageButton
+            android:id="@+id/btnOwoce1"
 
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             android:layout_weight="1"
+            android:background="@null"
             android:src="@drawable/ananas" />
 
     </LinearLayout>
