@@ -265,7 +265,7 @@
         android:layout_weight="0.5"
         android:orientation="horizontal">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/btnWoda1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -276,7 +276,7 @@
             android:src="@drawable/woda"
             android:text="Woda" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/btnWoda2"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -287,7 +287,7 @@
             android:src="@drawable/woda"
             android:text="Woda" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/btnWoda3"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -298,7 +298,7 @@
             android:src="@drawable/woda"
             android:text="Woda" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/btnWoda4"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -309,7 +309,7 @@
             android:src="@drawable/woda"
             android:text="Woda" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/btnWoda5"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -319,7 +319,8 @@
             android:scaleType="centerCrop"
             android:src="@drawable/woda"
             android:text="Woda" />
-        <ImageView
+
+        <ImageButton
             android:id="@+id/btnWoda6"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

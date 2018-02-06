@@ -32,6 +32,13 @@ public class PiramidActivity extends AppCompatActivity {
     boolean btnInne4_enabled = true;
     boolean btnInne5_enabled = true;
 
+    boolean btnWoda1_enabled = true;
+    boolean btnWoda2_enabled = true;
+    boolean btnWoda3_enabled = true;
+    boolean btnWoda4_enabled = true;
+    boolean btnWoda5_enabled = true;
+    boolean btnWoda6_enabled = true;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +66,13 @@ public class PiramidActivity extends AppCompatActivity {
         final ImageButton btnInne3 = (ImageButton) findViewById(R.id.btnInne3);
         final ImageButton btnInne4 = (ImageButton) findViewById(R.id.btnInne4);
         final ImageButton btnInne5 = (ImageButton) findViewById(R.id.btnInne5);
+
+        final ImageButton btnWoda1 = (ImageButton) findViewById(R.id.btnWoda1);
+        final ImageButton btnWoda2 = (ImageButton) findViewById(R.id.btnWoda2);
+        final ImageButton btnWoda3 = (ImageButton) findViewById(R.id.btnWoda3);
+        final ImageButton btnWoda4 = (ImageButton) findViewById(R.id.btnWoda4);
+        final ImageButton btnWoda5 = (ImageButton) findViewById(R.id.btnWoda5);
+        final ImageButton btnWoda6 = (ImageButton) findViewById(R.id.btnWoda6);
 
 
         btnOwoce.setOnClickListener(new View.OnClickListener() {
@@ -332,6 +346,99 @@ public class PiramidActivity extends AppCompatActivity {
                     btnIcon.clearColorFilter();
                     btnInne5.setImageDrawable(btnIcon);
                     btnInne5_enabled = true;
+                }
+            }
+        });
+
+        btnWoda1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
+                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
+                if (btnWoda1_enabled) {
+                    btnWoda1.setImageDrawable(grayedIcon);
+                    btnWoda1_enabled = false;
+                } else {
+                    btnIcon.clearColorFilter();
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda1_enabled = true;
+                }
+            }
+        });
+
+        btnWoda2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
+                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
+                if (btnWoda2_enabled) {
+                    btnWoda2.setImageDrawable(grayedIcon);
+                    btnWoda2_enabled = false;
+                } else {
+                    btnIcon.clearColorFilter();
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda2_enabled = true;
+                }
+            }
+        });
+        btnWoda3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
+                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
+                if (btnWoda3_enabled) {
+                    btnWoda3.setImageDrawable(grayedIcon);
+                    btnWoda3_enabled = false;
+                } else {
+                    btnIcon.clearColorFilter();
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda3_enabled = true;
+                }
+            }
+        });
+
+        btnWoda4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
+                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
+                if (btnWoda4_enabled) {
+                    btnWoda4.setImageDrawable(grayedIcon);
+                    btnWoda4_enabled = false;
+                } else {
+                    btnIcon.clearColorFilter();
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda4_enabled = true;
+                }
+            }
+        });
+        btnWoda5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
+                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
+                if (btnWoda5_enabled) {
+                    btnWoda5.setImageDrawable(grayedIcon);
+                    btnWoda5_enabled = false;
+                } else {
+                    btnIcon.clearColorFilter();
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda5_enabled = true;
+                }
+            }
+        });
+        btnWoda6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
+                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
+                if (btnWoda6_enabled) {
+                    btnWoda6.setImageDrawable(grayedIcon);
+                    btnWoda6_enabled = false;
+                } else {
+                    btnIcon.clearColorFilter();
+                    btnWoda6.setImageDrawable(btnIcon);
+                    btnWoda6_enabled = true;
                 }
             }
         });
