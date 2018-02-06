@@ -57,9 +57,9 @@ public class MainActivity extends AppCompatActivity {
         btnWoda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 int actualValue = Integer.parseInt(String.valueOf(editWoda.getText()));
-                editWoda.setText(String.valueOf(actualValue + 1));
+                actualValue += 1;
+                editWoda.setText(String.valueOf(actualValue));
                 saveSharedPref(editor, "woda", actualValue);
 
             }
@@ -69,7 +69,8 @@ public class MainActivity extends AppCompatActivity {
             public boolean onLongClick(View v) {
                 int actualValue = Integer.parseInt(String.valueOf(editWoda.getText()));
                 if (actualValue > 0) {
-                    editWoda.setText(String.valueOf(actualValue - 1));
+                    actualValue -= 1;
+                    editWoda.setText(String.valueOf(actualValue));
                     saveSharedPref(editor, "woda", actualValue);
                     return true;
                 }
@@ -80,9 +81,9 @@ public class MainActivity extends AppCompatActivity {
         btnInne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 int actualValue = Integer.parseInt(String.valueOf(editInne.getText()));
-                editInne.setText(String.valueOf(actualValue + 1));
+                actualValue += 1;
+                editInne.setText(String.valueOf(actualValue));
                 saveSharedPref(editor, "inne", actualValue);
             }
         });
@@ -91,7 +92,8 @@ public class MainActivity extends AppCompatActivity {
             public boolean onLongClick(View v) {
                 int actualValue = Integer.parseInt(String.valueOf(editInne.getText()));
                 if (actualValue > 0) {
-                    editInne.setText(String.valueOf(actualValue - 1));
+                    actualValue -= 1;
+                    editInne.setText(String.valueOf(actualValue));
                     saveSharedPref(editor, "inne", actualValue);
                     return true;
                 }
@@ -102,9 +104,9 @@ public class MainActivity extends AppCompatActivity {
         btnWarzywa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 int actualValue = Integer.parseInt(String.valueOf(editWarzywa.getText()));
-                editWarzywa.setText(String.valueOf(actualValue + 1));
+                actualValue += 1;
+                editWarzywa.setText(String.valueOf(actualValue));
                 saveSharedPref(editor, "warzywa", actualValue);
             }
         });
@@ -113,7 +115,8 @@ public class MainActivity extends AppCompatActivity {
             public boolean onLongClick(View v) {
                 int actualValue = Integer.parseInt(String.valueOf(editWarzywa.getText()));
                 if (actualValue > 0) {
-                    editWarzywa.setText(String.valueOf(actualValue - 1));
+                    actualValue -= 1;
+                    editWarzywa.setText(String.valueOf(actualValue));
                     saveSharedPref(editor, "warzywa", actualValue);
                     return true;
                 }
@@ -126,7 +129,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 int actualValue = Integer.parseInt(String.valueOf(editOwoce.getText()));
-                editOwoce.setText(String.valueOf(actualValue + 1));
+                actualValue += 1;
+                editOwoce.setText(String.valueOf(actualValue));
                 saveSharedPref(editor, "owoce", actualValue);
             }
         });
@@ -135,7 +139,8 @@ public class MainActivity extends AppCompatActivity {
             public boolean onLongClick(View v) {
                 int actualValue = Integer.parseInt(String.valueOf(editOwoce.getText()));
                 if (actualValue > 0) {
-                    editOwoce.setText(String.valueOf(actualValue - 1));
+                    actualValue -= 1;
+                    editOwoce.setText(String.valueOf(actualValue));
                     saveSharedPref(editor, "owoce", actualValue);
                     return true;
                 }
@@ -148,7 +153,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 int actualValue = Integer.parseInt(String.valueOf(editRyby.getText()));
-                editRyby.setText(String.valueOf(actualValue + 1));
+                actualValue += 1;
+                editRyby.setText(String.valueOf(actualValue));
                 saveSharedPref(editor, "ryby", actualValue);
             }
         });
@@ -157,7 +163,8 @@ public class MainActivity extends AppCompatActivity {
             public boolean onLongClick(View v) {
                 int actualValue = Integer.parseInt(String.valueOf(editRyby.getText()));
                 if (actualValue > 0) {
-                    editRyby.setText(String.valueOf(actualValue - 1));
+                    actualValue -= 1;
+                    editRyby.setText(String.valueOf(actualValue));
                     saveSharedPref(editor, "ryby", actualValue);
                     return true;
                 }
@@ -170,7 +177,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 int actualValue = Integer.parseInt(String.valueOf(editZboza.getText()));
-                editZboza.setText(String.valueOf(actualValue + 1));
+                actualValue += 1;
+                editZboza.setText(String.valueOf(actualValue));
                 saveSharedPref(editor, "zboza", actualValue);
             }
         });
@@ -179,7 +187,8 @@ public class MainActivity extends AppCompatActivity {
             public boolean onLongClick(View v) {
                 int actualValue = Integer.parseInt(String.valueOf(editZboza.getText()));
                 if (actualValue > 0) {
-                    editZboza.setText(String.valueOf(actualValue - 1));
+                    actualValue -= 1;
+                    editZboza.setText(String.valueOf(actualValue));
                     saveSharedPref(editor, "zboza", actualValue);
                     return true;
                 }
@@ -190,9 +199,9 @@ public class MainActivity extends AppCompatActivity {
         btnNabial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 int actualValue = Integer.parseInt(String.valueOf(editNabial.getText()));
-                editNabial.setText(String.valueOf(actualValue + 1));
+                actualValue += 1;
+                editNabial.setText(String.valueOf(actualValue));
                 saveSharedPref(editor, "nabial", actualValue);
             }
         });
@@ -201,7 +210,8 @@ public class MainActivity extends AppCompatActivity {
             public boolean onLongClick(View v) {
                 int actualValue = Integer.parseInt(String.valueOf(editNabial.getText()));
                 if (actualValue > 0) {
-                    editNabial.setText(String.valueOf(actualValue - 1));
+                    actualValue -= 1;
+                    editNabial.setText(String.valueOf(actualValue));
                     saveSharedPref(editor, "nabial", actualValue);
                     return true;
                 }
@@ -212,9 +222,9 @@ public class MainActivity extends AppCompatActivity {
         btnOrzechy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 int actualValue = Integer.parseInt(String.valueOf(editOrzechy.getText()));
-                editOrzechy.setText(String.valueOf(actualValue + 1));
+                actualValue += 1;
+                editOrzechy.setText(String.valueOf(actualValue));
                 saveSharedPref(editor, "orzechy", actualValue);
             }
         });
@@ -223,7 +233,8 @@ public class MainActivity extends AppCompatActivity {
             public boolean onLongClick(View v) {
                 int actualValue = Integer.parseInt(String.valueOf(editOrzechy.getText()));
                 if (actualValue > 0) {
-                    editOrzechy.setText(String.valueOf(actualValue - 1));
+                    actualValue -= 1;
+                    editOrzechy.setText(String.valueOf(actualValue));
                     saveSharedPref(editor, "orzechy", actualValue);
                     return true;
                 }
