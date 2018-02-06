@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:orientation="horizontal">
 
 
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="0dp"
-        android:layout_weight="1.3"
+        android:layout_weight="2"
         android:orientation="horizontal">
 
         <ImageButton
@@ -76,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="0dp"
-        android:layout_weight="1"
+        android:layout_weight="1.5"
         android:orientation="horizontal">
 
         <ImageButton
@@ -107,7 +107,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="0dp"
-        android:layout_weight="1.3"
+        android:layout_weight="2"
         android:orientation="horizontal">
 
         <ImageButton
@@ -148,7 +148,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="0dp"
-        android:layout_weight="1"
+        android:layout_weight="1.5"
         android:orientation="horizontal">
 
         <ImageButton
@@ -258,18 +258,20 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="0dp"
-        android:layout_weight="1.5"
+        android:layout_weight="0.5"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/btnWoda1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:background="@null"
             android:scaleType="centerCrop"
             android:src="@drawable/woda"
             android:text="Woda" />
@@ -278,7 +280,9 @@
             android:id="@+id/btnWoda2"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:background="@null"
             android:scaleType="centerCrop"
             android:src="@drawable/woda"
             android:text="Woda" />
@@ -287,7 +291,9 @@
             android:id="@+id/btnWoda3"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:background="@null"
             android:scaleType="centerCrop"
             android:src="@drawable/woda"
             android:text="Woda" />
@@ -296,7 +302,9 @@
             android:id="@+id/btnWoda4"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:background="@null"
             android:scaleType="centerCrop"
             android:src="@drawable/woda"
             android:text="Woda" />
@@ -305,7 +313,9 @@
             android:id="@+id/btnWoda5"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:background="@null"
             android:scaleType="centerCrop"
             android:src="@drawable/woda"
             android:text="Woda" />
@@ -313,7 +323,9 @@
             android:id="@+id/btnWoda6"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:background="@null"
             android:scaleType="centerCrop"
             android:src="@drawable/woda"
             android:text="Woda" />
