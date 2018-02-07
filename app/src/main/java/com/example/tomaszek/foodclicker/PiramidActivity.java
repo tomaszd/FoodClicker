@@ -41,6 +41,14 @@ public class PiramidActivity extends AppCompatActivity {
     boolean btnWoda6_enabled = false;
 
 
+    int woda_value = 0;
+    int inne_value = 0;
+    int warzywa_value = 0;
+    int owoce_value = 0;
+    int zboza_value = 0;
+    int ryby_value = 0;
+    int nabial_value = 0;
+    int orzech_value = 0;
 
 
     @Override
@@ -78,7 +86,6 @@ public class PiramidActivity extends AppCompatActivity {
         final ImageButton btnWoda6 = (ImageButton) findViewById(R.id.btnWoda6);
 
 
-
         btnOwoce.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.ananas)));
         btnRyby1.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.ryba)));
         btnOlejorzech.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.olejorzech)));
@@ -106,19 +113,113 @@ public class PiramidActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        int woda_value = intent.getIntExtra("woda", 0);
-        int inne_value = intent.getIntExtra("inne", 0);
-        int warzywa_value = intent.getIntExtra("warzywa", 0);
-        int owoce_value = intent.getIntExtra("owoce", 0);
-        int zboza_value = intent.getIntExtra("zboza", 0);
-        int ryby_value = intent.getIntExtra("ryby", 0);
-        int nabial_value = intent.getIntExtra("nabial", 0);
-        int orzech_value = intent.getIntExtra("orzechy", 0);
+        woda_value = intent.getIntExtra("woda", 0);
+        inne_value = intent.getIntExtra("inne", 0);
+        warzywa_value = intent.getIntExtra("warzywa", 0);
+        owoce_value = intent.getIntExtra("owoce", 0);
+        zboza_value = intent.getIntExtra("zboza", 0);
+        ryby_value = intent.getIntExtra("ryby", 0);
+        nabial_value = intent.getIntExtra("nabial", 0);
+        orzech_value = intent.getIntExtra("orzechy", 0);
 
 
         if (owoce_value > 0) {
-            getApplicationContext().getResources().getDrawable(R.drawable.ananas).clearColorFilter();
-            btnOwoce.setImageDrawable(getApplicationContext().getResources().getDrawable(R.drawable.ananas));
+            setButtonVisible(btnOwoce, R.drawable.ananas);
+            btnOwoce_enabled = true;
+        }
+        if (ryby_value > 0) {
+            setButtonVisible(btnRyby1, R.drawable.ryba);
+            btnRyby1_enabled = true;
+        }
+        if (orzech_value > 0) {
+            setButtonVisible(btnOlejorzech, (R.drawable.olejorzech));
+            btnOlejorzech_enabled = true;
+        }
+        if (nabial_value >= 1) {
+            setButtonVisible(btnNabial1, (R.drawable.nabial));
+            btnNabial1_enabled = true;
+        }
+        if (nabial_value >= 2) {
+            setButtonVisible(btnNabial2, (R.drawable.nabial));
+            btnNabial2_enabled = true;
+        }
+
+        if (zboza_value >= 1) {
+            setButtonVisible(btnZboza1, (R.drawable.zboza));
+            btnZboza1_enabled = true;
+        }
+        if (zboza_value >= 2) {
+            setButtonVisible(btnZboza2, (R.drawable.zboza));
+            btnZboza2_enabled = true;
+        }
+        if (zboza_value >= 3) {
+            setButtonVisible(btnZboza3, (R.drawable.zboza));
+            btnZboza3_enabled = true;
+        }
+        if (warzywa_value >= 1) {
+            setButtonVisible(btnWarzywa1, (R.drawable.warzywa));
+            btnWarzywa1_enabled = true;
+        }
+        if (warzywa_value >= 2) {
+            setButtonVisible(btnWarzywa2, (R.drawable.warzywa));
+            btnWarzywa2_enabled = true;
+        }
+        if (warzywa_value >= 3) {
+            setButtonVisible(btnWarzywa3, (R.drawable.warzywa));
+            btnWarzywa3_enabled = true;
+        }
+        if (warzywa_value >= 4) {
+            setButtonVisible(btnWarzywa4, (R.drawable.warzywa));
+            btnWarzywa4_enabled = true;
+        }
+        if (inne_value >= 1) {
+            setButtonVisible(btnInne1, (R.drawable.posilki));
+            btnInne1_enabled = true;
+        }
+        if (inne_value >= 2) {
+            setButtonVisible(btnInne2, (R.drawable.posilki));
+            btnInne2_enabled = true;
+        }
+
+        if (inne_value >= 3) {
+            setButtonVisible(btnInne3, (R.drawable.posilki));
+            btnInne3_enabled = true;
+        }
+
+        if (inne_value >= 4) {
+            setButtonVisible(btnInne4, (R.drawable.posilki));
+            btnInne4_enabled = true;
+        }
+        if (inne_value >= 5) {
+            setButtonVisible(btnInne5, (R.drawable.posilki));
+            btnInne5_enabled = true;
+        }
+        if (woda_value >= 1) {
+            setButtonVisible(btnWoda1, (R.drawable.woda));
+            btnWoda1_enabled = true;
+        }
+        if (woda_value >= 2) {
+            setButtonVisible(btnWoda2, (R.drawable.woda));
+            btnWoda2_enabled = true;
+        }
+        if (woda_value >= 3) {
+            setButtonVisible(btnWoda3, (R.drawable.woda));
+            btnWoda3_enabled = true;
+        }
+
+        if (woda_value >= 4) {
+            setButtonVisible(btnWoda4, (R.drawable.woda));
+            btnWoda4_enabled = true;
+        }
+
+        if (woda_value >= 5) {
+            setButtonVisible(btnWoda5, (R.drawable.woda));
+            btnWoda5_enabled = true;
+        }
+
+        if (woda_value >= 6) {
+            setButtonVisible(btnWoda6, (R.drawable.woda));
+            btnWoda6_enabled = true;
         }
 
 
@@ -490,6 +591,11 @@ public class PiramidActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void setButtonVisible(ImageButton imgButton, int drawableIcon) {
+        getApplicationContext().getResources().getDrawable(drawableIcon).clearColorFilter();
+        imgButton.setImageDrawable(getApplicationContext().getResources().getDrawable(drawableIcon));
     }
 
 
