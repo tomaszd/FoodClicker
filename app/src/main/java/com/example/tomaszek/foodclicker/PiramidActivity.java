@@ -75,7 +75,7 @@ public class PiramidActivity extends AppCompatActivity {
         final ImageButton btnWoda5 = (ImageButton) findViewById(R.id.btnWoda5);
         final ImageButton btnWoda6 = (ImageButton) findViewById(R.id.btnWoda6);
 
-
+        btnOwoce.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.ananas)));
 
         Intent intent = getIntent();
 
