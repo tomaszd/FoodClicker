@@ -12,8 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    int woda_value = 0;
+    int owoce_value = 0;
 
-    @TargetApi(Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,14 +43,14 @@ public class MainActivity extends AppCompatActivity {
         final SharedPreferences.Editor editor = settings.edit();
 
 
-        int woda_value = settings.getInt("woda", 0);
-        int inne_value = settings.getInt("inne", 0);
-        int warzywa_value = settings.getInt("warzywa", 0);
-        int owoce_value = settings.getInt("owoce", 0);
-        int zboza_value = settings.getInt("zboza", 0);
-        int ryby_value = settings.getInt("ryby", 0);
-        int nabial_value = settings.getInt("nabial", 0);
-        int orzech_value = settings.getInt("orzechy", 0);
+        woda_value = settings.getInt("woda", 0);
+        final int inne_value = settings.getInt("inne", 0);
+        final int warzywa_value = settings.getInt("warzywa", 0);
+        owoce_value = settings.getInt("owoce", 0);
+        final int zboza_value = settings.getInt("zboza", 0);
+        final int ryby_value = settings.getInt("ryby", 0);
+        final int nabial_value = settings.getInt("nabial", 0);
+        final int orzech_value = settings.getInt("orzechy", 0);
 
         setActualValue(editWoda, editInne, editWarzywa, editOwoce, editRyby, editZboza, editNabial, editOrzechy, woda_value, inne_value, warzywa_value, owoce_value, zboza_value, ryby_value, nabial_value, orzech_value);
 
@@ -57,10 +58,10 @@ public class MainActivity extends AppCompatActivity {
         btnWoda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int actualValue = Integer.parseInt(String.valueOf(editWoda.getText()));
-                actualValue += 1;
-                editWoda.setText(String.valueOf(actualValue));
-                saveSharedPref(editor, "woda", actualValue);
+                //int actualValue = Integer.parseInt(String.valueOf(editWoda.getText()));
+                woda_value += 1;
+                editWoda.setText(String.valueOf(woda_value));
+                saveSharedPref(editor, "woda", woda_value);
 
             }
         });
@@ -127,21 +128,19 @@ public class MainActivity extends AppCompatActivity {
         btnOwoce.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                int actualValue = Integer.parseInt(String.valueOf(editOwoce.getText()));
-                actualValue += 1;
-                editOwoce.setText(String.valueOf(actualValue));
-                saveSharedPref(editor, "owoce", actualValue);
+                owoce_value += 1;
+                editOwoce.setText(String.valueOf(owoce_value));
+                saveSharedPref(editor, "owoce", owoce_value);
             }
         });
         btnOwoce.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                int actualValue = Integer.parseInt(String.valueOf(editOwoce.getText()));
-                if (actualValue > 0) {
-                    actualValue -= 1;
-                    editOwoce.setText(String.valueOf(actualValue));
-                    saveSharedPref(editor, "owoce", actualValue);
+
+                if (owoce_value > 0) {
+                    owoce_value -= 1;
+                    editOwoce.setText(String.valueOf(owoce_value));
+                    saveSharedPref(editor, "owoce", owoce_value);
                     return true;
                 }
                 return false;
@@ -247,14 +246,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent myIntent = new Intent(MainActivity.this, PiramidActivity.class);
-                myIntent.putExtra("woda", ""); //Optional parameters
-                myIntent.putExtra("inne", ""); //Optional parameters
-                myIntent.putExtra("warzywa", ""); //Optional parameters
-                myIntent.putExtra("owoce", ""); //Optional parameters
-                myIntent.putExtra("ryby", ""); //Optional parameters
-                myIntent.putExtra("zboza", ""); //Optional parameters
-                myIntent.putExtra("nabial", ""); //Optional parameters
-                myIntent.putExtra("orzechy", ""); //Optional parameters
+                myIntent.putExtra("woda", woda_value); //Optional parameters
+                myIntent.putExtra("inne", inne_value); //Optional parameters
+                myIntent.putExtra("warzywa", warzywa_value); //Optional parameters
+                myIntent.putExtra("owoce", owoce_value); //Optional parameters
+                myIntent.putExtra("ryby", ryby_value); //Optional parameters
+                myIntent.putExtra("zboza", zboza_value); //Optional parameters
+                myIntent.putExtra("nabial", nabial_value); //Optional parameters
+                myIntent.putExtra("orzechy", orzech_value); //Optional parameters
                 MainActivity.this.startActivity(myIntent);
             }
         });

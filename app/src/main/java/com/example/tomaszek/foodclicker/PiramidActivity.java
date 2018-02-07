@@ -41,6 +41,8 @@ public class PiramidActivity extends AppCompatActivity {
     boolean btnWoda6_enabled = false;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,6 +77,8 @@ public class PiramidActivity extends AppCompatActivity {
         final ImageButton btnWoda5 = (ImageButton) findViewById(R.id.btnWoda5);
         final ImageButton btnWoda6 = (ImageButton) findViewById(R.id.btnWoda6);
 
+
+
         btnOwoce.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.ananas)));
         btnRyby1.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.ryba)));
         btnOlejorzech.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.olejorzech)));
@@ -100,10 +104,6 @@ public class PiramidActivity extends AppCompatActivity {
         btnWoda6.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.woda)));
 
 
-
-
-
-
         Intent intent = getIntent();
 
         int woda_value = intent.getIntExtra("woda", 0);
@@ -114,6 +114,12 @@ public class PiramidActivity extends AppCompatActivity {
         int ryby_value = intent.getIntExtra("ryby", 0);
         int nabial_value = intent.getIntExtra("nabial", 0);
         int orzech_value = intent.getIntExtra("orzechy", 0);
+
+
+        if (owoce_value > 0) {
+            getApplicationContext().getResources().getDrawable(R.drawable.ananas).clearColorFilter();
+            btnOwoce.setImageDrawable(getApplicationContext().getResources().getDrawable(R.drawable.ananas));
+        }
 
 
         btnOwoce.setOnClickListener(new View.OnClickListener() {
