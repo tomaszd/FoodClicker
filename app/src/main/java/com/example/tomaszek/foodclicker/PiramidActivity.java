@@ -1,6 +1,7 @@
 package com.example.tomaszek.foodclicker;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -12,32 +13,32 @@ import android.widget.ImageButton;
 
 public class PiramidActivity extends AppCompatActivity {
 
-    boolean btnOwoce_enabled = true;
-    boolean btnRyby1_enabled = true;
-    boolean btnOlejorzech_enabled = true;
-    boolean btnNabial1_enabled = true;
-    boolean btnNabial2_enabled = true;
-    boolean btnZboza1_enabled = true;
-    boolean btnZboza2_enabled = true;
-    boolean btnZboza3_enabled = true;
+    boolean btnOwoce_enabled = false;
+    boolean btnRyby1_enabled = false;
+    boolean btnOlejorzech_enabled = false;
+    boolean btnNabial1_enabled = false;
+    boolean btnNabial2_enabled = false;
+    boolean btnZboza1_enabled = false;
+    boolean btnZboza2_enabled = false;
+    boolean btnZboza3_enabled = false;
 
-    boolean btnWarzywa1_enabled = true;
-    boolean btnWarzywa2_enabled = true;
-    boolean btnWarzywa3_enabled = true;
-    boolean btnWarzywa4_enabled = true;
+    boolean btnWarzywa1_enabled = false;
+    boolean btnWarzywa2_enabled = false;
+    boolean btnWarzywa3_enabled = false;
+    boolean btnWarzywa4_enabled = false;
 
-    boolean btnInne1_enabled = true;
-    boolean btnInne2_enabled = true;
-    boolean btnInne3_enabled = true;
-    boolean btnInne4_enabled = true;
-    boolean btnInne5_enabled = true;
+    boolean btnInne1_enabled = false;
+    boolean btnInne2_enabled = false;
+    boolean btnInne3_enabled = false;
+    boolean btnInne4_enabled = false;
+    boolean btnInne5_enabled = false;
 
-    boolean btnWoda1_enabled = true;
-    boolean btnWoda2_enabled = true;
-    boolean btnWoda3_enabled = true;
-    boolean btnWoda4_enabled = true;
-    boolean btnWoda5_enabled = true;
-    boolean btnWoda6_enabled = true;
+    boolean btnWoda1_enabled = false;
+    boolean btnWoda2_enabled = false;
+    boolean btnWoda3_enabled = false;
+    boolean btnWoda4_enabled = false;
+    boolean btnWoda5_enabled = false;
+    boolean btnWoda6_enabled = false;
 
 
     @Override
@@ -73,6 +74,19 @@ public class PiramidActivity extends AppCompatActivity {
         final ImageButton btnWoda4 = (ImageButton) findViewById(R.id.btnWoda4);
         final ImageButton btnWoda5 = (ImageButton) findViewById(R.id.btnWoda5);
         final ImageButton btnWoda6 = (ImageButton) findViewById(R.id.btnWoda6);
+
+
+
+        Intent intent = getIntent();
+
+        int woda_value = intent.getIntExtra("woda", 0);
+        int inne_value = intent.getIntExtra("inne", 0);
+        int warzywa_value = intent.getIntExtra("warzywa", 0);
+        int owoce_value = intent.getIntExtra("owoce", 0);
+        int zboza_value = intent.getIntExtra("zboza", 0);
+        int ryby_value = intent.getIntExtra("ryby", 0);
+        int nabial_value = intent.getIntExtra("nabial", 0);
+        int orzech_value = intent.getIntExtra("orzechy", 0);
 
 
         btnOwoce.setOnClickListener(new View.OnClickListener() {
