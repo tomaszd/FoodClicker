@@ -264,6 +264,14 @@ public class MainActivity extends AppCompatActivity {
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                woda_value = 0;
+                inne_value = 0;
+                warzywa_value = 0;
+                owoce_value = 0;
+                ryby_value = 0;
+                zboza_value = 0;
+                nabial_value = 0;
+                orzech_value = 0;
                 editWoda.setText("0");
                 editInne.setText("0");
                 editWarzywa.setText("0");
