@@ -20,7 +20,8 @@
         </activity>
         <activity
             android:name=".PiramidActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".Settings"></activity>
     </application>
 
 </manifest>
