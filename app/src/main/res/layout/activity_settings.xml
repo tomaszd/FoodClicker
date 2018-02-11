@@ -7,30 +7,11 @@
     android:orientation="vertical">
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/logoSettings"
-
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:scaleType="centerCrop"
-            android:src="@drawable/settings" />
-    </LinearLayout>
-
     <ImageButton
         android:id="@+id/clickLogo"
 
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:layout_weight="1"
         android:adjustViewBounds="true"
         android:background="@null"
@@ -38,44 +19,29 @@
         android:src="@drawable/click_logo" />
 
 
-    <ImageButton
-        android:id="@+id/btnWstazka1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:adjustViewBounds="true"
-        android:background="@null"
+    <Button
+        android:id="@+id/btnInformacja"
+        style="@style/wstazki_settings"
+        android:src="@drawable/wstazka"
+        android:text="Informacja"
+ />
 
+    <Button
+        android:id="@+id/btnPiramida"
+        android:text="Piramida"
+
+        style="@style/wstazki_settings"
         android:src="@drawable/wstazka" />
 
-    <ImageButton
-        android:id="@+id/btnWstazka2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:adjustViewBounds="true"
-        android:background="@null"
+    <Button
+        android:id="@+id/btnTabela"
+        android:text="Tabela"
+        style="@style/wstazki_settings" />
 
-        android:src="@drawable/wstazka" />
-
-    <ImageButton
-        android:id="@+id/btnWstazka3"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:adjustViewBounds="true"
-        android:background="@null"
-
-        android:src="@drawable/wstazka" />
-
-    <ImageButton
-        android:id="@+id/btnWstazka4"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:src="@drawable/wstazka" />
+    <Button
+        android:id="@+id/btnKasujDane"
+        style="@style/wstazki_settings"
+        android:text="Kasuj Dane" />
 
 </LinearLayout>
 

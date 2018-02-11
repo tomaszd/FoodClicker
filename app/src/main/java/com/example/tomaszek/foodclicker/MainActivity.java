@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         final ImageView btnOrzechy = (ImageView) findViewById(R.id.btnOrzechy);
         final TextView editOrzechy = (TextView) findViewById(R.id.editOrzechy);
         final ImageView btnPiramida = (ImageView) findViewById(R.id.btnPiramida);
+        final ImageView btnSettings = (ImageView) findViewById(R.id.btnSettings);
 
 
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
@@ -241,6 +242,23 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
                 return false;
+            }
+        });
+
+
+        btnSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this, Settings.class);
+                myIntent.putExtra("woda", woda_value); //Optional parameters
+                myIntent.putExtra("inne", inne_value); //Optional parameters
+                myIntent.putExtra("warzywa", warzywa_value); //Optional parameters
+                myIntent.putExtra("owoce", owoce_value); //Optional parameters
+                myIntent.putExtra("ryby", ryby_value); //Optional parameters
+                myIntent.putExtra("zboza", zboza_value); //Optional parameters
+                myIntent.putExtra("nabial", nabial_value); //Optional parameters
+                myIntent.putExtra("orzechy", orzech_value); //Optional parameters
+                MainActivity.this.startActivity(myIntent);
             }
         });
 
