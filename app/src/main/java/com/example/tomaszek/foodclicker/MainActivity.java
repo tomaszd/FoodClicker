@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView editOrzechy = (TextView) findViewById(R.id.editOrzechy);
         final ImageView btnPiramida = (ImageView) findViewById(R.id.btnPiramida);
         final ImageView btnSettings = (ImageView) findViewById(R.id.btnSettings);
+        final ImageView btnTabela = (ImageView) findViewById(R.id.btnTabela);
 
 
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
@@ -262,6 +263,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnTabela.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this, TabelaActivity.class);
+                myIntent.putExtra("woda", woda_value); //Optional parameters
+                myIntent.putExtra("inne", inne_value); //Optional parameters
+                myIntent.putExtra("warzywa", warzywa_value); //Optional parameters
+                myIntent.putExtra("owoce", owoce_value); //Optional parameters
+                myIntent.putExtra("ryby", ryby_value); //Optional parameters
+                myIntent.putExtra("zboza", zboza_value); //Optional parameters
+                myIntent.putExtra("nabial", nabial_value); //Optional parameters
+                myIntent.putExtra("orzechy", orzech_value); //Optional parameters
+                MainActivity.this.startActivity(myIntent);
+            }
+        });
+
         btnPiramida.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -304,6 +321,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
+
 
     private void saveSharedPref(SharedPreferences.Editor editor, String key, int actual_value) {
         editor.putInt(key, actual_value);
