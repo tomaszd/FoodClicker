@@ -31,8 +31,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="2"
-            android:src="@drawable/kosz"
+            android:src="@drawable/settings"
             android:text="KOSZ" />
+
         <TextView
             android:id="@+id/editWoda"
             android:layout_width="0dp"
@@ -94,7 +95,7 @@
 
             android:layout_gravity="center"
             android:layout_weight="2"
-            android:src="@drawable/kosz"
+            android:src="@drawable/tabela"
             android:text="KOSZ" />
     </LinearLayout>
 
