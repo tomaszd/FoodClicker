@@ -22,26 +22,41 @@
     <Button
         android:id="@+id/btnInformacja"
         style="@style/wstazki_settings"
-        android:src="@drawable/wstazka"
-        android:text="Informacja"
- />
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        android:background="@drawable/wstazka_informacja"
+        android:text="     Informacja" />
 
     <Button
         android:id="@+id/btnPiramida"
-        android:text="Piramida"
-
         style="@style/wstazki_settings"
-        android:src="@drawable/wstazka" />
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/wstazka_piramida"
+        android:text="     Piramida" />
 
     <Button
         android:id="@+id/btnTabela"
-        android:text="Tabela"
-        style="@style/wstazki_settings" />
+        style="@style/wstazki_settings"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:adjustViewBounds="true"
+        android:background="@drawable/wstazka_tabela"
+        android:scaleType="centerCrop"
+        android:text="     Tabela" />
 
     <Button
         android:id="@+id/btnKasujDane"
         style="@style/wstazki_settings"
-        android:text="Kasuj Dane" />
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/wstazka_kosz"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:text="     Kasuj Dane" />
 
 </LinearLayout>
 
