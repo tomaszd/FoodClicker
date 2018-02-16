@@ -11,7 +11,7 @@ public class InneDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_woda_details);
+        setContentView(R.layout.activity_inne_details);
 
 
         ImageView btnPiramida = (ImageView) findViewById(R.id.btnPiramida);
