@@ -31,8 +31,7 @@
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            />
+            android:layout_weight="1" />
 
         <ImageView
             android:id="@+id/btnWoda"
@@ -51,17 +50,17 @@
             android:layout_height="wrap_content"
 
 
-            android:layout_weight="1"
             android:layout_gravity="center"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             android:src="@drawable/posilki"
             android:text="Inne" />
+
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            />
+            android:layout_weight="1" />
 
 
     </LinearLayout>
@@ -75,12 +74,11 @@
         android:orientation="horizontal">
 
 
-
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            />
+            android:layout_weight="1" />
+
         <ImageView
             android:id="@+id/btnWarzywa"
             android:layout_width="0dp"
@@ -89,9 +87,9 @@
 
 
             android:layout_weight="1"
-            android:src="@drawable/warzywa"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
+            android:src="@drawable/warzywa"
             android:text="Warzywa" />
 
         <ImageView
@@ -110,8 +108,7 @@
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            />
+            android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
@@ -125,16 +122,16 @@
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            />
+            android:layout_weight="1" />
+
         <ImageView
             android:id="@+id/btnRyby"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
 
 
-            android:layout_weight="1"
             android:layout_gravity="center"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
 
@@ -148,18 +145,17 @@
             android:layout_height="wrap_content"
 
 
-            android:layout_weight="1"
             android:layout_gravity="center"
-            android:src="@drawable/olejorzech"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
+            android:src="@drawable/olejorzech"
             android:text="Orzechy" />
 
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            />
+            android:layout_weight="1" />
 
     </LinearLayout>
 

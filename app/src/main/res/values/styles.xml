@@ -22,4 +22,12 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="styleIndetailInfo">
+        <item name="android:fontFamily">casual</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>
