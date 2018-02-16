@@ -23,7 +23,7 @@ public class TabelaActivity extends AppCompatActivity {
         });
 
         ImageView btnInne = (ImageView) findViewById(R.id.btnInne);
-        btnWoda.setOnClickListener(new View.OnClickListener() {
+        btnInne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(TabelaActivity.this, InneDetailsActivity.class);
