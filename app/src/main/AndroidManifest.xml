@@ -28,7 +28,8 @@
         <activity android:name=".WarzywaDetailsActivity" />
         <activity android:name=".OwoceDetailsActivity" />
         <activity android:name=".NabialDetailsActivity" />
-        <activity android:name=".ZbozaDetailsActivity"></activity>
+        <activity android:name=".ZbozaDetailsActivity" />
+        <activity android:name=".RybyDetailsActivity"></activity>
     </application>
 
 </manifest>
