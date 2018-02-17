@@ -24,7 +24,8 @@
         <activity android:name=".Settings" />
         <activity android:name=".TabelaActivity" />
         <activity android:name=".WodaDetailsActivity" />
-        <activity android:name=".InneDetailsActivity"></activity>
+        <activity android:name=".InneDetailsActivity" />
+        <activity android:name=".WarzywaDetailsActivity"></activity>
     </application>
 
 </manifest>
