@@ -43,7 +43,7 @@
             android:layout_weight="2"
             android:fontFamily="cursive"
             android:text="0"
-            android:textAlignment="textEnd"
+            android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="36sp"
             android:textStyle="bold" />
@@ -67,8 +67,8 @@
             android:layout_height="wrap_content"
 
 
-            android:layout_weight="4"
             android:layout_gravity="center"
+            android:layout_weight="4"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             android:src="@drawable/posilki"
@@ -84,10 +84,11 @@
             android:layout_weight="2"
             android:fontFamily="cursive"
             android:text="0"
-            android:textAlignment="textStart"
+            android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="36sp"
             android:textStyle="bold" />
+
         <ImageView
             android:id="@+id/btnTabela"
             android:layout_width="0dp"
@@ -104,10 +105,14 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
 
         android:orientation="horizontal">
 
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
 
         <TextView
             android:id="@+id/editWarzywa"
@@ -116,10 +121,10 @@
             android:layout_gravity="end|center"
 
 
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:fontFamily="cursive"
             android:text="0"
-            android:textAlignment="textEnd"
+            android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="36sp"
             android:textStyle="bold" />
@@ -131,10 +136,10 @@
             android:layout_gravity="center"
 
 
-            android:layout_weight="1"
-            android:src="@drawable/warzywa"
+            android:layout_weight="4"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
+            android:src="@drawable/warzywa"
             android:text="Warzywa" />
 
         <ImageView
@@ -143,8 +148,8 @@
             android:layout_height="wrap_content"
 
 
-            android:layout_weight="1"
             android:layout_gravity="center"
+            android:layout_weight="4"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             android:src="@drawable/banan"
@@ -157,14 +162,18 @@
             android:layout_gravity="start|center"
 
 
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:fontFamily="cursive"
             android:text="0"
-            android:textAlignment="textStart"
+            android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="36sp"
             android:textStyle="bold" />
 
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
     </LinearLayout>
 
     <LinearLayout
@@ -174,6 +183,11 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+
         <TextView
             android:id="@+id/editRyby"
             android:layout_width="0dp"
@@ -181,10 +195,10 @@
             android:layout_gravity="end|center"
 
 
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:fontFamily="cursive"
             android:text="0"
-            android:textAlignment="textEnd"
+            android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="36sp"
             android:textStyle="bold" />
@@ -195,11 +209,11 @@
             android:layout_height="wrap_content"
 
 
-            android:layout_weight="1"
             android:layout_gravity="center"
+            android:layout_weight="4"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-            
+
             android:src="@drawable/ryba"
             android:text="Ryby" />
 
@@ -210,11 +224,11 @@
             android:layout_height="wrap_content"
 
 
-            android:layout_weight="1"
             android:layout_gravity="center"
-            android:src="@drawable/olejorzech"
+            android:layout_weight="4"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
+            android:src="@drawable/olejorzech"
             android:text="Orzechy" />
 
         <TextView
@@ -224,14 +238,18 @@
             android:layout_gravity="start|center"
 
 
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:fontFamily="cursive"
             android:text="0"
-            android:textAlignment="textStart"
+            android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="36sp"
             android:textStyle="bold" />
 
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
     </LinearLayout>
 
     <LinearLayout
@@ -261,7 +279,7 @@
             android:layout_weight="2"
             android:fontFamily="cursive"
             android:text="0"
-            android:textAlignment="textEnd"
+            android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="36sp"
             android:textStyle="bold" />
@@ -304,7 +322,7 @@
             android:layout_weight="2"
             android:fontFamily="cursive"
             android:text="0"
-            android:textAlignment="textStart"
+            android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="36sp"
             android:textStyle="bold" />
