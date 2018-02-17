@@ -54,12 +54,12 @@
 
     <Button
         android:id="@+id/btnOk"
+        style="@style/styleIndetailInfo"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:background="@drawable/ok_ribeye"
-        android:text="            woda, ziola, kompot,\n                  herbata owocowa, kawa "
-        style="@style/styleIndetailInfo" />
+        android:text="@string/woda_ok_string" />
 
 
     <LinearLayout
@@ -77,7 +77,7 @@
             android:layout_weight="1"
             style="@style/styleIndetailInfo"
             android:background="@drawable/not_ok_ribeye"
-            android:text="           napoje gazowane\n             soki slodzone, energetyki" />
+            android:text="@string/woda_notok_string" />
 
     </LinearLayout>
 </LinearLayout>

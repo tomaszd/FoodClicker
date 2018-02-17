@@ -13,6 +13,15 @@ public class WodaDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_woda_details);
 
+        Intent intent = getIntent();
+        final int woda_value = intent.getIntExtra("woda", 0);
+        final int inne_value = intent.getIntExtra("inne", 0);
+        final int warzywa_value = intent.getIntExtra("warzywa", 0);
+        final int owoce_value = intent.getIntExtra("owoce", 0);
+        final int zboza_value = intent.getIntExtra("zboza", 0);
+        final int ryby_value = intent.getIntExtra("ryby", 0);
+        final int nabial_value = intent.getIntExtra("nabial", 0);
+        final int orzech_value = intent.getIntExtra("orzechy", 0);
 
 
         ImageView btnPiramida = (ImageView) findViewById(R.id.btnPiramida);
@@ -20,6 +29,14 @@ public class WodaDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(WodaDetailsActivity.this, PiramidActivity.class);
+                myIntent.putExtra("woda", woda_value); //Optional parameters
+                myIntent.putExtra("inne", inne_value); //Optional parameters
+                myIntent.putExtra("warzywa", warzywa_value); //Optional parameters
+                myIntent.putExtra("owoce", owoce_value); //Optional parameters
+                myIntent.putExtra("ryby", ryby_value); //Optional parameters
+                myIntent.putExtra("zboza", zboza_value); //Optional parameters
+                myIntent.putExtra("nabial", nabial_value); //Optional parameters
+                myIntent.putExtra("orzechy", orzech_value); //Optional parameters
                 WodaDetailsActivity.this.startActivity(myIntent);
             }
         });
@@ -29,6 +46,14 @@ public class WodaDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(WodaDetailsActivity.this, TabelaActivity.class);
+                myIntent.putExtra("woda", woda_value); //Optional parameters
+                myIntent.putExtra("inne", inne_value); //Optional parameters
+                myIntent.putExtra("warzywa", warzywa_value); //Optional parameters
+                myIntent.putExtra("owoce", owoce_value); //Optional parameters
+                myIntent.putExtra("ryby", ryby_value); //Optional parameters
+                myIntent.putExtra("zboza", zboza_value); //Optional parameters
+                myIntent.putExtra("nabial", nabial_value); //Optional parameters
+                myIntent.putExtra("orzechy", orzech_value); //Optional parameters
                 WodaDetailsActivity.this.startActivity(myIntent);
             }
         });
