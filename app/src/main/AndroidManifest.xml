@@ -26,7 +26,8 @@
         <activity android:name=".WodaDetailsActivity" />
         <activity android:name=".InneDetailsActivity" />
         <activity android:name=".WarzywaDetailsActivity" />
-        <activity android:name=".OwoceDetailsActivity"></activity>
+        <activity android:name=".OwoceDetailsActivity" />
+        <activity android:name=".NabialDetailsActivity"></activity>
     </application>
 
 </manifest>
