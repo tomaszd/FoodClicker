@@ -65,7 +65,7 @@ public class TabelaActivity extends AppCompatActivity {
             }
         });
 
-        ImageView btnOlejorzech = (ImageView) findViewById(R.id.btnOlejorzech);
+        ImageView btnOlejorzech = (ImageView) findViewById(R.id.btnOrzechy);
         btnOlejorzech.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
