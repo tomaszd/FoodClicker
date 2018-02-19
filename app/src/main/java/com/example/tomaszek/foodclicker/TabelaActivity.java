@@ -15,6 +15,18 @@ public class TabelaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabela);
 
+
+        Intent intent = getIntent();
+
+        final int woda_value = intent.getIntExtra("woda", 0);
+        final int inne_value = intent.getIntExtra("inne", 0);
+        final int warzywa_value = intent.getIntExtra("warzywa", 0);
+        final int owoce_value = intent.getIntExtra("owoce", 0);
+        final int zboza_value = intent.getIntExtra("zboza", 0);
+        final int ryby_value = intent.getIntExtra("ryby", 0);
+        final int nabial_value = intent.getIntExtra("nabial", 0);
+        final int orzech_value = intent.getIntExtra("orzechy", 0);
+
         EditText appCompatImageButton = (EditText) findViewById(R.id.appCompatImageButton);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font.ttf");
         appCompatImageButton.setTypeface(typeface);
@@ -25,8 +37,19 @@ public class TabelaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(TabelaActivity.this, WodaDetailsActivity.class);
+                myIntent = extendIntentByAmountValues(myIntent,
+                        woda_value,
+                        inne_value,
+                        warzywa_value,
+                        owoce_value,
+                        zboza_value,
+                        ryby_value,
+                        nabial_value,
+                        orzech_value);
                 TabelaActivity.this.startActivity(myIntent);
             }
+
+
         });
 
         ImageView btnInne = (ImageView) findViewById(R.id.btnInne);
@@ -34,6 +57,15 @@ public class TabelaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(TabelaActivity.this, InneDetailsActivity.class);
+                myIntent = extendIntentByAmountValues(myIntent,
+                        woda_value,
+                        inne_value,
+                        warzywa_value,
+                        owoce_value,
+                        zboza_value,
+                        ryby_value,
+                        nabial_value,
+                        orzech_value);
                 TabelaActivity.this.startActivity(myIntent);
             }
         });
@@ -43,6 +75,15 @@ public class TabelaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(TabelaActivity.this, WarzywaDetailsActivity.class);
+                myIntent = extendIntentByAmountValues(myIntent,
+                        woda_value,
+                        inne_value,
+                        warzywa_value,
+                        owoce_value,
+                        zboza_value,
+                        ryby_value,
+                        nabial_value,
+                        orzech_value);
                 TabelaActivity.this.startActivity(myIntent);
             }
         });
@@ -52,6 +93,15 @@ public class TabelaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(TabelaActivity.this, OwoceDetailsActivity.class);
+                myIntent = extendIntentByAmountValues(myIntent,
+                        woda_value,
+                        inne_value,
+                        warzywa_value,
+                        owoce_value,
+                        zboza_value,
+                        ryby_value,
+                        nabial_value,
+                        orzech_value);
                 TabelaActivity.this.startActivity(myIntent);
             }
         });
@@ -61,6 +111,15 @@ public class TabelaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(TabelaActivity.this, RybyDetailsActivity.class);
+                myIntent = extendIntentByAmountValues(myIntent,
+                        woda_value,
+                        inne_value,
+                        warzywa_value,
+                        owoce_value,
+                        zboza_value,
+                        ryby_value,
+                        nabial_value,
+                        orzech_value);
                 TabelaActivity.this.startActivity(myIntent);
             }
         });
@@ -70,6 +129,15 @@ public class TabelaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(TabelaActivity.this, OlejorzechDetailsActivity.class);
+                myIntent = extendIntentByAmountValues(myIntent,
+                        woda_value,
+                        inne_value,
+                        warzywa_value,
+                        owoce_value,
+                        zboza_value,
+                        ryby_value,
+                        nabial_value,
+                        orzech_value);
                 TabelaActivity.this.startActivity(myIntent);
             }
         });
@@ -79,6 +147,15 @@ public class TabelaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(TabelaActivity.this, ZbozaDetailsActivity.class);
+                myIntent = extendIntentByAmountValues(myIntent,
+                        woda_value,
+                        inne_value,
+                        warzywa_value,
+                        owoce_value,
+                        zboza_value,
+                        ryby_value,
+                        nabial_value,
+                        orzech_value);
                 TabelaActivity.this.startActivity(myIntent);
             }
         });
@@ -88,10 +165,33 @@ public class TabelaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(TabelaActivity.this, NabialDetailsActivity.class);
+                myIntent = extendIntentByAmountValues(myIntent,
+                        woda_value,
+                        inne_value,
+                        warzywa_value,
+                        owoce_value,
+                        zboza_value,
+                        ryby_value,
+                        nabial_value,
+                        orzech_value);
                 TabelaActivity.this.startActivity(myIntent);
             }
         });
 
+    }
+
+    private Intent extendIntentByAmountValues(Intent myIntent, int woda_value, int inne_value, int warzywa_value,
+                                              int owoce_value, int ryby_value, int zboza_value, int nabial_value,
+                                              int orzech_value) {
+        myIntent.putExtra("woda", woda_value); //Optional parameters
+        myIntent.putExtra("inne", inne_value); //Optional parameters
+        myIntent.putExtra("warzywa", warzywa_value); //Optional parameters
+        myIntent.putExtra("owoce", owoce_value); //Optional parameters
+        myIntent.putExtra("ryby", ryby_value); //Optional parameters
+        myIntent.putExtra("zboza", zboza_value); //Optional parameters
+        myIntent.putExtra("nabial", nabial_value); //Optional parameters
+        myIntent.putExtra("orzechy", orzech_value); //Optional parameters
+        return myIntent;
     }
 
 
