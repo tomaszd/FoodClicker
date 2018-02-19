@@ -51,18 +51,18 @@ public class MainActivity extends AppCompatActivity {
         appCompatImageButton.setTypeface(typeface);
 
 
-        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
-        final SharedPreferences.Editor editor = settings.edit();
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        final SharedPreferences.Editor editor = sharedPrefs.edit();
 
 
-        woda_value = settings.getInt("woda", 0);
-        inne_value = settings.getInt("inne", 0);
-        warzywa_value = settings.getInt("warzywa", 0);
-        owoce_value = settings.getInt("owoce", 0);
-        zboza_value = settings.getInt("zboza", 0);
-        ryby_value = settings.getInt("ryby", 0);
-        nabial_value = settings.getInt("nabial", 0);
-        orzech_value = settings.getInt("orzechy", 0);
+        woda_value = sharedPrefs.getInt("woda", 0);
+        inne_value = sharedPrefs.getInt("inne", 0);
+        warzywa_value = sharedPrefs.getInt("warzywa", 0);
+        owoce_value = sharedPrefs.getInt("owoce", 0);
+        zboza_value = sharedPrefs.getInt("zboza", 0);
+        ryby_value = sharedPrefs.getInt("ryby", 0);
+        nabial_value = sharedPrefs.getInt("nabial", 0);
+        orzech_value = sharedPrefs.getInt("orzechy", 0);
 
         setActualValue(editWoda, editInne, editWarzywa, editOwoce, editRyby, editZboza, editNabial, editOrzechy, woda_value, inne_value, warzywa_value, owoce_value, zboza_value, ryby_value, nabial_value, orzech_value);
 
