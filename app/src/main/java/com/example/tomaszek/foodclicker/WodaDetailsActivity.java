@@ -1,9 +1,12 @@
 package com.example.tomaszek.foodclicker;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 public class WodaDetailsActivity extends AppCompatActivity {
@@ -22,6 +25,12 @@ public class WodaDetailsActivity extends AppCompatActivity {
         final int ryby_value = intent.getIntExtra("ryby", 0);
         final int nabial_value = intent.getIntExtra("nabial", 0);
         final int orzech_value = intent.getIntExtra("orzechy", 0);
+
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font.ttf");
+        Button btnOk = (Button) findViewById(R.id.btnOk);
+        Button btnNotOk = (Button) findViewById(R.id.btnNotOk);
+        btnOk.setTypeface(typeface);
+        btnNotOk.setTypeface(typeface);
 
 
         ImageView btnPiramida = (ImageView) findViewById(R.id.btnPiramida);
@@ -59,8 +68,6 @@ public class WodaDetailsActivity extends AppCompatActivity {
         });
 
     }
-
-
 
 
 }

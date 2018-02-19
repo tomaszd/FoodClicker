@@ -1,10 +1,12 @@
 package com.example.tomaszek.foodclicker;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 public class Settings extends AppCompatActivity {
@@ -19,6 +21,14 @@ public class Settings extends AppCompatActivity {
         final Button btnTabela = (Button) findViewById(R.id.btnTabela);
         final Button btnPiramida = (Button) findViewById(R.id.btnPiramida);
         final Button btnKasujDane = (Button) findViewById(R.id.btnKasujDane);
+
+
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font.ttf");
+        btnInformacja.setTypeface(typeface);
+        btnTabela.setTypeface(typeface);
+        btnPiramida.setTypeface(typeface);
+        btnKasujDane.setTypeface(typeface);
+
 
         btnPiramida.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,8 +45,6 @@ public class Settings extends AppCompatActivity {
                 Settings.this.startActivity(myIntent);
             }
         });
-
-
 
 
     }

@@ -4,10 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 
@@ -84,7 +86,9 @@ public class PiramidActivity extends AppCompatActivity {
         final ImageButton btnWoda4 = (ImageButton) findViewById(R.id.btnWoda4);
         final ImageButton btnWoda5 = (ImageButton) findViewById(R.id.btnWoda5);
         final ImageButton btnWoda6 = (ImageButton) findViewById(R.id.btnWoda6);
-
+        EditText appCompatImageButton =(EditText) findViewById(R.id.appCompatImageButton);
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font.ttf");
+        appCompatImageButton.setTypeface(typeface);
 
         btnOwoce.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.ananas)));
         btnRyby1.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.ryba)));
