@@ -11,7 +11,7 @@ public class NabialDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_woda_details);
+        setContentView(R.layout.activity_nabial_details);
 
         Intent intent = getIntent();
         final int woda_value = intent.getIntExtra("woda", 0);
