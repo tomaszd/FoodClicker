@@ -177,6 +177,24 @@ public class TabelaActivity extends AppCompatActivity {
                 TabelaActivity.this.startActivity(myIntent);
             }
         });
+        ImageView btnPiramida = (ImageView) findViewById(R.id.btnPiramida);
+        btnPiramida.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent myIntent = new Intent(TabelaActivity.this, PiramidActivity.class);
+                myIntent.putExtra("woda", woda_value); //Optional parameters
+                myIntent.putExtra("inne", inne_value); //Optional parameters
+                myIntent.putExtra("warzywa", warzywa_value); //Optional parameters
+                myIntent.putExtra("owoce", owoce_value); //Optional parameters
+                myIntent.putExtra("ryby", ryby_value); //Optional parameters
+                myIntent.putExtra("zboza", zboza_value); //Optional parameters
+                myIntent.putExtra("nabial", nabial_value); //Optional parameters
+                myIntent.putExtra("orzechy", orzech_value); //Optional parameters
+                TabelaActivity.this.startActivity(myIntent);
+            }
+        });
+
 
     }
 
