@@ -21,7 +21,7 @@
         <activity
             android:name=".PiramidActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Settings" />
+        <activity android:name=".SettingsActivity" />
         <activity android:name=".TabelaActivity" />
         <activity android:name=".WodaDetailsActivity" />
         <activity android:name=".InneDetailsActivity" />
