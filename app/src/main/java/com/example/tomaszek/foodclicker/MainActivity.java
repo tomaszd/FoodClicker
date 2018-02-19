@@ -3,11 +3,13 @@ package com.example.tomaszek.foodclicker;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -45,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
         final ImageView btnPiramida = (ImageView) findViewById(R.id.btnPiramida);
         final ImageView btnSettings = (ImageView) findViewById(R.id.btnSettings);
         final ImageView btnTabela = (ImageView) findViewById(R.id.btnTabela);
+
+        EditText appCompatImageButton =(EditText) findViewById(R.id.appCompatImageButton);
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font.ttf");
+        appCompatImageButton.setTypeface(typeface);
 
 
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);

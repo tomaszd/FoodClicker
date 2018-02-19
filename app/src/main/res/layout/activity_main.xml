@@ -13,7 +13,6 @@
         android:layout_height="150dp"
         android:layout_weight="1"
         android:background="@drawable/chmurka"
-        android:fontFamily="cursive"
         android:text="Gdy jesz lub pijesz\nKliknij w ikonki"
         android:textAlignment="center"
         android:textSize="26sp"
