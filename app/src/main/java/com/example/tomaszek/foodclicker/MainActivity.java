@@ -1,10 +1,8 @@
 package com.example.tomaszek.foodclicker;
 
-import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
-import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -256,7 +254,7 @@ public class MainActivity extends AppCompatActivity {
         btnSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(MainActivity.this, Settings.class);
+                Intent myIntent = new Intent(MainActivity.this, SettingsActivity.class);
                 myIntent.putExtra("woda", woda_value); //Optional parameters
                 myIntent.putExtra("inne", inne_value); //Optional parameters
                 myIntent.putExtra("warzywa", warzywa_value); //Optional parameters
