@@ -4,4 +4,5 @@
     <string name="woda_notok_string">"         napoje gazowane\n         soki slodzone,\n         energetyki"</string>
     <string name="inne_ok_string">"       zalecana przerwa\n        miedzy posilkami"</string>
     <string name="inne_notok_string">"        ostatni posilek\n        przed snem"</string>
+    <string name="main_title">"       \n        Gdy jesz lub pijesz\n        Kliknij w ikonki"</string>
 </resources>

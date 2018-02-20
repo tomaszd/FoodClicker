@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         final ImageView btnSettings = (ImageView) findViewById(R.id.btnSettings);
         final ImageView btnTabela = (ImageView) findViewById(R.id.btnTabela);
 
-        EditText appCompatImageButton =(EditText) findViewById(R.id.appCompatImageButton);
+        TextView appCompatImageButton =(TextView) findViewById(R.id.appCompatImageButton);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font.ttf");
         appCompatImageButton.setTypeface(typeface);
 
