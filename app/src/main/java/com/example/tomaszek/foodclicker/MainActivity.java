@@ -266,6 +266,7 @@ public class MainActivity extends AppCompatActivity {
         btnSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                view.startAnimation(shake);
                 Intent myIntent = new Intent(MainActivity.this, SettingsActivity.class);
                 myIntent.putExtra("woda", woda_value); //Optional parameters
                 myIntent.putExtra("inne", inne_value); //Optional parameters
@@ -282,6 +283,7 @@ public class MainActivity extends AppCompatActivity {
         btnTabela.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                view.startAnimation(shake);
                 Intent myIntent = new Intent(MainActivity.this, TabelaActivity.class);
                 myIntent.putExtra("woda", woda_value); //Optional parameters
                 myIntent.putExtra("inne", inne_value); //Optional parameters
@@ -298,7 +300,7 @@ public class MainActivity extends AppCompatActivity {
         btnPiramida.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                view.startAnimation(shake);
                 Intent myIntent = new Intent(MainActivity.this, PiramidActivity.class);
                 myIntent.putExtra("woda", woda_value); //Optional parameters
                 myIntent.putExtra("inne", inne_value); //Optional parameters
@@ -315,6 +317,7 @@ public class MainActivity extends AppCompatActivity {
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                view.startAnimation(shake);
                 woda_value = 0;
                 inne_value = 0;
                 warzywa_value = 0;
@@ -331,6 +334,20 @@ public class MainActivity extends AppCompatActivity {
                 editZboza.setText("0");
                 editNabial.setText("0");
                 editOrzechy.setText("0");
+
+
+                editOwoce.startAnimation(shake);
+
+                editWoda.startAnimation(shake);
+                editInne.startAnimation(shake);
+                editWarzywa.startAnimation(shake);
+                editOwoce.startAnimation(shake);
+                editRyby.startAnimation(shake);
+                editZboza.startAnimation(shake);
+                editNabial.startAnimation(shake);
+                editOrzechy.startAnimation(shake);
+
+
             }
 
         });
