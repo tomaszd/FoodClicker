@@ -7,16 +7,15 @@
     android:orientation="vertical">
 
 
-    <TextView
+    <EditText
         android:id="@+id/appCompatImageButton"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_gravity="bottom"
         android:layout_weight="1"
         android:background="@drawable/chmurka"
-        android:text="@string/Main_title"
+        android:text="Gdy jesz lub pijesz\nKliknij w ikonki"
         android:textAlignment="center"
-        android:textSize="23sp"
+        android:textSize="26sp"
         android:textStyle="bold" />
 
     <LinearLayout
