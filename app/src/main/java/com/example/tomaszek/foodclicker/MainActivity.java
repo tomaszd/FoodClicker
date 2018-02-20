@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -46,9 +48,11 @@ public class MainActivity extends AppCompatActivity {
         final ImageView btnSettings = (ImageView) findViewById(R.id.btnSettings);
         final ImageView btnTabela = (ImageView) findViewById(R.id.btnTabela);
 
-        TextView appCompatImageButton =(TextView) findViewById(R.id.appCompatImageButton);
+        TextView appCompatImageButton = (TextView) findViewById(R.id.appCompatImageButton);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font.ttf");
         appCompatImageButton.setTypeface(typeface);
+
+        final Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
 
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
@@ -71,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //int actualValue = Integer.parseInt(String.valueOf(editWoda.getText()));
+                view.startAnimation(shake);
                 woda_value += 1;
                 editWoda.setText(String.valueOf(woda_value));
                 saveSharedPref(editor, "woda", woda_value);
@@ -94,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 inne_value += 1;
+                view.startAnimation(shake);
                 editInne.setText(String.valueOf(inne_value));
                 saveSharedPref(editor, "inne", inne_value);
             }
@@ -116,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 warzywa_value += 1;
+                view.startAnimation(shake);
                 editWarzywa.setText(String.valueOf(warzywa_value));
                 saveSharedPref(editor, "warzywa", warzywa_value);
             }
@@ -138,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 owoce_value += 1;
+                view.startAnimation(shake);
                 editOwoce.setText(String.valueOf(owoce_value));
                 saveSharedPref(editor, "owoce", owoce_value);
             }
@@ -162,6 +170,7 @@ public class MainActivity extends AppCompatActivity {
 
                 int ryby_value = Integer.parseInt(String.valueOf(editRyby.getText()));
                 ryby_value += 1;
+                view.startAnimation(shake);
                 editRyby.setText(String.valueOf(ryby_value));
                 saveSharedPref(editor, "ryby", ryby_value);
             }
@@ -186,6 +195,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 zboza_value += 1;
+                view.startAnimation(shake);
                 editZboza.setText(String.valueOf(zboza_value));
                 saveSharedPref(editor, "zboza", zboza_value);
             }
@@ -209,6 +219,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 nabial_value += 1;
+                view.startAnimation(shake);
                 editNabial.setText(String.valueOf(nabial_value));
                 saveSharedPref(editor, "nabial", nabial_value);
             }
@@ -232,6 +243,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 orzech_value += 1;
+                view.startAnimation(shake);
                 editOrzechy.setText(String.valueOf(orzech_value));
                 saveSharedPref(editor, "orzechy", orzech_value);
             }
@@ -325,8 +337,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-
 
 
     private void saveSharedPref(SharedPreferences.Editor editor, String key, int actual_value) {
