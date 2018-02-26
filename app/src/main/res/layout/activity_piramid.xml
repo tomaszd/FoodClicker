@@ -19,25 +19,59 @@
         android:textStyle="bold" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_margin="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
-
-        <ImageButton
-            android:id="@+id/btnOwoce1"
-
-            android:layout_width="fill_parent"
+        <ImageView
+            android:id="@+id/btnSettings"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ananas" />
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:src="@drawable/settings"
+            android:text="KOSZ" />
 
+        <Space
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:layout_weight="2" />
+
+        <ImageView
+            android:id="@+id/btnOwoce"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ananas"
+            android:text="Woda" />
+
+
+        <Space
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:layout_weight="2" />
+
+        <ImageView
+            android:id="@+id/btnTabela"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:src="@drawable/tabela"
+            android:text="KOSZ" />
     </LinearLayout>
 
     <LinearLayout

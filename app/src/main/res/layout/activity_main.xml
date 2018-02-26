@@ -151,7 +151,7 @@
             android:layout_weight="4"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-            android:src="@drawable/banan"
+            android:src="@drawable/ananas"
             android:text="Owoce" />
 
         <TextView
