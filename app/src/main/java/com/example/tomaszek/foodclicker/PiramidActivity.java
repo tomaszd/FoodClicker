@@ -66,7 +66,7 @@ public class PiramidActivity extends AppCompatActivity {
 
         final ImageView btnSettings = (ImageView) findViewById(R.id.btnSettings);
         final ImageView btnTabela = (ImageView) findViewById(R.id.btnTabela);
-        final ImageButton btnOwoce = (ImageButton) findViewById(R.id.btnOwoce1);
+        final ImageView btnOwoce = (ImageView) findViewById(R.id.btnOwoce);
         final ImageButton btnRyby1 = (ImageButton) findViewById(R.id.btnRyby1);
         final ImageButton btnOlejorzech = (ImageButton) findViewById(R.id.btnOlejorzech);
         final ImageButton btnNabial1 = (ImageButton) findViewById(R.id.btnNabial1);
@@ -641,6 +641,10 @@ public class PiramidActivity extends AppCompatActivity {
         imgButton.setImageDrawable(getApplicationContext().getResources().getDrawable(drawableIcon));
     }
 
+    private void setButtonVisible(ImageView imgButton, int drawableIcon) {
+        getApplicationContext().getResources().getDrawable(drawableIcon).clearColorFilter();
+        imgButton.setImageDrawable(getApplicationContext().getResources().getDrawable(drawableIcon));
+    }
 
     /**
      * Mutates and applies a filter that converts the given drawable to a Gray
