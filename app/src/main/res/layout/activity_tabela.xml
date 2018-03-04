@@ -7,15 +7,15 @@
     android:orientation="vertical">
 
 
-    <EditText
+    <TextView
         android:id="@+id/appCompatImageButton"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_weight="1"
         android:background="@drawable/chmurka_informacja"
         android:fontFamily="cursive"
-        android:text="Dowiedz sie wiecej \nkliknij w ikonki
-"
+        android:text="Dowiedz sie wiecej \nkliknij w ikonki"
+        android:gravity="center"
         android:textAlignment="center"
         android:textSize="26sp"
         android:textStyle="bold" />

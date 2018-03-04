@@ -15,6 +15,7 @@
         android:background="@drawable/chmurka"
         android:text="@string/main_title"
         android:textAlignment="center"
+        android:gravity="center"
         android:textSize="23sp"
         android:textStyle="bold" />
 
