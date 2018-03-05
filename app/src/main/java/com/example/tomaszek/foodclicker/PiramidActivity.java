@@ -95,8 +95,9 @@ public class PiramidActivity extends AppCompatActivity {
         final ImageButton btnWoda5 = (ImageButton) findViewById(R.id.btnWoda5);
         final ImageButton btnWoda6 = (ImageButton) findViewById(R.id.btnWoda6);
         TextView appCompatImageButton = (TextView) findViewById(R.id.appCompatImageButton);
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font.ttf");
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font2.ttf");
         appCompatImageButton.setTypeface(typeface);
+        appCompatImageButton.setTextColor(0xffa55712); //this is white color
 
         btnOwoce.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.ananas)));
         btnRyby1.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.ryba)));

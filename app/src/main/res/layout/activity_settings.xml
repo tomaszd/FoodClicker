@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/blue_background"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,7 +46,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@drawable/wstazka_informacja"
-        android:text="     Informacja" />
+        android:text="   Informacja" />
 
     <Button
         android:id="@+id/btnPiramida"
@@ -53,7 +54,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@drawable/wstazka_piramida"
-        android:text="     Piramida" />
+        android:text="  Piramida" />
 
     <Button
         android:id="@+id/btnTabela"
@@ -63,7 +64,7 @@
         android:adjustViewBounds="true"
         android:background="@drawable/wstazka_tabela"
         android:scaleType="centerCrop"
-        android:text="     Tabela" />
+        android:text="  Tabela" />
 
     <Button
         android:id="@+id/btnKasujDane"
@@ -73,7 +74,7 @@
         android:adjustViewBounds="true"
         android:background="@drawable/wstazka_kosz"
         android:scaleType="centerCrop"
-        android:text="     Kasuj Dane" />
+        android:text="    Kasuj Dane" />
 
 </LinearLayout>
 

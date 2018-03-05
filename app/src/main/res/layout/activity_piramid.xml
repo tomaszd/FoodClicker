@@ -12,11 +12,10 @@
         android:layout_height="100dp"
         android:layout_weight="1"
         android:background="@drawable/ribeye"
-        android:fontFamily="cursive"
         android:text="Piramida"
         android:textAlignment="center"
         android:gravity="center"
-        android:textSize="30sp"
+        android:textSize="26sp"
         android:textStyle="bold" />
 
     <LinearLayout

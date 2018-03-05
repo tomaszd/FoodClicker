@@ -23,11 +23,19 @@ public class SettingsActivity extends AppCompatActivity {
         final Button btnKasujDane = (Button) findViewById(R.id.btnKasujDane);
 
 
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font.ttf");
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font2.ttf");
         btnInformacja.setTypeface(typeface);
         btnTabela.setTypeface(typeface);
         btnPiramida.setTypeface(typeface);
         btnKasujDane.setTypeface(typeface);
+        btnInformacja.setTextColor(0xffa55712); //this is white color
+        btnTabela.setTextColor(0xffa55712); //this is white color
+        btnPiramida.setTextColor(0xffa55712); //this is white color
+        btnKasujDane.setTextColor(0xffa55712); //this is white color
+
+
+
+
 
         final SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         final SharedPreferences.Editor editor = sharedPrefs.edit();

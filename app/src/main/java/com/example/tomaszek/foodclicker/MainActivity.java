@@ -49,8 +49,9 @@ public class MainActivity extends AppCompatActivity {
         final ImageView btnTabela = (ImageView) findViewById(R.id.btnTabela);
 
         TextView appCompatImageButton = (TextView) findViewById(R.id.appCompatImageButton);
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font.ttf");
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font2.ttf");
         appCompatImageButton.setTypeface(typeface);
+        appCompatImageButton.setTextColor(0xffffffff); //this is white color
 
         final Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
 

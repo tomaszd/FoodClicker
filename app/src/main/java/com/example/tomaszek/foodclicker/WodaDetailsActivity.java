@@ -26,11 +26,13 @@ public class WodaDetailsActivity extends AppCompatActivity {
         final int nabial_value = intent.getIntExtra("nabial", 0);
         final int orzech_value = intent.getIntExtra("orzechy", 0);
 
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font.ttf");
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font2.ttf");
         Button btnOk = (Button) findViewById(R.id.btnOk);
         Button btnNotOk = (Button) findViewById(R.id.btnNotOk);
         btnOk.setTypeface(typeface);
         btnNotOk.setTypeface(typeface);
+        btnOk.setTextColor(0xffffffff); //this is white color
+        btnNotOk.setTextColor(0xffffffff); //this is white color
 
 
         ImageView btnPiramida = (ImageView) findViewById(R.id.btnPiramida);
