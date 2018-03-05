@@ -14,8 +14,8 @@
         android:layout_weight="1"
         android:background="@drawable/chmurka_informacja"
         android:fontFamily="cursive"
-        android:text="Dowiedz sie wiecej \nkliknij w ikonki"
         android:gravity="center"
+        android:text="Dowiedz sie wiecej \nkliknij w ikonki"
         android:textAlignment="center"
         android:textSize="26sp"
         android:textStyle="bold" />
@@ -48,8 +48,6 @@
             android:id="@+id/btnInne"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-
-
             android:layout_gravity="center"
             android:layout_weight="1"
             android:adjustViewBounds="true"
@@ -84,8 +82,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-
-
             android:layout_weight="1"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
@@ -125,32 +121,31 @@
             android:layout_weight="1" />
 
         <ImageView
-            android:id="@+id/btnRyby"
+            android:id="@+id/btnZboza"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-
-
             android:layout_gravity="center"
+
+
             android:layout_weight="1"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-
-            android:src="@drawable/ryba"
-            android:text="Ryby" />
-
+            android:src="@drawable/zboza"
+            android:text="Zboza" />
 
         <ImageView
-            android:id="@+id/btnOrzechy"
+            android:id="@+id/btnNabial"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-
-
             android:layout_gravity="center"
             android:layout_weight="1"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-            android:src="@drawable/olejorzech"
-            android:text="Orzechy" />
+
+
+            android:src="@drawable/nabial"
+            android:text="Nabial" />
+
 
         <Space
             android:layout_width="wrap_content"
@@ -169,8 +164,6 @@
             android:id="@+id/btnPiramida"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-
-
             android:layout_gravity="center"
             android:layout_weight="2"
             android:src="@drawable/piramida_logo"
@@ -181,34 +174,29 @@
             android:layout_height="wrap_content"
             android:layout_weight="2" />
 
-
         <ImageView
-            android:id="@+id/btnZboza"
+            android:id="@+id/btnRyby"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-
-
-            android:layout_weight="4"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/zboza"
-            android:text="Zboza" />
-
-        <ImageView
-            android:id="@+id/btnNabial"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-
-
             android:layout_gravity="center"
             android:layout_weight="4"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
+            android:src="@drawable/ryba"
+            android:text="Ryby" />
 
 
-            android:src="@drawable/nabial"
-            android:text="Nabial" />
+        <ImageView
+            android:id="@+id/btnOrzechy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/olejorzech"
+            android:text="Orzechy" />
+
 
         <Space
             android:layout_width="wrap_content"
