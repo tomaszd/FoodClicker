@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class TabelaActivity extends AppCompatActivity {
 
@@ -27,7 +28,7 @@ public class TabelaActivity extends AppCompatActivity {
         final int nabial_value = intent.getIntExtra("nabial", 0);
         final int orzech_value = intent.getIntExtra("orzechy", 0);
 
-        EditText appCompatImageButton = (EditText) findViewById(R.id.appCompatImageButton);
+        TextView appCompatImageButton = (TextView) findViewById(R.id.appCompatImageButton);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font.ttf");
         appCompatImageButton.setTypeface(typeface);
 

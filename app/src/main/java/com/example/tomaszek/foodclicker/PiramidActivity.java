@@ -14,6 +14,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class PiramidActivity extends AppCompatActivity {
@@ -93,7 +94,7 @@ public class PiramidActivity extends AppCompatActivity {
         final ImageButton btnWoda4 = (ImageButton) findViewById(R.id.btnWoda4);
         final ImageButton btnWoda5 = (ImageButton) findViewById(R.id.btnWoda5);
         final ImageButton btnWoda6 = (ImageButton) findViewById(R.id.btnWoda6);
-        EditText appCompatImageButton = (EditText) findViewById(R.id.appCompatImageButton);
+        TextView appCompatImageButton = (TextView) findViewById(R.id.appCompatImageButton);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font.ttf");
         appCompatImageButton.setTypeface(typeface);
 
