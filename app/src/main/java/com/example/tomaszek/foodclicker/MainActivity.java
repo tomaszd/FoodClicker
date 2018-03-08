@@ -5,7 +5,12 @@ import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -22,11 +27,20 @@ public class MainActivity extends AppCompatActivity {
     int ryby_value = 0;
     int nabial_value = 0;
     int orzech_value = 0;
+    private DrawerLayout mDrawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar actionbar = getSupportActionBar();
+        actionbar.setDisplayHomeAsUpEnabled(true);
+        actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
+
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
         final ImageView btnDelete = (ImageView) findViewById(R.id.btnDelete);
         final ImageView btnWoda = (ImageView) findViewById(R.id.btnWoda);
         final TextView editWoda = (TextView) findViewById(R.id.editWoda);
@@ -372,4 +386,15 @@ public class MainActivity extends AppCompatActivity {
         editNabial.setText(String.valueOf(nabial_value));
         editOrzechy.setText(String.valueOf(orzech_value));
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                mDrawerLayout.openDrawer(GravityCompat.START);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }
