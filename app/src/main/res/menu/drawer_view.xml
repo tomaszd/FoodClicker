@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_add_profil"
+            android:icon="@drawable/tabela"
+            android:title="Dodaj Profil" />
+        <item
+            android:id="@+id/nav_choose_profile"
+            android:icon="@drawable/settings"
+            android:title="Wybierz Profil" />
+        <item
+            android:id="@+id/nav_table_view"
+            android:icon="@drawable/tabela"
+            android:title="Widok Tabeli" />
+        <item
+            android:id="@+id/nav_piramid_view"
+            android:icon="@drawable/tabela"
+            android:title="Widok Piramidy" />
+        <item
+            android:id="@+id/nav_log"
+            android:icon="@drawable/tabela"
+            android:title="Dziennik Wpisow" />
+        <item
+            android:id="@+id/nav_info_view"
+            android:icon="@drawable/tabela"
+            android:title="Informacja i produktach" />
+    </group>
+</menu>
