@@ -5,6 +5,8 @@ import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
-
+        setupBottomNavigationView();
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         final ImageView btnDelete = (ImageView) findViewById(R.id.btnDelete);
@@ -397,4 +399,51 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    private void setupBottomNavigationView() {
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.action_home:
+                        Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
+                        myIntent.putExtra("woda", woda_value); //Optional parameters
+                        myIntent.putExtra("inne", inne_value); //Optional parameters
+                        myIntent.putExtra("warzywa", warzywa_value); //Optional parameters
+                        myIntent.putExtra("owoce", owoce_value); //Optional parameters
+                        myIntent.putExtra("ryby", ryby_value); //Optional parameters
+                        myIntent.putExtra("zboza", zboza_value); //Optional parameters
+                        myIntent.putExtra("nabial", nabial_value); //Optional parameters
+                        myIntent.putExtra("orzechy", orzech_value); //Optional parameters
+                        MainActivity.this.startActivity(myIntent);
+                        break;
+                    case R.id.action_info:
+                        Intent myIntent2 = new Intent(MainActivity.this, TabelaActivity.class);
+                        myIntent2.putExtra("woda", woda_value); //Optional parameters
+                        myIntent2.putExtra("inne", inne_value); //Optional parameters
+                        myIntent2.putExtra("warzywa", warzywa_value); //Optional parameters
+                        myIntent2.putExtra("owoce", owoce_value); //Optional parameters
+                        myIntent2.putExtra("ryby", ryby_value); //Optional parameters
+                        myIntent2.putExtra("zboza", zboza_value); //Optional parameters
+                        myIntent2.putExtra("nabial", nabial_value); //Optional parameters
+                        myIntent2.putExtra("orzechy", orzech_value); //Optional parameters
+                        MainActivity.this.startActivity(myIntent2);
+                        break;
+                    case R.id.action_piramid:
+                        Intent myIntent3 = new Intent(MainActivity.this, PiramidActivity.class);
+                        myIntent3.putExtra("woda", woda_value); //Optional parameters
+                        myIntent3.putExtra("inne", inne_value); //Optional parameters
+                        myIntent3.putExtra("warzywa", warzywa_value); //Optional parameters
+                        myIntent3.putExtra("owoce", owoce_value); //Optional parameters
+                        myIntent3.putExtra("ryby", ryby_value); //Optional parameters
+                        myIntent3.putExtra("zboza", zboza_value); //Optional parameters
+                        myIntent3.putExtra("nabial", nabial_value); //Optional parameters
+                        myIntent3.putExtra("orzechy", orzech_value); //Optional parameters
+                        MainActivity.this.startActivity(myIntent3);
+                        break;
+                }
+                return true;
+            }
+        });
+    }
 }

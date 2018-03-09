@@ -58,7 +58,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:background="@drawable/zboza_info_1"/>
+        android:background="@drawable/zboza_info_1" />
 
 
     <LinearLayout
@@ -75,9 +75,18 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:background="@drawable/zboza_info_2"
-            />
+            android:background="@drawable/zboza_info_2" />
 
     </LinearLayout>
+
+    <android.support.design.widget.BottomNavigationView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        app:itemBackground="@color/colorPrimaryDark"
+        app:itemIconTint="@color/colorWhite"
+        app:itemTextColor="@color/colorWhite"
+        app:menu="@menu/my_navigation_items" />
 </LinearLayout>
 

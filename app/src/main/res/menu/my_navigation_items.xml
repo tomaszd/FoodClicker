@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/action_piramid"
+        android:icon="@drawable/ic_arrow"
+        android:title="Piramida" />
+
+    <item
+        android:id="@+id/action_info"
+        android:icon="@drawable/ic_info"
+        android:title="Informacja" />
+
+</menu>

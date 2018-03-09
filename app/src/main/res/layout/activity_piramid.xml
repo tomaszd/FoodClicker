@@ -12,9 +12,9 @@
         android:layout_height="100dp"
         android:layout_weight="1"
         android:background="@drawable/ribeye"
+        android:gravity="center"
         android:text="Piramida"
         android:textAlignment="center"
-        android:gravity="center"
         android:textSize="26sp"
         android:textStyle="bold" />
 
@@ -367,5 +367,13 @@
 
     </LinearLayout>
 
-
+    <android.support.design.widget.BottomNavigationView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        app:itemBackground="@color/colorPrimaryDark"
+        app:itemIconTint="@color/colorWhite"
+        app:itemTextColor="@color/colorWhite"
+        app:menu="@menu/my_navigation_items" />
 </LinearLayout>
