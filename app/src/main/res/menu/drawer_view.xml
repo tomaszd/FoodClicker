@@ -10,12 +10,12 @@
             android:icon="@drawable/ic_info"
             android:title="Wybierz Profil" />
         <item
-            android:id="@+id/nav_table_view"
-            android:icon="@drawable/ic_info"
-            android:title="Widok Tabeli" />
+            android:id="@+id/nav_home_view"
+            android:icon="@drawable/ic_home"
+            android:title="Ekran Glowny" />
         <item
             android:id="@+id/nav_piramid_view"
-            android:icon="@drawable/ic_info"
+            android:icon="@drawable/ic_warning"
             android:title="Widok Piramidy" />
         <item
             android:id="@+id/nav_log"
