@@ -375,6 +375,18 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
 
                         switch (menuItem.getItemId()) {
+                            case R.id.nav_log:
+                                Intent myIntent0 = new Intent(MainActivity.this, LogActivity.class);
+                                myIntent0.putExtra("woda", woda_value); //Optional parameters
+                                myIntent0.putExtra("inne", inne_value); //Optional parameters
+                                myIntent0.putExtra("warzywa", warzywa_value); //Optional parameters
+                                myIntent0.putExtra("owoce", owoce_value); //Optional parameters
+                                myIntent0.putExtra("ryby", ryby_value); //Optional parameters
+                                myIntent0.putExtra("zboza", zboza_value); //Optional parameters
+                                myIntent0.putExtra("nabial", nabial_value); //Optional parameters
+                                myIntent0.putExtra("orzechy", orzech_value); //Optional parameters
+                                MainActivity.this.startActivity(myIntent0);
+                                break;
                             case R.id.nav_home_view:
                                 Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
                                 myIntent.putExtra("woda", woda_value); //Optional parameters
@@ -428,6 +440,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void saveSharedPref(SharedPreferences.Editor editor, String key, int actual_value) {
+
         editor.putInt(key, actual_value);
         editor.commit();
     }
