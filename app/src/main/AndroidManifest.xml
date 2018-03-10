@@ -17,7 +17,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".PiramidActivity"
@@ -31,7 +30,8 @@
         <activity android:name=".NabialDetailsActivity" />
         <activity android:name=".ZbozaDetailsActivity" />
         <activity android:name=".RybyDetailsActivity" />
-        <activity android:name=".OlejorzechDetailsActivity"></activity>
+        <activity android:name=".OlejorzechDetailsActivity" />
+        <activity android:name=".LogActivity"></activity>
     </application>
 
 </manifest>
