@@ -28,7 +28,7 @@
             android:background="@drawable/chmurka_informacja"
             android:fontFamily="cursive"
             android:gravity="center"
-            android:text="Dowiedz sie wiecej \nkliknij w ikonki"
+            android:text="@string/dowiedz_sie_wiecej_kliknij_w_ikonki"
             android:textAlignment="center"
             android:textSize="26sp"
             android:textStyle="bold" />
