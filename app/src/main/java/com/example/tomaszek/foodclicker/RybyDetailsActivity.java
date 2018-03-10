@@ -1,27 +1,38 @@
 package com.example.tomaszek.foodclicker;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
 public class RybyDetailsActivity extends AppCompatActivity {
+    int woda_value = 0;
+    int owoce_value = 0;
+    int inne_value = 0;
+    int warzywa_value = 0;
+    int zboza_value = 0;
+    int ryby_value = 0;
+    int nabial_value = 0;
+    int orzech_value = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ryby_details);
-
+        setupBottomNavigationView();
         Intent intent = getIntent();
-        final int woda_value = intent.getIntExtra("woda", 0);
-        final int inne_value = intent.getIntExtra("inne", 0);
-        final int warzywa_value = intent.getIntExtra("warzywa", 0);
-        final int owoce_value = intent.getIntExtra("owoce", 0);
-        final int zboza_value = intent.getIntExtra("zboza", 0);
-        final int ryby_value = intent.getIntExtra("ryby", 0);
-        final int nabial_value = intent.getIntExtra("nabial", 0);
-        final int orzech_value = intent.getIntExtra("orzechy", 0);
+        woda_value = intent.getIntExtra("woda", 0);
+        inne_value = intent.getIntExtra("inne", 0);
+        warzywa_value = intent.getIntExtra("warzywa", 0);
+        owoce_value = intent.getIntExtra("owoce", 0);
+        zboza_value = intent.getIntExtra("zboza", 0);
+        ryby_value = intent.getIntExtra("ryby", 0);
+        nabial_value = intent.getIntExtra("nabial", 0);
+        orzech_value = intent.getIntExtra("orzechy", 0);
 
 
         ImageView btnPiramida = (ImageView) findViewById(R.id.btnPiramida);
@@ -60,5 +71,51 @@ public class RybyDetailsActivity extends AppCompatActivity {
 
     }
 
-
+    private void setupBottomNavigationView() {
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.action_home:
+                        Intent myIntent = new Intent(RybyDetailsActivity.this, NabialDetailsActivity.class);
+                        myIntent.putExtra("woda", woda_value); //Optional parameters
+                        myIntent.putExtra("inne", inne_value); //Optional parameters
+                        myIntent.putExtra("warzywa", warzywa_value); //Optional parameters
+                        myIntent.putExtra("owoce", owoce_value); //Optional parameters
+                        myIntent.putExtra("ryby", ryby_value); //Optional parameters
+                        myIntent.putExtra("zboza", zboza_value); //Optional parameters
+                        myIntent.putExtra("nabial", nabial_value); //Optional parameters
+                        myIntent.putExtra("orzechy", orzech_value); //Optional parameters
+                        RybyDetailsActivity.this.startActivity(myIntent);
+                        break;
+                    case R.id.action_info:
+                        Intent myIntent2 = new Intent(RybyDetailsActivity.this, TabelaActivity.class);
+                        myIntent2.putExtra("woda", woda_value); //Optional parameters
+                        myIntent2.putExtra("inne", inne_value); //Optional parameters
+                        myIntent2.putExtra("warzywa", warzywa_value); //Optional parameters
+                        myIntent2.putExtra("owoce", owoce_value); //Optional parameters
+                        myIntent2.putExtra("ryby", ryby_value); //Optional parameters
+                        myIntent2.putExtra("zboza", zboza_value); //Optional parameters
+                        myIntent2.putExtra("nabial", nabial_value); //Optional parameters
+                        myIntent2.putExtra("orzechy", orzech_value); //Optional parameters
+                        RybyDetailsActivity.this.startActivity(myIntent2);
+                        break;
+                    case R.id.action_piramid:
+                        Intent myIntent3 = new Intent(RybyDetailsActivity.this, PiramidActivity.class);
+                        myIntent3.putExtra("woda", woda_value); //Optional parameters
+                        myIntent3.putExtra("inne", inne_value); //Optional parameters
+                        myIntent3.putExtra("warzywa", warzywa_value); //Optional parameters
+                        myIntent3.putExtra("owoce", owoce_value); //Optional parameters
+                        myIntent3.putExtra("ryby", ryby_value); //Optional parameters
+                        myIntent3.putExtra("zboza", zboza_value); //Optional parameters
+                        myIntent3.putExtra("nabial", nabial_value); //Optional parameters
+                        myIntent3.putExtra("orzechy", orzech_value); //Optional parameters
+                        RybyDetailsActivity.this.startActivity(myIntent3);
+                        break;
+                }
+                return true;
+            }
+        });
+    }
 }
