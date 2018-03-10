@@ -5,7 +5,12 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -20,15 +25,22 @@ public class TabelaActivity extends AppCompatActivity {
     int ryby_value = 0;
     int nabial_value = 0;
     int orzech_value = 0;
+    private DrawerLayout mDrawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabela);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar actionbar = getSupportActionBar();
+        actionbar.setDisplayHomeAsUpEnabled(true);
+        actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
+        setupBottomNavigationView();
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         Intent intent = getIntent();
-        setupBottomNavigationView();
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         woda_value = intent.getIntExtra("woda", 0);
         inne_value = intent.getIntExtra("inne", 0);
         warzywa_value = intent.getIntExtra("warzywa", 0);
@@ -207,7 +219,61 @@ public class TabelaActivity extends AppCompatActivity {
             }
         });
 
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(
+                new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(MenuItem menuItem) {
 
+                        switch (menuItem.getItemId()) {
+                            case R.id.nav_home_view:
+                                Intent myIntent = new Intent(TabelaActivity.this, MainActivity.class);
+                                myIntent.putExtra("woda", woda_value); //Optional parameters
+                                myIntent.putExtra("inne", inne_value); //Optional parameters
+                                myIntent.putExtra("warzywa", warzywa_value); //Optional parameters
+                                myIntent.putExtra("owoce", owoce_value); //Optional parameters
+                                myIntent.putExtra("ryby", ryby_value); //Optional parameters
+                                myIntent.putExtra("zboza", zboza_value); //Optional parameters
+                                myIntent.putExtra("nabial", nabial_value); //Optional parameters
+                                myIntent.putExtra("orzechy", orzech_value); //Optional parameters
+                                TabelaActivity.this.startActivity(myIntent);
+                                break;
+                            case R.id.nav_info_view:
+                                Intent myIntent2 = new Intent(TabelaActivity.this, TabelaActivity.class);
+                                myIntent2.putExtra("woda", woda_value); //Optional parameters
+                                myIntent2.putExtra("inne", inne_value); //Optional parameters
+                                myIntent2.putExtra("warzywa", warzywa_value); //Optional parameters
+                                myIntent2.putExtra("owoce", owoce_value); //Optional parameters
+                                myIntent2.putExtra("ryby", ryby_value); //Optional parameters
+                                myIntent2.putExtra("zboza", zboza_value); //Optional parameters
+                                myIntent2.putExtra("nabial", nabial_value); //Optional parameters
+                                myIntent2.putExtra("orzechy", orzech_value); //Optional parameters
+                                TabelaActivity.this.startActivity(myIntent2);
+                                break;
+                            case R.id.nav_piramid_view:
+                                Intent myIntent3 = new Intent(TabelaActivity.this, PiramidActivity.class);
+                                myIntent3.putExtra("woda", woda_value); //Optional parameters
+                                myIntent3.putExtra("inne", inne_value); //Optional parameters
+                                myIntent3.putExtra("warzywa", warzywa_value); //Optional parameters
+                                myIntent3.putExtra("owoce", owoce_value); //Optional parameters
+                                myIntent3.putExtra("ryby", ryby_value); //Optional parameters
+                                myIntent3.putExtra("zboza", zboza_value); //Optional parameters
+                                myIntent3.putExtra("nabial", nabial_value); //Optional parameters
+                                myIntent3.putExtra("orzechy", orzech_value); //Optional parameters
+                                TabelaActivity.this.startActivity(myIntent3);
+                                break;
+                        }
+                        // set item as selected to persist highlight
+                        menuItem.setChecked(true);
+                        // close drawer when item is tapped
+                        mDrawerLayout.closeDrawers();
+
+                        // Add code here to update the UI based on the item selected
+                        // For example, swap UI fragments here
+
+                        return true;
+                    }
+                });
     }
 
     private Intent extendIntentByAmountValues(Intent myIntent, int woda_value, int inne_value, int warzywa_value,
@@ -222,6 +288,16 @@ public class TabelaActivity extends AppCompatActivity {
         myIntent.putExtra("nabial", nabial_value); //Optional parameters
         myIntent.putExtra("orzechy", orzech_value); //Optional parameters
         return myIntent;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                mDrawerLayout.openDrawer(GravityCompat.START);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void setupBottomNavigationView() {

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -367,7 +368,61 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(
+                new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(MenuItem menuItem) {
 
+                        switch (menuItem.getItemId()) {
+                            case R.id.nav_home_view:
+                                Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
+                                myIntent.putExtra("woda", woda_value); //Optional parameters
+                                myIntent.putExtra("inne", inne_value); //Optional parameters
+                                myIntent.putExtra("warzywa", warzywa_value); //Optional parameters
+                                myIntent.putExtra("owoce", owoce_value); //Optional parameters
+                                myIntent.putExtra("ryby", ryby_value); //Optional parameters
+                                myIntent.putExtra("zboza", zboza_value); //Optional parameters
+                                myIntent.putExtra("nabial", nabial_value); //Optional parameters
+                                myIntent.putExtra("orzechy", orzech_value); //Optional parameters
+                                MainActivity.this.startActivity(myIntent);
+                                break;
+                            case R.id.nav_info_view:
+                                Intent myIntent2 = new Intent(MainActivity.this, TabelaActivity.class);
+                                myIntent2.putExtra("woda", woda_value); //Optional parameters
+                                myIntent2.putExtra("inne", inne_value); //Optional parameters
+                                myIntent2.putExtra("warzywa", warzywa_value); //Optional parameters
+                                myIntent2.putExtra("owoce", owoce_value); //Optional parameters
+                                myIntent2.putExtra("ryby", ryby_value); //Optional parameters
+                                myIntent2.putExtra("zboza", zboza_value); //Optional parameters
+                                myIntent2.putExtra("nabial", nabial_value); //Optional parameters
+                                myIntent2.putExtra("orzechy", orzech_value); //Optional parameters
+                                MainActivity.this.startActivity(myIntent2);
+                                break;
+                            case R.id.nav_piramid_view:
+                                Intent myIntent3 = new Intent(MainActivity.this, PiramidActivity.class);
+                                myIntent3.putExtra("woda", woda_value); //Optional parameters
+                                myIntent3.putExtra("inne", inne_value); //Optional parameters
+                                myIntent3.putExtra("warzywa", warzywa_value); //Optional parameters
+                                myIntent3.putExtra("owoce", owoce_value); //Optional parameters
+                                myIntent3.putExtra("ryby", ryby_value); //Optional parameters
+                                myIntent3.putExtra("zboza", zboza_value); //Optional parameters
+                                myIntent3.putExtra("nabial", nabial_value); //Optional parameters
+                                myIntent3.putExtra("orzechy", orzech_value); //Optional parameters
+                                MainActivity.this.startActivity(myIntent3);
+                                break;
+                        }
+                        // set item as selected to persist highlight
+                        menuItem.setChecked(true);
+                        // close drawer when item is tapped
+                        mDrawerLayout.closeDrawers();
+
+                        // Add code here to update the UI based on the item selected
+                        // For example, swap UI fragments here
+
+                        return true;
+                    }
+                });
 
     }
 
