@@ -258,7 +258,7 @@ public class PiramidActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 view.startAnimation(shake);
-                Intent myIntent = new Intent(PiramidActivity.this, TabelaActivity.class);
+                Intent myIntent = new Intent(PiramidActivity.this, MainActivity.class);
                 myIntent.putExtra("woda", woda_value); //Optional parameters
                 myIntent.putExtra("inne", inne_value); //Optional parameters
                 myIntent.putExtra("warzywa", warzywa_value); //Optional parameters
@@ -267,6 +267,7 @@ public class PiramidActivity extends AppCompatActivity {
                 myIntent.putExtra("zboza", zboza_value); //Optional parameters
                 myIntent.putExtra("nabial", nabial_value); //Optional parameters
                 myIntent.putExtra("orzechy", orzech_value); //Optional parameters
+                myIntent.putExtra("otherActivity", true); //Optional parameters
                 PiramidActivity.this.startActivity(myIntent);
             }
         });
