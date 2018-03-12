@@ -74,16 +74,29 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         final SharedPreferences.Editor editor = sharedPrefs.edit();
+        Intent intent = getIntent();
 
+        if (intent.getBooleanExtra("otherActivity", false)) //Optional parameters
+        {
+            woda_value = intent.getIntExtra("woda", 0);
+            inne_value = intent.getIntExtra("inne", 0);
+            warzywa_value = intent.getIntExtra("warzywa", 0);
+            owoce_value = intent.getIntExtra("owoce", 0);
+            zboza_value = intent.getIntExtra("zboza", 0);
+            ryby_value = intent.getIntExtra("ryby", 0);
+            nabial_value = intent.getIntExtra("nabial", 0);
+            orzech_value = intent.getIntExtra("orzechy", 0);
+        } else {
 
-        woda_value = sharedPrefs.getInt("woda", 0);
-        inne_value = sharedPrefs.getInt("inne", 0);
-        warzywa_value = sharedPrefs.getInt("warzywa", 0);
-        owoce_value = sharedPrefs.getInt("owoce", 0);
-        zboza_value = sharedPrefs.getInt("zboza", 0);
-        ryby_value = sharedPrefs.getInt("ryby", 0);
-        nabial_value = sharedPrefs.getInt("nabial", 0);
-        orzech_value = sharedPrefs.getInt("orzechy", 0);
+            woda_value = sharedPrefs.getInt("woda", 0);
+            inne_value = sharedPrefs.getInt("inne", 0);
+            warzywa_value = sharedPrefs.getInt("warzywa", 0);
+            owoce_value = sharedPrefs.getInt("owoce", 0);
+            zboza_value = sharedPrefs.getInt("zboza", 0);
+            ryby_value = sharedPrefs.getInt("ryby", 0);
+            nabial_value = sharedPrefs.getInt("nabial", 0);
+            orzech_value = sharedPrefs.getInt("orzechy", 0);
+        }
 
         setActualValue(editWoda, editInne, editWarzywa, editOwoce, editRyby, editZboza, editNabial, editOrzechy, woda_value, inne_value, warzywa_value, owoce_value, zboza_value, ryby_value, nabial_value, orzech_value);
 
@@ -91,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
         btnWoda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //int actualValue = Integer.parseInt(String.valueOf(editWoda.getText()));
                 view.startAnimation(shake);
                 woda_value += 1;
                 editWoda.setText(String.valueOf(woda_value));
@@ -137,7 +149,6 @@ public class MainActivity extends AppCompatActivity {
         btnWarzywa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 warzywa_value += 1;
                 view.startAnimation(shake);
                 editWarzywa.setText(String.valueOf(warzywa_value));
@@ -147,7 +158,6 @@ public class MainActivity extends AppCompatActivity {
         btnWarzywa.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-
                 if (warzywa_value > 0) {
                     warzywa_value -= 1;
                     editWarzywa.setText(String.valueOf(warzywa_value));
@@ -184,8 +194,6 @@ public class MainActivity extends AppCompatActivity {
         btnRyby.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                int ryby_value = Integer.parseInt(String.valueOf(editRyby.getText()));
                 ryby_value += 1;
                 view.startAnimation(shake);
                 editRyby.setText(String.valueOf(ryby_value));
@@ -195,7 +203,6 @@ public class MainActivity extends AppCompatActivity {
         btnRyby.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                int ryby_value = Integer.parseInt(String.valueOf(editRyby.getText()));
                 if (ryby_value > 0) {
                     ryby_value -= 1;
                     editRyby.setText(String.valueOf(ryby_value));
@@ -234,7 +241,6 @@ public class MainActivity extends AppCompatActivity {
         btnNabial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 nabial_value += 1;
                 view.startAnimation(shake);
                 editNabial.setText(String.valueOf(nabial_value));
@@ -244,7 +250,6 @@ public class MainActivity extends AppCompatActivity {
         btnNabial.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-
                 if (nabial_value > 0) {
                     nabial_value -= 1;
                     editNabial.setText(String.valueOf(nabial_value));
@@ -258,7 +263,6 @@ public class MainActivity extends AppCompatActivity {
         btnOrzechy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 orzech_value += 1;
                 view.startAnimation(shake);
                 editOrzechy.setText(String.valueOf(orzech_value));
@@ -268,7 +272,6 @@ public class MainActivity extends AppCompatActivity {
         btnOrzechy.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-
                 if (orzech_value > 0) {
                     orzech_value -= 1;
                     editOrzechy.setText(String.valueOf(orzech_value));

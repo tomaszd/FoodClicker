@@ -21,17 +21,39 @@
         <activity
             android:name=".PiramidActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".TabelaActivity" />
-        <activity android:name=".WodaDetailsActivity" />
-        <activity android:name=".InneDetailsActivity" />
-        <activity android:name=".WarzywaDetailsActivity" />
-        <activity android:name=".OwoceDetailsActivity" />
-        <activity android:name=".NabialDetailsActivity" />
-        <activity android:name=".ZbozaDetailsActivity" />
-        <activity android:name=".RybyDetailsActivity" />
-        <activity android:name=".OlejorzechDetailsActivity" />
-        <activity android:name=".LogActivity"></activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TabelaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WodaDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InneDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WarzywaDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OwoceDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NabialDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ZbozaDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RybyDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OlejorzechDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LogActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

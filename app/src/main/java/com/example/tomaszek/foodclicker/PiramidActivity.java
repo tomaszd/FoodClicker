@@ -276,9 +276,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnOwoceIcon = getApplicationContext().getResources().getDrawable(R.drawable.ananas);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnOwoceIcon);
                 if (btnOwoce_enabled) {
+                    owoce_value -= 1;
                     btnOwoce.setImageDrawable(grayedIcon);
                     btnOwoce_enabled = false;
                 } else {
+                    owoce_value += 1;
                     btnOwoceIcon.clearColorFilter();
                     btnOwoce.setImageDrawable(btnOwoceIcon);
                     btnOwoce_enabled = true;
@@ -293,9 +295,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.ryba);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnRyby1_enabled) {
+                    ryby_value -= 1;
                     btnRyby1.setImageDrawable(grayedIcon);
                     btnRyby1_enabled = false;
                 } else {
+                    ryby_value += 1;
                     btnIcon.clearColorFilter();
                     btnRyby1.setImageDrawable(btnIcon);
                     btnRyby1_enabled = true;
@@ -310,9 +314,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.olejorzech);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnOlejorzech_enabled) {
+                    orzech_value -= 1;
                     btnOlejorzech.setImageDrawable(grayedIcon);
                     btnOlejorzech_enabled = false;
                 } else {
+                    orzech_value += 1;
                     btnIcon.clearColorFilter();
                     btnOlejorzech.setImageDrawable(btnIcon);
                     btnOlejorzech_enabled = true;
@@ -326,9 +332,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.nabial);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnNabial1_enabled) {
+                    nabial_value -= 1;
                     btnNabial1.setImageDrawable(grayedIcon);
                     btnNabial1_enabled = false;
                 } else {
+                    nabial_value += 1;
                     btnIcon.clearColorFilter();
                     btnNabial1.setImageDrawable(btnIcon);
                     btnNabial1_enabled = true;
@@ -342,9 +350,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.nabial);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnNabial2_enabled) {
+                    nabial_value -= 1;
                     btnNabial2.setImageDrawable(grayedIcon);
                     btnNabial2_enabled = false;
                 } else {
+                    nabial_value += 1;
                     btnIcon.clearColorFilter();
                     btnNabial2.setImageDrawable(btnIcon);
                     btnNabial2_enabled = true;
@@ -358,9 +368,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.zboza);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnZboza1_enabled) {
+                    zboza_value -= 1;
                     btnZboza1.setImageDrawable(grayedIcon);
                     btnZboza1_enabled = false;
                 } else {
+                    zboza_value += 1;
                     btnIcon.clearColorFilter();
                     btnZboza1.setImageDrawable(btnIcon);
                     btnZboza1_enabled = true;
@@ -374,9 +386,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.zboza);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnZboza2_enabled) {
+                    zboza_value -= 1;
                     btnZboza2.setImageDrawable(grayedIcon);
                     btnZboza2_enabled = false;
                 } else {
+                    zboza_value += 1;
                     btnIcon.clearColorFilter();
                     btnZboza2.setImageDrawable(btnIcon);
                     btnZboza2_enabled = true;
@@ -390,9 +404,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.zboza);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnZboza3_enabled) {
+                    zboza_value -= 1;
                     btnZboza3.setImageDrawable(grayedIcon);
                     btnZboza3_enabled = false;
                 } else {
+                    zboza_value += 1;
                     btnIcon.clearColorFilter();
                     btnZboza3.setImageDrawable(btnIcon);
                     btnZboza3_enabled = true;
@@ -406,9 +422,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.warzywa);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnWarzywa1_enabled) {
+                    warzywa_value -= 1;
                     btnWarzywa1.setImageDrawable(grayedIcon);
                     btnWarzywa1_enabled = false;
                 } else {
+                    warzywa_value += 1;
                     btnIcon.clearColorFilter();
                     btnWarzywa1.setImageDrawable(btnIcon);
                     btnWarzywa1_enabled = true;
@@ -422,9 +440,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.warzywa);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnWarzywa2_enabled) {
+                    warzywa_value -= 1;
                     btnWarzywa2.setImageDrawable(grayedIcon);
                     btnWarzywa2_enabled = false;
                 } else {
+                    warzywa_value += 1;
                     btnIcon.clearColorFilter();
                     btnWarzywa2.setImageDrawable(btnIcon);
                     btnWarzywa2_enabled = true;
@@ -438,9 +458,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.warzywa);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnWarzywa3_enabled) {
+                    warzywa_value -= 1;
                     btnWarzywa3.setImageDrawable(grayedIcon);
                     btnWarzywa3_enabled = false;
                 } else {
+                    warzywa_value += 1;
                     btnIcon.clearColorFilter();
                     btnWarzywa3.setImageDrawable(btnIcon);
                     btnWarzywa3_enabled = true;
@@ -454,9 +476,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.warzywa);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnWarzywa4_enabled) {
+                    warzywa_value -= 1;
                     btnWarzywa4.setImageDrawable(grayedIcon);
                     btnWarzywa4_enabled = false;
                 } else {
+                    warzywa_value += 1;
                     btnIcon.clearColorFilter();
                     btnWarzywa4.setImageDrawable(btnIcon);
                     btnWarzywa4_enabled = true;
@@ -471,9 +495,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnInne1_enabled) {
+                    inne_value -= 1;
                     btnInne1.setImageDrawable(grayedIcon);
                     btnInne1_enabled = false;
                 } else {
+                    inne_value += 1;
                     btnIcon.clearColorFilter();
                     btnInne1.setImageDrawable(btnIcon);
                     btnInne1_enabled = true;
@@ -488,9 +514,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnInne2_enabled) {
+                    inne_value -= 1;
                     btnInne2.setImageDrawable(grayedIcon);
                     btnInne2_enabled = false;
                 } else {
+                    inne_value += 1;
                     btnIcon.clearColorFilter();
                     btnInne2.setImageDrawable(btnIcon);
                     btnInne2_enabled = true;
@@ -504,9 +532,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnInne3_enabled) {
+                    inne_value -= 1;
                     btnInne3.setImageDrawable(grayedIcon);
                     btnInne3_enabled = false;
                 } else {
+                    inne_value += 1;
                     btnIcon.clearColorFilter();
                     btnInne3.setImageDrawable(btnIcon);
                     btnInne3_enabled = true;
@@ -520,9 +550,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnInne4_enabled) {
+                    inne_value -= 1;
                     btnInne4.setImageDrawable(grayedIcon);
                     btnInne4_enabled = false;
                 } else {
+                    inne_value += 1;
                     btnIcon.clearColorFilter();
                     btnInne4.setImageDrawable(btnIcon);
                     btnInne4_enabled = true;
@@ -535,9 +567,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnInne5_enabled) {
+                    inne_value -= 1;
                     btnInne5.setImageDrawable(grayedIcon);
                     btnInne5_enabled = false;
                 } else {
+                    inne_value += 1;
                     btnIcon.clearColorFilter();
                     btnInne5.setImageDrawable(btnIcon);
                     btnInne5_enabled = true;
@@ -551,9 +585,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnWoda1_enabled) {
+                    woda_value -= 1;
                     btnWoda1.setImageDrawable(grayedIcon);
                     btnWoda1_enabled = false;
                 } else {
+                    woda_value += 1;
                     btnIcon.clearColorFilter();
                     btnWoda1.setImageDrawable(btnIcon);
                     btnWoda1_enabled = true;
@@ -567,9 +603,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnWoda2_enabled) {
+                    woda_value -= 1;
                     btnWoda2.setImageDrawable(grayedIcon);
                     btnWoda2_enabled = false;
                 } else {
+                    woda_value += 1;
                     btnIcon.clearColorFilter();
                     btnWoda2.setImageDrawable(btnIcon);
                     btnWoda2_enabled = true;
@@ -582,9 +620,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnWoda3_enabled) {
+                    woda_value -= 1;
                     btnWoda3.setImageDrawable(grayedIcon);
                     btnWoda3_enabled = false;
                 } else {
+                    woda_value += 1;
                     btnIcon.clearColorFilter();
                     btnWoda3.setImageDrawable(btnIcon);
                     btnWoda3_enabled = true;
@@ -598,9 +638,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnWoda4_enabled) {
+                    woda_value -= 1;
                     btnWoda4.setImageDrawable(grayedIcon);
                     btnWoda4_enabled = false;
                 } else {
+                    woda_value += 1;
                     btnIcon.clearColorFilter();
                     btnWoda4.setImageDrawable(btnIcon);
                     btnWoda4_enabled = true;
@@ -613,9 +655,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnWoda5_enabled) {
+                    woda_value -= 1;
                     btnWoda5.setImageDrawable(grayedIcon);
                     btnWoda5_enabled = false;
                 } else {
+                    woda_value += 1;
                     btnIcon.clearColorFilter();
                     btnWoda5.setImageDrawable(btnIcon);
                     btnWoda5_enabled = true;
@@ -628,9 +672,11 @@ public class PiramidActivity extends AppCompatActivity {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
                 if (btnWoda6_enabled) {
+                    woda_value -= 1;
                     btnWoda6.setImageDrawable(grayedIcon);
                     btnWoda6_enabled = false;
                 } else {
+                    woda_value += 1;
                     btnIcon.clearColorFilter();
                     btnWoda6.setImageDrawable(btnIcon);
                     btnWoda6_enabled = true;
@@ -699,6 +745,7 @@ public class PiramidActivity extends AppCompatActivity {
                         myIntent.putExtra("zboza", zboza_value); //Optional parameters
                         myIntent.putExtra("nabial", nabial_value); //Optional parameters
                         myIntent.putExtra("orzechy", orzech_value); //Optional parameters
+                        myIntent.putExtra("otherActivity", true); //Optional parameters
                         PiramidActivity.this.startActivity(myIntent);
                         break;
                     case R.id.action_info:
