@@ -3,7 +3,6 @@ package com.example.tomaszek.foodclicker;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
@@ -21,7 +20,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import static android.app.PendingIntent.getActivity;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     int woda_value = 0;
@@ -471,7 +472,9 @@ public class MainActivity extends AppCompatActivity {
         Intent mServiceIntent = new Intent(getApplicationContext(), LogDBService.class);
         mServiceIntent.setAction("com.example.tomaszek.foodclicker.action.add");
         mServiceIntent.putExtra("what", what);
-        mServiceIntent.putExtra("when", "tu bedzie timestamp");
+        DateFormat df = new SimpleDateFormat("hh:mm (dd.MM)");
+        String date = df.format(new Date());
+        mServiceIntent.putExtra("when", date);
         mServiceIntent.putExtra("added", added);
         getApplicationContext().startService(mServiceIntent);
     }

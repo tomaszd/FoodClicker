@@ -18,6 +18,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 public class PiramidActivity extends AppCompatActivity {
 
@@ -765,7 +769,9 @@ public class PiramidActivity extends AppCompatActivity {
         Intent mServiceIntent = new Intent(getApplicationContext(), LogDBService.class);
         mServiceIntent.setAction("com.example.tomaszek.foodclicker.action.add");
         mServiceIntent.putExtra("what", what);
-        mServiceIntent.putExtra("when", "tu bedzie timestamp");
+        DateFormat df = new SimpleDateFormat("hh:mm (dd.MM)");
+        String date = df.format(new Date());
+        mServiceIntent.putExtra("when", date);
         mServiceIntent.putExtra("added", added);
         getApplicationContext().startService(mServiceIntent);
     }
