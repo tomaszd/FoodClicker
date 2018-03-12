@@ -48,6 +48,7 @@ public class OwoceDetailsActivity extends AppCompatActivity {
                 myIntent.putExtra("zboza", zboza_value); //Optional parameters
                 myIntent.putExtra("nabial", nabial_value); //Optional parameters
                 myIntent.putExtra("orzechy", orzech_value); //Optional parameters
+                myIntent.putExtra("otherActivity", true); //Optional parameters
                 OwoceDetailsActivity.this.startActivity(myIntent);
             }
         });

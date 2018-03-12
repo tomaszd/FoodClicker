@@ -87,6 +87,7 @@ public class NabialDetailsActivity extends AppCompatActivity {
                         myIntent.putExtra("zboza", zboza_value); //Optional parameters
                         myIntent.putExtra("nabial", nabial_value); //Optional parameters
                         myIntent.putExtra("orzechy", orzech_value); //Optional parameters
+                        myIntent.putExtra("otherActivity", true); //Optional parameters
                         NabialDetailsActivity.this.startActivity(myIntent);
                         break;
                     case R.id.action_info:
