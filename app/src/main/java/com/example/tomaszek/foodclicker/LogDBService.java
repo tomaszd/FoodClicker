@@ -1,11 +1,15 @@
 package com.example.tomaszek.foodclicker;
 
 import android.app.IntentService;
-import android.content.Intent;
+import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
+
+import static java.security.AccessController.getContext;
 
 /**
  * An {@link IntentService} subclass for handling asynchronous task requests in
@@ -90,6 +94,18 @@ public class LogDBService extends IntentService {
             public void run() {
                 Toast toast1 = Toast.makeText(MyContext, "Added:  " + added + " what: " + what + " when:" + when, Toast.LENGTH_LONG);
                 toast1.show();
+                ProductDbHelper mDbHelper = new ProductDbHelper(getApplicationContext());
+                // Gets the data repository in write mode
+                SQLiteDatabase db = mDbHelper.getWritableDatabase();
+// Create a new map of values, where column names are the keys
+                ContentValues values = new ContentValues();
+                values.put(Product.ProductEntry.COLUMN_NAME_PRODUCT_NAME, what);
+                values.put(Product.ProductEntry.COLUMN_NAME_TIMESTAMP, when);
+                values.put(Product.ProductEntry.COLUMN_NAME_ADDED, added);
+// Insert the new row, returning the primary key value of the new row
+                long newRowId = db.insert(Product.ProductEntry.TABLE_NAME, null, values);
+
+
             }
         });
     }
