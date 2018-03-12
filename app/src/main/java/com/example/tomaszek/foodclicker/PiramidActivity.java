@@ -280,11 +280,13 @@ public class PiramidActivity extends AppCompatActivity {
                     owoce_value -= 1;
                     btnOwoce.setImageDrawable(grayedIcon);
                     btnOwoce_enabled = false;
+                    saveLogIntoDB("owoce", false);
                 } else {
                     owoce_value += 1;
                     btnOwoceIcon.clearColorFilter();
                     btnOwoce.setImageDrawable(btnOwoceIcon);
                     btnOwoce_enabled = true;
+                    saveLogIntoDB("owoce", true);
                 }
 
             }
@@ -299,11 +301,13 @@ public class PiramidActivity extends AppCompatActivity {
                     ryby_value -= 1;
                     btnRyby1.setImageDrawable(grayedIcon);
                     btnRyby1_enabled = false;
+                    saveLogIntoDB("ryby", false);
                 } else {
                     ryby_value += 1;
                     btnIcon.clearColorFilter();
                     btnRyby1.setImageDrawable(btnIcon);
                     btnRyby1_enabled = true;
+                    saveLogIntoDB("ryby", true);
                 }
 
             }
@@ -318,11 +322,13 @@ public class PiramidActivity extends AppCompatActivity {
                     orzech_value -= 1;
                     btnOlejorzech.setImageDrawable(grayedIcon);
                     btnOlejorzech_enabled = false;
+                    saveLogIntoDB("orzechy", false);
                 } else {
                     orzech_value += 1;
                     btnIcon.clearColorFilter();
                     btnOlejorzech.setImageDrawable(btnIcon);
                     btnOlejorzech_enabled = true;
+                    saveLogIntoDB("orzechy", true);
                 }
             }
         });
@@ -336,11 +342,13 @@ public class PiramidActivity extends AppCompatActivity {
                     nabial_value -= 1;
                     btnNabial1.setImageDrawable(grayedIcon);
                     btnNabial1_enabled = false;
+                    saveLogIntoDB("nabial", false);
                 } else {
                     nabial_value += 1;
                     btnIcon.clearColorFilter();
                     btnNabial1.setImageDrawable(btnIcon);
                     btnNabial1_enabled = true;
+                    saveLogIntoDB("nabial", true);
                 }
             }
         });
@@ -354,11 +362,13 @@ public class PiramidActivity extends AppCompatActivity {
                     nabial_value -= 1;
                     btnNabial2.setImageDrawable(grayedIcon);
                     btnNabial2_enabled = false;
+                    saveLogIntoDB("nabial", false);
                 } else {
                     nabial_value += 1;
                     btnIcon.clearColorFilter();
                     btnNabial2.setImageDrawable(btnIcon);
                     btnNabial2_enabled = true;
+                    saveLogIntoDB("nabial", true);
                 }
             }
         });
@@ -372,11 +382,13 @@ public class PiramidActivity extends AppCompatActivity {
                     zboza_value -= 1;
                     btnZboza1.setImageDrawable(grayedIcon);
                     btnZboza1_enabled = false;
+                    saveLogIntoDB("zboza", false);
                 } else {
                     zboza_value += 1;
                     btnIcon.clearColorFilter();
                     btnZboza1.setImageDrawable(btnIcon);
                     btnZboza1_enabled = true;
+                    saveLogIntoDB("zboza", true);
                 }
             }
         });
@@ -390,11 +402,13 @@ public class PiramidActivity extends AppCompatActivity {
                     zboza_value -= 1;
                     btnZboza2.setImageDrawable(grayedIcon);
                     btnZboza2_enabled = false;
+                    saveLogIntoDB("zboza", false);
                 } else {
                     zboza_value += 1;
                     btnIcon.clearColorFilter();
                     btnZboza2.setImageDrawable(btnIcon);
                     btnZboza2_enabled = true;
+                    saveLogIntoDB("zboza", true);
                 }
             }
         });
@@ -408,11 +422,13 @@ public class PiramidActivity extends AppCompatActivity {
                     zboza_value -= 1;
                     btnZboza3.setImageDrawable(grayedIcon);
                     btnZboza3_enabled = false;
+                    saveLogIntoDB("zboza", false);
                 } else {
                     zboza_value += 1;
                     btnIcon.clearColorFilter();
                     btnZboza3.setImageDrawable(btnIcon);
                     btnZboza3_enabled = true;
+                    saveLogIntoDB("zboza", true);
                 }
             }
         });
@@ -426,11 +442,13 @@ public class PiramidActivity extends AppCompatActivity {
                     warzywa_value -= 1;
                     btnWarzywa1.setImageDrawable(grayedIcon);
                     btnWarzywa1_enabled = false;
+                    saveLogIntoDB("warzywa", false);
                 } else {
                     warzywa_value += 1;
                     btnIcon.clearColorFilter();
                     btnWarzywa1.setImageDrawable(btnIcon);
                     btnWarzywa1_enabled = true;
+                    saveLogIntoDB("warzywa", true);
                 }
             }
         });
@@ -444,11 +462,13 @@ public class PiramidActivity extends AppCompatActivity {
                     warzywa_value -= 1;
                     btnWarzywa2.setImageDrawable(grayedIcon);
                     btnWarzywa2_enabled = false;
+                    saveLogIntoDB("warzywa", false);
                 } else {
                     warzywa_value += 1;
                     btnIcon.clearColorFilter();
                     btnWarzywa2.setImageDrawable(btnIcon);
                     btnWarzywa2_enabled = true;
+                    saveLogIntoDB("warzywa", true);
                 }
             }
         });
@@ -462,11 +482,13 @@ public class PiramidActivity extends AppCompatActivity {
                     warzywa_value -= 1;
                     btnWarzywa3.setImageDrawable(grayedIcon);
                     btnWarzywa3_enabled = false;
+                    saveLogIntoDB("warzywa", false);
                 } else {
                     warzywa_value += 1;
                     btnIcon.clearColorFilter();
                     btnWarzywa3.setImageDrawable(btnIcon);
                     btnWarzywa3_enabled = true;
+                    saveLogIntoDB("warzywa", true);
                 }
             }
         });
@@ -480,11 +502,13 @@ public class PiramidActivity extends AppCompatActivity {
                     warzywa_value -= 1;
                     btnWarzywa4.setImageDrawable(grayedIcon);
                     btnWarzywa4_enabled = false;
+                    saveLogIntoDB("warzywa", false);
                 } else {
                     warzywa_value += 1;
                     btnIcon.clearColorFilter();
                     btnWarzywa4.setImageDrawable(btnIcon);
                     btnWarzywa4_enabled = true;
+                    saveLogIntoDB("warzywa", true);
                 }
             }
         });
@@ -499,11 +523,13 @@ public class PiramidActivity extends AppCompatActivity {
                     inne_value -= 1;
                     btnInne1.setImageDrawable(grayedIcon);
                     btnInne1_enabled = false;
+                    saveLogIntoDB("inne", false);
                 } else {
                     inne_value += 1;
                     btnIcon.clearColorFilter();
                     btnInne1.setImageDrawable(btnIcon);
                     btnInne1_enabled = true;
+                    saveLogIntoDB("inne", true);
                 }
             }
         });
@@ -518,11 +544,13 @@ public class PiramidActivity extends AppCompatActivity {
                     inne_value -= 1;
                     btnInne2.setImageDrawable(grayedIcon);
                     btnInne2_enabled = false;
+                    saveLogIntoDB("inne", false);
                 } else {
                     inne_value += 1;
                     btnIcon.clearColorFilter();
                     btnInne2.setImageDrawable(btnIcon);
                     btnInne2_enabled = true;
+                    saveLogIntoDB("inne", true);
                 }
             }
         });
@@ -536,11 +564,13 @@ public class PiramidActivity extends AppCompatActivity {
                     inne_value -= 1;
                     btnInne3.setImageDrawable(grayedIcon);
                     btnInne3_enabled = false;
+                    saveLogIntoDB("inne", false);
                 } else {
                     inne_value += 1;
                     btnIcon.clearColorFilter();
                     btnInne3.setImageDrawable(btnIcon);
                     btnInne3_enabled = true;
+                    saveLogIntoDB("inne", true);
                 }
             }
         });
@@ -554,11 +584,13 @@ public class PiramidActivity extends AppCompatActivity {
                     inne_value -= 1;
                     btnInne4.setImageDrawable(grayedIcon);
                     btnInne4_enabled = false;
+                    saveLogIntoDB("inne", false);
                 } else {
                     inne_value += 1;
                     btnIcon.clearColorFilter();
                     btnInne4.setImageDrawable(btnIcon);
                     btnInne4_enabled = true;
+                    saveLogIntoDB("inne", true);
                 }
             }
         });
@@ -571,11 +603,13 @@ public class PiramidActivity extends AppCompatActivity {
                     inne_value -= 1;
                     btnInne5.setImageDrawable(grayedIcon);
                     btnInne5_enabled = false;
+                    saveLogIntoDB("inne", false);
                 } else {
                     inne_value += 1;
                     btnIcon.clearColorFilter();
                     btnInne5.setImageDrawable(btnIcon);
                     btnInne5_enabled = true;
+                    saveLogIntoDB("inne", true);
                 }
             }
         });
@@ -589,11 +623,13 @@ public class PiramidActivity extends AppCompatActivity {
                     woda_value -= 1;
                     btnWoda1.setImageDrawable(grayedIcon);
                     btnWoda1_enabled = false;
+                    saveLogIntoDB("woda", false);
                 } else {
                     woda_value += 1;
                     btnIcon.clearColorFilter();
                     btnWoda1.setImageDrawable(btnIcon);
                     btnWoda1_enabled = true;
+                    saveLogIntoDB("woda", true);
                 }
             }
         });
@@ -607,11 +643,13 @@ public class PiramidActivity extends AppCompatActivity {
                     woda_value -= 1;
                     btnWoda2.setImageDrawable(grayedIcon);
                     btnWoda2_enabled = false;
+                    saveLogIntoDB("woda", false);
                 } else {
                     woda_value += 1;
                     btnIcon.clearColorFilter();
                     btnWoda2.setImageDrawable(btnIcon);
                     btnWoda2_enabled = true;
+                    saveLogIntoDB("woda", true);
                 }
             }
         });
@@ -624,11 +662,13 @@ public class PiramidActivity extends AppCompatActivity {
                     woda_value -= 1;
                     btnWoda3.setImageDrawable(grayedIcon);
                     btnWoda3_enabled = false;
+                    saveLogIntoDB("woda", false);
                 } else {
                     woda_value += 1;
                     btnIcon.clearColorFilter();
                     btnWoda3.setImageDrawable(btnIcon);
                     btnWoda3_enabled = true;
+                    saveLogIntoDB("woda", true);
                 }
             }
         });
@@ -642,11 +682,13 @@ public class PiramidActivity extends AppCompatActivity {
                     woda_value -= 1;
                     btnWoda4.setImageDrawable(grayedIcon);
                     btnWoda4_enabled = false;
+                    saveLogIntoDB("woda", false);
                 } else {
                     woda_value += 1;
                     btnIcon.clearColorFilter();
                     btnWoda4.setImageDrawable(btnIcon);
                     btnWoda4_enabled = true;
+                    saveLogIntoDB("woda", true);
                 }
             }
         });
@@ -659,11 +701,13 @@ public class PiramidActivity extends AppCompatActivity {
                     woda_value -= 1;
                     btnWoda5.setImageDrawable(grayedIcon);
                     btnWoda5_enabled = false;
+                    saveLogIntoDB("woda", false);
                 } else {
                     woda_value += 1;
                     btnIcon.clearColorFilter();
                     btnWoda5.setImageDrawable(btnIcon);
                     btnWoda5_enabled = true;
+                    saveLogIntoDB("woda", true);
                 }
             }
         });
@@ -676,11 +720,13 @@ public class PiramidActivity extends AppCompatActivity {
                     woda_value -= 1;
                     btnWoda6.setImageDrawable(grayedIcon);
                     btnWoda6_enabled = false;
+                    saveLogIntoDB("woda", false);
                 } else {
                     woda_value += 1;
                     btnIcon.clearColorFilter();
                     btnWoda6.setImageDrawable(btnIcon);
                     btnWoda6_enabled = true;
+                    saveLogIntoDB("woda", true);
                 }
             }
         });
@@ -712,6 +758,16 @@ public class PiramidActivity extends AppCompatActivity {
         //res.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_IN);
         res.setColorFilter(Color.GRAY, PorterDuff.Mode.MULTIPLY);
         return res;
+    }
+
+
+    private void saveLogIntoDB(String what, boolean added) {
+        Intent mServiceIntent = new Intent(getApplicationContext(), LogDBService.class);
+        mServiceIntent.setAction("com.example.tomaszek.foodclicker.action.add");
+        mServiceIntent.putExtra("what", what);
+        mServiceIntent.putExtra("when", "tu bedzie timestamp");
+        mServiceIntent.putExtra("added", added);
+        getApplicationContext().startService(mServiceIntent);
     }
 
     /**

@@ -3,6 +3,7 @@ package com.example.tomaszek.foodclicker;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
@@ -19,6 +20,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import static android.app.PendingIntent.getActivity;
 
 public class MainActivity extends AppCompatActivity {
     int woda_value = 0;
@@ -108,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
                 woda_value += 1;
                 editWoda.setText(String.valueOf(woda_value));
                 saveSharedPref(editor, "woda", woda_value);
-
+                saveLogIntoDB("woda", true);
             }
         });
         btnWoda.setOnLongClickListener(new View.OnLongClickListener() {
@@ -118,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
                     woda_value -= 1;
                     editWoda.setText(String.valueOf(woda_value));
                     saveSharedPref(editor, "woda", woda_value);
+                    saveLogIntoDB("woda", false);
                     return true;
                 }
                 return false;
@@ -131,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
                 view.startAnimation(shake);
                 editInne.setText(String.valueOf(inne_value));
                 saveSharedPref(editor, "inne", inne_value);
+                saveLogIntoDB("inne", true);
             }
         });
         btnInne.setOnLongClickListener(new View.OnLongClickListener() {
@@ -140,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
                     inne_value -= 1;
                     editInne.setText(String.valueOf(inne_value));
                     saveSharedPref(editor, "inne", inne_value);
+                    saveLogIntoDB("inne", false);
                     return true;
                 }
                 return false;
@@ -153,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
                 view.startAnimation(shake);
                 editWarzywa.setText(String.valueOf(warzywa_value));
                 saveSharedPref(editor, "warzywa", warzywa_value);
+                saveLogIntoDB("warzywa", true);
             }
         });
         btnWarzywa.setOnLongClickListener(new View.OnLongClickListener() {
@@ -162,6 +169,7 @@ public class MainActivity extends AppCompatActivity {
                     warzywa_value -= 1;
                     editWarzywa.setText(String.valueOf(warzywa_value));
                     saveSharedPref(editor, "warzywa", warzywa_value);
+                    saveLogIntoDB("warzywa", false);
                     return true;
                 }
                 return false;
@@ -175,6 +183,7 @@ public class MainActivity extends AppCompatActivity {
                 view.startAnimation(shake);
                 editOwoce.setText(String.valueOf(owoce_value));
                 saveSharedPref(editor, "owoce", owoce_value);
+                saveLogIntoDB("owoce", true);
             }
         });
         btnOwoce.setOnLongClickListener(new View.OnLongClickListener() {
@@ -185,6 +194,7 @@ public class MainActivity extends AppCompatActivity {
                     owoce_value -= 1;
                     editOwoce.setText(String.valueOf(owoce_value));
                     saveSharedPref(editor, "owoce", owoce_value);
+                    saveLogIntoDB("owoce", false);
                     return true;
                 }
                 return false;
@@ -198,6 +208,7 @@ public class MainActivity extends AppCompatActivity {
                 view.startAnimation(shake);
                 editRyby.setText(String.valueOf(ryby_value));
                 saveSharedPref(editor, "ryby", ryby_value);
+                saveLogIntoDB("ryby", true);
             }
         });
         btnRyby.setOnLongClickListener(new View.OnLongClickListener() {
@@ -207,6 +218,7 @@ public class MainActivity extends AppCompatActivity {
                     ryby_value -= 1;
                     editRyby.setText(String.valueOf(ryby_value));
                     saveSharedPref(editor, "ryby", ryby_value);
+                    saveLogIntoDB("ryby", false);
                     return true;
                 }
                 return false;
@@ -222,6 +234,7 @@ public class MainActivity extends AppCompatActivity {
                 view.startAnimation(shake);
                 editZboza.setText(String.valueOf(zboza_value));
                 saveSharedPref(editor, "zboza", zboza_value);
+                saveLogIntoDB("zboza", true);
             }
         });
         btnZboza.setOnLongClickListener(new View.OnLongClickListener() {
@@ -232,6 +245,7 @@ public class MainActivity extends AppCompatActivity {
                     zboza_value -= 1;
                     editZboza.setText(String.valueOf(zboza_value));
                     saveSharedPref(editor, "zboza", zboza_value);
+                    saveLogIntoDB("zboza", false);
                     return true;
                 }
                 return false;
@@ -245,6 +259,7 @@ public class MainActivity extends AppCompatActivity {
                 view.startAnimation(shake);
                 editNabial.setText(String.valueOf(nabial_value));
                 saveSharedPref(editor, "nabial", nabial_value);
+                saveLogIntoDB("nabial", true);
             }
         });
         btnNabial.setOnLongClickListener(new View.OnLongClickListener() {
@@ -254,6 +269,7 @@ public class MainActivity extends AppCompatActivity {
                     nabial_value -= 1;
                     editNabial.setText(String.valueOf(nabial_value));
                     saveSharedPref(editor, "nabial", nabial_value);
+                    saveLogIntoDB("nabial", false);
                     return true;
                 }
                 return false;
@@ -267,6 +283,7 @@ public class MainActivity extends AppCompatActivity {
                 view.startAnimation(shake);
                 editOrzechy.setText(String.valueOf(orzech_value));
                 saveSharedPref(editor, "orzechy", orzech_value);
+                saveLogIntoDB("orzechy", true);
             }
         });
         btnOrzechy.setOnLongClickListener(new View.OnLongClickListener() {
@@ -276,6 +293,7 @@ public class MainActivity extends AppCompatActivity {
                     orzech_value -= 1;
                     editOrzechy.setText(String.valueOf(orzech_value));
                     saveSharedPref(editor, "orzechy", orzech_value);
+                    saveLogIntoDB("orzechy", false);
                     return true;
                 }
                 return false;
@@ -440,6 +458,22 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+    }
+
+    /**
+     * Added ->
+     *
+     * @param what  "woda" "inne etc"
+     * @param added true -item added false item deleted
+     */
+
+    private void saveLogIntoDB(String what, boolean added) {
+        Intent mServiceIntent = new Intent(getApplicationContext(), LogDBService.class);
+        mServiceIntent.setAction("com.example.tomaszek.foodclicker.action.add");
+        mServiceIntent.putExtra("what", what);
+        mServiceIntent.putExtra("when", "tu bedzie timestamp");
+        mServiceIntent.putExtra("added", added);
+        getApplicationContext().startService(mServiceIntent);
     }
 
 
