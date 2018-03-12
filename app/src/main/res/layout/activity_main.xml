@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_weight="1"
-            android:background="@drawable/chmurka"
+            android:background="@drawable/chmurka_ramka"
             android:gravity="center"
             android:text="@string/main_title"
             android:textAlignment="center"
