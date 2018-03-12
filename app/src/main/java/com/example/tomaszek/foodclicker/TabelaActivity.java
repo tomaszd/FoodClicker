@@ -237,6 +237,7 @@ public class TabelaActivity extends AppCompatActivity {
                                 myIntent.putExtra("nabial", nabial_value); //Optional parameters
                                 myIntent.putExtra("orzechy", orzech_value); //Optional parameters
                                 myIntent.putExtra("otherActivity", true); //Optional parameters
+                                myIntent.putExtra("otherActivity", true); //Optional parameters
                                 TabelaActivity.this.startActivity(myIntent);
                                 break;
                             case R.id.nav_info_view:
