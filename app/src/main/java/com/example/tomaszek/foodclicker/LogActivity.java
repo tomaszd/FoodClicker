@@ -92,14 +92,14 @@ public class LogActivity extends AppCompatActivity {
         TextView textLog7 = (TextView) findViewById(R.id.textLog7);
 
 
-        textLog0.setText((String) itemWhen.get(1));
-        textLog1.setText((String) itemWhen.get(2));
-        textLog2.setText((String) itemWhen.get(3));
-        textLog3.setText((String) itemWhen.get(4));
-        textLog4.setText((String) itemWhen.get(5));
-        textLog5.setText((String) itemWhen.get(6));
-        textLog6.setText((String) itemWhen.get(7));
-        textLog7.setText((String) itemWhen.get(8));
+        textLog0.setText((String) itemWhen.get(0));
+        textLog1.setText((String) itemWhen.get(1));
+        textLog2.setText((String) itemWhen.get(2));
+        textLog3.setText((String) itemWhen.get(3));
+        textLog4.setText((String) itemWhen.get(4));
+        textLog5.setText((String) itemWhen.get(5));
+        textLog6.setText((String) itemWhen.get(6));
+        textLog7.setText((String) itemWhen.get(7));
 
 
     }
