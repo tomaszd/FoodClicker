@@ -81,7 +81,6 @@ public class LogActivity extends AppCompatActivity {
         }
         cursor.close();
 
-
         TextView textLog0 = (TextView) findViewById(R.id.textLog0);
         TextView textLog1 = (TextView) findViewById(R.id.textLog1);
         TextView textLog2 = (TextView) findViewById(R.id.textLog2);
@@ -91,7 +90,6 @@ public class LogActivity extends AppCompatActivity {
         TextView textLog6 = (TextView) findViewById(R.id.textLog6);
         TextView textLog7 = (TextView) findViewById(R.id.textLog7);
 
-
         textLog0.setText((String) itemWhen.get(0));
         textLog1.setText((String) itemWhen.get(1));
         textLog2.setText((String) itemWhen.get(2));
@@ -100,6 +98,9 @@ public class LogActivity extends AppCompatActivity {
         textLog5.setText((String) itemWhen.get(5));
         textLog6.setText((String) itemWhen.get(6));
         textLog7.setText((String) itemWhen.get(7));
+
+
+
 
 
     }

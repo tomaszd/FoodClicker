@@ -22,7 +22,7 @@
             android:layout_gravity="center"
             android:layout_weight="3"
             android:src="@drawable/piramida_logo"
-            android:text="Timestamp"
+            android:text="Here are last actions"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="24sp" />
@@ -35,7 +35,7 @@
             android:adjustViewBounds="true"
             android:background="@null"
             android:scaleType="centerCrop"
-            android:src="@drawable/ryba_wst" />
+            android:src="@drawable/posil_wst" />
     </LinearLayout>
 
     <LinearLayout
@@ -53,7 +53,7 @@
             android:layout_gravity="center"
             android:layout_weight="3"
             android:src="@drawable/piramida_logo"
-            android:text="Timestamp"
+            android:text="Here are last actions"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="24sp" />
@@ -66,7 +66,7 @@
             android:adjustViewBounds="true"
             android:background="@null"
             android:scaleType="centerCrop"
-            android:src="@drawable/ryba_wst" />
+            android:src="@drawable/posil_wst" />
     </LinearLayout>
 
     <LinearLayout
@@ -84,7 +84,8 @@
             android:layout_gravity="center"
             android:layout_weight="3"
             android:src="@drawable/piramida_logo"
-            android:text="Timestamp"
+            android:text="Here are last actions
+"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="24sp" />
@@ -97,7 +98,7 @@
             android:adjustViewBounds="true"
             android:background="@null"
             android:scaleType="centerCrop"
-            android:src="@drawable/ryba_wst" />
+            android:src="@drawable/posil_wst" />
     </LinearLayout>
 
     <LinearLayout
@@ -115,7 +116,8 @@
             android:layout_gravity="center"
             android:layout_weight="3"
             android:src="@drawable/piramida_logo"
-            android:text="Timestamp"
+            android:text="Here are last actions
+"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="24sp" />
@@ -128,7 +130,7 @@
             android:adjustViewBounds="true"
             android:background="@null"
             android:scaleType="centerCrop"
-            android:src="@drawable/ryba_wst" />
+            android:src="@drawable/posil_wst" />
     </LinearLayout>
 
     <LinearLayout
@@ -146,7 +148,8 @@
             android:layout_gravity="center"
             android:layout_weight="3"
             android:src="@drawable/piramida_logo"
-            android:text="Timestamp"
+            android:text="Here are last actions
+"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="24sp" />
@@ -159,7 +162,7 @@
             android:adjustViewBounds="true"
             android:background="@null"
             android:scaleType="centerCrop"
-            android:src="@drawable/ryba_wst" />
+            android:src="@drawable/posil_wst" />
     </LinearLayout>
 
     <LinearLayout
@@ -177,7 +180,8 @@
             android:layout_gravity="center"
             android:layout_weight="3"
             android:src="@drawable/piramida_logo"
-            android:text="Timestamp"
+            android:text="Here are last actions
+"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="24sp" />
@@ -190,7 +194,7 @@
             android:adjustViewBounds="true"
             android:background="@null"
             android:scaleType="centerCrop"
-            android:src="@drawable/ryba_wst" />
+            android:src="@drawable/posil_wst" />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/lytLog6"
@@ -207,7 +211,8 @@
             android:layout_gravity="center"
             android:layout_weight="3"
             android:src="@drawable/piramida_logo"
-            android:text="Timestamp"
+            android:text="Here are last actions
+"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="24sp" />
@@ -220,7 +225,7 @@
             android:adjustViewBounds="true"
             android:background="@null"
             android:scaleType="centerCrop"
-            android:src="@drawable/ryba_wst" />
+            android:src="@drawable/posil_wst" />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/lytLog7"
@@ -237,7 +242,8 @@
             android:layout_gravity="center"
             android:layout_weight="3"
             android:src="@drawable/piramida_logo"
-            android:text="Timestamp"
+            android:text="Here are last actions
+"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="24sp" />
@@ -250,7 +256,7 @@
             android:adjustViewBounds="true"
             android:background="@null"
             android:scaleType="centerCrop"
-            android:src="@drawable/ryba_wst" />
+            android:src="@drawable/posil_wst" />
     </LinearLayout>
     <android.support.design.widget.BottomNavigationView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
