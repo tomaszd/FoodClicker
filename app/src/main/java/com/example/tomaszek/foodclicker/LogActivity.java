@@ -2,17 +2,16 @@ package com.example.tomaszek.foodclicker;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
+import android.graphics.Typeface;
+import android.os.Bundle;
 import android.provider.BaseColumns;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.example.tomaszek.foodclicker.Product.ProductEntry.COLUMN_NAME_TIMESTAMP;
-import static com.example.tomaszek.foodclicker.R.id.textLog0;
-import static com.example.tomaszek.foodclicker.R.id.view_offset_helper;
 
 public class LogActivity extends AppCompatActivity {
 
@@ -40,7 +39,8 @@ public class LogActivity extends AppCompatActivity {
 
 // How you want the results sorted in the resulting Cursor
         String sortOrder =
-                COLUMN_NAME_TIMESTAMP + " DESC";
+                //COLUMN_NAME_TIMESTAMP + " DESC";
+                BaseColumns._ID + " DESC";
 
         Cursor cursor = db.query(
                 Product.ProductEntry.TABLE_NAME,   // The table to query
@@ -69,17 +69,18 @@ public class LogActivity extends AppCompatActivity {
  all the item IDs stored in a cursor and add them to a list:
  */
         List itemIds = new ArrayList<>();
-        List itemWhat = new ArrayList<>();
-        List itemWhen = new ArrayList<>();
-        List itemAdded = new ArrayList<>();
+        final List itemWhat = new ArrayList<>();
+        final List itemWhen = new ArrayList<>();
+        final List itemAdded = new ArrayList<>();
 
         while (cursor.moveToNext()) {
-
+            itemIds.add(cursor.getString(0));
             itemWhat.add(cursor.getString(1));
             itemWhen.add(cursor.getString(2));
             itemAdded.add(cursor.getString(3));
         }
         cursor.close();
+
 
         TextView textLog0 = (TextView) findViewById(R.id.textLog0);
         TextView textLog1 = (TextView) findViewById(R.id.textLog1);
@@ -90,18 +91,84 @@ public class LogActivity extends AppCompatActivity {
         TextView textLog6 = (TextView) findViewById(R.id.textLog6);
         TextView textLog7 = (TextView) findViewById(R.id.textLog7);
 
-        textLog0.setText((String) itemWhen.get(0));
-        textLog1.setText((String) itemWhen.get(1));
-        textLog2.setText((String) itemWhen.get(2));
-        textLog3.setText((String) itemWhen.get(3));
-        textLog4.setText((String) itemWhen.get(4));
-        textLog5.setText((String) itemWhen.get(5));
-        textLog6.setText((String) itemWhen.get(6));
-        textLog7.setText((String) itemWhen.get(7));
+        ImageButton btnLog0 = (ImageButton) findViewById(R.id.btnLog0);
+        ImageButton btnLog1 = (ImageButton) findViewById(R.id.btnLog1);
+        ImageButton btnLog2 = (ImageButton) findViewById(R.id.btnLog2);
+        ImageButton btnLog3 = (ImageButton) findViewById(R.id.btnLog3);
+        ImageButton btnLog4 = (ImageButton) findViewById(R.id.btnLog4);
+        ImageButton btnLog5 = (ImageButton) findViewById(R.id.btnLog5);
+        ImageButton btnLog6 = (ImageButton) findViewById(R.id.btnLog6);
+        ImageButton btnLog7 = (ImageButton) findViewById(R.id.btnLog7);
 
 
+        if (itemWhat.size() >= 1) {
+            setLogInUI(textLog0, btnLog0, itemWhat.get(0), itemWhen.get(0), itemAdded.get(0));
+        }
+        if (itemWhat.size() >= 2) {
+            setLogInUI(textLog1, btnLog1, itemWhat.get(1), itemWhen.get(1), itemAdded.get(1));
+        }
+        if (itemWhat.size() >= 3) {
+            setLogInUI(textLog2, btnLog2, itemWhat.get(2), itemWhen.get(2), itemAdded.get(2));
+        }
+        if (itemWhat.size() >= 4) {
+            setLogInUI(textLog3, btnLog3, itemWhat.get(3), itemWhen.get(3), itemAdded.get(3));
+        }
+        if (itemWhat.size() >= 5) {
+            setLogInUI(textLog4, btnLog4, itemWhat.get(4), itemWhen.get(4), itemAdded.get(4));
+        }
+        if (itemWhat.size() >= 6) {
+            setLogInUI(textLog5, btnLog5, itemWhat.get(5), itemWhen.get(5), itemAdded.get(5));
+        }
+        if (itemWhat.size() >= 7) {
+            setLogInUI(textLog6, btnLog6, itemWhat.get(6), itemWhen.get(6), itemAdded.get(6));
+        }
+        if (itemWhat.size() >= 8) {
+            setLogInUI(textLog7, btnLog7, itemWhat.get(7), itemWhen.get(7), itemAdded.get(7));
+        }
 
+    }
+
+    private void setLogInUI(TextView textLog, ImageButton btnLog, Object what, Object when, Object added) {
+        textLog.setText((String) when);
+        textLog.setTypeface(null, Typeface.BOLD_ITALIC);
+        if (added.equals("1")) {
+            textLog.setTextColor(Color.RED);
+        } else
+            textLog.setTextColor(Color.BLUE);
+        switch ((String) what) {
+            case "owoce":
+                btnLog.setImageResource(R.drawable.owoc_wst);
+                break;
+            case "warzywa":
+                btnLog.setImageResource(R.drawable.warzyw_wst);
+                break;
+            case "inne":
+                btnLog.setImageResource(R.drawable.posil_wst);
+                break;
+            case "woda":
+                btnLog.setImageResource(R.drawable.woda_wst);
+                break;
+            case "zboza":
+                btnLog.setImageResource(R.drawable.zboza_wst);
+                break;
+            case "nabial":
+                btnLog.setImageResource(R.drawable.nabial_wst);
+                break;
+            case "orzech":
+                btnLog.setImageResource(R.drawable.olej_wst);
+                break;
+            case "ryby":
+                btnLog.setImageResource(R.drawable.ryba_wst);
+                break;
+            default:
+                btnLog.setImageResource(R.drawable.posil_wst);
+                break;
+        }
 
 
     }
+
+
 }
+
+
