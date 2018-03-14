@@ -1,272 +1,681 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/blue_background"
-    android:orientation="vertical">
+    android:fillViewport="true">
 
-
-    <LinearLayout
-        android:id="@+id/lytLog0"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="0dp"
-        android:orientation="horizontal">
+        android:background="@drawable/blue_background"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textLog0"
-            android:layout_width="0dp"
+
+        <LinearLayout
+            android:id="@+id/lytLog0"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="3"
-            android:src="@drawable/piramida_logo"
-            android:text="Here are last actions"
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="24sp" />
+            android:layout_margin="0dp"
+            android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/btnLog0"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:scaleType="centerCrop"
-            android:src="@drawable/posil_wst" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/textSign0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
 
-    <LinearLayout
-        android:id="@+id/lytLog1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="0dp"
-        android:orientation="horizontal">
+                android:layout_weight="1"
+                android:src="@drawable/piramida_logo"
+                android:text="+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
 
-        <TextView
-            android:id="@+id/textLog1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="3"
-            android:src="@drawable/piramida_logo"
-            android:text="Here are last actions"
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="24sp" />
+            <TextView
+                android:id="@+id/textLog0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
 
-        <ImageButton
-            android:id="@+id/btnLog1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:scaleType="centerCrop"
-            android:src="@drawable/posil_wst" />
-    </LinearLayout>
+                android:layout_weight="4"
+                android:src="@drawable/piramida_logo"
+                android:text="Here are last actions"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
 
-    <LinearLayout
-        android:id="@+id/lytLog2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="0dp"
-        android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/btnLog0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/posil_wst" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/textLog2"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/lytLog1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="3"
-            android:src="@drawable/piramida_logo"
-            android:text="Here are last actions
+            android:layout_margin="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textSign1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/piramida_logo"
+                android:text="+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textLog1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="4"
+                android:src="@drawable/piramida_logo"
+                android:text="Here are last actions"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:id="@+id/btnLog1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/posil_wst" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytLog2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textSign2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/piramida_logo"
+                android:text="+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textLog2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:src="@drawable/piramida_logo"
+                android:text="Here are last actions
 "
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="24sp" />
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
 
-        <ImageButton
-            android:id="@+id/btnLog2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:scaleType="centerCrop"
-            android:src="@drawable/posil_wst" />
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/btnLog2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/posil_wst" />
+        </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/lytLog3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="0dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textLog3"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/lytLog3"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="3"
-            android:src="@drawable/piramida_logo"
-            android:text="Here are last actions
+            android:layout_margin="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textSign3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:src="@drawable/piramida_logo"
+                android:text="+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textLog3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:src="@drawable/piramida_logo"
+                android:text="Here are last actions
 "
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="24sp" />
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
 
-        <ImageButton
-            android:id="@+id/btnLog3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:scaleType="centerCrop"
-            android:src="@drawable/posil_wst" />
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/btnLog3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/posil_wst" />
+        </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/lytLog4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="0dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textLog4"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/lytLog4"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="3"
-            android:src="@drawable/piramida_logo"
-            android:text="Here are last actions
+            android:layout_margin="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textSign4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:src="@drawable/piramida_logo"
+                android:text="+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textLog4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:src="@drawable/piramida_logo"
+                android:text="Here are last actions
 "
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="24sp" />
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
 
-        <ImageButton
-            android:id="@+id/btnLog4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:scaleType="centerCrop"
-            android:src="@drawable/posil_wst" />
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/btnLog4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/posil_wst" />
+        </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/lytLog5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="0dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textLog5"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/lytLog5"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="3"
-            android:src="@drawable/piramida_logo"
-            android:text="Here are last actions
+            android:layout_margin="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textSign5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:src="@drawable/piramida_logo"
+                android:text="+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textLog5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:src="@drawable/piramida_logo"
+                android:text="Here are last actions
 "
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="24sp" />
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
 
-        <ImageButton
-            android:id="@+id/btnLog5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:scaleType="centerCrop"
-            android:src="@drawable/posil_wst" />
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/lytLog6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="0dp"
-        android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/btnLog5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/posil_wst" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/textLog6"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/lytLog6"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="3"
-            android:src="@drawable/piramida_logo"
-            android:text="Here are last actions
+            android:layout_margin="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textSign6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:src="@drawable/piramida_logo"
+                android:text="+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textLog6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:src="@drawable/piramida_logo"
+                android:text="Here are last actions
 "
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="24sp" />
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
 
-        <ImageButton
-            android:id="@+id/btnLog6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:scaleType="centerCrop"
-            android:src="@drawable/posil_wst" />
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/lytLog7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="0dp"
-        android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/btnLog6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/posil_wst" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/textLog7"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/lytLog7"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="3"
-            android:src="@drawable/piramida_logo"
-            android:text="Here are last actions
+            android:layout_margin="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textSign7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:src="@drawable/piramida_logo"
+                android:text="+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textLog7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:src="@drawable/piramida_logo"
+                android:text="Here are last actions
 "
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="24sp" />
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
 
-        <ImageButton
-            android:id="@+id/btnLog7"
-            android:layout_width="0dp"
+            <ImageButton
+                android:id="@+id/btnLog7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/posil_wst" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytLog8"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:scaleType="centerCrop"
-            android:src="@drawable/posil_wst" />
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textSign8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:src="@drawable/piramida_logo"
+                android:text="+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textLog8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:src="@drawable/piramida_logo"
+                android:text="Here are last actions
+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:id="@+id/btnLog8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/posil_wst" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytLog9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textSign9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:src="@drawable/piramida_logo"
+                android:text="+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textLog9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:src="@drawable/piramida_logo"
+                android:text="Here are last actions
+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:id="@+id/btnLog9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/posil_wst" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytLog10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textSign10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:src="@drawable/piramida_logo"
+                android:text="+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textLog10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:src="@drawable/piramida_logo"
+                android:text="Here are last actions
+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:id="@+id/btnLog10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/posil_wst" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytLog11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textSign11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:src="@drawable/piramida_logo"
+                android:text="+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textLog11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:src="@drawable/piramida_logo"
+                android:text="Here are last actions
+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:id="@+id/btnLog11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/posil_wst" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytLog12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textSign12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:src="@drawable/piramida_logo"
+                android:text="+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textLog12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:src="@drawable/piramida_logo"
+                android:text="Here are last actions
+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:id="@+id/btnLog12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/posil_wst" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytLog13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textSign13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:src="@drawable/piramida_logo"
+                android:text="+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textLog13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:src="@drawable/piramida_logo"
+                android:text="Here are last actions
+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:id="@+id/btnLog13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/posil_wst" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytLog14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textSign14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:src="@drawable/piramida_logo"
+                android:text="+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textLog14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:src="@drawable/piramida_logo"
+                android:text="Here are last actions
+"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:id="@+id/btnLog14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/posil_wst" />
+        </LinearLayout>
+
+        <android.support.design.widget.BottomNavigationView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            app:itemBackground="@color/colorPrimaryDark"
+            app:itemIconTint="@color/colorWhite"
+            app:itemTextColor="@color/colorWhite"
+            app:menu="@menu/my_navigation_items" />
     </LinearLayout>
-    <android.support.design.widget.BottomNavigationView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/navigation"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        app:itemBackground="@color/colorPrimaryDark"
-        app:itemIconTint="@color/colorWhite"
-        app:itemTextColor="@color/colorWhite"
-        app:menu="@menu/my_navigation_items" />
-</LinearLayout>
 
-
+</ScrollView>
