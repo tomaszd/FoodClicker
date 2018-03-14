@@ -14,6 +14,7 @@
         android:background="@drawable/chmurka_ramka"
         android:gravity="center"
         android:text="Piramida"
+        android:textColor="@color/tekst_zliczanie"
         android:textAlignment="center"
         android:textSize="26sp"
         android:textStyle="bold" />

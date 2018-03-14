@@ -46,6 +46,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@drawable/wstazka_informacja"
+        android:textColor="@color/tekst_zliczanie"
         android:text="   Informacja" />
 
     <Button
@@ -54,6 +55,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@drawable/wstazka_piramida"
+        android:textColor="@color/tekst_zliczanie"
         android:text="  Piramida" />
 
     <Button
@@ -64,6 +66,7 @@
         android:adjustViewBounds="true"
         android:background="@drawable/wstazka_tabela"
         android:scaleType="centerCrop"
+        android:textColor="@color/tekst_zliczanie"
         android:text="  Tabela" />
 
     <Button
@@ -74,7 +77,9 @@
         android:adjustViewBounds="true"
         android:background="@drawable/wstazka_kosz"
         android:scaleType="centerCrop"
+        android:textColor="@color/tekst_zliczanie"
         android:text="    Kasuj Dane" />
+
     <android.support.design.widget.BottomNavigationView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"

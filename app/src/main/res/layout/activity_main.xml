@@ -28,6 +28,7 @@
             android:gravity="center"
             android:text="@string/main_title"
             android:textAlignment="center"
+            android:textColor="@color/tekst_zliczanie"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -56,7 +57,7 @@
                 android:fontFamily="cursive"
                 android:text="0"
                 android:textAlignment="center"
-                android:textColor="@android:color/black"
+                android:textColor="@color/tekst_zliczanie"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -97,7 +98,7 @@
                 android:fontFamily="cursive"
                 android:text="0"
                 android:textAlignment="center"
-                android:textColor="@android:color/black"
+                android:textColor="@color/tekst_zliczanie"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -137,7 +138,7 @@
                 android:fontFamily="cursive"
                 android:text="0"
                 android:textAlignment="center"
-                android:textColor="@android:color/black"
+                android:textColor="@color/tekst_zliczanie"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -178,7 +179,7 @@
                 android:fontFamily="cursive"
                 android:text="0"
                 android:textAlignment="center"
-                android:textColor="@android:color/black"
+                android:textColor="@color/tekst_zliczanie"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -211,7 +212,7 @@
                 android:fontFamily="cursive"
                 android:text="0"
                 android:textAlignment="center"
-                android:textColor="@android:color/black"
+                android:textColor="@color/tekst_zliczanie"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -254,7 +255,7 @@
                 android:fontFamily="cursive"
                 android:text="0"
                 android:textAlignment="center"
-                android:textColor="@android:color/black"
+                android:textColor="@color/tekst_zliczanie"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -292,7 +293,7 @@
                 android:fontFamily="cursive"
                 android:text="0"
                 android:textAlignment="center"
-                android:textColor="@android:color/black"
+                android:textColor="@color/tekst_zliczanie"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -335,7 +336,7 @@
                 android:fontFamily="cursive"
                 android:text="0"
                 android:textAlignment="center"
-                android:textColor="@android:color/black"
+                android:textColor="@color/tekst_zliczanie"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
