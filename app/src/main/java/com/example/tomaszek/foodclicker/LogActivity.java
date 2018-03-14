@@ -132,9 +132,9 @@ public class LogActivity extends AppCompatActivity {
         textLog.setText((String) when);
         textLog.setTypeface(null, Typeface.BOLD_ITALIC);
         if (added.equals("1")) {
-            textLog.setTextColor(Color.RED);
+            textLog.setTextColor(Color.GREEN);
         } else
-            textLog.setTextColor(Color.BLUE);
+            textLog.setTextColor(Color.RED);
         switch ((String) what) {
             case "owoce":
                 btnLog.setImageResource(R.drawable.owoc_wst);
