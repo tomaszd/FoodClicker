@@ -9,8 +9,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
 
-import static java.security.AccessController.getContext;
-
 /**
  * An {@link IntentService} subclass for handling asynchronous task requests in
  * a service on a separate handler thread.
