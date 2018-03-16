@@ -218,6 +218,9 @@ public class LogActivity extends AppCompatActivity {
             case "ryby":
                 btnLog.setImageResource(R.drawable.ryba_wst);
                 break;
+            case "kosz":
+                btnLog.setImageResource(R.drawable.kosz);
+                break;
             default:
                 btnLog.setImageResource(R.drawable.posil_wst);
                 break;

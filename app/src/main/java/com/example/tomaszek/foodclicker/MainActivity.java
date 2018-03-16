@@ -385,6 +385,7 @@ public class MainActivity extends AppCompatActivity {
                 editZboza.startAnimation(shake);
                 editNabial.startAnimation(shake);
                 editOrzechy.startAnimation(shake);
+                saveLogIntoDB("kosz", false);
 
 
             }
