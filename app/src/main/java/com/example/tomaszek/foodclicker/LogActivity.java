@@ -107,7 +107,7 @@ public class LogActivity extends AppCompatActivity {
         ImageButton btnLog5 = (ImageButton) findViewById(R.id.btnLog5);
         ImageButton btnLog6 = (ImageButton) findViewById(R.id.btnLog6);
         ImageButton btnLog7 = (ImageButton) findViewById(R.id.btnLog7);
-        ImageButton btnLog8 = (ImageButton)  findViewById(R.id.btnLog8);
+        ImageButton btnLog8 = (ImageButton) findViewById(R.id.btnLog8);
         ImageButton btnLog9 = (ImageButton) findViewById(R.id.btnLog9);
         ImageButton btnLog10 = (ImageButton) findViewById(R.id.btnLog10);
         ImageButton btnLog11 = (ImageButton) findViewById(R.id.btnLog11);
