@@ -57,7 +57,9 @@
 
         <service
             android:name=".LogDBService"
-            android:exported="false"></service>
+            android:exported="false" />
+
+        <activity android:name=".AddProfileActivity"></activity>
     </application>
 
 </manifest>
