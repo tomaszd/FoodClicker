@@ -458,6 +458,21 @@ public class MainActivity extends AppCompatActivity {
                                 myIntent4.putExtra("orzechy", orzech_value); //Optional parameters
                                 MainActivity.this.startActivity(myIntent4);
                                 break;
+                            case R.id.nav_choose_profile:
+                                Intent myIntent5 = new Intent(MainActivity.this, SelectUserActivity.class);
+                                myIntent5.putExtra("woda", woda_value); //Optional parameters
+                                myIntent5.putExtra("inne", inne_value); //Optional parameters
+                                myIntent5.putExtra("warzywa", warzywa_value); //Optional parameters
+                                myIntent5.putExtra("owoce", owoce_value); //Optional parameters
+                                myIntent5.putExtra("ryby", ryby_value); //Optional parameters
+                                myIntent5.putExtra("zboza", zboza_value); //Optional parameters
+                                myIntent5.putExtra("nabial", nabial_value); //Optional parameters
+                                myIntent5.putExtra("orzechy", orzech_value); //Optional parameters
+                                MainActivity.this.startActivity(myIntent5);
+                                break;
+
+
+                            
                         }
                         // set item as selected to persist highlight
                         menuItem.setChecked(true);
