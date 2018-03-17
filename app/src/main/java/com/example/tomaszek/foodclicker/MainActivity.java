@@ -40,12 +40,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorWhite));
+        toolbar.setTitle("Food Clicker");
+        toolbar.setDrawingCacheBackgroundColor(getResources().getColor(R.color.colorWhite));
+
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
         setupBottomNavigationView();
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        //mDrawerLayout.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.colorWhite));
+
 
         final ImageView btnDelete = (ImageView) findViewById(R.id.btnDelete);
         final ImageView btnWoda = (ImageView) findViewById(R.id.btnWoda);
@@ -472,7 +478,6 @@ public class MainActivity extends AppCompatActivity {
                                 break;
 
 
-                            
                         }
                         // set item as selected to persist highlight
                         menuItem.setChecked(true);
