@@ -21,7 +21,7 @@
             android:id="@+id/btnSettings"
 
             android:layout_width="0dp"
-            android:layout_height="211dp"
+            android:layout_height="169dp"
             android:layout_weight="4"
             android:adjustViewBounds="true"
             android:background="@null"
@@ -80,7 +80,7 @@
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/tekst_zliczanie"
-            android:textSize="36sp"
+            android:textSize="40sp"
             android:textStyle="bold" />
 
         <Space
@@ -100,7 +100,7 @@
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/tekst_zliczanie"
-            android:textSize="36sp"
+            android:textSize="40sp"
             android:textStyle="bold" />
 
 

@@ -372,7 +372,7 @@
         android:id="@+id/navigation"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        app:itemBackground="@color/colorPrimaryDark"
+        app:itemBackground="@color/tekst_zliczanie"
         app:itemIconTint="@color/colorWhite"
         app:itemTextColor="@color/colorWhite"
         app:menu="@menu/my_navigation_items" />

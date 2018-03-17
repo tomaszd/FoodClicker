@@ -252,6 +252,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_gravity="start"
+        android:background="@color/tekst_zliczanie"
         app:headerLayout="@layout/nav_header"
         android:fontFamily="casual"
         app:itemBackground="@color/tekst_zliczanie"
