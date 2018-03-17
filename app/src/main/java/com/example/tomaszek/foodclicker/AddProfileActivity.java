@@ -1,6 +1,8 @@
 package com.example.tomaszek.foodclicker;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -38,6 +40,24 @@ public class AddProfileActivity extends AppCompatActivity {
                 }
                 Toast toast1 = Toast.makeText(getApplicationContext(), "Added user :  " + newUsername, Toast.LENGTH_LONG);
                 toast1.show();
+
+
+
+
+
+                ProductDbHelper mDbHelper = new ProductDbHelper(getApplicationContext());
+                // Gets the data repository in write mode
+                SQLiteDatabase db = mDbHelper.getWritableDatabase();
+// Create a new map of values, where column names are the keys
+                ContentValues values = new ContentValues();
+                values.put(Product.UserEntry.COLUMN_NAME_USER_NAME, newUsername);
+
+// Insert the new row, returning the primary key value of the new row
+                long newRowId = db.insert(Product.UserEntry.TABLE_NAME, null, values);
+
+                Toast toast2 = Toast.makeText(getApplicationContext(), "Dodano do db :  " + newUsername, Toast.LENGTH_LONG);
+                toast2.show();
+                if (1==1) return;
                 Intent myIntent = new Intent(AddProfileActivity.this, MainActivity.class);
                 myIntent.putExtra("woda", 0); //Optional parameters
                 myIntent.putExtra("inne", 0); //Optional parameters
