@@ -374,7 +374,8 @@
         android:layout_alignParentBottom="true"
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header"
-        app:itemBackground="@color/colorPrimaryDark"
+        android:fontFamily="casual"
+        app:itemBackground="@color/tekst_zliczanie"
         app:itemIconTint="@color/colorWhite"
         app:itemTextColor="@color/colorWhite"
         app:menu="@menu/drawer_view" />
