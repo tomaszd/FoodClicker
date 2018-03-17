@@ -42,9 +42,6 @@ public class AddProfileActivity extends AppCompatActivity {
                 toast1.show();
 
 
-
-
-
                 ProductDbHelper mDbHelper = new ProductDbHelper(getApplicationContext());
                 // Gets the data repository in write mode
                 SQLiteDatabase db = mDbHelper.getWritableDatabase();
@@ -54,10 +51,8 @@ public class AddProfileActivity extends AppCompatActivity {
 
 // Insert the new row, returning the primary key value of the new row
                 long newRowId = db.insert(Product.UserEntry.TABLE_NAME, null, values);
-
                 Toast toast2 = Toast.makeText(getApplicationContext(), "Dodano do db :  " + newUsername, Toast.LENGTH_LONG);
                 toast2.show();
-                if (1==1) return;
                 Intent myIntent = new Intent(AddProfileActivity.this, MainActivity.class);
                 myIntent.putExtra("woda", 0); //Optional parameters
                 myIntent.putExtra("inne", 0); //Optional parameters

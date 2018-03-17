@@ -1,7 +1,10 @@
 package com.example.tomaszek.foodclicker;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.provider.BaseColumns;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
@@ -11,6 +14,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.w3c.dom.Text;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
 
 public class SelectUserActivity extends AppCompatActivity {
     String userSelected = null;
@@ -40,11 +47,60 @@ public class SelectUserActivity extends AppCompatActivity {
         textUser5.setTypeface(typeface);
         textUser3.setTypeface(typeface);
 
+        ProductDbHelper mDbHelper = new ProductDbHelper(getApplicationContext());
+        SQLiteDatabase db = mDbHelper.getReadableDatabase();
+
+
+        String[] projection = {
+                BaseColumns._ID,
+                Product.UserEntry.COLUMN_NAME_USER_NAME,
+        };
+
+        String[] selectionArgs = {null};
+
+        String sortOrder =
+                //COLUMN_NAME_TIMESTAMP + " DESC";
+                BaseColumns._ID + " ASC";
+
+        Cursor cursor = db.query(
+                Product.UserEntry.TABLE_NAME,   // The table to query
+                null,//projection,             // The array of columns to return (pass null to get all)
+                null,//selection,              // The columns for the WHERE clause
+                null,//selectionArgs,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder,               // The sort order,
+                "5"//limit
+        );
+
+        List itemIds = new ArrayList<>();
+        final List rowUsername = new ArrayList<>();
+
+        while (cursor.moveToNext()) {
+            itemIds.add(cursor.getString(0));
+            rowUsername.add(cursor.getString(1));
+        }
+        cursor.close();
+
+        if (rowUsername.size() >= 0 + 1) {
+            textUser1.setText(String.valueOf(rowUsername.get(0)));
+        }
+        if (rowUsername.size() >= 1 + 1) {
+            textUser2.setText(String.valueOf(rowUsername.get(1)));
+        }
+        if (rowUsername.size() >= 2 + 1) {
+            textUser3.setText(String.valueOf(rowUsername.get(2)));
+        }
+        if (rowUsername.size() >= 3 + 1) {
+            textUser4.setText(String.valueOf(rowUsername.get(3)));
+        }
+        if (rowUsername.size() >= 4 + 1) {
+            textUser5.setText(String.valueOf(rowUsername.get(4)));
+        }
         textUser1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 view.startAnimation(shake);
-                //textUser1.setBackgroundColor("@");
                 selectActiveColor(textUser1, allTextViews);
             }
         });
@@ -52,7 +108,6 @@ public class SelectUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 view.startAnimation(shake);
-                //textUser1.setBackgroundColor("@");
                 selectActiveColor(textUser2, allTextViews);
             }
         });
@@ -60,7 +115,6 @@ public class SelectUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 view.startAnimation(shake);
-                //textUser1.setBackgroundColor("@");
                 selectActiveColor(textUser3, allTextViews);
             }
         });
@@ -68,7 +122,7 @@ public class SelectUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 view.startAnimation(shake);
-                //textUser4.setBackgroundColor("@");
+
                 selectActiveColor(textUser4, allTextViews);
             }
         });
@@ -76,7 +130,7 @@ public class SelectUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 view.startAnimation(shake);
-                //textUser1.setBackgroundColor("@");
+
                 selectActiveColor(textUser5, allTextViews);
 
             }
@@ -85,8 +139,12 @@ public class SelectUserActivity extends AppCompatActivity {
         buttonSelectUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Toast toast1 = Toast.makeText(getApplicationContext(), "User Selected : ", Toast.LENGTH_LONG);
+                if (userSelected == null) {
+                    Toast toast0 = Toast.makeText(getApplicationContext(), "Select an user and click OK", Toast.LENGTH_LONG);
+                    toast0.show();
+                    return;
+                }
+                Toast toast1 = Toast.makeText(getApplicationContext(), "User Selected : " + userSelected, Toast.LENGTH_LONG);
                 toast1.show();
                 onBackPressed();
             }
@@ -95,7 +153,7 @@ public class SelectUserActivity extends AppCompatActivity {
         buttonCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast toast1 = Toast.makeText(getApplicationContext(), "User Selection Canceled", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "User Selection Cancelled", Toast.LENGTH_LONG);
                 toast1.show();
                 onBackPressed();
             }
