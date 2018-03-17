@@ -48,6 +48,7 @@ public class AddProfileActivity extends AppCompatActivity {
                 myIntent.putExtra("nabial", 0); //Optional parameters
                 myIntent.putExtra("orzechy", 0); //Optional parameters
                 myIntent.putExtra("otherActivity", true); //Optional parameters
+                AddProfileActivity.this.startActivity(myIntent);
             }
         });
         buttonCancel.setOnClickListener(new View.OnClickListener() {
