@@ -16,8 +16,11 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+            android:background="@color/tekst_zliczanie"
+            android:subtitleTextColor="@color/colorWhite"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:titleTextAppearance="@color/colorWhite"
+            android:titleTextColor="@color/colorWhite" />
 
 
         <TextView

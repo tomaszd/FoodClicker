@@ -18,7 +18,10 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/tekst_zliczanie"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+            android:subtitleTextColor="@color/colorWhite"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:titleTextAppearance="@color/colorWhite"
+            android:titleTextColor="@color/colorWhite" />
 
         <TextView
             android:id="@+id/appCompatImageButton"
@@ -373,8 +376,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header"
         android:fontFamily="casual"
+        app:headerLayout="@layout/nav_header"
         app:itemBackground="@color/tekst_zliczanie"
         app:itemIconTint="@color/colorWhite"
         app:itemTextColor="@color/colorWhite"
