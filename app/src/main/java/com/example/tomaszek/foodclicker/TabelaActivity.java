@@ -53,8 +53,6 @@ public class TabelaActivity extends AppCompatActivity {
         TextView appCompatImageButton = (TextView) findViewById(R.id.appCompatImageButton);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font2.ttf");
         appCompatImageButton.setTypeface(typeface);
-        appCompatImageButton.setTextColor(0xffffffff); //this is white color
-
 
         ImageView btnWoda = (ImageView) findViewById(R.id.btnWoda);
         btnWoda.setOnClickListener(new View.OnClickListener() {

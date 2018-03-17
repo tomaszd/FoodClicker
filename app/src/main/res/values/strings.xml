@@ -7,4 +7,10 @@
     <string name="main_title">" Gdy jesz lub pijesz\n Kliknij w ikonki"</string>
     <string name="dowiedz_sie_wiecej_kliknij_w_ikonki">"To know more \nclick on icons"</string>
     <string name="title_activity_log">LogActivity</string>
+    <string name="add_user">Add User</string>
+    <string name="choose_user">Choose User</string>
+    <string name="tabela">Tabela</string>
+    <string name="piramida">Piramida</string>
+    <string name="nutrition_facts">Nutrition Facts</string>
+    <string name="food_diary">Food Diary</string>
 </resources>

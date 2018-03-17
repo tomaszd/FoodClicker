@@ -3,27 +3,33 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_add_profil"
-            android:icon="@drawable/ic_info"
-            android:title="Dodaj Profil" />
+            android:fontFamily="casual"
+            android:icon="@drawable/ic_add_circle"
+            android:title="@string/add_user" />
         <item
             android:id="@+id/nav_choose_profile"
-            android:icon="@drawable/ic_info"
-            android:title="Wybierz Profil" />
+            android:fontFamily="casual"
+            android:icon="@drawable/ic_supervisor_account"
+            android:title="@string/choose_user" />
         <item
             android:id="@+id/nav_home_view"
+            android:fontFamily="casual"
             android:icon="@drawable/ic_home"
-            android:title="Ekran Glowny" />
+            android:title="@string/tabela" />
         <item
             android:id="@+id/nav_piramid_view"
+            android:fontFamily="casual"
             android:icon="@drawable/ic_warning"
-            android:title="Widok Piramidy" />
+            android:title="@string/piramida" />
         <item
             android:id="@+id/nav_log"
-            android:icon="@drawable/ic_info"
-            android:title="Dziennik Wpisow" />
+            android:fontFamily="casual"
+            android:icon="@drawable/ic_access_time"
+            android:title="@string/food_diary" />
         <item
             android:id="@+id/nav_info_view"
+            android:fontFamily="casual"
             android:icon="@drawable/ic_info"
-            android:title="Informacja i produktach" />
+            android:title="@string/nutrition_facts" />
     </group>
 </menu>
