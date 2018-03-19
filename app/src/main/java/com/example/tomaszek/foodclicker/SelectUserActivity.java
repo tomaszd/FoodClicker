@@ -1,5 +1,7 @@
 package com.example.tomaszek.foodclicker;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
@@ -19,6 +21,8 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
+
+import static com.example.tomaszek.foodclicker.Product.UserEntry.COLUMN_NAME_USER_NAME;
 
 public class SelectUserActivity extends AppCompatActivity {
     String userSelected = null;
@@ -53,14 +57,6 @@ public class SelectUserActivity extends AppCompatActivity {
 
         ProductDbHelper mDbHelper = new ProductDbHelper(getApplicationContext());
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
-
-
-        String[] projection = {
-                BaseColumns._ID,
-                Product.UserEntry.COLUMN_NAME_USER_NAME,
-        };
-
-        String[] selectionArgs = {null};
 
         String sortOrder =
                 //COLUMN_NAME_TIMESTAMP + " DESC";
@@ -180,13 +176,43 @@ public class SelectUserActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast toast1 = Toast.makeText(getApplicationContext(), "User deleted Add actions!" + userSelected, Toast.LENGTH_LONG);
                 toast1.show();
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(SelectUserActivity.this);
+                builder.setMessage("Are you sure you want to delete user " + userSelected + " ?")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                if (deleteUser(userSelected)) {
+                                    Toast toast1 = Toast.makeText(getApplicationContext(), "User deleted: " + userSelected, Toast.LENGTH_LONG);
+                                    toast1.show();
+                                }
+
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
+
                 // usunac z bazy
                 // przerywsowac
+
             }
+
+            private boolean deleteUser(String userSelected) {
+                ProductDbHelper mDbHelper = new ProductDbHelper(getApplicationContext());
+                SQLiteDatabase db = mDbHelper.getReadableDatabase();
+                return db.delete(Product.UserEntry.TABLE_NAME, COLUMN_NAME_USER_NAME + "=?", new String[]{String.valueOf(userSelected)}) > 0;
+            }
+
         });
 
 
     }
+
 
     private void selectActiveColor(TextView textUserSelected, TextView[] allTextViews) {
 
