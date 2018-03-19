@@ -197,16 +197,20 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
     <android.support.design.widget.BottomNavigationView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/navigation"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_gravity="bottom"
-        app:itemBackground="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/tekst_zliczanie"
         app:itemIconTint="@color/colorWhite"
         app:itemTextColor="@color/colorWhite"
         app:menu="@menu/my_navigation_items" />
-
 </LinearLayout>
+
 
