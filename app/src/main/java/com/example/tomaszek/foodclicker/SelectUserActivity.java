@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +30,9 @@ public class SelectUserActivity extends AppCompatActivity {
         final Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
         final Button buttonSelectUser = (Button) findViewById(R.id.buttonSelectUser);
         final Button buttonCancel = (Button) findViewById(R.id.buttonCancel);
+        final Button buttonDelete = (Button) findViewById(R.id.buttonDelete);
+        final LinearLayout lytDelete = (LinearLayout) findViewById(R.id.lytDelete);
+
 
         final TextView textUser1 = (TextView) findViewById(R.id.textUser1);
         final TextView textUser2 = (TextView) findViewById(R.id.textUser2);
@@ -83,23 +87,31 @@ public class SelectUserActivity extends AppCompatActivity {
         cursor.close();
 
         if (rowUsername.size() >= 0 + 1) {
+            textUser1.setVisibility(View.VISIBLE);
             textUser1.setText(String.valueOf(rowUsername.get(0)));
         }
         if (rowUsername.size() >= 1 + 1) {
+            textUser2.setVisibility(View.VISIBLE);
             textUser2.setText(String.valueOf(rowUsername.get(1)));
         }
         if (rowUsername.size() >= 2 + 1) {
+            textUser3.setVisibility(View.VISIBLE);
             textUser3.setText(String.valueOf(rowUsername.get(2)));
         }
         if (rowUsername.size() >= 3 + 1) {
+            textUser4.setVisibility(View.VISIBLE);
             textUser4.setText(String.valueOf(rowUsername.get(3)));
         }
         if (rowUsername.size() >= 4 + 1) {
+            textUser5.setVisibility(View.VISIBLE);
             textUser5.setText(String.valueOf(rowUsername.get(4)));
         }
+
+
         textUser1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lytDelete.setVisibility(View.VISIBLE);
                 view.startAnimation(shake);
                 selectActiveColor(textUser1, allTextViews);
             }
@@ -107,6 +119,7 @@ public class SelectUserActivity extends AppCompatActivity {
         textUser2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lytDelete.setVisibility(View.VISIBLE);
                 view.startAnimation(shake);
                 selectActiveColor(textUser2, allTextViews);
             }
@@ -114,6 +127,7 @@ public class SelectUserActivity extends AppCompatActivity {
         textUser3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lytDelete.setVisibility(View.VISIBLE);
                 view.startAnimation(shake);
                 selectActiveColor(textUser3, allTextViews);
             }
@@ -121,6 +135,7 @@ public class SelectUserActivity extends AppCompatActivity {
         textUser4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lytDelete.setVisibility(View.VISIBLE);
                 view.startAnimation(shake);
 
                 selectActiveColor(textUser4, allTextViews);
@@ -129,6 +144,7 @@ public class SelectUserActivity extends AppCompatActivity {
         textUser5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lytDelete.setVisibility(View.VISIBLE);
                 view.startAnimation(shake);
 
                 selectActiveColor(textUser5, allTextViews);
@@ -159,9 +175,21 @@ public class SelectUserActivity extends AppCompatActivity {
             }
         });
 
+        buttonDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast toast1 = Toast.makeText(getApplicationContext(), "User deleted Add actions!" + userSelected, Toast.LENGTH_LONG);
+                toast1.show();
+                // usunac z bazy
+                // przerywsowac
+            }
+        });
+
+
     }
 
     private void selectActiveColor(TextView textUserSelected, TextView[] allTextViews) {
+
         for (TextView tv : allTextViews) {
             tv.setBackgroundColor(getResources().getColor(R.color.tlo));
             tv.setTextColor(getResources().getColor(R.color.tekst_zliczanie));
