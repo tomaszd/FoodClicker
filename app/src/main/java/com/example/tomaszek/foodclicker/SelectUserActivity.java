@@ -186,6 +186,7 @@ public class SelectUserActivity extends AppCompatActivity {
                                     Toast toast1 = Toast.makeText(getApplicationContext(), "User deleted: " + userSelected, Toast.LENGTH_LONG);
                                     toast1.show();
                                 }
+                                recreate();
 
                             }
                         })
