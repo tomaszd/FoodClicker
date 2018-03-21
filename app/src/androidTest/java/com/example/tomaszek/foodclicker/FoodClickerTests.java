@@ -108,6 +108,21 @@ public class FoodClickerTests {
             true,     // initialTouchMode
             false);   // launchActivity. False to customize the intent
 
+    @Rule
+    public ActivityTestRule<SelectUserActivity> selectUserActivityTestRule
+            = new ActivityTestRule<>(
+            SelectUserActivity.class,
+            true,     // initialTouchMode
+            false);   // launchActivity. False to customize the intent
+
+    @Rule
+    public ActivityTestRule<AddProfileActivity> addProfileActivityTestRule
+            = new ActivityTestRule<>(
+            AddProfileActivity.class,
+            true,     // initialTouchMode
+            false);   // launchActivity. False to customize the intent
+
+
     @Test
     public void useAppContext() throws Exception {
         // Context of the app under test.
@@ -193,4 +208,18 @@ public class FoodClickerTests {
         Intent intent = new Intent();
         zbozaDetailsActivityTestRule.launchActivity(intent);
     }
+
+    @Test
+    public void selectUserActivityStartWithoutCrash() throws Exception {
+        Intent intent = new Intent();
+        selectUserActivityTestRule.launchActivity(intent);
+    }
+
+    @Test
+    public void addProfileActivityStartWithoutCrash() throws Exception {
+        Intent intent = new Intent();
+        addProfileActivityTestRule.launchActivity(intent);
+    }
+
+
 }
