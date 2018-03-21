@@ -224,8 +224,20 @@ public class TabelaActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
 
                         switch (menuItem.getItemId()) {
+                            case R.id.nav_log:
+                                Intent myIntent0 = new Intent(TabelaActivity.this, LogActivity.class);
+                                myIntent0.putExtra("woda", woda_value); //Optional parameters
+                                myIntent0.putExtra("inne", inne_value); //Optional parameters
+                                myIntent0.putExtra("warzywa", warzywa_value); //Optional parameters
+                                myIntent0.putExtra("owoce", owoce_value); //Optional parameters
+                                myIntent0.putExtra("ryby", ryby_value); //Optional parameters
+                                myIntent0.putExtra("zboza", zboza_value); //Optional parameters
+                                myIntent0.putExtra("nabial", nabial_value); //Optional parameters
+                                myIntent0.putExtra("orzechy", orzech_value); //Optional parameters
+                                TabelaActivity.this.startActivity(myIntent0);
+                                break;
                             case R.id.nav_home_view:
-                                Intent myIntent = new Intent(TabelaActivity.this, MainActivity.class);
+                                Intent myIntent = new Intent(TabelaActivity.this, TabelaActivity.class);
                                 myIntent.putExtra("woda", woda_value); //Optional parameters
                                 myIntent.putExtra("inne", inne_value); //Optional parameters
                                 myIntent.putExtra("warzywa", warzywa_value); //Optional parameters
@@ -234,7 +246,6 @@ public class TabelaActivity extends AppCompatActivity {
                                 myIntent.putExtra("zboza", zboza_value); //Optional parameters
                                 myIntent.putExtra("nabial", nabial_value); //Optional parameters
                                 myIntent.putExtra("orzechy", orzech_value); //Optional parameters
-                                myIntent.putExtra("otherActivity", true); //Optional parameters
                                 myIntent.putExtra("otherActivity", true); //Optional parameters
                                 TabelaActivity.this.startActivity(myIntent);
                                 break;
@@ -274,6 +285,20 @@ public class TabelaActivity extends AppCompatActivity {
                                 myIntent4.putExtra("orzechy", orzech_value); //Optional parameters
                                 TabelaActivity.this.startActivity(myIntent4);
                                 break;
+                            case R.id.nav_choose_profile:
+                                Intent myIntent5 = new Intent(TabelaActivity.this, SelectUserActivity.class);
+                                myIntent5.putExtra("woda", woda_value); //Optional parameters
+                                myIntent5.putExtra("inne", inne_value); //Optional parameters
+                                myIntent5.putExtra("warzywa", warzywa_value); //Optional parameters
+                                myIntent5.putExtra("owoce", owoce_value); //Optional parameters
+                                myIntent5.putExtra("ryby", ryby_value); //Optional parameters
+                                myIntent5.putExtra("zboza", zboza_value); //Optional parameters
+                                myIntent5.putExtra("nabial", nabial_value); //Optional parameters
+                                myIntent5.putExtra("orzechy", orzech_value); //Optional parameters
+                                TabelaActivity.this.startActivity(myIntent5);
+                                break;
+
+
                         }
                         // set item as selected to persist highlight
                         menuItem.setChecked(true);
