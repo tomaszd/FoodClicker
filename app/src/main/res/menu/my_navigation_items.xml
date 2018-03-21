@@ -2,7 +2,7 @@
     <item
         android:id="@+id/action_home"
         android:icon="@drawable/ic_home"
-        android:title="Home" />
+        android:title="FoodClicker" />
     <item
         android:id="@+id/action_piramid"
         android:icon="@drawable/ic_warning"
