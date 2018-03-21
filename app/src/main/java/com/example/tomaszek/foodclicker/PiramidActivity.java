@@ -27,7 +27,9 @@ public class PiramidActivity extends AppCompatActivity {
 
     boolean btnOwoce_enabled = false;
     boolean btnRyby1_enabled = false;
+    boolean btnRyby2_enabled = false;
     boolean btnOlejorzech_enabled = false;
+    boolean btnOlejorzech2_enabled = false;
     boolean btnNabial1_enabled = false;
     boolean btnNabial2_enabled = false;
     boolean btnZboza1_enabled = false;
@@ -75,7 +77,9 @@ public class PiramidActivity extends AppCompatActivity {
         final ImageView btnTabela = (ImageView) findViewById(R.id.btnTabela);
         final ImageView btnOwoce = (ImageView) findViewById(R.id.btnOwoce);
         final ImageButton btnRyby1 = (ImageButton) findViewById(R.id.btnRyby1);
+        final ImageButton btnRyby2 = (ImageButton) findViewById(R.id.btnRyby2);
         final ImageButton btnOlejorzech = (ImageButton) findViewById(R.id.btnOlejorzech);
+        final ImageButton btnOlejorzech2 = (ImageButton) findViewById(R.id.btnOlejorzech2);
         final ImageButton btnNabial1 = (ImageButton) findViewById(R.id.btnNabial1);
         final ImageButton btnNabial2 = (ImageButton) findViewById(R.id.btnNabial2);
 
@@ -107,7 +111,9 @@ public class PiramidActivity extends AppCompatActivity {
 
         btnOwoce.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.ananas)));
         btnRyby1.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.ryba)));
+        btnRyby2.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.ryba)));
         btnOlejorzech.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.olejorzech)));
+        btnOlejorzech2.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.olejorzech)));
         btnNabial1.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.nabial)));
         btnNabial2.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.nabial)));
         btnZboza1.setImageDrawable(convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.zboza)));
@@ -150,9 +156,17 @@ public class PiramidActivity extends AppCompatActivity {
             setButtonVisible(btnRyby1, R.drawable.ryba);
             btnRyby1_enabled = true;
         }
+        if (ryby_value > 1) {
+            setButtonVisible(btnRyby2, R.drawable.ryba);
+            btnRyby2_enabled = true;
+        }
         if (orzech_value > 0) {
             setButtonVisible(btnOlejorzech, (R.drawable.olejorzech));
             btnOlejorzech_enabled = true;
+        }
+        if (orzech_value > 1) {
+            setButtonVisible(btnOlejorzech2, (R.drawable.olejorzech));
+            btnOlejorzech2_enabled = true;
         }
         if (nabial_value >= 1) {
             setButtonVisible(btnNabial1, (R.drawable.nabial));
@@ -316,7 +330,26 @@ public class PiramidActivity extends AppCompatActivity {
 
             }
         });
+        btnRyby2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.ryba);
+                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
+                if (btnRyby2_enabled) {
+                    ryby_value -= 1;
+                    btnRyby2.setImageDrawable(grayedIcon);
+                    btnRyby2_enabled = false;
+                    saveLogIntoDB("ryby", false);
+                } else {
+                    ryby_value += 1;
+                    btnIcon.clearColorFilter();
+                    btnRyby2.setImageDrawable(btnIcon);
+                    btnRyby2_enabled = true;
+                    saveLogIntoDB("ryby", true);
+                }
 
+            }
+        });
         btnOlejorzech.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -336,7 +369,25 @@ public class PiramidActivity extends AppCompatActivity {
                 }
             }
         });
-
+        btnOlejorzech2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.olejorzech);
+                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
+                if (btnOlejorzech2_enabled) {
+                    orzech_value -= 1;
+                    btnOlejorzech2.setImageDrawable(grayedIcon);
+                    btnOlejorzech2_enabled = false;
+                    saveLogIntoDB("orzechy", false);
+                } else {
+                    orzech_value += 1;
+                    btnIcon.clearColorFilter();
+                    btnOlejorzech2.setImageDrawable(btnIcon);
+                    btnOlejorzech2_enabled = true;
+                    saveLogIntoDB("orzechy", true);
+                }
+            }
+        });
         btnNabial1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

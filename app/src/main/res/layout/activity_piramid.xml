@@ -74,43 +74,14 @@
             android:text="KOSZ" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="0dp"
-        android:layout_weight="1.8"
-        android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/btnRyby1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ryba" />
-
-        <ImageButton
-            android:id="@+id/btnOlejorzech"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:scaleType="centerCrop"
-            android:src="@drawable/olejorzech" />
-
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="0dp"
-        android:layout_weight="1.5"
+        android:layout_weight="1.9"
         android:orientation="horizontal">
 
         <ImageButton
@@ -141,7 +112,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="0dp"
-        android:layout_weight="2"
+        android:layout_weight="2.2"
         android:orientation="horizontal">
 
         <ImageButton
@@ -176,7 +147,52 @@
 
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="0dp"
+        android:layout_weight="1.5"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/btnRyby1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ryba" />
+        <ImageButton
+            android:id="@+id/btnRyby2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ryba" />
 
+        <ImageButton
+            android:id="@+id/btnOlejorzech"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/olejorzech" />
+        <ImageButton
+            android:id="@+id/btnOlejorzech2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/olejorzech" />
+
+    </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
