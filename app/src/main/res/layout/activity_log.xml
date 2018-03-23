@@ -20,17 +20,15 @@
             android:layout_margin="0dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textSign0"
+            <ImageButton
+                android:id="@+id/btnSign0"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
                 android:layout_weight="1"
-                android:src="@drawable/piramida_logo"
-                android:text="+"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/plus" />
 
             <TextView
                 android:id="@+id/textLog0"
@@ -42,7 +40,7 @@
                 android:text="Here are last actions"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:textSize="26sp" />
 
             <ImageButton
                 android:id="@+id/btnLog0"
@@ -63,16 +61,15 @@
             android:layout_margin="0dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textSign1"
+            <ImageButton
+                android:id="@+id/btnSign1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/piramida_logo"
-                android:text="+"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/plus" />
 
             <TextView
                 android:id="@+id/textLog1"
@@ -84,7 +81,7 @@
                 android:text="Here are last actions"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:textSize="26sp" />
 
             <ImageButton
                 android:id="@+id/btnLog1"
@@ -105,16 +102,15 @@
             android:layout_margin="0dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textSign2"
+            <ImageButton
+                android:id="@+id/btnSign2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/piramida_logo"
-                android:text="+"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/plus" />
 
             <TextView
                 android:id="@+id/textLog2"
@@ -127,7 +123,7 @@
 "
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:textSize="26sp" />
 
             <ImageButton
                 android:id="@+id/btnLog2"
@@ -148,17 +144,15 @@
             android:layout_margin="0dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textSign3"
+            <ImageButton
+                android:id="@+id/btnSign3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
                 android:layout_weight="1"
-                android:src="@drawable/piramida_logo"
-                android:text="+"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/plus" />
 
             <TextView
                 android:id="@+id/textLog3"
@@ -171,7 +165,7 @@
 "
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:textSize="26sp" />
 
             <ImageButton
                 android:id="@+id/btnLog3"
@@ -192,17 +186,15 @@
             android:layout_margin="0dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textSign4"
+            <ImageButton
+                android:id="@+id/btnSign4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
                 android:layout_weight="1"
-                android:src="@drawable/piramida_logo"
-                android:text="+"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/plus" />
 
             <TextView
                 android:id="@+id/textLog4"
@@ -215,7 +207,7 @@
 "
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:textSize="26sp" />
 
             <ImageButton
                 android:id="@+id/btnLog4"
@@ -236,17 +228,15 @@
             android:layout_margin="0dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textSign5"
+            <ImageButton
+                android:id="@+id/btnSign5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
                 android:layout_weight="1"
-                android:src="@drawable/piramida_logo"
-                android:text="+"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/plus" />
 
             <TextView
                 android:id="@+id/textLog5"
@@ -259,7 +249,7 @@
 "
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:textSize="26sp" />
 
             <ImageButton
                 android:id="@+id/btnLog5"
@@ -280,17 +270,15 @@
             android:layout_margin="0dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textSign6"
+            <ImageButton
+                android:id="@+id/btnSign6"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
                 android:layout_weight="1"
-                android:src="@drawable/piramida_logo"
-                android:text="+"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/plus" />
 
             <TextView
                 android:id="@+id/textLog6"
@@ -303,7 +291,7 @@
 "
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:textSize="26sp" />
 
             <ImageButton
                 android:id="@+id/btnLog6"
@@ -324,17 +312,15 @@
             android:layout_margin="0dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textSign7"
+            <ImageButton
+                android:id="@+id/btnSign7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
                 android:layout_weight="1"
-                android:src="@drawable/piramida_logo"
-                android:text="+"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/plus" />
 
             <TextView
                 android:id="@+id/textLog7"
@@ -347,7 +333,7 @@
 "
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:textSize="26sp" />
 
             <ImageButton
                 android:id="@+id/btnLog7"
@@ -368,17 +354,15 @@
             android:layout_margin="0dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textSign8"
+            <ImageButton
+                android:id="@+id/btnSign8"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
                 android:layout_weight="1"
-                android:src="@drawable/piramida_logo"
-                android:text="+"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/plus" />
 
             <TextView
                 android:id="@+id/textLog8"
@@ -391,7 +375,7 @@
 "
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:textSize="26sp" />
 
             <ImageButton
                 android:id="@+id/btnLog8"
@@ -412,17 +396,15 @@
             android:layout_margin="0dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textSign9"
+            <ImageButton
+                android:id="@+id/btnSign9"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
                 android:layout_weight="1"
-                android:src="@drawable/piramida_logo"
-                android:text="+"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/plus" />
 
             <TextView
                 android:id="@+id/textLog9"
@@ -435,7 +417,7 @@
 "
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:textSize="26sp" />
 
             <ImageButton
                 android:id="@+id/btnLog9"
@@ -456,17 +438,15 @@
             android:layout_margin="0dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textSign10"
+            <ImageButton
+                android:id="@+id/btnSign10"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
                 android:layout_weight="1"
-                android:src="@drawable/piramida_logo"
-                android:text="+"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/plus" />
 
             <TextView
                 android:id="@+id/textLog10"
@@ -479,7 +459,7 @@
 "
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:textSize="26sp" />
 
             <ImageButton
                 android:id="@+id/btnLog10"
@@ -500,17 +480,15 @@
             android:layout_margin="0dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textSign11"
+            <ImageButton
+                android:id="@+id/btnSign11"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
                 android:layout_weight="1"
-                android:src="@drawable/piramida_logo"
-                android:text="+"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/plus" />
 
             <TextView
                 android:id="@+id/textLog11"
@@ -523,7 +501,7 @@
 "
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:textSize="26sp" />
 
             <ImageButton
                 android:id="@+id/btnLog11"
@@ -544,17 +522,15 @@
             android:layout_margin="0dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textSign12"
+            <ImageButton
+                android:id="@+id/btnSign12"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
                 android:layout_weight="1"
-                android:src="@drawable/piramida_logo"
-                android:text="+"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/plus" />
 
             <TextView
                 android:id="@+id/textLog12"
@@ -567,7 +543,7 @@
 "
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:textSize="26sp" />
 
             <ImageButton
                 android:id="@+id/btnLog12"
@@ -588,17 +564,15 @@
             android:layout_margin="0dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textSign13"
+            <ImageButton
+                android:id="@+id/btnSign13"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
                 android:layout_weight="1"
-                android:src="@drawable/piramida_logo"
-                android:text="+"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/plus" />
 
             <TextView
                 android:id="@+id/textLog13"
@@ -611,7 +585,7 @@
 "
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:textSize="26sp" />
 
             <ImageButton
                 android:id="@+id/btnLog13"
@@ -632,17 +606,15 @@
             android:layout_margin="0dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textSign14"
+            <ImageButton
+                android:id="@+id/btnSign14"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
                 android:layout_weight="1"
-                android:src="@drawable/piramida_logo"
-                android:text="+"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/plus" />
 
             <TextView
                 android:id="@+id/textLog14"
@@ -655,7 +627,7 @@
 "
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:textSize="26sp" />
 
             <ImageButton
                 android:id="@+id/btnLog14"
