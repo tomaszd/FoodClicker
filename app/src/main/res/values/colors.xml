@@ -3,6 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#8C5600</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorTooMuch">#ff9093</color>
     <color name="colorWhite">#f9f0f3</color>
     <color name="tekst_zliczanie">#8C5600</color>
     <color name="tlo">#FEC23A</color>

@@ -256,10 +256,12 @@ public class PiramidActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Drawable btnOwoceIcon = getApplicationContext().getResources().getDrawable(R.drawable.ananas);
-                Drawable grayedIcon = convertDrawableToGrayScale(btnOwoceIcon);
+                //Drawable grayedIcon = convertDrawableToGrayScale(btnOwoceIcon);
+                Drawable redIcon = convertDrawableToRedScale(btnOwoceIcon);
+
                 if (btnOwoce_enabled) {
                     owoce_value -= 1;
-                    btnOwoce.setImageDrawable(grayedIcon);
+                    btnOwoce.setImageDrawable(redIcon);
                     btnOwoce_enabled = false;
                     saveLogIntoDB("owoce", false);
                 } else {
@@ -775,6 +777,23 @@ public class PiramidActivity extends AppCompatActivity {
         Drawable res = drawable.mutate();
         //res.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_IN);
         res.setColorFilter(Color.GRAY, PorterDuff.Mode.MULTIPLY);
+        return res;
+    }
+
+    /**
+     * Mutates and applies a filter that converts the given drawable to a Gray
+     * image. This method may be used to simulate the color of disable icons in
+     * Honeycomb's ActionBar.
+     *
+     * @return a mutated version of the given drawable with a color filter applied.
+     */
+    public Drawable convertDrawableToRedScale(Drawable drawable) {
+        if (drawable == null)
+            return null;
+
+        Drawable res = drawable.mutate();
+        //res.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_IN);
+        res.setColorFilter(getResources().getColor(R.color.colorTooMuch), PorterDuff.Mode.MULTIPLY);
         return res;
     }
 
