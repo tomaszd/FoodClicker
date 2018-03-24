@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -253,33 +254,58 @@ public class PiramidActivity extends AppCompatActivity {
         }
 
         btnOwoce.setOnClickListener(new View.OnClickListener() {
+            Drawable btnOwoceIcon = getApplicationContext().getResources().getDrawable(R.drawable.ananas);
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.ananas));
+
             @Override
             public void onClick(View view) {
-                Drawable btnOwoceIcon = getApplicationContext().getResources().getDrawable(R.drawable.ananas);
-                //Drawable grayedIcon = convertDrawableToGrayScale(btnOwoceIcon);
-                Drawable redIcon = convertDrawableToRedScale(btnOwoceIcon);
 
-                if (btnOwoce_enabled) {
-                    owoce_value -= 1;
+                owoce_value += 1;
+                btnOwoce_enabled = true;
+                saveLogIntoDB("owoce", true);
+                if (owoce_value > 1) {
                     btnOwoce.setImageDrawable(redIcon);
-                    btnOwoce_enabled = false;
-                    saveLogIntoDB("owoce", false);
                 } else {
-                    owoce_value += 1;
-                    btnOwoceIcon.clearColorFilter();
                     btnOwoce.setImageDrawable(btnOwoceIcon);
-                    btnOwoce_enabled = true;
-                    saveLogIntoDB("owoce", true);
                 }
 
             }
         });
+
+        btnOwoce.setOnLongClickListener(new View.OnLongClickListener() {
+            Drawable btnOwoceIcon = getApplicationContext().getResources().getDrawable(R.drawable.ananas);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.ananas));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.ananas));
+
+            @Override
+            public boolean onLongClick(View v) {
+                // TODO Auto-generated method stub
+                owoce_value -= 1;
+                if (owoce_value < 0) {
+                    owoce_value = 0;
+                }
+                btnOwoce_enabled = false;
+                saveLogIntoDB("owoce", false);
+                if (owoce_value > 1) {
+                    btnOwoce.setImageDrawable(redIcon);
+                }
+                if (owoce_value == 1) {
+                    btnOwoce.setImageDrawable(btnOwoceIcon);
+                }
+                if (owoce_value == 0) {
+                    btnOwoce.setImageDrawable(grayedIcon);
+                }
+                return true;
+            }
+        });
+
 
         btnRyby1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.ryba);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
+                Drawable redIcon = convertDrawableToRedScale(btnIcon);
                 if (btnRyby1_enabled) {
                     ryby_value -= 1;
                     btnRyby1.setImageDrawable(grayedIcon);
@@ -292,6 +318,10 @@ public class PiramidActivity extends AppCompatActivity {
                     btnRyby1_enabled = true;
                     saveLogIntoDB("ryby", true);
                 }
+                if (ryby_value > 1) {
+                    btnRyby1.setImageDrawable(redIcon);
+                    btnRyby2.setImageDrawable(redIcon);
+                }
 
             }
         });
@@ -300,6 +330,7 @@ public class PiramidActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.ryba);
                 Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
+                Drawable redIcon = convertDrawableToRedScale(btnIcon);
                 if (btnRyby2_enabled) {
                     ryby_value -= 1;
                     btnRyby2.setImageDrawable(grayedIcon);
@@ -311,6 +342,10 @@ public class PiramidActivity extends AppCompatActivity {
                     btnRyby2.setImageDrawable(btnIcon);
                     btnRyby2_enabled = true;
                     saveLogIntoDB("ryby", true);
+                }
+                if (ryby_value > 1) {
+                    btnRyby1.setImageDrawable(redIcon);
+                    btnRyby2.setImageDrawable(redIcon);
                 }
 
             }

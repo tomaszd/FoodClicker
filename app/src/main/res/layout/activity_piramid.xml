@@ -37,12 +37,10 @@
             android:id="@+id/btnOwoce"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1.18"
+            android:layout_weight="1"
             android:background="@null"
             android:scaleType="centerCrop"
-            android:src="@drawable/ananas"
-            android:text="Woda" />
+            android:src="@drawable/ananas" />
 
         <Space
 
