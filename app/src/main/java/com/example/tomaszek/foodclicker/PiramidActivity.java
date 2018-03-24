@@ -72,10 +72,7 @@ public class PiramidActivity extends AppCompatActivity {
         setupBottomNavigationView();
         final Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
 
-
-        final ImageView btnSettings = (ImageView) findViewById(R.id.btnSettings);
-        final ImageView btnTabela = (ImageView) findViewById(R.id.btnTabela);
-        final ImageView btnOwoce = (ImageView) findViewById(R.id.btnOwoce);
+        final ImageButton btnOwoce = (ImageButton) findViewById(R.id.btnOwoce);
         final ImageButton btnRyby1 = (ImageButton) findViewById(R.id.btnRyby1);
         final ImageButton btnRyby2 = (ImageButton) findViewById(R.id.btnRyby2);
         final ImageButton btnOlejorzech = (ImageButton) findViewById(R.id.btnOlejorzech);
@@ -255,40 +252,6 @@ public class PiramidActivity extends AppCompatActivity {
             btnWoda6_enabled = true;
         }
 
-        btnSettings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                view.startAnimation(shake);
-                Intent myIntent = new Intent(PiramidActivity.this, SettingsActivity.class);
-                myIntent.putExtra("woda", woda_value); //Optional parameters
-                myIntent.putExtra("inne", inne_value); //Optional parameters
-                myIntent.putExtra("warzywa", warzywa_value); //Optional parameters
-                myIntent.putExtra("owoce", owoce_value); //Optional parameters
-                myIntent.putExtra("ryby", ryby_value); //Optional parameters
-                myIntent.putExtra("zboza", zboza_value); //Optional parameters
-                myIntent.putExtra("nabial", nabial_value); //Optional parameters
-                myIntent.putExtra("orzechy", orzech_value); //Optional parameters
-                PiramidActivity.this.startActivity(myIntent);
-            }
-        });
-
-        btnTabela.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                view.startAnimation(shake);
-                Intent myIntent = new Intent(PiramidActivity.this, MainActivity.class);
-                myIntent.putExtra("woda", woda_value); //Optional parameters
-                myIntent.putExtra("inne", inne_value); //Optional parameters
-                myIntent.putExtra("warzywa", warzywa_value); //Optional parameters
-                myIntent.putExtra("owoce", owoce_value); //Optional parameters
-                myIntent.putExtra("ryby", ryby_value); //Optional parameters
-                myIntent.putExtra("zboza", zboza_value); //Optional parameters
-                myIntent.putExtra("nabial", nabial_value); //Optional parameters
-                myIntent.putExtra("orzechy", orzech_value); //Optional parameters
-                myIntent.putExtra("otherActivity", true); //Optional parameters
-                PiramidActivity.this.startActivity(myIntent);
-            }
-        });
         btnOwoce.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
