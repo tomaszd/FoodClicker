@@ -46,10 +46,12 @@
 
     <Button
         android:id="@+id/btnZalecane"
+        style="@style/styleIndetailInfo"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:background="@drawable/zboza_zalecane" />
+        android:background="@drawable/triple_ribeye"
+        android:text="@string/recommended_daily_intake_1_portion_80g_100g" />
 
     <Button
         android:id="@+id/btnOk"
@@ -57,7 +59,8 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:background="@drawable/zboza_info_1" />
+        android:background="@drawable/cart_ribeye"
+        android:text="@string/cereals_products" />
 
 
     <LinearLayout
@@ -74,7 +77,8 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:background="@drawable/zboza_info_2" />
+            android:background="@drawable/eighty_hundred_ribeye"
+            android:text="@string/approximate_weight_of_the_portion" />
 
     </LinearLayout>
 

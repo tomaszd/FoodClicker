@@ -13,12 +13,15 @@
     <string name="piramida">Piramida</string>
     <string name="nutrition_facts">Nutrition Facts</string>
     <string name="food_diary">Food Diary</string>
-    <string name="best_time_to_eat">Best time to eat</string>
-    <string name="maximum_daily_intake">Maximum daily intake</string>
-    <string name="recommended_daily_intake">Recommended daily intake</string>
-    <string name="oil_olive_butter_nuts">oil, olive , butter, nuts</string>
+    <string name="best_time_to_eat">"        Best time\n        to eat"</string>
+    <string name="maximum_daily_intake">"        Maximum daily\n        intake"</string>
+    <string name="recommended_daily_intake">"        Recommended\n        daily intake"</string>
+    <string name="oil_olive_butter_nuts">"         oil, olive,\n         butter, nuts"</string>
     <string name="recommended_amount_of_intakes_3_main_2_snacks">"         Recommended amount\n        of intakes.\n       3 main + 2 snacks"</string>
     <string name="nabial_cart">"        milk, yoghurt, kefir,\n         maslanka, cheese"</string>
     <string name="intake_nabial">"        recommended daily\n         intake\n       (e.g. 2 cups of milk)"</string>
     <string name="surfeit">      surfeit</string>
+    <string name="recommended_daily_intake_1_portion_80g_100g">"        recommended\n        daily intake\n        (1 portion 80g-100g)</string>
+    <string name="cereals_products">"         bread, pasta,\n        cereal, flour,\n        legumes"</string>
+    <string name="approximate_weight_of_the_portion">"        approximate weight\n        of the portion"</string>
 </resources>
