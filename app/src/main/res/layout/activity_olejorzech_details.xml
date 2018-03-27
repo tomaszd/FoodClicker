@@ -46,18 +46,21 @@
 
     <Button
         android:id="@+id/btnZalecane"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="1"
-        android:background="@drawable/owoce_zalecane" />
-
-    <Button
-        android:id="@+id/btnOk"
         style="@style/styleIndetailInfo"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:background="@drawable/olejorzech_info_1" />
+        android:background="@drawable/once_ribeye"
+        android:text="@string/recommended_daily_intake" />
+
+    <Button
+        android:id="@+id/btnOk"
+        style="@style/styleIndetailInfo"
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/cart_ribeye"
+        android:text="@string/oil_olive_butter_nuts" />
 
 
     <LinearLayout
@@ -74,7 +77,8 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:background="@drawable/owoce_info_2" />
+            android:background="@drawable/before_twelve"
+            android:text="@string/best_time_to_eat" />
 
     </LinearLayout>
 
