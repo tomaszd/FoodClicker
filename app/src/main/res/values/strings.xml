@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">FoodClicker</string>
-    <string name="woda_ok_string">"         water, herb,\n         fruit tea,\n        compote, coffee"</string>
-    <string name="woda_notok_string">"         carbonated drinks,\n        sweetened juices,\n        energy drinks"</string>
-    <string name="inne_ok_string">"       zalecana przerwa\n        miedzy posilkami"</string>
-    <string name="inne_notok_string">"        ostatni posilek\n        przed snem"</string>
-    <string name="main_title">" Gdy jesz lub pijesz\n Kliknij w ikonki"</string>
+    <string name="woda_ok_string">"         Water, herb,\n         fruit tea,\n        compote, coffee"</string>
+    <string name="woda_notok_string">"         Carbonated drinks,\n        sweetened juices,\n        energy drinks"</string>
+    <string name="inne_ok_string">"       Recommended break\n between meals"</string>
+    <string name="inne_notok_string">"        Last meal\n         before sleep time"</string>
+    <string name="main_title">" When you eat or drink \n Click on the icons"</string>
     <string name="dowiedz_sie_wiecej_kliknij_w_ikonki">"To know more \nclick on icons"</string>
     <string name="title_activity_log">LogActivity</string>
     <string name="add_user">Add User</string>
@@ -16,16 +16,16 @@
     <string name="best_time_to_eat">"        Best time\n        to eat"</string>
     <string name="maximum_daily_intake">"        Maximum daily\n        intake"</string>
     <string name="recommended_daily_intake">"        Recommended\n        daily intake"</string>
-    <string name="oil_olive_butter_nuts">"         oil, olive,\n         butter, nuts"</string>
+    <string name="oil_olive_butter_nuts">"         Oil, olive,\n         butter, nuts"</string>
     <string name="recommended_amount_of_intakes_3_main_2_snacks">"         Recommended amount\n        of intakes.\n       3 main + 2 snacks"</string>
-    <string name="nabial_cart">"        milk, yoghurt, kefir,\n         maslanka, cheese"</string>
-    <string name="intake_nabial">"        recommended daily\n         intake\n       (e.g. 2 cups of milk)"</string>
-    <string name="surfeit">      surfeit</string>
-    <string name="recommended_daily_intake_1_portion_80g_100g">"        recommended\n        daily intake\n        (1 portion 80g-100g)</string>
-    <string name="cereals_products">"         bread, pasta,\n        cereal, flour,\n        legumes"</string>
-    <string name="approximate_weight_of_the_portion">"        approximate weight\n        of the portion"</string>
-    <string name="minimal_daily_intake">"        minimal\n         daily intake"</string>
-    <string name="hours_before_sleep_for_last_meal">"        hours before\n        sleep for\n        last meal"</string>
-    <string name="recommended_weight_ratio_of_vegetables_to_the_rest_of_the_meals">"        recommended weight\n        ratio of vegetables\n        to the rest of the meals"</string>
-    <string name="recommended_daily_intake_about_6_glasses">"        recommended daily\n        intake\n        (about 6 glasses)"</string>
+    <string name="nabial_cart">"        Milk, yoghurt, kefir,\n         maslanka, cheese"</string>
+    <string name="intake_nabial">"        Recommended daily\n         intake\n       (e.g. 2 cups of milk)"</string>
+    <string name="surfeit">      Surfeit</string>
+    <string name="recommended_daily_intake_1_portion_80g_100g">"        Recommended\n        daily intake\n        (1 portion 80g-100g)</string>
+    <string name="cereals_products">"         Bread, pasta,\n        cereal, flour,\n        legumes"</string>
+    <string name="approximate_weight_of_the_portion">"        Approximate weight\n        of the portion"</string>
+    <string name="minimal_daily_intake">"        Minimal\n         daily intake"</string>
+    <string name="hours_before_sleep_for_last_meal">"        Hours before\n        sleep for\n        last meal"</string>
+    <string name="recommended_weight_ratio_of_vegetables_to_the_rest_of_the_meals">"        Recommended weight\n        ratio of vegetables\n            to the rest of the meals"</string>
+    <string name="recommended_daily_intake_about_6_glasses">"          Recommended daily\n          intake\n        (about 6 glasses)"</string>
 </resources>
