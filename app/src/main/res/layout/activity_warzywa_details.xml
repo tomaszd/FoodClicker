@@ -46,10 +46,12 @@
 
     <Button
         android:id="@+id/btnZalecane"
+        style="@style/styleIndetailInfo"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:background="@drawable/warzywa_zalecane" />
+        android:text="@string/minimal_daily_intake"
+        android:background="@drawable/fourhundred_g" />
 
     <Button
         android:id="@+id/btnOk"
@@ -57,7 +59,8 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:background="@drawable/warzywa_info_1" />
+        android:text="@string/recommended_weight_ratio_of_vegetables_to_the_rest_of_the_meals"
+        android:background="@drawable/one_one_ratio_ribeye" />
 
 
     <LinearLayout
@@ -74,7 +77,8 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:background="@drawable/warzywa_info_2" />
+            android:text="@string/hours_before_sleep_for_last_meal"
+            android:background="@drawable/three_five_hours_ribeye" />
 
     </LinearLayout>
 

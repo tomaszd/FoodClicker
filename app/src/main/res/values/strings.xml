@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">FoodClicker</string>
-    <string name="woda_ok_string">"         woda, ziola,\n        herbata owocowa\n         kompot, kawa</string>
-    <string name="woda_notok_string">"         napoje gazowane\n         soki slodzone,\n         energetyki"</string>
+    <string name="woda_ok_string">"         water, herb,\n         fruit tea,\n        compote, coffee"</string>
+    <string name="woda_notok_string">"         carbonated drinks,\n        sweetened juices,\n        energy drinks"</string>
     <string name="inne_ok_string">"       zalecana przerwa\n        miedzy posilkami"</string>
     <string name="inne_notok_string">"        ostatni posilek\n        przed snem"</string>
     <string name="main_title">" Gdy jesz lub pijesz\n Kliknij w ikonki"</string>
@@ -24,4 +24,8 @@
     <string name="recommended_daily_intake_1_portion_80g_100g">"        recommended\n        daily intake\n        (1 portion 80g-100g)</string>
     <string name="cereals_products">"         bread, pasta,\n        cereal, flour,\n        legumes"</string>
     <string name="approximate_weight_of_the_portion">"        approximate weight\n        of the portion"</string>
+    <string name="minimal_daily_intake">"        minimal\n         daily intake"</string>
+    <string name="hours_before_sleep_for_last_meal">"        hours before\n        sleep for\n        last meal"</string>
+    <string name="recommended_weight_ratio_of_vegetables_to_the_rest_of_the_meals">"        recommended weight\n        ratio of vegetables\n        to the rest of the meals"</string>
+    <string name="recommended_daily_intake_about_6_glasses">"        recommended daily\n        intake\n        (about 6 glasses)"</string>
 </resources>

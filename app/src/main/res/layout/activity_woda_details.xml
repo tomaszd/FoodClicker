@@ -46,10 +46,12 @@
 
     <Button
         android:id="@+id/btnZalecane"
+        style="@style/styleIndetailInfo"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:background="@drawable/woda_zalecane" />
+        android:text="@string/recommended_daily_intake_about_6_glasses"
+        android:background="@drawable/one_half_liter_ribeye" />
 
     <Button
         android:id="@+id/btnOk"
