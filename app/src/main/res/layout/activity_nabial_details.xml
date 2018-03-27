@@ -49,8 +49,10 @@
         android:id="@+id/btnZalecane"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        style="@style/styleIndetailInfo"
+        android:text="@string/intake_nabial"
         android:layout_weight="1"
-        android:background="@drawable/nabial_zalecane" />
+        android:background="@drawable/twice_ribeye" />
 
     <Button
         android:id="@+id/btnOk"
@@ -58,7 +60,8 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:background="@drawable/nabial_info_1" />
+        android:text="@string/nabial_cart"
+        android:background="@drawable/cart_ribeye" />
 
 
     <LinearLayout
@@ -76,7 +79,7 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@drawable/not_ok_ribeye"
-            android:text="obzarcie" />
+            android:text="@string/surfeit" />
 
     </LinearLayout>
 

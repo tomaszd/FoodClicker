@@ -18,4 +18,7 @@
     <string name="recommended_daily_intake">Recommended daily intake</string>
     <string name="oil_olive_butter_nuts">oil, olive , butter, nuts</string>
     <string name="recommended_amount_of_intakes_3_main_2_snacks">"         Recommended amount\n        of intakes.\n       3 main + 2 snacks"</string>
+    <string name="nabial_cart">"        milk, yoghurt, kefir,\n         maslanka, cheese"</string>
+    <string name="intake_nabial">"        recommended daily\n         intake\n       (e.g. 2 cups of milk)"</string>
+    <string name="surfeit">      surfeit</string>
 </resources>
