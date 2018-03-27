@@ -17,4 +17,5 @@
     <string name="maximum_daily_intake">Maximum daily intake</string>
     <string name="recommended_daily_intake">Recommended daily intake</string>
     <string name="oil_olive_butter_nuts">oil, olive , butter, nuts</string>
+    <string name="recommended_amount_of_intakes_3_main_2_snacks">"         Recommended amount\n        of intakes.\n       3 main + 2 snacks"</string>
 </resources>
