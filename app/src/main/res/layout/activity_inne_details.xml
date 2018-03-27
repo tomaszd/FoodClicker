@@ -46,12 +46,12 @@
 
     <Button
         android:id="@+id/btnZalecane"
+        style="@style/styleIndetailInfo"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        style="@style/styleIndetailInfo"
         android:layout_weight="1"
-        android:text="@string/recommended_amount_of_intakes_3_main_2_snacks"
-        android:background="@drawable/five_ribeye" />
+        android:background="@drawable/five_ribeye"
+        android:text="@string/recommended_amount_of_intakes_3_main_2_snacks" />
 
     <Button
         android:id="@+id/btnOk"
@@ -59,7 +59,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:background="@drawable/ok_ribeye"
+        android:background="@drawable/three_hours_ribeye"
         android:text="@string/inne_ok_string" />
 
 
@@ -77,7 +77,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:background="@drawable/not_ok_ribeye"
+            android:background="@drawable/three_hours_ribeye"
             android:text="@string/inne_notok_string" />
 
     </LinearLayout>

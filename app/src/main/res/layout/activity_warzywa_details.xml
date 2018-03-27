@@ -77,8 +77,8 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/hours_before_sleep_for_last_meal"
-            android:background="@drawable/three_five_hours_ribeye" />
+            android:background="@drawable/three_five_hours_ribeye"
+            android:text="@string/hours_before_sleep_for_last_meal" />
 
     </LinearLayout>
 

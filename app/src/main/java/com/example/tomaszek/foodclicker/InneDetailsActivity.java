@@ -35,11 +35,16 @@ public class InneDetailsActivity extends AppCompatActivity {
         nabial_value = intent.getIntExtra("nabial", 0);
         orzech_value = intent.getIntExtra("orzechy", 0);
 
-        Button btnOk = (Button) findViewById(R.id.btnOk);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font2.ttf");
-        btnOk.setTypeface(typeface);
+        Button btnZalecane = (Button) findViewById(R.id.btnZalecane);
+        Button btnOk = (Button) findViewById(R.id.btnOk);
         Button btnNotOk = (Button) findViewById(R.id.btnNotOk);
+        btnZalecane.setTypeface(typeface);
+        btnOk.setTypeface(typeface);
         btnNotOk.setTypeface(typeface);
+        btnOk.setTextColor(0xffffffff); //this is white color
+        btnNotOk.setTextColor(0xffffffff); //this is white color
+        btnZalecane.setTextColor(0xffffffff); //this is white color
 
 
         ImageView btnPiramida = (ImageView) findViewById(R.id.btnPiramida);
