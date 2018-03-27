@@ -38,7 +38,6 @@ public class InneDetailsActivity extends AppCompatActivity {
         Button btnOk = (Button) findViewById(R.id.btnOk);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font2.ttf");
         btnOk.setTypeface(typeface);
-        btnOk.setTextColor(0xffffffff); //this is white color
         Button btnNotOk = (Button) findViewById(R.id.btnNotOk);
         btnNotOk.setTypeface(typeface);
 
