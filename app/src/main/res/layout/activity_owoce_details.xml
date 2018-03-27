@@ -48,8 +48,11 @@
         android:id="@+id/btnZalecane"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        style="@style/styleIndetailInfo"
         android:layout_weight="1"
-        android:background="@drawable/owoce_zalecane" />
+        android:background="@drawable/once_ribeye"
+        android:text="@string/recommended_daily_intake"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btnOk"
@@ -57,7 +60,8 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:background="@drawable/owoce_info_1" />
+        android:text="@string/maximum_daily_intake"
+        android:background="@drawable/fourhundred_g" />
 
 
     <LinearLayout
@@ -70,11 +74,12 @@
 
         <Button
             android:id="@+id/btnNotOk"
-            style="@style/styleIndetailInfo"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:background="@drawable/owoce_info_2" />
+            style="@style/styleIndetailInfo"
+            android:text="@string/best_time_to_eat"
+            android:background="@drawable/before_twelve" />
 
     </LinearLayout>
 

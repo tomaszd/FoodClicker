@@ -13,4 +13,7 @@
     <string name="piramida">Piramida</string>
     <string name="nutrition_facts">Nutrition Facts</string>
     <string name="food_diary">Food Diary</string>
+    <string name="best_time_to_eat">Best time to eat</string>
+    <string name="maximum_daily_intake">Maximum daily intake</string>
+    <string name="recommended_daily_intake">Recommended daily intake</string>
 </resources>
