@@ -11,6 +11,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -44,12 +45,26 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle("Food Clicker");
         toolbar.setDrawingCacheBackgroundColor(getResources().getColor(R.color.colorWhite));
 
+
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
         setupBottomNavigationView();
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.add_user, R.string.choose_user);
+
+        mDrawerToggle.setDrawerIndicatorEnabled(false);
+
+        mDrawerToggle.setToolbarNavigationClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDrawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+
+        mDrawerToggle.setHomeAsUpIndicator(R.drawable.ananas);
+
         //mDrawerLayout.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.colorWhite));
 
 
