@@ -1,8 +1,10 @@
 package com.example.tomaszek.foodclicker;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
@@ -41,7 +43,7 @@ public class TabelaActivity extends AppCompatActivity {
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
         setupBottomNavigationView();
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         Intent intent = getIntent();
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         woda_value = intent.getIntExtra("woda", 0);
@@ -204,6 +206,10 @@ public class TabelaActivity extends AppCompatActivity {
         });
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        View headerView = navigationView.getHeaderView(0);
+        TextView txtUsername = (TextView) headerView.findViewById(R.id.txtUsername);
+        String username = sharedPrefs.getString("username", "Anonymous");
+        txtUsername.setText(username);
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override

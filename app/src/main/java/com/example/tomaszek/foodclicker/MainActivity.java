@@ -397,6 +397,13 @@ public class MainActivity extends AppCompatActivity {
 
         });
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
+
+        View headerView = navigationView.getHeaderView(0);
+        TextView txtUsername = (TextView) headerView.findViewById(R.id.txtUsername);
+        String username = sharedPrefs.getString("username", "Anonymous");
+        txtUsername.setText(username);
+
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override

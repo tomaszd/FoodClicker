@@ -2,9 +2,11 @@ package com.example.tomaszek.foodclicker;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -24,7 +26,8 @@ public class AddProfileActivity extends AppCompatActivity {
         final Button buttonAddNewUser = (Button) findViewById(R.id.buttonAddNewUser);
         final Button buttonCancel = (Button) findViewById(R.id.buttonCancel);
 
-
+        final SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        final SharedPreferences.Editor editor = sharedPrefs.edit();
         TextView textViewAddNewuser = (TextView) findViewById(R.id.textViewAddNewuser);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font2.ttf");
         textViewAddNewuser.setTypeface(typeface);
@@ -63,6 +66,11 @@ public class AddProfileActivity extends AppCompatActivity {
                 myIntent.putExtra("nabial", 0); //Optional parameters
                 myIntent.putExtra("orzechy", 0); //Optional parameters
                 myIntent.putExtra("otherActivity", true); //Optional parameters
+
+                editor.putString("username", newUsername);
+                editor.commit();
+
+
                 AddProfileActivity.this.startActivity(myIntent);
             }
         });

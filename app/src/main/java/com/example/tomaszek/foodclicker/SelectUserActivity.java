@@ -2,10 +2,13 @@ package com.example.tomaszek.foodclicker;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.BaseColumns;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -54,6 +57,11 @@ public class SelectUserActivity extends AppCompatActivity {
         textUser4.setTypeface(typeface);
         textUser5.setTypeface(typeface);
         textUser3.setTypeface(typeface);
+
+
+        final SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        final SharedPreferences.Editor editor = sharedPrefs.edit();
+
 
         ProductDbHelper mDbHelper = new ProductDbHelper(getApplicationContext());
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
@@ -158,6 +166,10 @@ public class SelectUserActivity extends AppCompatActivity {
                 }
                 Toast toast1 = Toast.makeText(getApplicationContext(), "User Selected : " + userSelected, Toast.LENGTH_LONG);
                 toast1.show();
+                editor.putString("username", userSelected);
+                editor.commit();
+
+
                 onBackPressed();
             }
         });
