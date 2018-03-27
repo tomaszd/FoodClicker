@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle("Food Clicker");
         toolbar.setDrawingCacheBackgroundColor(getResources().getColor(R.color.colorWhite));
 
-
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
@@ -63,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mDrawerToggle.setHomeAsUpIndicator(R.drawable.ananas);
+        mDrawerToggle.setHomeAsUpIndicator(R.drawable.hamb);
 
         //mDrawerLayout.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.colorWhite));
 

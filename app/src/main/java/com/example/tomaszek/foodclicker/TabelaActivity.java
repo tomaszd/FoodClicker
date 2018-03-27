@@ -53,7 +53,7 @@ public class TabelaActivity extends AppCompatActivity {
                 mDrawerLayout.openDrawer(GravityCompat.START);
             }
         });
-        mDrawerToggle.setHomeAsUpIndicator(R.drawable.ananas);
+        mDrawerToggle.setHomeAsUpIndicator(R.drawable.hamb);
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         Intent intent = getIntent();

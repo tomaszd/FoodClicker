@@ -18,12 +18,12 @@
             android:id="@+id/btnImage"
 
             android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:layout_weight="4"
+            android:layout_height="126dp"
+            android:layout_weight="5.28"
             android:adjustViewBounds="true"
             android:background="@null"
             android:scaleType="centerCrop"
-            android:src="@drawable/add_user" />
+            android:src="@drawable/users" />
 
     </LinearLayout>
 
