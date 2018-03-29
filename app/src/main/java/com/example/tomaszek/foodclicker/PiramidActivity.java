@@ -280,8 +280,11 @@ public class PiramidActivity extends AppCompatActivity {
             public boolean onLongClick(View v) {
                 // TODO Auto-generated method stub
                 owoce_value -= 1;
+                btnOwoce_enabled = false;
                 if (owoce_value < 0) {
                     owoce_value = 0;
+                    return true;
+
                 }
                 btnOwoce_enabled = false;
                 saveLogIntoDB("owoce", false);
@@ -327,10 +330,11 @@ public class PiramidActivity extends AppCompatActivity {
             public boolean onLongClick(View v) {
                 // TODO Auto-generated method stub
                 ryby_value -= 1;
+                btnRyby1_enabled = false;
                 if (ryby_value < 0) {
                     ryby_value = 0;
+                    return true;
                 }
-                btnRyby1_enabled = false;
                 saveLogIntoDB("ryby", false);
                 if (ryby_value > 2) {
                     btnRyby1.setImageDrawable(redIcon);
@@ -379,10 +383,11 @@ public class PiramidActivity extends AppCompatActivity {
             public boolean onLongClick(View v) {
                 // TODO Auto-generated method stub
                 ryby_value -= 1;
+                btnRyby2_enabled = false;
                 if (ryby_value < 0) {
                     ryby_value = 0;
+                    return true;
                 }
-                btnRyby2_enabled = false;
                 saveLogIntoDB("ryby", false);
                 if (ryby_value > 2) {
                     btnRyby1.setImageDrawable(redIcon);
@@ -405,38 +410,101 @@ public class PiramidActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.olejorzech);
-                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
-                if (btnOlejorzech_enabled) {
-                    orzech_value -= 1;
-                    btnOlejorzech.setImageDrawable(grayedIcon);
-                    btnOlejorzech_enabled = false;
-                    saveLogIntoDB("orzechy", false);
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.olejorzech));
+                orzech_value += 1;
+                btnOlejorzech_enabled = true;
+                saveLogIntoDB("orzechy", true);
+                btnOlejorzech.setImageDrawable(btnIcon);
+                if (orzech_value > 2) {
+                    btnOlejorzech.setImageDrawable(redIcon);
+                    btnOlejorzech2.setImageDrawable(redIcon);
                 } else {
-                    orzech_value += 1;
-                    btnIcon.clearColorFilter();
                     btnOlejorzech.setImageDrawable(btnIcon);
-                    btnOlejorzech_enabled = true;
-                    saveLogIntoDB("orzechy", true);
                 }
+
+            }
+        });
+
+        btnOlejorzech.setOnLongClickListener(new View.OnLongClickListener() {
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.olejorzech);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.olejorzech));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.olejorzech));
+
+            @Override
+            public boolean onLongClick(View v) {
+                // TODO Auto-generated method stub
+                orzech_value -= 1;
+                btnOlejorzech_enabled = false;
+                if (orzech_value < 0) {
+                    orzech_value = 0;
+                    return true;
+                }
+                saveLogIntoDB("orzechy", false);
+                if (orzech_value > 2) {
+                    btnOlejorzech.setImageDrawable(redIcon);
+                    btnOlejorzech2.setImageDrawable(redIcon);
+                } else if (orzech_value == 2) {
+                    btnOlejorzech.setImageDrawable(btnIcon);
+                    btnOlejorzech2.setImageDrawable(btnIcon);
+                }
+                if (orzech_value == 1) {
+                    btnOlejorzech.setImageDrawable(grayedIcon);
+                }
+                if (orzech_value == 0) {
+                    btnOlejorzech.setImageDrawable(grayedIcon);
+                    btnOlejorzech2.setImageDrawable(grayedIcon);
+                }
+                return true;
             }
         });
         btnOlejorzech2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.olejorzech);
-                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
-                if (btnOlejorzech2_enabled) {
-                    orzech_value -= 1;
-                    btnOlejorzech2.setImageDrawable(grayedIcon);
-                    btnOlejorzech2_enabled = false;
-                    saveLogIntoDB("orzechy", false);
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.olejorzech));
+                orzech_value += 1;
+                btnOlejorzech2_enabled = true;
+                saveLogIntoDB("orzechy", true);
+                if (orzech_value > 2) {
+                    btnOlejorzech2.setImageDrawable(redIcon);
+                    btnOlejorzech.setImageDrawable(redIcon);
                 } else {
-                    orzech_value += 1;
-                    btnIcon.clearColorFilter();
                     btnOlejorzech2.setImageDrawable(btnIcon);
-                    btnOlejorzech2_enabled = true;
-                    saveLogIntoDB("orzechy", true);
                 }
+
+            }
+        });
+
+        btnOlejorzech2.setOnLongClickListener(new View.OnLongClickListener() {
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.olejorzech);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.olejorzech));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.olejorzech));
+
+            @Override
+            public boolean onLongClick(View v) {
+                // TODO Auto-generated method stub
+                orzech_value -= 1;
+                btnOlejorzech2_enabled = false;
+                if (orzech_value < 0) {
+                    orzech_value = 0;
+                    return true;
+                }
+                saveLogIntoDB("orzechy", false);
+                if (orzech_value > 2) {
+                    btnOlejorzech2.setImageDrawable(redIcon);
+                    btnOlejorzech.setImageDrawable(redIcon);
+                } else if (orzech_value == 2) {
+                    btnOlejorzech.setImageDrawable(btnIcon);
+                    btnOlejorzech2.setImageDrawable(btnIcon);
+                }
+                if (orzech_value == 1) {
+                    btnOlejorzech2.setImageDrawable(grayedIcon);
+                }
+                if (orzech_value == 0) {
+                    btnOlejorzech.setImageDrawable(grayedIcon);
+                    btnOlejorzech2.setImageDrawable(grayedIcon);
+                }
+                return true;
             }
         });
         btnNabial1.setOnClickListener(new View.OnClickListener() {
