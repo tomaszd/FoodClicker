@@ -314,6 +314,9 @@ public class PiramidActivity extends AppCompatActivity {
                 if (ryby_value > 2) {
                     btnRyby1.setImageDrawable(redIcon);
                     btnRyby2.setImageDrawable(redIcon);
+                } else if (ryby_value == 2) {
+                    btnRyby1.setImageDrawable(btnIcon);
+                    btnRyby2.setImageDrawable(btnIcon);
                 } else {
                     btnRyby1.setImageDrawable(btnIcon);
                 }
@@ -321,7 +324,9 @@ public class PiramidActivity extends AppCompatActivity {
             }
         });
 
-        btnRyby1.setOnLongClickListener(new View.OnLongClickListener() {
+        btnRyby1.setOnLongClickListener(new View.OnLongClickListener()
+
+        {
             Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.ryba);
             Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.ryba));
             Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.ryba));
@@ -354,7 +359,9 @@ public class PiramidActivity extends AppCompatActivity {
             }
         });
 
-        btnRyby2.setOnClickListener(new View.OnClickListener() {
+        btnRyby2.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.ryba);
@@ -367,6 +374,9 @@ public class PiramidActivity extends AppCompatActivity {
                 if (ryby_value > 2) {
                     btnRyby1.setImageDrawable(redIcon);
                     btnRyby2.setImageDrawable(redIcon);
+                } else if (ryby_value == 2) {
+                    btnRyby1.setImageDrawable(btnIcon);
+                    btnRyby2.setImageDrawable(btnIcon);
                 } else {
                     btnRyby2.setImageDrawable(btnIcon);
                 }
@@ -374,7 +384,9 @@ public class PiramidActivity extends AppCompatActivity {
             }
         });
 
-        btnRyby2.setOnLongClickListener(new View.OnLongClickListener() {
+        btnRyby2.setOnLongClickListener(new View.OnLongClickListener()
+
+        {
             Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.ryba);
             Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.ryba));
             Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.ryba));
@@ -406,7 +418,9 @@ public class PiramidActivity extends AppCompatActivity {
                 return true;
             }
         });
-        btnOlejorzech.setOnClickListener(new View.OnClickListener() {
+        btnOlejorzech.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.olejorzech);
@@ -418,6 +432,10 @@ public class PiramidActivity extends AppCompatActivity {
                 if (orzech_value > 2) {
                     btnOlejorzech.setImageDrawable(redIcon);
                     btnOlejorzech2.setImageDrawable(redIcon);
+                }
+                if (orzech_value == 2) {
+                    btnOlejorzech.setImageDrawable(btnIcon);
+                    btnOlejorzech2.setImageDrawable(btnIcon);
                 } else {
                     btnOlejorzech.setImageDrawable(btnIcon);
                 }
@@ -425,7 +443,9 @@ public class PiramidActivity extends AppCompatActivity {
             }
         });
 
-        btnOlejorzech.setOnLongClickListener(new View.OnLongClickListener() {
+        btnOlejorzech.setOnLongClickListener(new View.OnLongClickListener()
+
+        {
             Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.olejorzech);
             Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.olejorzech));
             Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.olejorzech));
@@ -457,7 +477,9 @@ public class PiramidActivity extends AppCompatActivity {
                 return true;
             }
         });
-        btnOlejorzech2.setOnClickListener(new View.OnClickListener() {
+        btnOlejorzech2.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.olejorzech);
@@ -468,6 +490,10 @@ public class PiramidActivity extends AppCompatActivity {
                 if (orzech_value > 2) {
                     btnOlejorzech2.setImageDrawable(redIcon);
                     btnOlejorzech.setImageDrawable(redIcon);
+                }
+                if (orzech_value == 2) {
+                    btnOlejorzech.setImageDrawable(btnIcon);
+                    btnOlejorzech2.setImageDrawable(btnIcon);
                 } else {
                     btnOlejorzech2.setImageDrawable(btnIcon);
                 }
@@ -475,7 +501,9 @@ public class PiramidActivity extends AppCompatActivity {
             }
         });
 
-        btnOlejorzech2.setOnLongClickListener(new View.OnLongClickListener() {
+        btnOlejorzech2.setOnLongClickListener(new View.OnLongClickListener()
+
+        {
             Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.olejorzech);
             Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.olejorzech));
             Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.olejorzech));
@@ -507,47 +535,125 @@ public class PiramidActivity extends AppCompatActivity {
                 return true;
             }
         });
-        btnNabial1.setOnClickListener(new View.OnClickListener() {
+        btnNabial1.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.nabial);
-                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
-                if (btnNabial1_enabled) {
-                    nabial_value -= 1;
-                    btnNabial1.setImageDrawable(grayedIcon);
-                    btnNabial1_enabled = false;
-                    saveLogIntoDB("nabial", false);
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.nabial));
+                nabial_value += 1;
+                btnNabial1_enabled = true;
+                saveLogIntoDB("nabial", true);
+                btnNabial1.setImageDrawable(btnIcon);
+                if (nabial_value > 2) {
+                    btnNabial1.setImageDrawable(redIcon);
+                    btnNabial2.setImageDrawable(redIcon);
+                } else if (orzech_value == 2) {
+                    btnOlejorzech.setImageDrawable(btnIcon);
+                    btnOlejorzech2.setImageDrawable(btnIcon);
                 } else {
-                    nabial_value += 1;
-                    btnIcon.clearColorFilter();
                     btnNabial1.setImageDrawable(btnIcon);
-                    btnNabial1_enabled = true;
-                    saveLogIntoDB("nabial", true);
                 }
+
             }
         });
 
-        btnNabial2.setOnClickListener(new View.OnClickListener() {
+        btnNabial1.setOnLongClickListener(new View.OnLongClickListener()
+
+        {
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.nabial);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.nabial));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.nabial));
+
+            @Override
+            public boolean onLongClick(View v) {
+                // TODO Auto-generated method stub
+                nabial_value -= 1;
+                btnNabial1_enabled = false;
+                if (nabial_value < 0) {
+                    nabial_value = 0;
+                    return true;
+                }
+                saveLogIntoDB("nabial", false);
+                if (nabial_value > 2) {
+                    btnNabial1.setImageDrawable(redIcon);
+                    btnNabial2.setImageDrawable(redIcon);
+                } else if (nabial_value == 2) {
+                    btnNabial1.setImageDrawable(btnIcon);
+                    btnNabial2.setImageDrawable(btnIcon);
+                }
+                if (nabial_value == 1) {
+                    btnNabial1.setImageDrawable(grayedIcon);
+                }
+                if (nabial_value == 0) {
+                    btnNabial1.setImageDrawable(grayedIcon);
+                    btnNabial2.setImageDrawable(grayedIcon);
+                }
+                return true;
+            }
+        });
+        btnNabial2.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.nabial);
-                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
-                if (btnNabial2_enabled) {
-                    nabial_value -= 1;
-                    btnNabial2.setImageDrawable(grayedIcon);
-                    btnNabial2_enabled = false;
-                    saveLogIntoDB("nabial", false);
-                } else {
-                    nabial_value += 1;
-                    btnIcon.clearColorFilter();
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.nabial));
+                nabial_value += 1;
+                btnNabial2_enabled = true;
+                saveLogIntoDB("nabial", true);
+                if (nabial_value > 2) {
+                    btnNabial2.setImageDrawable(redIcon);
+                    btnNabial1.setImageDrawable(redIcon);
+                } else if (nabial_value == 2) {
+                    btnNabial1.setImageDrawable(btnIcon);
                     btnNabial2.setImageDrawable(btnIcon);
-                    btnNabial2_enabled = true;
-                    saveLogIntoDB("nabial", true);
+                } else {
+                    btnNabial2.setImageDrawable(btnIcon);
                 }
+
             }
         });
 
-        btnZboza1.setOnClickListener(new View.OnClickListener() {
+        btnNabial2.setOnLongClickListener(new View.OnLongClickListener()
+
+        {
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.nabial);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.nabial));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.nabial));
+
+            @Override
+            public boolean onLongClick(View v) {
+                // TODO Auto-generated method stub
+                nabial_value -= 1;
+                btnNabial2_enabled = false;
+                if (nabial_value < 0) {
+                    nabial_value = 0;
+                    return true;
+                }
+                saveLogIntoDB("nabial", false);
+                if (nabial_value > 2) {
+                    btnNabial2.setImageDrawable(redIcon);
+                    btnNabial1.setImageDrawable(redIcon);
+                } else if (nabial_value == 2) {
+                    btnNabial1.setImageDrawable(btnIcon);
+                    btnNabial2.setImageDrawable(btnIcon);
+                }
+                if (nabial_value == 1) {
+                    btnNabial2.setImageDrawable(grayedIcon);
+                }
+                if (nabial_value == 0) {
+                    btnNabial1.setImageDrawable(grayedIcon);
+                    btnNabial2.setImageDrawable(grayedIcon);
+                }
+                return true;
+            }
+        });
+
+        btnZboza1.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.zboza);
@@ -567,7 +673,9 @@ public class PiramidActivity extends AppCompatActivity {
             }
         });
 
-        btnZboza2.setOnClickListener(new View.OnClickListener() {
+        btnZboza2.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.zboza);
@@ -587,7 +695,9 @@ public class PiramidActivity extends AppCompatActivity {
             }
         });
 
-        btnZboza3.setOnClickListener(new View.OnClickListener() {
+        btnZboza3.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.zboza);
@@ -607,7 +717,9 @@ public class PiramidActivity extends AppCompatActivity {
             }
         });
 
-        btnWarzywa1.setOnClickListener(new View.OnClickListener() {
+        btnWarzywa1.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.warzywa);
@@ -627,7 +739,9 @@ public class PiramidActivity extends AppCompatActivity {
             }
         });
 
-        btnWarzywa2.setOnClickListener(new View.OnClickListener() {
+        btnWarzywa2.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.warzywa);
@@ -647,7 +761,9 @@ public class PiramidActivity extends AppCompatActivity {
             }
         });
 
-        btnWarzywa3.setOnClickListener(new View.OnClickListener() {
+        btnWarzywa3.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.warzywa);
@@ -667,7 +783,9 @@ public class PiramidActivity extends AppCompatActivity {
             }
         });
 
-        btnWarzywa4.setOnClickListener(new View.OnClickListener() {
+        btnWarzywa4.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.warzywa);
@@ -688,7 +806,9 @@ public class PiramidActivity extends AppCompatActivity {
         });
 
 
-        btnInne1.setOnClickListener(new View.OnClickListener() {
+        btnInne1.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
@@ -709,7 +829,9 @@ public class PiramidActivity extends AppCompatActivity {
         });
 
 
-        btnInne2.setOnClickListener(new View.OnClickListener() {
+        btnInne2.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
@@ -729,7 +851,9 @@ public class PiramidActivity extends AppCompatActivity {
             }
         });
 
-        btnInne3.setOnClickListener(new View.OnClickListener() {
+        btnInne3.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
@@ -749,7 +873,9 @@ public class PiramidActivity extends AppCompatActivity {
             }
         });
 
-        btnInne4.setOnClickListener(new View.OnClickListener() {
+        btnInne4.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
@@ -768,7 +894,9 @@ public class PiramidActivity extends AppCompatActivity {
                 }
             }
         });
-        btnInne5.setOnClickListener(new View.OnClickListener() {
+        btnInne5.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
@@ -788,7 +916,9 @@ public class PiramidActivity extends AppCompatActivity {
             }
         });
 
-        btnWoda1.setOnClickListener(new View.OnClickListener() {
+        btnWoda1.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
@@ -808,7 +938,9 @@ public class PiramidActivity extends AppCompatActivity {
             }
         });
 
-        btnWoda2.setOnClickListener(new View.OnClickListener() {
+        btnWoda2.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
@@ -827,7 +959,9 @@ public class PiramidActivity extends AppCompatActivity {
                 }
             }
         });
-        btnWoda3.setOnClickListener(new View.OnClickListener() {
+        btnWoda3.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
@@ -847,7 +981,9 @@ public class PiramidActivity extends AppCompatActivity {
             }
         });
 
-        btnWoda4.setOnClickListener(new View.OnClickListener() {
+        btnWoda4.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
@@ -866,7 +1002,9 @@ public class PiramidActivity extends AppCompatActivity {
                 }
             }
         });
-        btnWoda5.setOnClickListener(new View.OnClickListener() {
+        btnWoda5.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
@@ -885,7 +1023,9 @@ public class PiramidActivity extends AppCompatActivity {
                 }
             }
         });
-        btnWoda6.setOnClickListener(new View.OnClickListener() {
+        btnWoda6.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
