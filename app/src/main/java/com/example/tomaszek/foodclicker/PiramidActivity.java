@@ -148,7 +148,13 @@ public class PiramidActivity extends AppCompatActivity {
         if (owoce_value > 0) {
             setButtonVisible(btnOwoce, R.drawable.ananas);
             btnOwoce_enabled = true;
+
+            setButtonRed(btnOwoce, R.drawable.ananas);
         }
+        if (owoce_value > 1) {
+            setButtonRed(btnOwoce, R.drawable.ananas);
+        }
+
         if (ryby_value > 0) {
             setButtonVisible(btnRyby1, R.drawable.ryba);
             btnRyby1_enabled = true;
@@ -156,6 +162,10 @@ public class PiramidActivity extends AppCompatActivity {
         if (ryby_value > 1) {
             setButtonVisible(btnRyby2, R.drawable.ryba);
             btnRyby2_enabled = true;
+        }
+        if (ryby_value > 2) {
+            setButtonRed(btnRyby1, R.drawable.ryba);
+            setButtonRed(btnRyby2, R.drawable.ryba);
         }
         if (orzech_value > 0) {
             setButtonVisible(btnOlejorzech, (R.drawable.olejorzech));
@@ -165,6 +175,10 @@ public class PiramidActivity extends AppCompatActivity {
             setButtonVisible(btnOlejorzech2, (R.drawable.olejorzech));
             btnOlejorzech2_enabled = true;
         }
+        if (orzech_value > 2) {
+            setButtonRed(btnOlejorzech, (R.drawable.olejorzech));
+            setButtonRed(btnOlejorzech2, (R.drawable.olejorzech));
+        }
         if (nabial_value >= 1) {
             setButtonVisible(btnNabial1, (R.drawable.nabial));
             btnNabial1_enabled = true;
@@ -173,7 +187,10 @@ public class PiramidActivity extends AppCompatActivity {
             setButtonVisible(btnNabial2, (R.drawable.nabial));
             btnNabial2_enabled = true;
         }
-
+        if (nabial_value > 2) {
+            setButtonRed(btnNabial1, (R.drawable.nabial));
+            setButtonRed(btnNabial2, (R.drawable.nabial));
+        }
         if (zboza_value >= 1) {
             setButtonVisible(btnZboza1, (R.drawable.zboza));
             btnZboza1_enabled = true;
@@ -186,6 +203,12 @@ public class PiramidActivity extends AppCompatActivity {
             setButtonVisible(btnZboza3, (R.drawable.zboza));
             btnZboza3_enabled = true;
         }
+        if (zboza_value > 3) {
+            setButtonRed(btnZboza1, (R.drawable.zboza));
+            setButtonRed(btnZboza2, (R.drawable.zboza));
+            setButtonRed(btnZboza3, (R.drawable.zboza));
+        }
+
         if (warzywa_value >= 1) {
             setButtonVisible(btnWarzywa1, (R.drawable.warzywa));
             btnWarzywa1_enabled = true;
@@ -201,6 +224,12 @@ public class PiramidActivity extends AppCompatActivity {
         if (warzywa_value >= 4) {
             setButtonVisible(btnWarzywa4, (R.drawable.warzywa));
             btnWarzywa4_enabled = true;
+        }
+        if (zboza_value > 3) {
+            setButtonRed(btnWarzywa1, (R.drawable.warzywa));
+            setButtonRed(btnWarzywa2, (R.drawable.warzywa));
+            setButtonRed(btnWarzywa3, (R.drawable.warzywa));
+            setButtonRed(btnWarzywa4, (R.drawable.warzywa));
         }
         if (inne_value >= 1) {
             setButtonVisible(btnInne1, (R.drawable.posilki));
@@ -1092,10 +1121,10 @@ public class PiramidActivity extends AppCompatActivity {
                     btnWarzywa4.setImageDrawable(btnIcon);
                 }
                 if (warzywa_value == 1) {
-                    btnWarzywa1.setImageDrawable(grayedIcon);
+                    btnWarzywa1.setImageDrawable(btnIcon);
                     btnWarzywa2.setImageDrawable(grayedIcon);
                     btnWarzywa3.setImageDrawable(grayedIcon);
-                    btnWarzywa4.setImageDrawable(btnIcon);
+                    btnWarzywa4.setImageDrawable(grayedIcon);
                 }
                 if (warzywa_value == 0) {
                     btnWarzywa1.setImageDrawable(grayedIcon);
@@ -1439,9 +1468,9 @@ public class PiramidActivity extends AppCompatActivity {
         imgButton.setImageDrawable(getApplicationContext().getResources().getDrawable(drawableIcon));
     }
 
-    private void setButtonVisible(ImageView imgButton, int drawableIcon) {
-        getApplicationContext().getResources().getDrawable(drawableIcon).clearColorFilter();
-        imgButton.setImageDrawable(getApplicationContext().getResources().getDrawable(drawableIcon));
+    private void setButtonRed(ImageView imgButton, int drawableIcon) {
+        Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(drawableIcon));
+        imgButton.setImageDrawable(redIcon);
     }
 
     /**
