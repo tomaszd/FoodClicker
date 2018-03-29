@@ -297,56 +297,108 @@ public class PiramidActivity extends AppCompatActivity {
                 return true;
             }
         });
-
-
         btnRyby1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.ryba);
-                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
-                Drawable redIcon = convertDrawableToRedScale(btnIcon);
-                if (btnRyby1_enabled) {
-                    ryby_value -= 1;
-                    btnRyby1.setImageDrawable(grayedIcon);
-                    btnRyby1_enabled = false;
-                    saveLogIntoDB("ryby", false);
-                } else {
-                    ryby_value += 1;
-                    btnIcon.clearColorFilter();
-                    btnRyby1.setImageDrawable(btnIcon);
-                    btnRyby1_enabled = true;
-                    saveLogIntoDB("ryby", true);
-                }
-                if (ryby_value > 1) {
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.ryba));
+                ryby_value += 1;
+                btnRyby1_enabled = true;
+                saveLogIntoDB("ryby", true);
+
+
+                btnRyby1.setImageDrawable(btnIcon);
+                if (ryby_value > 2) {
                     btnRyby1.setImageDrawable(redIcon);
                     btnRyby2.setImageDrawable(redIcon);
+                } else {
+                    btnRyby1.setImageDrawable(btnIcon);
                 }
 
             }
         });
+
+        btnRyby1.setOnLongClickListener(new View.OnLongClickListener() {
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.ryba);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.ryba));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.ryba));
+
+            @Override
+            public boolean onLongClick(View v) {
+                // TODO Auto-generated method stub
+                ryby_value -= 1;
+                if (ryby_value < 0) {
+                    ryby_value = 0;
+                }
+                btnRyby1_enabled = false;
+                saveLogIntoDB("ryby", false);
+                if (ryby_value > 2) {
+                    btnRyby1.setImageDrawable(redIcon);
+                    btnRyby2.setImageDrawable(redIcon);
+                } else if (ryby_value == 2) {
+                    btnRyby1.setImageDrawable(btnIcon);
+                    btnRyby2.setImageDrawable(btnIcon);
+                }
+                if (ryby_value == 1) {
+                    btnRyby1.setImageDrawable(grayedIcon);
+                }
+                if (ryby_value == 0) {
+                    btnRyby1.setImageDrawable(grayedIcon);
+                    btnRyby2.setImageDrawable(grayedIcon);
+                }
+                return true;
+            }
+        });
+
         btnRyby2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.ryba);
-                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
-                Drawable redIcon = convertDrawableToRedScale(btnIcon);
-                if (btnRyby2_enabled) {
-                    ryby_value -= 1;
-                    btnRyby2.setImageDrawable(grayedIcon);
-                    btnRyby2_enabled = false;
-                    saveLogIntoDB("ryby", false);
-                } else {
-                    ryby_value += 1;
-                    btnIcon.clearColorFilter();
-                    btnRyby2.setImageDrawable(btnIcon);
-                    btnRyby2_enabled = true;
-                    saveLogIntoDB("ryby", true);
-                }
-                if (ryby_value > 1) {
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.ryba));
+                ryby_value += 1;
+                btnRyby2_enabled = true;
+                saveLogIntoDB("ryby", true);
+
+                btnRyby2.setImageDrawable(btnIcon);
+                if (ryby_value > 2) {
                     btnRyby1.setImageDrawable(redIcon);
                     btnRyby2.setImageDrawable(redIcon);
+                } else {
+                    btnRyby2.setImageDrawable(btnIcon);
                 }
 
+            }
+        });
+
+        btnRyby2.setOnLongClickListener(new View.OnLongClickListener() {
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.ryba);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.ryba));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.ryba));
+
+            @Override
+            public boolean onLongClick(View v) {
+                // TODO Auto-generated method stub
+                ryby_value -= 1;
+                if (ryby_value < 0) {
+                    ryby_value = 0;
+                }
+                btnRyby2_enabled = false;
+                saveLogIntoDB("ryby", false);
+                if (ryby_value > 2) {
+                    btnRyby1.setImageDrawable(redIcon);
+                    btnRyby2.setImageDrawable(redIcon);
+                } else if (ryby_value == 2) {
+                    btnRyby1.setImageDrawable(btnIcon);
+                    btnRyby2.setImageDrawable(btnIcon);
+                }
+                if (ryby_value == 1) {
+                    btnRyby2.setImageDrawable(grayedIcon);
+                }
+                if (ryby_value == 0) {
+                    btnRyby1.setImageDrawable(grayedIcon);
+                    btnRyby2.setImageDrawable(grayedIcon);
+                }
+                return true;
             }
         });
         btnOlejorzech.setOnClickListener(new View.OnClickListener() {
