@@ -157,7 +157,7 @@ public class PiramidActivity extends AppCompatActivity {
         }
         if (owoce_value > 1) {
             setButtonRed(btnOwoce, R.drawable.ananas);
-            txtOwoce.setText("+"+String.valueOf(owoce_value-1));
+            txtOwoce.setText("+" + String.valueOf(owoce_value - 1));
         }
 
         if (ryby_value > 0) {
@@ -314,7 +314,7 @@ public class PiramidActivity extends AppCompatActivity {
                 saveLogIntoDB("owoce", true);
                 if (owoce_value > 1) {
                     btnOwoce.setImageDrawable(redIcon);
-                    txtOwoce.setText("+"+String.valueOf(owoce_value-1));
+                    txtOwoce.setText("+" + String.valueOf(owoce_value - 1));
                 } else {
                     btnOwoce.setImageDrawable(btnOwoceIcon);
                 }
@@ -341,8 +341,8 @@ public class PiramidActivity extends AppCompatActivity {
                 saveLogIntoDB("owoce", false);
                 if (owoce_value > 1) {
                     btnOwoce.setImageDrawable(redIcon);
-                    txtOwoce.setText("+"+String.valueOf(owoce_value-1));
-                }else{
+                    txtOwoce.setText("+" + String.valueOf(owoce_value - 1));
+                } else {
                     txtOwoce.setText("   ");
                 }
                 if (owoce_value == 1) {
@@ -488,9 +488,11 @@ public class PiramidActivity extends AppCompatActivity {
                 if (orzech_value == 2) {
                     btnOlejorzech.setImageDrawable(btnIcon);
                     btnOlejorzech2.setImageDrawable(btnIcon);
-                } else {
+                }
+                if (orzech_value == 1) {
                     btnOlejorzech.setImageDrawable(btnIcon);
                 }
+
 
             }
         });
@@ -543,7 +545,8 @@ public class PiramidActivity extends AppCompatActivity {
                 if (orzech_value == 2) {
                     btnOlejorzech.setImageDrawable(btnIcon);
                     btnOlejorzech2.setImageDrawable(btnIcon);
-                } else {
+                }
+                if (orzech_value == 1) {
                     btnOlejorzech2.setImageDrawable(btnIcon);
                 }
 
@@ -600,7 +603,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnNabial2.setImageDrawable(redIcon);
                 } else if (nabial_value == 2) {
                     btnNabial1.setImageDrawable(btnIcon);
-                    btnNabial1.setImageDrawable(btnIcon);
+                    btnNabial2.setImageDrawable(btnIcon);
                 } else {
                     btnNabial1.setImageDrawable(btnIcon);
                 }
