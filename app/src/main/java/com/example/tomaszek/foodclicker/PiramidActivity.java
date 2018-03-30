@@ -1301,7 +1301,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne2.setImageDrawable(redIcon);
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
-                    btnInne4.setImageDrawable(redIcon);
+                    btnInne5.setImageDrawable(redIcon);
                 } else if (inne_value == 5) {
                     btnInne1.setImageDrawable(btnIcon);
                     btnInne2.setImageDrawable(btnIcon);
@@ -1795,68 +1795,422 @@ public class PiramidActivity extends AppCompatActivity {
             }
         });
 
-        btnWoda1.setOnClickListener(new View.OnClickListener()
-
-        {
+        btnWoda1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
-                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
-                if (btnWoda1_enabled) {
-                    woda_value -= 1;
-                    btnWoda1.setImageDrawable(grayedIcon);
-                    btnWoda1_enabled = false;
-                    saveLogIntoDB("woda", false);
-                } else {
-                    woda_value += 1;
-                    btnIcon.clearColorFilter();
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                woda_value += 1;
+                btnWoda1_enabled = true;
+                saveLogIntoDB("woda", true);
+                btnWoda1.setImageDrawable(btnIcon);
+                if (woda_value > 6) {
+                    btnWoda1.setImageDrawable(redIcon);
+                    btnWoda2.setImageDrawable(redIcon);
+                    btnWoda3.setImageDrawable(redIcon);
+                    btnWoda4.setImageDrawable(redIcon);
+                    btnWoda5.setImageDrawable(redIcon);
+                    btnWoda6.setImageDrawable(redIcon);
+                } else if (woda_value == 6) {
                     btnWoda1.setImageDrawable(btnIcon);
-                    btnWoda1_enabled = true;
-                    saveLogIntoDB("woda", true);
-                }
-            }
-        });
-
-        btnWoda2.setOnClickListener(new View.OnClickListener()
-
-        {
-            @Override
-            public void onClick(View view) {
-                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
-                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
-                if (btnWoda2_enabled) {
-                    woda_value -= 1;
-                    btnWoda2.setImageDrawable(grayedIcon);
-                    btnWoda2_enabled = false;
-                    saveLogIntoDB("woda", false);
-                } else {
-                    woda_value += 1;
-                    btnIcon.clearColorFilter();
                     btnWoda2.setImageDrawable(btnIcon);
-                    btnWoda2_enabled = true;
-                    saveLogIntoDB("woda", true);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 5) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(grayedIcon);
+                } else if (woda_value == 4) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(grayedIcon);
+                    btnWoda6.setImageDrawable(grayedIcon);
+                } else if (woda_value == 3) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(grayedIcon);
+                    btnWoda5.setImageDrawable(grayedIcon);
+                    btnWoda6.setImageDrawable(grayedIcon);
+                } else if (woda_value == 2) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda3.setImageDrawable(grayedIcon);
+                    btnWoda4.setImageDrawable(grayedIcon);
+                    btnWoda5.setImageDrawable(grayedIcon);
+                    btnWoda6.setImageDrawable(grayedIcon);
+                } else if (woda_value == 1) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(grayedIcon);
+                    btnWoda3.setImageDrawable(grayedIcon);
+                    btnWoda4.setImageDrawable(grayedIcon);
+                    btnWoda5.setImageDrawable(grayedIcon);
+                    btnWoda6.setImageDrawable(grayedIcon);
                 }
+
             }
         });
-        btnWoda3.setOnClickListener(new View.OnClickListener()
 
-        {
+        btnWoda1.setOnLongClickListener(new View.OnLongClickListener() {
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+
+            @Override
+            public boolean onLongClick(View v) {
+                // TODO Auto-generated method stub
+                woda_value -= 1;
+                btnWoda1_enabled = false;
+                if (woda_value < 0) {
+                    woda_value = 0;
+                    return true;
+                }
+                saveLogIntoDB("woda", false);
+                if (woda_value > 6) {
+                    btnWoda1.setImageDrawable(redIcon);
+                    btnWoda2.setImageDrawable(redIcon);
+                    btnWoda3.setImageDrawable(redIcon);
+                    btnWoda4.setImageDrawable(redIcon);
+                    btnWoda5.setImageDrawable(redIcon);
+                    btnWoda6.setImageDrawable(redIcon);
+                } else if (woda_value == 6) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 5) {
+                    btnWoda1.setImageDrawable(grayedIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 4) {
+                    btnWoda1.setImageDrawable(grayedIcon);
+                    btnWoda2.setImageDrawable(grayedIcon);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 3) {
+                    btnWoda1.setImageDrawable(grayedIcon);
+                    btnWoda2.setImageDrawable(grayedIcon);
+                    btnWoda3.setImageDrawable(grayedIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 2) {
+                    btnWoda1.setImageDrawable(grayedIcon);
+                    btnWoda2.setImageDrawable(grayedIcon);
+                    btnWoda3.setImageDrawable(grayedIcon);
+                    btnWoda4.setImageDrawable(grayedIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 1) {
+                    btnWoda1.setImageDrawable(grayedIcon);
+                    btnWoda2.setImageDrawable(grayedIcon);
+                    btnWoda3.setImageDrawable(grayedIcon);
+                    btnWoda4.setImageDrawable(grayedIcon);
+                    btnWoda5.setImageDrawable(grayedIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 0) {
+                    btnWoda1.setImageDrawable(grayedIcon);
+                    btnWoda2.setImageDrawable(grayedIcon);
+                    btnWoda3.setImageDrawable(grayedIcon);
+                    btnWoda4.setImageDrawable(grayedIcon);
+                    btnWoda5.setImageDrawable(grayedIcon);
+                    btnWoda6.setImageDrawable(grayedIcon);
+                }
+                return true;
+            }
+        });
+
+        btnWoda2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
-                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
-                if (btnWoda3_enabled) {
-                    woda_value -= 1;
-                    btnWoda3.setImageDrawable(grayedIcon);
-                    btnWoda3_enabled = false;
-                    saveLogIntoDB("woda", false);
-                } else {
-                    woda_value += 1;
-                    btnIcon.clearColorFilter();
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                woda_value += 1;
+                btnWoda2_enabled = true;
+                saveLogIntoDB("woda", true);
+                btnWoda2.setImageDrawable(btnIcon);
+                if (woda_value > 6) {
+                    btnWoda1.setImageDrawable(redIcon);
+                    btnWoda2.setImageDrawable(redIcon);
+                    btnWoda3.setImageDrawable(redIcon);
+                    btnWoda4.setImageDrawable(redIcon);
+                    btnWoda5.setImageDrawable(redIcon);
+                    btnWoda6.setImageDrawable(redIcon);
+                } else if (woda_value == 6) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
                     btnWoda3.setImageDrawable(btnIcon);
-                    btnWoda3_enabled = true;
-                    saveLogIntoDB("woda", true);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 5) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(grayedIcon);
+                } else if (woda_value == 4) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(grayedIcon);
+                    btnWoda6.setImageDrawable(grayedIcon);
+                } else if (woda_value == 3) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(grayedIcon);
+                    btnWoda5.setImageDrawable(grayedIcon);
+                    btnWoda6.setImageDrawable(grayedIcon);
+                } else if (woda_value == 2) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda3.setImageDrawable(grayedIcon);
+                    btnWoda4.setImageDrawable(grayedIcon);
+                    btnWoda5.setImageDrawable(grayedIcon);
+                    btnWoda6.setImageDrawable(grayedIcon);
+                } else if (woda_value == 1) {
+                    btnWoda1.setImageDrawable(grayedIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda3.setImageDrawable(grayedIcon);
+                    btnWoda4.setImageDrawable(grayedIcon);
+                    btnWoda5.setImageDrawable(grayedIcon);
+                    btnWoda6.setImageDrawable(grayedIcon);
                 }
+
+            }
+        });
+
+        btnWoda2.setOnLongClickListener(new View.OnLongClickListener() {
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+
+            @Override
+            public boolean onLongClick(View v) {
+                // TODO Auto-generated method stub
+                woda_value -= 1;
+                btnWoda2_enabled = false;
+                if (woda_value < 0) {
+                    woda_value = 0;
+                    return true;
+                }
+                saveLogIntoDB("woda", false);
+                if (woda_value > 6) {
+                    btnWoda1.setImageDrawable(redIcon);
+                    btnWoda2.setImageDrawable(redIcon);
+                    btnWoda3.setImageDrawable(redIcon);
+                    btnWoda4.setImageDrawable(redIcon);
+                    btnWoda5.setImageDrawable(redIcon);
+                    btnWoda6.setImageDrawable(redIcon);
+                } else if (woda_value == 6) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 5) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(grayedIcon);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 4) {
+                    btnWoda1.setImageDrawable(grayedIcon);
+                    btnWoda2.setImageDrawable(grayedIcon);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 3) {
+                    btnWoda1.setImageDrawable(grayedIcon);
+                    btnWoda2.setImageDrawable(grayedIcon);
+                    btnWoda3.setImageDrawable(grayedIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 2) {
+                    btnWoda1.setImageDrawable(grayedIcon);
+                    btnWoda2.setImageDrawable(grayedIcon);
+                    btnWoda3.setImageDrawable(grayedIcon);
+                    btnWoda4.setImageDrawable(grayedIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 1) {
+                    btnWoda1.setImageDrawable(grayedIcon);
+                    btnWoda2.setImageDrawable(grayedIcon);
+                    btnWoda3.setImageDrawable(grayedIcon);
+                    btnWoda4.setImageDrawable(grayedIcon);
+                    btnWoda5.setImageDrawable(grayedIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 0) {
+                    btnWoda1.setImageDrawable(grayedIcon);
+                    btnWoda2.setImageDrawable(grayedIcon);
+                    btnWoda3.setImageDrawable(grayedIcon);
+                    btnWoda4.setImageDrawable(grayedIcon);
+                    btnWoda5.setImageDrawable(grayedIcon);
+                    btnWoda6.setImageDrawable(grayedIcon);
+                }
+                return true;
+            }
+        });
+        btnWoda3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                woda_value += 1;
+                btnWoda3_enabled = true;
+                saveLogIntoDB("woda", true);
+                btnWoda3.setImageDrawable(btnIcon);
+                if (woda_value > 6) {
+                    btnWoda1.setImageDrawable(redIcon);
+                    btnWoda2.setImageDrawable(redIcon);
+                    btnWoda3.setImageDrawable(redIcon);
+                    btnWoda4.setImageDrawable(redIcon);
+                    btnWoda5.setImageDrawable(redIcon);
+                    btnWoda6.setImageDrawable(redIcon);
+                } else if (woda_value == 6) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 5) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(grayedIcon);
+                } else if (woda_value == 4) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(grayedIcon);
+                    btnWoda6.setImageDrawable(grayedIcon);
+                } else if (woda_value == 3) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(grayedIcon);
+                    btnWoda5.setImageDrawable(grayedIcon);
+                    btnWoda6.setImageDrawable(grayedIcon);
+                } else if (woda_value == 2) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(grayedIcon);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(grayedIcon);
+                    btnWoda5.setImageDrawable(grayedIcon);
+                    btnWoda6.setImageDrawable(grayedIcon);
+                } else if (woda_value == 1) {
+                    btnWoda1.setImageDrawable(grayedIcon);
+                    btnWoda2.setImageDrawable(grayedIcon);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(grayedIcon);
+                    btnWoda5.setImageDrawable(grayedIcon);
+                    btnWoda6.setImageDrawable(grayedIcon);
+                }
+
+            }
+        });
+
+        btnWoda3.setOnLongClickListener(new View.OnLongClickListener() {
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+
+            @Override
+            public boolean onLongClick(View v) {
+                // TODO Auto-generated method stub
+                woda_value -= 1;
+                btnWoda3_enabled = false;
+                if (woda_value < 0) {
+                    woda_value = 0;
+                    return true;
+                }
+                saveLogIntoDB("woda", false);
+                if (woda_value > 6) {
+                    btnWoda1.setImageDrawable(redIcon);
+                    btnWoda2.setImageDrawable(redIcon);
+                    btnWoda3.setImageDrawable(redIcon);
+                    btnWoda4.setImageDrawable(redIcon);
+                    btnWoda5.setImageDrawable(redIcon);
+                    btnWoda6.setImageDrawable(redIcon);
+                } else if (woda_value == 6) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda3.setImageDrawable(btnIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 5) {
+                    btnWoda1.setImageDrawable(btnIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda3.setImageDrawable(grayedIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 4) {
+                    btnWoda1.setImageDrawable(grayedIcon);
+                    btnWoda2.setImageDrawable(btnIcon);
+                    btnWoda3.setImageDrawable(grayedIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 3) {
+                    btnWoda1.setImageDrawable(grayedIcon);
+                    btnWoda2.setImageDrawable(grayedIcon);
+                    btnWoda3.setImageDrawable(grayedIcon);
+                    btnWoda4.setImageDrawable(btnIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 2) {
+                    btnWoda1.setImageDrawable(grayedIcon);
+                    btnWoda2.setImageDrawable(grayedIcon);
+                    btnWoda3.setImageDrawable(grayedIcon);
+                    btnWoda4.setImageDrawable(grayedIcon);
+                    btnWoda5.setImageDrawable(btnIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 1) {
+                    btnWoda1.setImageDrawable(grayedIcon);
+                    btnWoda2.setImageDrawable(grayedIcon);
+                    btnWoda3.setImageDrawable(grayedIcon);
+                    btnWoda4.setImageDrawable(grayedIcon);
+                    btnWoda5.setImageDrawable(grayedIcon);
+                    btnWoda6.setImageDrawable(btnIcon);
+                } else if (woda_value == 0) {
+                    btnWoda1.setImageDrawable(grayedIcon);
+                    btnWoda2.setImageDrawable(grayedIcon);
+                    btnWoda3.setImageDrawable(grayedIcon);
+                    btnWoda4.setImageDrawable(grayedIcon);
+                    btnWoda5.setImageDrawable(grayedIcon);
+                    btnWoda6.setImageDrawable(grayedIcon);
+                }
+                return true;
             }
         });
 
