@@ -39,14 +39,14 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="30dp"
-            android:layout_weight=""
+            android:layout_weight="0"
             android:gravity="bottom"
             android:text="+5"
             android:textColor="@color/colorAccent"
             android:textSize="18sp" />
 
         <ImageButton
-            android:id="@+id/btnOwoce2"
+            android:id="@+id/btnOwoce"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="30dp"
-            android:layout_weight=""
+            android:layout_weight="0"
             android:gravity="bottom"
             android:text="  "
             android:textColor="@color/colorAccent"
@@ -91,7 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="30dp"
-            android:layout_weight="1"
+            android:layout_weight="0"
             android:gravity="bottom"
             android:text="+5"
             android:textColor="@color/colorAccent"
@@ -118,14 +118,14 @@
             android:src="@drawable/olejorzech" />
 
         <TextView
-            android:id="@+id/txtOlejorzech2"
+            android:id="@+id/txtOlejorzech1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="30dp"
-            android:layout_weight="1"
+            android:layout_weight="0"
             android:gravity="bottom"
-            android:text="  "
+            android:text="    "
             android:textColor="@color/colorAccent"
             android:textSize="18sp" />
     </LinearLayout>
