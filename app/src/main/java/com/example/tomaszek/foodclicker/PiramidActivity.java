@@ -225,7 +225,7 @@ public class PiramidActivity extends AppCompatActivity {
             setButtonVisible(btnWarzywa4, (R.drawable.warzywa));
             btnWarzywa4_enabled = true;
         }
-        if (zboza_value > 3) {
+        if (warzywa_value > 4) {
             setButtonRed(btnWarzywa1, (R.drawable.warzywa));
             setButtonRed(btnWarzywa2, (R.drawable.warzywa));
             setButtonRed(btnWarzywa3, (R.drawable.warzywa));
@@ -252,6 +252,13 @@ public class PiramidActivity extends AppCompatActivity {
         if (inne_value >= 5) {
             setButtonVisible(btnInne5, (R.drawable.posilki));
             btnInne5_enabled = true;
+        }
+        if (inne_value > 5) {
+            setButtonRed(btnInne1, (R.drawable.posilki));
+            setButtonRed(btnInne2, (R.drawable.posilki));
+            setButtonRed(btnInne3, (R.drawable.posilki));
+            setButtonRed(btnInne4, (R.drawable.posilki));
+            setButtonRed(btnInne5, (R.drawable.posilki));
         }
         if (woda_value >= 1) {
             setButtonVisible(btnWoda1, (R.drawable.woda));
@@ -1223,113 +1230,568 @@ public class PiramidActivity extends AppCompatActivity {
         });
 
 
-        btnInne1.setOnClickListener(new View.OnClickListener()
-
-        {
+        btnInne1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
-                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
-                if (btnInne1_enabled) {
-                    inne_value -= 1;
-                    btnInne1.setImageDrawable(grayedIcon);
-                    btnInne1_enabled = false;
-                    saveLogIntoDB("inne", false);
-                } else {
-                    inne_value += 1;
-                    btnIcon.clearColorFilter();
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                inne_value += 1;
+                btnInne1_enabled = true;
+                saveLogIntoDB("inne", true);
+                btnInne1.setImageDrawable(btnIcon);
+                if (inne_value > 5) {
+                    btnInne1.setImageDrawable(redIcon);
+                    btnInne2.setImageDrawable(redIcon);
+                    btnInne3.setImageDrawable(redIcon);
+                    btnInne4.setImageDrawable(redIcon);
+                    btnInne5.setImageDrawable(redIcon);
+                } else if (inne_value == 5) {
                     btnInne1.setImageDrawable(btnIcon);
-                    btnInne1_enabled = true;
-                    saveLogIntoDB("inne", true);
-                }
-            }
-        });
-
-
-        btnInne2.setOnClickListener(new View.OnClickListener()
-
-        {
-            @Override
-            public void onClick(View view) {
-                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
-                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
-                if (btnInne2_enabled) {
-                    inne_value -= 1;
-                    btnInne2.setImageDrawable(grayedIcon);
-                    btnInne2_enabled = false;
-                    saveLogIntoDB("inne", false);
-                } else {
-                    inne_value += 1;
-                    btnIcon.clearColorFilter();
                     btnInne2.setImageDrawable(btnIcon);
-                    btnInne2_enabled = true;
-                    saveLogIntoDB("inne", true);
-                }
-            }
-        });
-
-        btnInne3.setOnClickListener(new View.OnClickListener()
-
-        {
-            @Override
-            public void onClick(View view) {
-                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
-                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
-                if (btnInne3_enabled) {
-                    inne_value -= 1;
-                    btnInne3.setImageDrawable(grayedIcon);
-                    btnInne3_enabled = false;
-                    saveLogIntoDB("inne", false);
-                } else {
-                    inne_value += 1;
-                    btnIcon.clearColorFilter();
                     btnInne3.setImageDrawable(btnIcon);
-                    btnInne3_enabled = true;
-                    saveLogIntoDB("inne", true);
-                }
-            }
-        });
-
-        btnInne4.setOnClickListener(new View.OnClickListener()
-
-        {
-            @Override
-            public void onClick(View view) {
-                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
-                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
-                if (btnInne4_enabled) {
-                    inne_value -= 1;
-                    btnInne4.setImageDrawable(grayedIcon);
-                    btnInne4_enabled = false;
-                    saveLogIntoDB("inne", false);
-                } else {
-                    inne_value += 1;
-                    btnIcon.clearColorFilter();
                     btnInne4.setImageDrawable(btnIcon);
-                    btnInne4_enabled = true;
-                    saveLogIntoDB("inne", true);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 4) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                } else if (inne_value == 3) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                } else if (inne_value == 2) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                } else if (inne_value == 1) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
                 }
+
             }
         });
-        btnInne5.setOnClickListener(new View.OnClickListener()
 
-        {
+        btnInne1.setOnLongClickListener(new View.OnLongClickListener() {
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+
+            @Override
+            public boolean onLongClick(View v) {
+                // TODO Auto-generated method stub
+                inne_value -= 1;
+                btnInne1_enabled = false;
+                if (inne_value < 0) {
+                    inne_value = 0;
+                    return true;
+                }
+                saveLogIntoDB("inne", false);
+                if (inne_value > 5) {
+                    btnInne1.setImageDrawable(redIcon);
+                    btnInne2.setImageDrawable(redIcon);
+                    btnInne3.setImageDrawable(redIcon);
+                    btnInne4.setImageDrawable(redIcon);
+                    btnInne4.setImageDrawable(redIcon);
+                } else if (inne_value == 5) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 4) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 3) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                } else if (inne_value == 2) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                } else if (inne_value == 1) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                } else if (inne_value == 0) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                }
+                return true;
+            }
+        });
+
+
+        btnInne2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
-                Drawable grayedIcon = convertDrawableToGrayScale(btnIcon);
-                if (btnInne5_enabled) {
-                    inne_value -= 1;
-                    btnInne5.setImageDrawable(grayedIcon);
-                    btnInne5_enabled = false;
-                    saveLogIntoDB("inne", false);
-                } else {
-                    inne_value += 1;
-                    btnIcon.clearColorFilter();
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                inne_value += 1;
+                btnInne2_enabled = true;
+                saveLogIntoDB("inne", true);
+                btnInne1.setImageDrawable(btnIcon);
+                if (inne_value > 5) {
+                    btnInne1.setImageDrawable(redIcon);
+                    btnInne2.setImageDrawable(redIcon);
+                    btnInne3.setImageDrawable(redIcon);
+                    btnInne4.setImageDrawable(redIcon);
+                    btnInne5.setImageDrawable(redIcon);
+                } else if (inne_value == 5) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
                     btnInne5.setImageDrawable(btnIcon);
-                    btnInne5_enabled = true;
-                    saveLogIntoDB("inne", true);
+                } else if (inne_value == 4) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                } else if (inne_value == 3) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                } else if (inne_value == 2) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                } else if (inne_value == 1) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
                 }
+
+            }
+        });
+
+        btnInne2.setOnLongClickListener(new View.OnLongClickListener() {
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+
+            @Override
+            public boolean onLongClick(View v) {
+                // TODO Auto-generated method stub
+                inne_value -= 1;
+                btnInne2_enabled = false;
+                if (inne_value < 0) {
+                    inne_value = 0;
+                    return true;
+                }
+                saveLogIntoDB("inne", false);
+                if (inne_value > 5) {
+                    btnInne1.setImageDrawable(redIcon);
+                    btnInne2.setImageDrawable(redIcon);
+                    btnInne3.setImageDrawable(redIcon);
+                    btnInne4.setImageDrawable(redIcon);
+                    btnInne4.setImageDrawable(redIcon);
+                } else if (inne_value == 5) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 4) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 3) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 2) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 1) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 0) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                }
+                return true;
+            }
+        });
+
+
+        btnInne3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                inne_value += 1;
+                btnInne3_enabled = true;
+                saveLogIntoDB("inne", true);
+                btnInne3.setImageDrawable(btnIcon);
+                if (inne_value > 5) {
+                    btnInne1.setImageDrawable(redIcon);
+                    btnInne2.setImageDrawable(redIcon);
+                    btnInne3.setImageDrawable(redIcon);
+                    btnInne4.setImageDrawable(redIcon);
+                    btnInne5.setImageDrawable(redIcon);
+                } else if (inne_value == 5) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 4) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                } else if (inne_value == 3) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                } else if (inne_value == 2) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                } else if (inne_value == 1) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                }
+
+            }
+        });
+
+        btnInne3.setOnLongClickListener(new View.OnLongClickListener() {
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+
+            @Override
+            public boolean onLongClick(View v) {
+                // TODO Auto-generated method stub
+                inne_value -= 1;
+                btnInne3_enabled = false;
+                if (inne_value < 0) {
+                    inne_value = 0;
+                    return true;
+                }
+                saveLogIntoDB("inne", false);
+                if (inne_value > 5) {
+                    btnInne1.setImageDrawable(redIcon);
+                    btnInne2.setImageDrawable(redIcon);
+                    btnInne3.setImageDrawable(redIcon);
+                    btnInne4.setImageDrawable(redIcon);
+                    btnInne4.setImageDrawable(redIcon);
+                } else if (inne_value == 5) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 4) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 3) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 2) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 1) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 0) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                }
+                return true;
+            }
+        });
+        btnInne4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                inne_value += 1;
+                btnInne4_enabled = true;
+                saveLogIntoDB("inne", true);
+                btnInne4.setImageDrawable(btnIcon);
+                if (inne_value > 5) {
+                    btnInne1.setImageDrawable(redIcon);
+                    btnInne2.setImageDrawable(redIcon);
+                    btnInne3.setImageDrawable(redIcon);
+                    btnInne4.setImageDrawable(redIcon);
+                    btnInne5.setImageDrawable(redIcon);
+                } else if (inne_value == 5) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 4) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                } else if (inne_value == 3) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                } else if (inne_value == 2) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                } else if (inne_value == 1) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                }
+
+            }
+        });
+
+        btnInne4.setOnLongClickListener(new View.OnLongClickListener() {
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+
+            @Override
+            public boolean onLongClick(View v) {
+                // TODO Auto-generated method stub
+                inne_value -= 1;
+                btnInne4_enabled = false;
+                if (inne_value < 0) {
+                    inne_value = 0;
+                    return true;
+                }
+                saveLogIntoDB("inne", false);
+                if (inne_value > 5) {
+                    btnInne1.setImageDrawable(redIcon);
+                    btnInne2.setImageDrawable(redIcon);
+                    btnInne3.setImageDrawable(redIcon);
+                    btnInne4.setImageDrawable(redIcon);
+                    btnInne4.setImageDrawable(redIcon);
+                } else if (inne_value == 5) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 4) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 3) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 2) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 1) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 0) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                }
+                return true;
+            }
+        });
+        btnInne5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                inne_value += 1;
+                btnInne5_enabled = true;
+                saveLogIntoDB("inne", true);
+                btnInne5.setImageDrawable(btnIcon);
+                if (inne_value > 5) {
+                    btnInne1.setImageDrawable(redIcon);
+                    btnInne2.setImageDrawable(redIcon);
+                    btnInne3.setImageDrawable(redIcon);
+                    btnInne4.setImageDrawable(redIcon);
+                    btnInne5.setImageDrawable(redIcon);
+                } else if (inne_value == 5) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 4) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 3) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 2) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 1) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                }
+
+            }
+        });
+
+        btnInne5.setOnLongClickListener(new View.OnLongClickListener() {
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+
+            @Override
+            public boolean onLongClick(View v) {
+                // TODO Auto-generated method stub
+                inne_value -= 1;
+                btnInne5_enabled = false;
+                if (inne_value < 0) {
+                    inne_value = 0;
+                    return true;
+                }
+                saveLogIntoDB("inne", false);
+                if (inne_value > 5) {
+                    btnInne1.setImageDrawable(redIcon);
+                    btnInne2.setImageDrawable(redIcon);
+                    btnInne3.setImageDrawable(redIcon);
+                    btnInne4.setImageDrawable(redIcon);
+                    btnInne5.setImageDrawable(redIcon);
+                } else if (inne_value == 5) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(btnIcon);
+                } else if (inne_value == 4) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(btnIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                } else if (inne_value == 3) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(btnIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                } else if (inne_value == 2) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(btnIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                } else if (inne_value == 1) {
+                    btnInne1.setImageDrawable(btnIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                } else if (inne_value == 0) {
+                    btnInne1.setImageDrawable(grayedIcon);
+                    btnInne2.setImageDrawable(grayedIcon);
+                    btnInne3.setImageDrawable(grayedIcon);
+                    btnInne4.setImageDrawable(grayedIcon);
+                    btnInne5.setImageDrawable(grayedIcon);
+                }
+                return true;
             }
         });
 
