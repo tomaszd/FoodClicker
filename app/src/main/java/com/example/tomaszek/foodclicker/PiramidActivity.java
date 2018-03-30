@@ -101,6 +101,11 @@ public class PiramidActivity extends AppCompatActivity {
         final ImageButton btnWoda4 = (ImageButton) findViewById(R.id.btnWoda4);
         final ImageButton btnWoda5 = (ImageButton) findViewById(R.id.btnWoda5);
         final ImageButton btnWoda6 = (ImageButton) findViewById(R.id.btnWoda6);
+
+
+        final TextView txtOwoce = (TextView) findViewById(R.id.txtOwoce);
+
+
         TextView appCompatImageButton = (TextView) findViewById(R.id.appCompatImageButton);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font2.ttf");
         appCompatImageButton.setTypeface(typeface);
@@ -148,11 +153,11 @@ public class PiramidActivity extends AppCompatActivity {
         if (owoce_value > 0) {
             setButtonVisible(btnOwoce, R.drawable.ananas);
             btnOwoce_enabled = true;
-
             setButtonRed(btnOwoce, R.drawable.ananas);
         }
         if (owoce_value > 1) {
             setButtonRed(btnOwoce, R.drawable.ananas);
+            txtOwoce.setText("+"+String.valueOf(owoce_value-1));
         }
 
         if (ryby_value > 0) {
@@ -309,6 +314,7 @@ public class PiramidActivity extends AppCompatActivity {
                 saveLogIntoDB("owoce", true);
                 if (owoce_value > 1) {
                     btnOwoce.setImageDrawable(redIcon);
+                    txtOwoce.setText("+"+String.valueOf(owoce_value-1));
                 } else {
                     btnOwoce.setImageDrawable(btnOwoceIcon);
                 }
@@ -335,6 +341,9 @@ public class PiramidActivity extends AppCompatActivity {
                 saveLogIntoDB("owoce", false);
                 if (owoce_value > 1) {
                     btnOwoce.setImageDrawable(redIcon);
+                    txtOwoce.setText("+"+String.valueOf(owoce_value-1));
+                }else{
+                    txtOwoce.setText("   ");
                 }
                 if (owoce_value == 1) {
                     btnOwoce.setImageDrawable(btnOwoceIcon);
