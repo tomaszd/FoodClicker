@@ -288,6 +288,15 @@ public class PiramidActivity extends AppCompatActivity {
             btnWoda6_enabled = true;
         }
 
+        if (woda_value > 6) {
+            setButtonRed(btnWoda1, (R.drawable.woda));
+            setButtonRed(btnWoda2, (R.drawable.woda));
+            setButtonRed(btnWoda3, (R.drawable.woda));
+            setButtonRed(btnWoda4, (R.drawable.woda));
+            setButtonRed(btnWoda5, (R.drawable.woda));
+            setButtonRed(btnWoda6, (R.drawable.woda));
+        }
+
         btnOwoce.setOnClickListener(new View.OnClickListener() {
             Drawable btnOwoceIcon = getApplicationContext().getResources().getDrawable(R.drawable.ananas);
             Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.ananas));
@@ -1798,9 +1807,9 @@ public class PiramidActivity extends AppCompatActivity {
         btnWoda1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
-                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
-                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
+                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
                 woda_value += 1;
                 btnWoda1_enabled = true;
                 saveLogIntoDB("woda", true);
@@ -1860,9 +1869,9 @@ public class PiramidActivity extends AppCompatActivity {
         });
 
         btnWoda1.setOnLongClickListener(new View.OnLongClickListener() {
-            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
-            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
-            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
 
             @Override
             public boolean onLongClick(View v) {
@@ -1938,9 +1947,9 @@ public class PiramidActivity extends AppCompatActivity {
         btnWoda2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
-                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
-                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
+                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
                 woda_value += 1;
                 btnWoda2_enabled = true;
                 saveLogIntoDB("woda", true);
@@ -2000,9 +2009,9 @@ public class PiramidActivity extends AppCompatActivity {
         });
 
         btnWoda2.setOnLongClickListener(new View.OnLongClickListener() {
-            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
-            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
-            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
 
             @Override
             public boolean onLongClick(View v) {
@@ -2077,9 +2086,9 @@ public class PiramidActivity extends AppCompatActivity {
         btnWoda3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
-                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
-                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
+                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
                 woda_value += 1;
                 btnWoda3_enabled = true;
                 saveLogIntoDB("woda", true);
@@ -2139,9 +2148,9 @@ public class PiramidActivity extends AppCompatActivity {
         });
 
         btnWoda3.setOnLongClickListener(new View.OnLongClickListener() {
-            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
-            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
-            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
 
             @Override
             public boolean onLongClick(View v) {
@@ -2217,9 +2226,9 @@ public class PiramidActivity extends AppCompatActivity {
         btnWoda4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
-                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
-                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
+                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
                 woda_value += 1;
                 btnWoda4_enabled = true;
                 saveLogIntoDB("woda", true);
@@ -2279,9 +2288,9 @@ public class PiramidActivity extends AppCompatActivity {
         });
 
         btnWoda4.setOnLongClickListener(new View.OnLongClickListener() {
-            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
-            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
-            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
 
             @Override
             public boolean onLongClick(View v) {
@@ -2356,9 +2365,9 @@ public class PiramidActivity extends AppCompatActivity {
         btnWoda5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
-                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
-                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
+                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
                 woda_value += 1;
                 btnWoda5_enabled = true;
                 saveLogIntoDB("woda", true);
@@ -2418,9 +2427,9 @@ public class PiramidActivity extends AppCompatActivity {
         });
 
         btnWoda5.setOnLongClickListener(new View.OnLongClickListener() {
-            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
-            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
-            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
 
             @Override
             public boolean onLongClick(View v) {
@@ -2495,9 +2504,9 @@ public class PiramidActivity extends AppCompatActivity {
         btnWoda6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
-                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
-                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+                Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
+                Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
+                Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
                 woda_value += 1;
                 btnWoda6_enabled = true;
                 saveLogIntoDB("woda", true);
@@ -2557,9 +2566,9 @@ public class PiramidActivity extends AppCompatActivity {
         });
 
         btnWoda6.setOnLongClickListener(new View.OnLongClickListener() {
-            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.posilki);
-            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
-            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.posilki));
+            Drawable btnIcon = getApplicationContext().getResources().getDrawable(R.drawable.woda);
+            Drawable grayedIcon = convertDrawableToGrayScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
+            Drawable redIcon = convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.woda));
 
             @Override
             public boolean onLongClick(View v) {
