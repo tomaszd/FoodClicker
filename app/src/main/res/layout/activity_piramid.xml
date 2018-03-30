@@ -33,14 +33,38 @@
             android:layout_gravity="end|center"
             android:layout_weight="2" />
 
+        <TextView
+            android:id="@+id/txtOwoce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30dp"
+            android:layout_weight=""
+            android:gravity="bottom"
+            android:text="+5"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
         <ImageButton
-            android:id="@+id/btnOwoce"
+            android:id="@+id/btnOwoce2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@null"
             android:scaleType="centerCrop"
             android:src="@drawable/ananas" />
+
+        <TextView
+            android:id="@+id/txtOwoce1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30dp"
+            android:layout_weight=""
+            android:gravity="bottom"
+            android:text="  "
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
 
         <Space
 
@@ -61,6 +85,17 @@
         android:layout_weight="1.9"
         android:orientation="horizontal">
 
+        <TextView
+            android:id="@+id/txtOlejorzech"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:text="+5"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
 
         <ImageButton
             android:id="@+id/btnOlejorzech"
@@ -82,6 +117,17 @@
             android:scaleType="centerCrop"
             android:src="@drawable/olejorzech" />
 
+        <TextView
+            android:id="@+id/txtOlejorzech2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:text="  "
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -91,6 +137,18 @@
         android:layout_margin="0dp"
         android:layout_weight="2.2"
         android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtZboza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:text="+5"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
 
         <ImageButton
             android:id="@+id/btnZboza1"
@@ -122,6 +180,17 @@
             android:scaleType="centerCrop"
             android:src="@drawable/zboza" />
 
+        <TextView
+            android:id="@+id/txtZboza1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:text="  "
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -132,6 +201,18 @@
         android:layout_margin="0dp"
         android:layout_weight="1.5"
         android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtRyby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:text="+5"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
 
         <ImageButton
             android:id="@+id/btnRyby1"
@@ -173,6 +254,17 @@
             android:scaleType="centerCrop"
             android:src="@drawable/nabial" />
 
+        <TextView
+            android:id="@+id/txtNabial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:text="+5"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -183,6 +275,18 @@
         android:layout_margin="0dp"
         android:layout_weight="1.5"
         android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtWarzywa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:text="+5"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
 
         <ImageButton
             android:id="@+id/btnWarzywa1"
@@ -226,6 +330,17 @@
             android:scaleType="centerCrop"
             android:src="@drawable/warzywa" />
 
+        <TextView
+            android:id="@+id/txtWarzywa1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:text="  "
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -237,11 +352,23 @@
         android:layout_weight="0.5"
         android:orientation="horizontal">
 
+        <TextView
+            android:id="@+id/txtInne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:text="+5"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+
         <ImageButton
             android:id="@+id/btnInne1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:adjustViewBounds="true"
             android:background="@null"
             android:scaleType="centerCrop"
@@ -251,7 +378,7 @@
             android:id="@+id/btnInne2"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:adjustViewBounds="true"
             android:background="@null"
             android:scaleType="centerCrop"
@@ -261,7 +388,7 @@
             android:id="@+id/btnInne3"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:adjustViewBounds="true"
             android:background="@null"
             android:scaleType="centerCrop"
@@ -271,7 +398,7 @@
             android:id="@+id/btnInne4"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:adjustViewBounds="true"
             android:background="@null"
             android:scaleType="centerCrop"
@@ -281,12 +408,23 @@
             android:id="@+id/btnInne5"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:adjustViewBounds="true"
             android:background="@null"
             android:scaleType="centerCrop"
             android:src="@drawable/posilki" />
 
+        <TextView
+            android:id="@+id/txtWoda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="35dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:text="+5"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
 
     </LinearLayout>
 
