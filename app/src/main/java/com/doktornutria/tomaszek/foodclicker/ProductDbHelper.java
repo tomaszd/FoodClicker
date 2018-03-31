@@ -1,13 +1,13 @@
-package com.example.tomaszek.foodclicker;
+package com.doktornutria.tomaszek.foodclicker;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import static com.example.tomaszek.foodclicker.Product.SQL_CREATE_ENTRIES;
-import static com.example.tomaszek.foodclicker.Product.SQL_DELETE_ENTRIES;
-import static com.example.tomaszek.foodclicker.Product.SQL_USER_CREATE_ENTRIES;
-import static com.example.tomaszek.foodclicker.Product.SQL_USER_DELETE_ENTRIES;
+import static com.doktornutria.tomaszek.foodclicker.Product.SQL_CREATE_ENTRIES;
+import static com.doktornutria.tomaszek.foodclicker.Product.SQL_DELETE_ENTRIES;
+import static com.doktornutria.tomaszek.foodclicker.Product.SQL_USER_CREATE_ENTRIES;
+import static com.doktornutria.tomaszek.foodclicker.Product.SQL_USER_DELETE_ENTRIES;
 
 /**
  * Created by Tomaszek on 3/12/2018.

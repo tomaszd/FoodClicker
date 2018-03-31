@@ -1,4 +1,4 @@
-package com.example.tomaszek.foodclicker;
+package com.doktornutria.tomaszek.foodclicker;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class OwoceDetailsActivity extends AppCompatActivity {
+public class InneDetailsActivity extends AppCompatActivity {
     int woda_value = 0;
     int owoce_value = 0;
     int inne_value = 0;
@@ -24,8 +24,7 @@ public class OwoceDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_owoce_details);
-        setupBottomNavigationView();
+        setContentView(R.layout.activity_inne_details);
         Intent intent = getIntent();
         woda_value = intent.getIntExtra("woda", 0);
         inne_value = intent.getIntExtra("inne", 0);
@@ -46,11 +45,13 @@ public class OwoceDetailsActivity extends AppCompatActivity {
         btnOk.setTextColor(0xffffffff); //this is white color
         btnNotOk.setTextColor(0xffffffff); //this is white color
         btnZalecane.setTextColor(0xffffffff); //this is white color
+
+
         ImageView btnPiramida = (ImageView) findViewById(R.id.btnPiramida);
         btnPiramida.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(OwoceDetailsActivity.this, PiramidActivity.class);
+                Intent myIntent = new Intent(InneDetailsActivity.this, PiramidActivity.class);
                 myIntent.putExtra("woda", woda_value); //Optional parameters
                 myIntent.putExtra("inne", inne_value); //Optional parameters
                 myIntent.putExtra("warzywa", warzywa_value); //Optional parameters
@@ -59,8 +60,7 @@ public class OwoceDetailsActivity extends AppCompatActivity {
                 myIntent.putExtra("zboza", zboza_value); //Optional parameters
                 myIntent.putExtra("nabial", nabial_value); //Optional parameters
                 myIntent.putExtra("orzechy", orzech_value); //Optional parameters
-                myIntent.putExtra("otherActivity", true); //Optional parameters
-                OwoceDetailsActivity.this.startActivity(myIntent);
+                InneDetailsActivity.this.startActivity(myIntent);
             }
         });
 
@@ -68,7 +68,7 @@ public class OwoceDetailsActivity extends AppCompatActivity {
         btnTabela.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(OwoceDetailsActivity.this, TabelaActivity.class);
+                Intent myIntent = new Intent(InneDetailsActivity.this, TabelaActivity.class);
                 myIntent.putExtra("woda", woda_value); //Optional parameters
                 myIntent.putExtra("inne", inne_value); //Optional parameters
                 myIntent.putExtra("warzywa", warzywa_value); //Optional parameters
@@ -77,7 +77,7 @@ public class OwoceDetailsActivity extends AppCompatActivity {
                 myIntent.putExtra("zboza", zboza_value); //Optional parameters
                 myIntent.putExtra("nabial", nabial_value); //Optional parameters
                 myIntent.putExtra("orzechy", orzech_value); //Optional parameters
-                OwoceDetailsActivity.this.startActivity(myIntent);
+                InneDetailsActivity.this.startActivity(myIntent);
             }
         });
 
@@ -90,7 +90,7 @@ public class OwoceDetailsActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_home:
-                        Intent myIntent = new Intent(OwoceDetailsActivity.this, NabialDetailsActivity.class);
+                        Intent myIntent = new Intent(InneDetailsActivity.this, NabialDetailsActivity.class);
                         myIntent.putExtra("woda", woda_value); //Optional parameters
                         myIntent.putExtra("inne", inne_value); //Optional parameters
                         myIntent.putExtra("warzywa", warzywa_value); //Optional parameters
@@ -99,11 +99,10 @@ public class OwoceDetailsActivity extends AppCompatActivity {
                         myIntent.putExtra("zboza", zboza_value); //Optional parameters
                         myIntent.putExtra("nabial", nabial_value); //Optional parameters
                         myIntent.putExtra("orzechy", orzech_value); //Optional parameters
-                        myIntent.putExtra("otherActivity", true); //Optional parameters
-                        OwoceDetailsActivity.this.startActivity(myIntent);
+                        InneDetailsActivity.this.startActivity(myIntent);
                         break;
                     case R.id.action_info:
-                        Intent myIntent2 = new Intent(OwoceDetailsActivity.this, TabelaActivity.class);
+                        Intent myIntent2 = new Intent(InneDetailsActivity.this, TabelaActivity.class);
                         myIntent2.putExtra("woda", woda_value); //Optional parameters
                         myIntent2.putExtra("inne", inne_value); //Optional parameters
                         myIntent2.putExtra("warzywa", warzywa_value); //Optional parameters
@@ -112,10 +111,10 @@ public class OwoceDetailsActivity extends AppCompatActivity {
                         myIntent2.putExtra("zboza", zboza_value); //Optional parameters
                         myIntent2.putExtra("nabial", nabial_value); //Optional parameters
                         myIntent2.putExtra("orzechy", orzech_value); //Optional parameters
-                        OwoceDetailsActivity.this.startActivity(myIntent2);
+                        InneDetailsActivity.this.startActivity(myIntent2);
                         break;
                     case R.id.action_piramid:
-                        Intent myIntent3 = new Intent(OwoceDetailsActivity.this, PiramidActivity.class);
+                        Intent myIntent3 = new Intent(InneDetailsActivity.this, PiramidActivity.class);
                         myIntent3.putExtra("woda", woda_value); //Optional parameters
                         myIntent3.putExtra("inne", inne_value); //Optional parameters
                         myIntent3.putExtra("warzywa", warzywa_value); //Optional parameters
@@ -124,7 +123,7 @@ public class OwoceDetailsActivity extends AppCompatActivity {
                         myIntent3.putExtra("zboza", zboza_value); //Optional parameters
                         myIntent3.putExtra("nabial", nabial_value); //Optional parameters
                         myIntent3.putExtra("orzechy", orzech_value); //Optional parameters
-                        OwoceDetailsActivity.this.startActivity(myIntent3);
+                        InneDetailsActivity.this.startActivity(myIntent3);
                         break;
                 }
                 return true;

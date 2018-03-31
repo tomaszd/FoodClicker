@@ -1,4 +1,4 @@
-package com.example.tomaszek.foodclicker;
+package com.doktornutria.tomaszek.foodclicker;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -21,7 +21,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.tomaszek.foodclicker.Product.UserEntry.COLUMN_NAME_USER_NAME;
+import static com.doktornutria.tomaszek.foodclicker.Product.UserEntry.COLUMN_NAME_USER_NAME;
 
 public class SelectUserActivity extends AppCompatActivity {
     String userSelected = null;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tomaszek.foodclicker">
+    package="com.doktornutria.tomaszek.foodclicker">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".MainActivity"
+            android:name="com.doktornutria.tomaszek.foodclicker.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,48 +19,48 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PiramidActivity"
+            android:name="com.doktornutria.tomaszek.foodclicker.PiramidActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SettingsActivity"
+            android:name="com.doktornutria.tomaszek.foodclicker.SettingsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TabelaActivity"
+            android:name="com.doktornutria.tomaszek.foodclicker.TabelaActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".WodaDetailsActivity"
+            android:name="com.doktornutria.tomaszek.foodclicker.WodaDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".InneDetailsActivity"
+            android:name="com.doktornutria.tomaszek.foodclicker.InneDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".WarzywaDetailsActivity"
+            android:name="com.doktornutria.tomaszek.foodclicker.WarzywaDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".OwoceDetailsActivity"
+            android:name="com.doktornutria.tomaszek.foodclicker.OwoceDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".NabialDetailsActivity"
+            android:name="com.doktornutria.tomaszek.foodclicker.NabialDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ZbozaDetailsActivity"
+            android:name="com.doktornutria.tomaszek.foodclicker.ZbozaDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".RybyDetailsActivity"
+            android:name="com.doktornutria.tomaszek.foodclicker.RybyDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".OlejorzechDetailsActivity"
+            android:name="com.doktornutria.tomaszek.foodclicker.OlejorzechDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".LogActivity"
+            android:name="com.doktornutria.tomaszek.foodclicker.LogActivity"
             android:screenOrientation="portrait" />
 
         <service
-            android:name=".LogDBService"
+            android:name="com.doktornutria.tomaszek.foodclicker.LogDBService"
             android:exported="false" />
 
-        <activity android:name=".AddProfileActivity" />
-        <activity android:name=".SelectUserActivity"></activity>
+        <activity android:name="com.doktornutria.tomaszek.foodclicker.AddProfileActivity" />
+        <activity android:name="com.doktornutria.tomaszek.foodclicker.SelectUserActivity"></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.tomaszek.foodclicker;
+package com.doktornutria.tomaszek.foodclicker;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;

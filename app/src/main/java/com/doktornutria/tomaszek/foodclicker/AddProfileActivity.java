@@ -1,4 +1,4 @@
-package com.example.tomaszek.foodclicker;
+package com.doktornutria.tomaszek.foodclicker;
 
 import android.content.ContentValues;
 import android.content.Intent;

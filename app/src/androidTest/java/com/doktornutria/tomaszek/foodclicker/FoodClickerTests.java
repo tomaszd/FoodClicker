@@ -1,4 +1,4 @@
-package com.example.tomaszek.foodclicker;
+package com.doktornutria.tomaszek.foodclicker;
 
 import android.content.Context;
 import android.content.Intent;
@@ -127,7 +127,7 @@ public class FoodClickerTests {
     public void useAppContext() throws Exception {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
-        assertEquals("com.example.tomaszek.foodclicker", appContext.getPackageName());
+        assertEquals("com.doktornutria.tomaszek.foodclicker", appContext.getPackageName());
 
     }
 

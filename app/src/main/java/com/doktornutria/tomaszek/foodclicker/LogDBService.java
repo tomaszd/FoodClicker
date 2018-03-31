@@ -1,4 +1,4 @@
-package com.example.tomaszek.foodclicker;
+package com.doktornutria.tomaszek.foodclicker;
 
 import android.app.IntentService;
 import android.content.ContentValues;
@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Handler;
 import android.os.Looper;
-import android.widget.Toast;
 
 /**
  * An {@link IntentService} subclass for handling asynchronous task requests in
