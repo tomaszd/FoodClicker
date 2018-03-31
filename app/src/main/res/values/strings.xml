@@ -10,7 +10,7 @@
     <string name="add_user">Add User</string>
     <string name="choose_user">Choose User</string>
     <string name="tabela">Tabela</string>
-    <string name="piramida">Piramida</string>
+    <string name="piramida">Pyramid</string>
     <string name="nutrition_facts">Nutrition Facts</string>
     <string name="food_diary">Food Diary</string>
     <string name="best_time_to_eat">"        Best time\n        to eat"</string>
@@ -28,4 +28,5 @@
     <string name="hours_before_sleep_for_last_meal">"        Hours before\n        sleep for\n        last meal"</string>
     <string name="recommended_weight_ratio_of_vegetables_to_the_rest_of_the_meals">"        Recommended weight\n        ratio of vegetables\n            to the rest of the meals"</string>
     <string name="recommended_daily_intake_about_6_glasses">"          Recommended daily\n          intake\n        (about 6 glasses)"</string>
+    <string name="informacja">Information</string>
 </resources>

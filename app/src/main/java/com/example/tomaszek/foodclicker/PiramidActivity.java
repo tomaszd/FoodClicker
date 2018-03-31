@@ -175,7 +175,7 @@ public class PiramidActivity extends AppCompatActivity {
         if (ryby_value > 2) {
             setButtonRed(btnRyby1, R.drawable.ryba);
             setButtonRed(btnRyby2, R.drawable.ryba);
-            txtRyby.setText("+" + String.valueOf(ryby_value - 1));
+            txtRyby.setText("+" + String.valueOf(ryby_value - 2));
         } else {
             txtRyby.setText("   ");
         }
@@ -189,7 +189,7 @@ public class PiramidActivity extends AppCompatActivity {
             btnOlejorzech2_enabled = true;
         }
         if (orzech_value > 2) {
-            txtOlejorzech.setText("+" + String.valueOf(owoce_value - 1));
+            txtOlejorzech.setText("+" + String.valueOf(orzech_value - 1));
             setButtonRed(btnOlejorzech, (R.drawable.olejorzech));
             setButtonRed(btnOlejorzech2, (R.drawable.olejorzech));
         } else {
@@ -206,7 +206,7 @@ public class PiramidActivity extends AppCompatActivity {
         if (nabial_value > 2) {
             setButtonRed(btnNabial1, (R.drawable.nabial));
             setButtonRed(btnNabial2, (R.drawable.nabial));
-            txtNabial.setText("+" + String.valueOf(nabial_value - 1));
+            txtNabial.setText("+" + String.valueOf(nabial_value - 2));
         } else {
             txtNabial.setText("   ");
         }
@@ -226,7 +226,7 @@ public class PiramidActivity extends AppCompatActivity {
             setButtonRed(btnZboza1, (R.drawable.zboza));
             setButtonRed(btnZboza2, (R.drawable.zboza));
             setButtonRed(btnZboza3, (R.drawable.zboza));
-            txtZboza.setText("+" + String.valueOf(zboza_value - 1));
+            txtZboza.setText("+" + String.valueOf(zboza_value - 3));
         } else {
             txtZboza.setText("   ");
         }
@@ -252,7 +252,7 @@ public class PiramidActivity extends AppCompatActivity {
             setButtonRed(btnWarzywa2, (R.drawable.warzywa));
             setButtonRed(btnWarzywa3, (R.drawable.warzywa));
             setButtonRed(btnWarzywa4, (R.drawable.warzywa));
-            txtWarzywa.setText("+" + String.valueOf(warzywa_value - 1));
+            txtWarzywa.setText("+" + String.valueOf(warzywa_value - 4));
         } else {
             txtWarzywa.setText("   ");
         }
@@ -284,7 +284,7 @@ public class PiramidActivity extends AppCompatActivity {
             setButtonRed(btnInne3, (R.drawable.posilki));
             setButtonRed(btnInne4, (R.drawable.posilki));
             setButtonRed(btnInne5, (R.drawable.posilki));
-            txtInne.setText("+" + String.valueOf(inne_value - 1));
+            txtInne.setText("+" + String.valueOf(inne_value - 5));
         } else {
             txtInne.setText("   ");
         }
@@ -389,7 +389,7 @@ public class PiramidActivity extends AppCompatActivity {
                 if (ryby_value > 2) {
                     btnRyby1.setImageDrawable(redIcon);
                     btnRyby2.setImageDrawable(redIcon);
-                    txtRyby.setText("+" + String.valueOf(ryby_value - 1));
+                    txtRyby.setText("+" + String.valueOf(ryby_value - 2));
                 } else {
                     txtRyby.setText("   ");
                 }
@@ -423,7 +423,7 @@ public class PiramidActivity extends AppCompatActivity {
                 if (ryby_value > 2) {
                     btnRyby1.setImageDrawable(redIcon);
                     btnRyby2.setImageDrawable(redIcon);
-                    txtRyby.setText("+" + String.valueOf(ryby_value - 1));
+                    txtRyby.setText("+" + String.valueOf(ryby_value - 2));
                 } else {
                     txtRyby.setText("   ");
                 }
@@ -457,7 +457,7 @@ public class PiramidActivity extends AppCompatActivity {
                 if (ryby_value > 2) {
                     btnRyby1.setImageDrawable(redIcon);
                     btnRyby2.setImageDrawable(redIcon);
-                    txtRyby.setText("+" + String.valueOf(ryby_value - 1));
+                    txtRyby.setText("+" + String.valueOf(ryby_value - 2));
                 } else {
                     txtRyby.setText("   ");
                 }
@@ -491,7 +491,7 @@ public class PiramidActivity extends AppCompatActivity {
                 if (ryby_value > 2) {
                     btnRyby1.setImageDrawable(redIcon);
                     btnRyby2.setImageDrawable(redIcon);
-                    txtRyby.setText("+" + String.valueOf(ryby_value - 1));
+                    txtRyby.setText("+" + String.valueOf(ryby_value - 2));
                 } else {
                     txtRyby.setText("   ");
                 }
@@ -523,7 +523,7 @@ public class PiramidActivity extends AppCompatActivity {
                 if (orzech_value > 2) {
                     btnOlejorzech.setImageDrawable(redIcon);
                     btnOlejorzech2.setImageDrawable(redIcon);
-                    txtOlejorzech.setText("+" + String.valueOf(orzech_value - 1));
+                    txtOlejorzech.setText("+" + String.valueOf(orzech_value - 2));
                 } else {
                     txtOlejorzech.setText("   ");
                 }
@@ -556,7 +556,7 @@ public class PiramidActivity extends AppCompatActivity {
                 if (orzech_value > 2) {
                     btnOlejorzech.setImageDrawable(redIcon);
                     btnOlejorzech2.setImageDrawable(redIcon);
-                    txtOlejorzech.setText("+" + String.valueOf(orzech_value - 1));
+                    txtOlejorzech.setText("+" + String.valueOf(orzech_value - 2));
                 } else {
                     txtOlejorzech.setText("   ");
                 }
@@ -587,7 +587,7 @@ public class PiramidActivity extends AppCompatActivity {
                 if (orzech_value > 2) {
                     btnOlejorzech2.setImageDrawable(redIcon);
                     btnOlejorzech.setImageDrawable(redIcon);
-                    txtOwoce.setText("+" + String.valueOf(orzech_value - 1));
+                    txtOwoce.setText("+" + String.valueOf(orzech_value - 2));
                 } else {
                     txtOlejorzech.setText("   ");
                 }
@@ -622,7 +622,7 @@ public class PiramidActivity extends AppCompatActivity {
                 if (orzech_value > 2) {
                     btnOlejorzech2.setImageDrawable(redIcon);
                     btnOlejorzech.setImageDrawable(redIcon);
-                    txtOlejorzech.setText("+" + String.valueOf(orzech_value - 1));
+                    txtOlejorzech.setText("+" + String.valueOf(orzech_value - 2));
                 } else {
                     txtOlejorzech.setText("   ");
                 }
@@ -654,7 +654,7 @@ public class PiramidActivity extends AppCompatActivity {
                 if (nabial_value > 2) {
                     btnNabial1.setImageDrawable(redIcon);
                     btnNabial2.setImageDrawable(redIcon);
-                    txtNabial.setText("+" + String.valueOf(nabial_value - 1));
+                    txtNabial.setText("+" + String.valueOf(nabial_value - 2));
                 } else {
                     txtNabial.setText("   ");
                 }
@@ -686,7 +686,7 @@ public class PiramidActivity extends AppCompatActivity {
                 if (nabial_value > 2) {
                     btnNabial1.setImageDrawable(redIcon);
                     btnNabial2.setImageDrawable(redIcon);
-                    txtNabial.setText("+" + String.valueOf(nabial_value - 1));
+                    txtNabial.setText("+" + String.valueOf(nabial_value - 2));
                 } else {
                     txtNabial.setText("   ");
                 }
@@ -717,7 +717,7 @@ public class PiramidActivity extends AppCompatActivity {
                 if (nabial_value > 2) {
                     btnNabial2.setImageDrawable(redIcon);
                     btnNabial1.setImageDrawable(redIcon);
-                    txtNabial.setText("+" + String.valueOf(nabial_value - 1));
+                    txtNabial.setText("+" + String.valueOf(nabial_value - 2));
                 } else {
                     txtNabial.setText("   ");
                 }
@@ -749,7 +749,7 @@ public class PiramidActivity extends AppCompatActivity {
                 if (nabial_value > 2) {
                     btnNabial2.setImageDrawable(redIcon);
                     btnNabial1.setImageDrawable(redIcon);
-                    txtNabial.setText("+" + String.valueOf(nabial_value - 1));
+                    txtNabial.setText("+" + String.valueOf(nabial_value - 2));
                 } else {
                     txtNabial.setText("   ");
                 }
@@ -784,7 +784,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnZboza1.setImageDrawable(redIcon);
                     btnZboza2.setImageDrawable(redIcon);
                     btnZboza3.setImageDrawable(redIcon);
-                    txtZboza.setText("+" + String.valueOf(zboza_value - 1));
+                    txtZboza.setText("+" + String.valueOf(zboza_value - 3));
                 } else {
                     txtZboza.setText("   ");
                 }
@@ -819,7 +819,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnZboza1.setImageDrawable(redIcon);
                     btnZboza2.setImageDrawable(redIcon);
                     btnZboza3.setImageDrawable(redIcon);
-                    txtZboza.setText("+" + String.valueOf(zboza_value - 1));
+                    txtZboza.setText("+" + String.valueOf(zboza_value - 3));
                 } else {
                     txtZboza.setText("   ");
                 }
@@ -861,7 +861,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnZboza1.setImageDrawable(redIcon);
                     btnZboza2.setImageDrawable(redIcon);
                     btnZboza3.setImageDrawable(redIcon);
-                    txtZboza.setText("+" + String.valueOf(zboza_value - 1));
+                    txtZboza.setText("+" + String.valueOf(zboza_value - 3));
                 } else {
                     txtZboza.setText("   ");
                 }
@@ -896,7 +896,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnZboza1.setImageDrawable(redIcon);
                     btnZboza2.setImageDrawable(redIcon);
                     btnZboza3.setImageDrawable(redIcon);
-                    txtZboza.setText("+" + String.valueOf(zboza_value - 1));
+                    txtZboza.setText("+" + String.valueOf(zboza_value - 3));
                 } else {
                     txtZboza.setText("   ");
                 }
@@ -936,7 +936,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnZboza1.setImageDrawable(redIcon);
                     btnZboza2.setImageDrawable(redIcon);
                     btnZboza3.setImageDrawable(redIcon);
-                    txtZboza.setText("+" + String.valueOf(zboza_value - 1));
+                    txtZboza.setText("+" + String.valueOf(zboza_value - 3));
                 } else {
                     txtZboza.setText("   ");
                 }
@@ -971,7 +971,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnZboza1.setImageDrawable(redIcon);
                     btnZboza2.setImageDrawable(redIcon);
                     btnZboza3.setImageDrawable(redIcon);
-                    txtZboza.setText("+" + String.valueOf(zboza_value - 1));
+                    txtZboza.setText("+" + String.valueOf(zboza_value - 3));
                 } else {
                     txtZboza.setText("   ");
                 }
@@ -1014,7 +1014,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnWarzywa2.setImageDrawable(redIcon);
                     btnWarzywa3.setImageDrawable(redIcon);
                     btnWarzywa4.setImageDrawable(redIcon);
-                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 1));
+                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 4));
                 } else {
                     txtWarzywa.setText("   ");
                 }
@@ -1057,7 +1057,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnWarzywa2.setImageDrawable(redIcon);
                     btnWarzywa3.setImageDrawable(redIcon);
                     btnWarzywa4.setImageDrawable(redIcon);
-                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 1));
+                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 4));
                 } else {
                     txtWarzywa.setText("   ");
                 }
@@ -1108,7 +1108,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnWarzywa2.setImageDrawable(redIcon);
                     btnWarzywa3.setImageDrawable(redIcon);
                     btnWarzywa4.setImageDrawable(redIcon);
-                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 1));
+                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 4));
                 } else {
                     txtWarzywa.setText("   ");
                 }
@@ -1151,7 +1151,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnWarzywa2.setImageDrawable(redIcon);
                     btnWarzywa3.setImageDrawable(redIcon);
                     btnWarzywa4.setImageDrawable(redIcon);
-                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 1));
+                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 4));
                 } else {
                     txtWarzywa.setText("   ");
                 }
@@ -1202,7 +1202,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnWarzywa2.setImageDrawable(redIcon);
                     btnWarzywa3.setImageDrawable(redIcon);
                     btnWarzywa4.setImageDrawable(redIcon);
-                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 1));
+                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 4));
                 } else {
                     txtWarzywa.setText("   ");
                 }
@@ -1245,7 +1245,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnWarzywa2.setImageDrawable(redIcon);
                     btnWarzywa3.setImageDrawable(redIcon);
                     btnWarzywa4.setImageDrawable(redIcon);
-                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 1));
+                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 4));
                 } else {
                     txtWarzywa.setText("   ");
                 }
@@ -1296,7 +1296,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnWarzywa2.setImageDrawable(redIcon);
                     btnWarzywa3.setImageDrawable(redIcon);
                     btnWarzywa4.setImageDrawable(redIcon);
-                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 1));
+                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 4));
                 } else {
                     txtWarzywa.setText("   ");
                 }
@@ -1339,7 +1339,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnWarzywa2.setImageDrawable(redIcon);
                     btnWarzywa3.setImageDrawable(redIcon);
                     btnWarzywa4.setImageDrawable(redIcon);
-                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 1));
+                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 4));
                 } else {
                     txtWarzywa.setText("   ");
                 }
@@ -1392,7 +1392,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne5.setImageDrawable(redIcon);
-                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                    txtInne.setText("+" + String.valueOf(inne_value - 5));
                 } else {
                     txtInne.setText("   ");
                 }
@@ -1452,7 +1452,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne5.setImageDrawable(redIcon);
-                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                    txtInne.setText("+" + String.valueOf(inne_value - 5));
                 } else {
                     txtInne.setText("   ");
                 }
@@ -1514,7 +1514,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne5.setImageDrawable(redIcon);
-                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                    txtInne.setText("+" + String.valueOf(inne_value - 5));
                 } else {
                     txtInne.setText("   ");
                 }
@@ -1574,7 +1574,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
-                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                    txtInne.setText("+" + String.valueOf(inne_value - 5));
                 } else {
                     txtInne.setText("   ");
                 }
@@ -1636,7 +1636,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne5.setImageDrawable(redIcon);
-                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                    txtInne.setText("+" + String.valueOf(inne_value - 5));
                 } else {
                     txtInne.setText("   ");
                 }
@@ -1696,7 +1696,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
-                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                    txtInne.setText("+" + String.valueOf(inne_value - 5));
                 } else {
                     txtInne.setText("   ");
                 }
@@ -1756,7 +1756,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne5.setImageDrawable(redIcon);
-                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                    txtInne.setText("+" + String.valueOf(inne_value - 5));
                 } else {
                     txtInne.setText("   ");
                 }
@@ -1816,7 +1816,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
-                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                    txtInne.setText("+" + String.valueOf(inne_value - 5));
                 } else {
                     txtInne.setText("   ");
                 }
@@ -1876,7 +1876,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne5.setImageDrawable(redIcon);
-                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                    txtInne.setText("+" + String.valueOf(inne_value - 5));
                 } else {
                     txtInne.setText("   ");
                 }
@@ -1936,7 +1936,7 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne5.setImageDrawable(redIcon);
-                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                    txtInne.setText("+" + String.valueOf(inne_value - 5));
                 } else {
                     txtInne.setText("   ");
                 }

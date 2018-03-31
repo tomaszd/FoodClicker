@@ -6,11 +6,11 @@
     <item
         android:id="@+id/action_piramid"
         android:icon="@drawable/ic_warning"
-        android:title="Piramida" />
+        android:title="@string/piramida" />
 
     <item
         android:id="@+id/action_info"
         android:icon="@drawable/ic_info"
-        android:title="Informacja" />
+        android:title="@string/informacja" />
 
 </menu>
