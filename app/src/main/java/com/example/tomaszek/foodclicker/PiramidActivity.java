@@ -104,7 +104,12 @@ public class PiramidActivity extends AppCompatActivity {
 
 
         final TextView txtOwoce = (TextView) findViewById(R.id.txtOwoce);
-
+        final TextView txtOlejorzech = (TextView) findViewById(R.id.txtOlejorzech);
+        final TextView txtZboza = (TextView) findViewById(R.id.txtZboza);
+        final TextView txtRyby = (TextView) findViewById(R.id.txtRyby);
+        final TextView txtNabial = (TextView) findViewById(R.id.txtNabial);
+        final TextView txtWarzywa = (TextView) findViewById(R.id.txtWarzywa);
+        final TextView txtInne = (TextView) findViewById(R.id.txtInne);
 
         TextView appCompatImageButton = (TextView) findViewById(R.id.appCompatImageButton);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font2.ttf");
@@ -153,7 +158,6 @@ public class PiramidActivity extends AppCompatActivity {
         if (owoce_value > 0) {
             setButtonVisible(btnOwoce, R.drawable.ananas);
             btnOwoce_enabled = true;
-            setButtonRed(btnOwoce, R.drawable.ananas);
         }
         if (owoce_value > 1) {
             setButtonRed(btnOwoce, R.drawable.ananas);
@@ -171,7 +175,11 @@ public class PiramidActivity extends AppCompatActivity {
         if (ryby_value > 2) {
             setButtonRed(btnRyby1, R.drawable.ryba);
             setButtonRed(btnRyby2, R.drawable.ryba);
+            txtRyby.setText("+" + String.valueOf(ryby_value - 1));
+        } else {
+            txtRyby.setText("   ");
         }
+
         if (orzech_value > 0) {
             setButtonVisible(btnOlejorzech, (R.drawable.olejorzech));
             btnOlejorzech_enabled = true;
@@ -181,8 +189,11 @@ public class PiramidActivity extends AppCompatActivity {
             btnOlejorzech2_enabled = true;
         }
         if (orzech_value > 2) {
+            txtOlejorzech.setText("+" + String.valueOf(owoce_value - 1));
             setButtonRed(btnOlejorzech, (R.drawable.olejorzech));
             setButtonRed(btnOlejorzech2, (R.drawable.olejorzech));
+        } else {
+            txtOlejorzech.setText("   ");
         }
         if (nabial_value >= 1) {
             setButtonVisible(btnNabial1, (R.drawable.nabial));
@@ -195,6 +206,9 @@ public class PiramidActivity extends AppCompatActivity {
         if (nabial_value > 2) {
             setButtonRed(btnNabial1, (R.drawable.nabial));
             setButtonRed(btnNabial2, (R.drawable.nabial));
+            txtNabial.setText("+" + String.valueOf(nabial_value - 1));
+        } else {
+            txtNabial.setText("   ");
         }
         if (zboza_value >= 1) {
             setButtonVisible(btnZboza1, (R.drawable.zboza));
@@ -212,6 +226,9 @@ public class PiramidActivity extends AppCompatActivity {
             setButtonRed(btnZboza1, (R.drawable.zboza));
             setButtonRed(btnZboza2, (R.drawable.zboza));
             setButtonRed(btnZboza3, (R.drawable.zboza));
+            txtZboza.setText("+" + String.valueOf(zboza_value - 1));
+        } else {
+            txtZboza.setText("   ");
         }
 
         if (warzywa_value >= 1) {
@@ -235,6 +252,9 @@ public class PiramidActivity extends AppCompatActivity {
             setButtonRed(btnWarzywa2, (R.drawable.warzywa));
             setButtonRed(btnWarzywa3, (R.drawable.warzywa));
             setButtonRed(btnWarzywa4, (R.drawable.warzywa));
+            txtWarzywa.setText("+" + String.valueOf(warzywa_value - 1));
+        } else {
+            txtWarzywa.setText("   ");
         }
         if (inne_value >= 1) {
             setButtonVisible(btnInne1, (R.drawable.posilki));
@@ -264,6 +284,9 @@ public class PiramidActivity extends AppCompatActivity {
             setButtonRed(btnInne3, (R.drawable.posilki));
             setButtonRed(btnInne4, (R.drawable.posilki));
             setButtonRed(btnInne5, (R.drawable.posilki));
+            txtInne.setText("+" + String.valueOf(inne_value - 1));
+        } else {
+            txtInne.setText("   ");
         }
         if (woda_value >= 1) {
             setButtonVisible(btnWoda1, (R.drawable.woda));
@@ -366,7 +389,11 @@ public class PiramidActivity extends AppCompatActivity {
                 if (ryby_value > 2) {
                     btnRyby1.setImageDrawable(redIcon);
                     btnRyby2.setImageDrawable(redIcon);
-                } else if (ryby_value == 2) {
+                    txtRyby.setText("+" + String.valueOf(ryby_value - 1));
+                } else {
+                    txtRyby.setText("   ");
+                }
+                if (ryby_value == 2) {
                     btnRyby1.setImageDrawable(btnIcon);
                     btnRyby2.setImageDrawable(btnIcon);
                 } else {
@@ -396,7 +423,11 @@ public class PiramidActivity extends AppCompatActivity {
                 if (ryby_value > 2) {
                     btnRyby1.setImageDrawable(redIcon);
                     btnRyby2.setImageDrawable(redIcon);
-                } else if (ryby_value == 2) {
+                    txtRyby.setText("+" + String.valueOf(ryby_value - 1));
+                } else {
+                    txtRyby.setText("   ");
+                }
+                if (ryby_value == 2) {
                     btnRyby1.setImageDrawable(btnIcon);
                     btnRyby2.setImageDrawable(btnIcon);
                 }
@@ -426,7 +457,11 @@ public class PiramidActivity extends AppCompatActivity {
                 if (ryby_value > 2) {
                     btnRyby1.setImageDrawable(redIcon);
                     btnRyby2.setImageDrawable(redIcon);
-                } else if (ryby_value == 2) {
+                    txtRyby.setText("+" + String.valueOf(ryby_value - 1));
+                } else {
+                    txtRyby.setText("   ");
+                }
+                if (ryby_value == 2) {
                     btnRyby1.setImageDrawable(btnIcon);
                     btnRyby2.setImageDrawable(btnIcon);
                 } else {
@@ -456,7 +491,11 @@ public class PiramidActivity extends AppCompatActivity {
                 if (ryby_value > 2) {
                     btnRyby1.setImageDrawable(redIcon);
                     btnRyby2.setImageDrawable(redIcon);
-                } else if (ryby_value == 2) {
+                    txtRyby.setText("+" + String.valueOf(ryby_value - 1));
+                } else {
+                    txtRyby.setText("   ");
+                }
+                if (ryby_value == 2) {
                     btnRyby1.setImageDrawable(btnIcon);
                     btnRyby2.setImageDrawable(btnIcon);
                 }
@@ -484,6 +523,9 @@ public class PiramidActivity extends AppCompatActivity {
                 if (orzech_value > 2) {
                     btnOlejorzech.setImageDrawable(redIcon);
                     btnOlejorzech2.setImageDrawable(redIcon);
+                    txtOlejorzech.setText("+" + String.valueOf(orzech_value - 1));
+                } else {
+                    txtOlejorzech.setText("   ");
                 }
                 if (orzech_value == 2) {
                     btnOlejorzech.setImageDrawable(btnIcon);
@@ -514,7 +556,11 @@ public class PiramidActivity extends AppCompatActivity {
                 if (orzech_value > 2) {
                     btnOlejorzech.setImageDrawable(redIcon);
                     btnOlejorzech2.setImageDrawable(redIcon);
-                } else if (orzech_value == 2) {
+                    txtOlejorzech.setText("+" + String.valueOf(orzech_value - 1));
+                } else {
+                    txtOlejorzech.setText("   ");
+                }
+                if (orzech_value == 2) {
                     btnOlejorzech.setImageDrawable(btnIcon);
                     btnOlejorzech2.setImageDrawable(btnIcon);
                 }
@@ -541,6 +587,9 @@ public class PiramidActivity extends AppCompatActivity {
                 if (orzech_value > 2) {
                     btnOlejorzech2.setImageDrawable(redIcon);
                     btnOlejorzech.setImageDrawable(redIcon);
+                    txtOwoce.setText("+" + String.valueOf(orzech_value - 1));
+                } else {
+                    txtOlejorzech.setText("   ");
                 }
                 if (orzech_value == 2) {
                     btnOlejorzech.setImageDrawable(btnIcon);
@@ -573,7 +622,11 @@ public class PiramidActivity extends AppCompatActivity {
                 if (orzech_value > 2) {
                     btnOlejorzech2.setImageDrawable(redIcon);
                     btnOlejorzech.setImageDrawable(redIcon);
-                } else if (orzech_value == 2) {
+                    txtOlejorzech.setText("+" + String.valueOf(orzech_value - 1));
+                } else {
+                    txtOlejorzech.setText("   ");
+                }
+                if (orzech_value == 2) {
                     btnOlejorzech.setImageDrawable(btnIcon);
                     btnOlejorzech2.setImageDrawable(btnIcon);
                 }
@@ -601,7 +654,11 @@ public class PiramidActivity extends AppCompatActivity {
                 if (nabial_value > 2) {
                     btnNabial1.setImageDrawable(redIcon);
                     btnNabial2.setImageDrawable(redIcon);
-                } else if (nabial_value == 2) {
+                    txtNabial.setText("+" + String.valueOf(nabial_value - 1));
+                } else {
+                    txtNabial.setText("   ");
+                }
+                if (nabial_value == 2) {
                     btnNabial1.setImageDrawable(btnIcon);
                     btnNabial2.setImageDrawable(btnIcon);
                 } else {
@@ -629,7 +686,11 @@ public class PiramidActivity extends AppCompatActivity {
                 if (nabial_value > 2) {
                     btnNabial1.setImageDrawable(redIcon);
                     btnNabial2.setImageDrawable(redIcon);
-                } else if (nabial_value == 2) {
+                    txtNabial.setText("+" + String.valueOf(nabial_value - 1));
+                } else {
+                    txtNabial.setText("   ");
+                }
+                if (nabial_value == 2) {
                     btnNabial1.setImageDrawable(btnIcon);
                     btnNabial2.setImageDrawable(btnIcon);
                 }
@@ -656,7 +717,11 @@ public class PiramidActivity extends AppCompatActivity {
                 if (nabial_value > 2) {
                     btnNabial2.setImageDrawable(redIcon);
                     btnNabial1.setImageDrawable(redIcon);
-                } else if (nabial_value == 2) {
+                    txtNabial.setText("+" + String.valueOf(nabial_value - 1));
+                } else {
+                    txtNabial.setText("   ");
+                }
+                if (nabial_value == 2) {
                     btnNabial1.setImageDrawable(btnIcon);
                     btnNabial2.setImageDrawable(btnIcon);
                 } else {
@@ -684,7 +749,11 @@ public class PiramidActivity extends AppCompatActivity {
                 if (nabial_value > 2) {
                     btnNabial2.setImageDrawable(redIcon);
                     btnNabial1.setImageDrawable(redIcon);
-                } else if (nabial_value == 2) {
+                    txtNabial.setText("+" + String.valueOf(nabial_value - 1));
+                } else {
+                    txtNabial.setText("   ");
+                }
+                if (nabial_value == 2) {
                     btnNabial1.setImageDrawable(btnIcon);
                     btnNabial2.setImageDrawable(btnIcon);
                 }
@@ -715,7 +784,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnZboza1.setImageDrawable(redIcon);
                     btnZboza2.setImageDrawable(redIcon);
                     btnZboza3.setImageDrawable(redIcon);
-                } else if (zboza_value == 3) {
+                    txtZboza.setText("+" + String.valueOf(zboza_value - 1));
+                } else {
+                    txtZboza.setText("   ");
+                }
+                if (zboza_value == 3) {
                     btnZboza1.setImageDrawable(btnIcon);
                     btnZboza2.setImageDrawable(btnIcon);
                     btnZboza3.setImageDrawable(btnIcon);
@@ -746,7 +819,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnZboza1.setImageDrawable(redIcon);
                     btnZboza2.setImageDrawable(redIcon);
                     btnZboza3.setImageDrawable(redIcon);
-                } else if (zboza_value == 3) {
+                    txtZboza.setText("+" + String.valueOf(zboza_value - 1));
+                } else {
+                    txtZboza.setText("   ");
+                }
+                if (zboza_value == 3) {
                     btnZboza1.setImageDrawable(btnIcon);
                     btnZboza2.setImageDrawable(btnIcon);
                     btnZboza3.setImageDrawable(btnIcon);
@@ -784,7 +861,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnZboza1.setImageDrawable(redIcon);
                     btnZboza2.setImageDrawable(redIcon);
                     btnZboza3.setImageDrawable(redIcon);
-                } else if (zboza_value == 3) {
+                    txtZboza.setText("+" + String.valueOf(zboza_value - 1));
+                } else {
+                    txtZboza.setText("   ");
+                }
+                if (zboza_value == 3) {
                     btnZboza1.setImageDrawable(btnIcon);
                     btnZboza2.setImageDrawable(btnIcon);
                     btnZboza3.setImageDrawable(btnIcon);
@@ -815,7 +896,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnZboza1.setImageDrawable(redIcon);
                     btnZboza2.setImageDrawable(redIcon);
                     btnZboza3.setImageDrawable(redIcon);
-                } else if (zboza_value == 3) {
+                    txtZboza.setText("+" + String.valueOf(zboza_value - 1));
+                } else {
+                    txtZboza.setText("   ");
+                }
+                if (zboza_value == 3) {
                     btnZboza1.setImageDrawable(btnIcon);
                     btnZboza2.setImageDrawable(btnIcon);
                     btnZboza3.setImageDrawable(btnIcon);
@@ -851,7 +936,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnZboza1.setImageDrawable(redIcon);
                     btnZboza2.setImageDrawable(redIcon);
                     btnZboza3.setImageDrawable(redIcon);
-                } else if (zboza_value == 3) {
+                    txtZboza.setText("+" + String.valueOf(zboza_value - 1));
+                } else {
+                    txtZboza.setText("   ");
+                }
+                if (zboza_value == 3) {
                     btnZboza1.setImageDrawable(btnIcon);
                     btnZboza2.setImageDrawable(btnIcon);
                     btnZboza3.setImageDrawable(btnIcon);
@@ -882,7 +971,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnZboza1.setImageDrawable(redIcon);
                     btnZboza2.setImageDrawable(redIcon);
                     btnZboza3.setImageDrawable(redIcon);
-                } else if (zboza_value == 3) {
+                    txtZboza.setText("+" + String.valueOf(zboza_value - 1));
+                } else {
+                    txtZboza.setText("   ");
+                }
+                if (zboza_value == 3) {
                     btnZboza1.setImageDrawable(btnIcon);
                     btnZboza2.setImageDrawable(btnIcon);
                     btnZboza3.setImageDrawable(btnIcon);
@@ -921,7 +1014,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnWarzywa2.setImageDrawable(redIcon);
                     btnWarzywa3.setImageDrawable(redIcon);
                     btnWarzywa4.setImageDrawable(redIcon);
-                } else if (warzywa_value == 4) {
+                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 1));
+                } else {
+                    txtWarzywa.setText("   ");
+                }
+                if (warzywa_value == 4) {
                     btnWarzywa1.setImageDrawable(btnIcon);
                     btnWarzywa2.setImageDrawable(btnIcon);
                     btnWarzywa3.setImageDrawable(btnIcon);
@@ -960,7 +1057,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnWarzywa2.setImageDrawable(redIcon);
                     btnWarzywa3.setImageDrawable(redIcon);
                     btnWarzywa4.setImageDrawable(redIcon);
-                } else if (warzywa_value == 4) {
+                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 1));
+                } else {
+                    txtWarzywa.setText("   ");
+                }
+                if (warzywa_value == 4) {
                     btnWarzywa1.setImageDrawable(btnIcon);
                     btnWarzywa2.setImageDrawable(btnIcon);
                     btnWarzywa3.setImageDrawable(btnIcon);
@@ -1007,7 +1108,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnWarzywa2.setImageDrawable(redIcon);
                     btnWarzywa3.setImageDrawable(redIcon);
                     btnWarzywa4.setImageDrawable(redIcon);
-                } else if (warzywa_value == 4) {
+                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 1));
+                } else {
+                    txtWarzywa.setText("   ");
+                }
+                if (warzywa_value == 4) {
                     btnWarzywa1.setImageDrawable(btnIcon);
                     btnWarzywa2.setImageDrawable(btnIcon);
                     btnWarzywa3.setImageDrawable(btnIcon);
@@ -1046,7 +1151,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnWarzywa2.setImageDrawable(redIcon);
                     btnWarzywa3.setImageDrawable(redIcon);
                     btnWarzywa4.setImageDrawable(redIcon);
-                } else if (warzywa_value == 4) {
+                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 1));
+                } else {
+                    txtWarzywa.setText("   ");
+                }
+                if (warzywa_value == 4) {
                     btnWarzywa1.setImageDrawable(btnIcon);
                     btnWarzywa2.setImageDrawable(btnIcon);
                     btnWarzywa3.setImageDrawable(btnIcon);
@@ -1093,7 +1202,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnWarzywa2.setImageDrawable(redIcon);
                     btnWarzywa3.setImageDrawable(redIcon);
                     btnWarzywa4.setImageDrawable(redIcon);
-                } else if (warzywa_value == 4) {
+                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 1));
+                } else {
+                    txtWarzywa.setText("   ");
+                }
+                if (warzywa_value == 4) {
                     btnWarzywa1.setImageDrawable(btnIcon);
                     btnWarzywa2.setImageDrawable(btnIcon);
                     btnWarzywa3.setImageDrawable(btnIcon);
@@ -1132,7 +1245,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnWarzywa2.setImageDrawable(redIcon);
                     btnWarzywa3.setImageDrawable(redIcon);
                     btnWarzywa4.setImageDrawable(redIcon);
-                } else if (warzywa_value == 4) {
+                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 1));
+                } else {
+                    txtWarzywa.setText("   ");
+                }
+                if (warzywa_value == 4) {
                     btnWarzywa1.setImageDrawable(btnIcon);
                     btnWarzywa2.setImageDrawable(btnIcon);
                     btnWarzywa3.setImageDrawable(btnIcon);
@@ -1179,7 +1296,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnWarzywa2.setImageDrawable(redIcon);
                     btnWarzywa3.setImageDrawable(redIcon);
                     btnWarzywa4.setImageDrawable(redIcon);
-                } else if (warzywa_value == 4) {
+                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 1));
+                } else {
+                    txtWarzywa.setText("   ");
+                }
+                if (warzywa_value == 4) {
                     btnWarzywa1.setImageDrawable(btnIcon);
                     btnWarzywa2.setImageDrawable(btnIcon);
                     btnWarzywa3.setImageDrawable(btnIcon);
@@ -1218,7 +1339,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnWarzywa2.setImageDrawable(redIcon);
                     btnWarzywa3.setImageDrawable(redIcon);
                     btnWarzywa4.setImageDrawable(redIcon);
-                } else if (warzywa_value == 4) {
+                    txtWarzywa.setText("+" + String.valueOf(warzywa_value - 1));
+                } else {
+                    txtWarzywa.setText("   ");
+                }
+                if (warzywa_value == 4) {
                     btnWarzywa1.setImageDrawable(btnIcon);
                     btnWarzywa2.setImageDrawable(btnIcon);
                     btnWarzywa3.setImageDrawable(btnIcon);
@@ -1267,7 +1392,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne5.setImageDrawable(redIcon);
-                } else if (inne_value == 5) {
+                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                } else {
+                    txtInne.setText("   ");
+                }
+                if (inne_value == 5) {
                     btnInne1.setImageDrawable(btnIcon);
                     btnInne2.setImageDrawable(btnIcon);
                     btnInne3.setImageDrawable(btnIcon);
@@ -1323,7 +1452,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne5.setImageDrawable(redIcon);
-                } else if (inne_value == 5) {
+                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                } else {
+                    txtInne.setText("   ");
+                }
+                if (inne_value == 5) {
                     btnInne1.setImageDrawable(btnIcon);
                     btnInne2.setImageDrawable(btnIcon);
                     btnInne3.setImageDrawable(btnIcon);
@@ -1381,7 +1514,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne5.setImageDrawable(redIcon);
-                } else if (inne_value == 5) {
+                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                } else {
+                    txtInne.setText("   ");
+                }
+                if (inne_value == 5) {
                     btnInne1.setImageDrawable(btnIcon);
                     btnInne2.setImageDrawable(btnIcon);
                     btnInne3.setImageDrawable(btnIcon);
@@ -1437,7 +1574,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
-                } else if (inne_value == 5) {
+                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                } else {
+                    txtInne.setText("   ");
+                }
+                if (inne_value == 5) {
                     btnInne1.setImageDrawable(btnIcon);
                     btnInne2.setImageDrawable(btnIcon);
                     btnInne3.setImageDrawable(btnIcon);
@@ -1495,7 +1636,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne5.setImageDrawable(redIcon);
-                } else if (inne_value == 5) {
+                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                } else {
+                    txtInne.setText("   ");
+                }
+                if (inne_value == 5) {
                     btnInne1.setImageDrawable(btnIcon);
                     btnInne2.setImageDrawable(btnIcon);
                     btnInne3.setImageDrawable(btnIcon);
@@ -1551,7 +1696,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
-                } else if (inne_value == 5) {
+                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                } else {
+                    txtInne.setText("   ");
+                }
+                if (inne_value == 5) {
                     btnInne1.setImageDrawable(btnIcon);
                     btnInne2.setImageDrawable(btnIcon);
                     btnInne3.setImageDrawable(btnIcon);
@@ -1607,7 +1756,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne5.setImageDrawable(redIcon);
-                } else if (inne_value == 5) {
+                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                } else {
+                    txtInne.setText("   ");
+                }
+                if (inne_value == 5) {
                     btnInne1.setImageDrawable(btnIcon);
                     btnInne2.setImageDrawable(btnIcon);
                     btnInne3.setImageDrawable(btnIcon);
@@ -1663,7 +1816,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
-                } else if (inne_value == 5) {
+                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                } else {
+                    txtInne.setText("   ");
+                }
+                if (inne_value == 5) {
                     btnInne1.setImageDrawable(btnIcon);
                     btnInne2.setImageDrawable(btnIcon);
                     btnInne3.setImageDrawable(btnIcon);
@@ -1719,7 +1876,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne5.setImageDrawable(redIcon);
-                } else if (inne_value == 5) {
+                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                } else {
+                    txtInne.setText("   ");
+                }
+                if (inne_value == 5) {
                     btnInne1.setImageDrawable(btnIcon);
                     btnInne2.setImageDrawable(btnIcon);
                     btnInne3.setImageDrawable(btnIcon);
@@ -1775,7 +1936,11 @@ public class PiramidActivity extends AppCompatActivity {
                     btnInne3.setImageDrawable(redIcon);
                     btnInne4.setImageDrawable(redIcon);
                     btnInne5.setImageDrawable(redIcon);
-                } else if (inne_value == 5) {
+                    txtInne.setText("+" + String.valueOf(inne_value - 1));
+                } else {
+                    txtInne.setText("   ");
+                }
+                if (inne_value == 5) {
                     btnInne1.setImageDrawable(btnIcon);
                     btnInne2.setImageDrawable(btnIcon);
                     btnInne3.setImageDrawable(btnIcon);

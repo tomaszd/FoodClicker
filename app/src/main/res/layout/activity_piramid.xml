@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_weight="0"
             android:fontFamily="casual"
             android:gravity="bottom"
@@ -91,7 +91,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="25dp"
             android:layout_weight="0"
             android:fontFamily="casual"
             android:gravity="bottom"
@@ -214,7 +214,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="25dp"
             android:layout_weight="1"
             android:fontFamily="casual"
             android:gravity="bottom"
@@ -274,7 +274,8 @@
             android:gravity="bottom"
             android:text="+5"
             android:textColor="@color/colorAccent"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -291,7 +292,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="25dp"
             android:layout_weight="1"
             android:fontFamily="casual"
             android:gravity="bottom"
@@ -371,9 +372,10 @@
             android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:fontFamily="casual"
-            android:text="5"
+            android:text="+5"
             android:textColor="@color/colorAccent"
-            android:textSize="14sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <ImageButton
             android:id="@+id/btnInne1"
@@ -424,19 +426,6 @@
             android:background="@null"
             android:scaleType="centerCrop"
             android:src="@drawable/posilki" />
-
-        <TextView
-            android:id="@+id/txtWoda"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="45dp"
-            android:layout_weight="1"
-            android:fontFamily="casual"
-            android:gravity="bottom"
-            android:text="5"
-            android:textColor="@color/colorPrimary"
-            android:textSize="14sp" />
 
     </LinearLayout>
 
