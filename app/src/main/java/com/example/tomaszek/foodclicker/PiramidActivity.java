@@ -396,8 +396,6 @@ public class PiramidActivity extends AppCompatActivity {
                 if (ryby_value == 2) {
                     btnRyby1.setImageDrawable(btnIcon);
                     btnRyby2.setImageDrawable(btnIcon);
-                } else {
-                    btnRyby1.setImageDrawable(btnIcon);
                 }
 
             }
@@ -464,8 +462,6 @@ public class PiramidActivity extends AppCompatActivity {
                 if (ryby_value == 2) {
                     btnRyby1.setImageDrawable(btnIcon);
                     btnRyby2.setImageDrawable(btnIcon);
-                } else {
-                    btnRyby2.setImageDrawable(btnIcon);
                 }
 
             }
@@ -489,8 +485,8 @@ public class PiramidActivity extends AppCompatActivity {
                 }
                 saveLogIntoDB("ryby", false);
                 if (ryby_value > 2) {
-                    btnRyby1.setImageDrawable(redIcon);
-                    btnRyby2.setImageDrawable(redIcon);
+                    btnRyby1.setImageDrawable(convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.ryba)));
+                    btnRyby2.setImageDrawable(convertDrawableToRedScale(getApplicationContext().getResources().getDrawable(R.drawable.ryba)));
                     txtRyby.setText("+" + String.valueOf(ryby_value - 2));
                 } else {
                     txtRyby.setText("   ");
@@ -587,7 +583,7 @@ public class PiramidActivity extends AppCompatActivity {
                 if (orzech_value > 2) {
                     btnOlejorzech2.setImageDrawable(redIcon);
                     btnOlejorzech.setImageDrawable(redIcon);
-                    txtOwoce.setText("+" + String.valueOf(orzech_value - 2));
+                    txtOlejorzech.setText("+" + String.valueOf(orzech_value - 2));
                 } else {
                     txtOlejorzech.setText("   ");
                 }
@@ -661,8 +657,6 @@ public class PiramidActivity extends AppCompatActivity {
                 if (nabial_value == 2) {
                     btnNabial1.setImageDrawable(btnIcon);
                     btnNabial2.setImageDrawable(btnIcon);
-                } else {
-                    btnNabial1.setImageDrawable(btnIcon);
                 }
 
             }
@@ -714,6 +708,7 @@ public class PiramidActivity extends AppCompatActivity {
                 nabial_value += 1;
                 btnNabial2_enabled = true;
                 saveLogIntoDB("nabial", true);
+                btnNabial2.setImageDrawable(btnIcon);
                 if (nabial_value > 2) {
                     btnNabial2.setImageDrawable(redIcon);
                     btnNabial1.setImageDrawable(redIcon);
@@ -723,8 +718,6 @@ public class PiramidActivity extends AppCompatActivity {
                 }
                 if (nabial_value == 2) {
                     btnNabial1.setImageDrawable(btnIcon);
-                    btnNabial2.setImageDrawable(btnIcon);
-                } else {
                     btnNabial2.setImageDrawable(btnIcon);
                 }
 
