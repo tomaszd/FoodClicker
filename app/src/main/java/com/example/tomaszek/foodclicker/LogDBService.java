@@ -90,8 +90,9 @@ public class LogDBService extends IntentService {
         new Handler(Looper.getMainLooper()).post(new Runnable() {
             @Override
             public void run() {
-                Toast toast1 = Toast.makeText(MyContext, "Added:  " + added + " what: " + what + " when:" + when, Toast.LENGTH_LONG);
-                toast1.show();
+                //Log only in debug
+                //Toast toast1 = Toast.makeText(MyContext, "Added:  " + added + " what: " + what + " when:" + when, Toast.LENGTH_LONG);
+                //toast1.show();
                 ProductDbHelper mDbHelper = new ProductDbHelper(getApplicationContext());
                 // Gets the data repository in write mode
                 SQLiteDatabase db = mDbHelper.getWritableDatabase();
