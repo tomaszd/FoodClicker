@@ -182,7 +182,6 @@ public class LogActivity extends AppCompatActivity {
 
     private void setLogInUI(TextView textLog, ImageButton btnLog, ImageButton btnSign, Object what, Object when, Object added) {
         textLog.setText((String) when);
-        textLog.setTypeface(null, Typeface.BOLD_ITALIC);
         if (added.equals("1")) {
             textLog.setTextColor(Color.GREEN);
             btnSign.setImageResource(R.drawable.plus);
