@@ -92,17 +92,13 @@ public class LogDBService extends IntentService {
 
 // Define a projection that specifies which columns from the database
 // you will actually use after this query.
+
                 String[] projection = {
                         what
-                        //Product.UserEntry.COLUMN_NAME_WODA,
-                        //Product.UserEntry.COLUMN_NAME_INNE,
-                        //Product.UserEntry.COLUMN_NAME_WARZYWA,
-                        //Product.UserEntry.COLUMN_NAME_OWOCE,
-                        //Product.UserEntry.COLUMN_NAME_ZBOZA,
-                        //Product.UserEntry.COLUMN_NAME_RYBY,
-                        //Product.UserEntry.COLUMN_NAME_NABIAL,
-                        //Product.UserEntry.COLUMN_NAME_ORZECHY,
                 };
+                if (what.equals("kosz")) {
+                    projection = null;
+                }
 
                 String selection = Product.UserEntry.COLUMN_NAME_USER_NAME + " = ?";
                 String[] selectionArgs = {username};
