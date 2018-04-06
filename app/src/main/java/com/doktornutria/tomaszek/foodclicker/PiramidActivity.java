@@ -2,11 +2,15 @@ package com.doktornutria.tomaszek.foodclicker;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -153,7 +157,55 @@ public class PiramidActivity extends AppCompatActivity {
         ryby_value = intent.getIntExtra("ryby", 0);
         nabial_value = intent.getIntExtra("nabial", 0);
         orzech_value = intent.getIntExtra("orzechy", 0);
+        //getValues
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String username = sharedPrefs.getString("username", "Anonymous");
+        ProductDbHelper mDbHelper = new ProductDbHelper(getApplicationContext());
+        SQLiteDatabase dbReadable = mDbHelper.getReadableDatabase();
+        //Check if there is auser in DB:
 
+        String[] projection = {
+
+                Product.UserEntry.COLUMN_NAME_WODA,
+                Product.UserEntry.COLUMN_NAME_INNE,
+                Product.UserEntry.COLUMN_NAME_WARZYWA,
+                Product.UserEntry.COLUMN_NAME_OWOCE,
+                Product.UserEntry.COLUMN_NAME_ZBOZA,
+                Product.UserEntry.COLUMN_NAME_RYBY,
+                Product.UserEntry.COLUMN_NAME_NABIAL,
+                Product.UserEntry.COLUMN_NAME_ORZECHY,
+        };
+
+        String selection = Product.UserEntry.COLUMN_NAME_USER_NAME + " = ?";
+        String[] selectionArgs = {username};
+
+// How you want the results sorted in the resulting Cursor
+        String sortOrder =
+                Product.UserEntry.COLUMN_NAME_USER_NAME + " DESC";
+
+        Cursor cursor = dbReadable.query(
+                Product.UserEntry.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                //null,
+                selection,              // The columns for the WHERE clause
+                selectionArgs,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder               // The sort order
+        );
+
+
+        while (cursor.moveToNext()) {
+            woda_value = Integer.valueOf(cursor.getString(cursor.getColumnIndex("woda")));
+            inne_value = Integer.valueOf(cursor.getString(cursor.getColumnIndex("inne")));
+            warzywa_value = Integer.valueOf(cursor.getString(cursor.getColumnIndex("warzywa")));
+            owoce_value = Integer.valueOf(cursor.getString(cursor.getColumnIndex("owoce")));
+            zboza_value = Integer.valueOf(cursor.getString(cursor.getColumnIndex("ryby")));
+            zboza_value = Integer.valueOf(cursor.getString(cursor.getColumnIndex("zboza")));
+            nabial_value = Integer.valueOf(cursor.getString(cursor.getColumnIndex("nabial")));
+            orzech_value = Integer.valueOf(cursor.getString(cursor.getColumnIndex("orzechy")));
+        }
+        cursor.close();
 
         if (owoce_value > 0) {
             setButtonVisible(btnOwoce, R.drawable.ananas);

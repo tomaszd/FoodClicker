@@ -2,6 +2,7 @@ package com.doktornutria.tomaszek.foodclicker;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -164,9 +165,8 @@ public class SelectUserActivity extends AppCompatActivity {
                 toast1.show();
                 editor.putString("username", userSelected);
                 editor.commit();
-
-
-                onBackPressed();
+                Intent myIntent = new Intent(SelectUserActivity.this, MainActivity.class);
+                SelectUserActivity.this.startActivity(myIntent);
             }
         });
 
@@ -207,9 +207,6 @@ public class SelectUserActivity extends AppCompatActivity {
                         });
                 AlertDialog alert = builder.create();
                 alert.show();
-
-                // usunac z bazy
-                // przerywsowac
 
             }
 

@@ -2,6 +2,8 @@ package com.doktornutria.tomaszek.foodclicker;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -120,6 +122,56 @@ public class MainActivity extends AppCompatActivity {
             nabial_value = sharedPrefs.getInt("nabial", 0);
             orzech_value = sharedPrefs.getInt("orzechy", 0);
         }
+
+
+        //getValues
+        String username = sharedPrefs.getString("username", "Anonymous");
+        ProductDbHelper mDbHelper = new ProductDbHelper(getApplicationContext());
+        SQLiteDatabase dbReadable = mDbHelper.getReadableDatabase();
+        //Check if there is auser in DB:
+
+        String[] projection = {
+
+                Product.UserEntry.COLUMN_NAME_WODA,
+                Product.UserEntry.COLUMN_NAME_INNE,
+                Product.UserEntry.COLUMN_NAME_WARZYWA,
+                Product.UserEntry.COLUMN_NAME_OWOCE,
+                Product.UserEntry.COLUMN_NAME_ZBOZA,
+                Product.UserEntry.COLUMN_NAME_RYBY,
+                Product.UserEntry.COLUMN_NAME_NABIAL,
+                Product.UserEntry.COLUMN_NAME_ORZECHY,
+        };
+
+        String selection = Product.UserEntry.COLUMN_NAME_USER_NAME + " = ?";
+        String[] selectionArgs = {username};
+
+// How you want the results sorted in the resulting Cursor
+        String sortOrder =
+                Product.UserEntry.COLUMN_NAME_USER_NAME + " DESC";
+
+        Cursor cursor = dbReadable.query(
+                Product.UserEntry.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                //null,
+                selection,              // The columns for the WHERE clause
+                selectionArgs,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder               // The sort order
+        );
+
+
+        while (cursor.moveToNext()) {
+            woda_value = Integer.valueOf(cursor.getString(cursor.getColumnIndex("woda")));
+            inne_value = Integer.valueOf(cursor.getString(cursor.getColumnIndex("inne")));
+            warzywa_value = Integer.valueOf(cursor.getString(cursor.getColumnIndex("warzywa")));
+            owoce_value = Integer.valueOf(cursor.getString(cursor.getColumnIndex("owoce")));
+            zboza_value = Integer.valueOf(cursor.getString(cursor.getColumnIndex("ryby")));
+            zboza_value = Integer.valueOf(cursor.getString(cursor.getColumnIndex("zboza")));
+            nabial_value = Integer.valueOf(cursor.getString(cursor.getColumnIndex("nabial")));
+            orzech_value = Integer.valueOf(cursor.getString(cursor.getColumnIndex("orzechy")));
+        }
+        cursor.close();
 
         setActualValue(editWoda, editInne, editWarzywa, editOwoce, editRyby, editZboza, editNabial, editOrzechy, woda_value, inne_value, warzywa_value, owoce_value, zboza_value, ryby_value, nabial_value, orzech_value);
 
@@ -415,7 +467,7 @@ public class MainActivity extends AppCompatActivity {
 
         View headerView = navigationView.getHeaderView(0);
         TextView txtUsername = (TextView) headerView.findViewById(R.id.txtUsername);
-        String username = sharedPrefs.getString("username", "Anonymous");
+        //String username = sharedPrefs.getString("username", "Anonymous");
         txtUsername.setText(username);
 
         navigationView.setNavigationItemSelectedListener(

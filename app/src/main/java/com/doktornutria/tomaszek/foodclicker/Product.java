@@ -20,6 +20,16 @@ public final class Product {
     public static class UserEntry implements BaseColumns {
         public static final String TABLE_NAME = "user";
         public static final String COLUMN_NAME_USER_NAME = "username";
+        //new
+        public static final String COLUMN_NAME_WODA = "woda";
+        public static final String COLUMN_NAME_INNE = "inne";
+        public static final String COLUMN_NAME_WARZYWA = "warzywa";
+        public static final String COLUMN_NAME_OWOCE = "owoce";
+        public static final String COLUMN_NAME_ZBOZA = "zboza";
+        public static final String COLUMN_NAME_RYBY = "ryby";
+        public static final String COLUMN_NAME_NABIAL = "nabial";
+        public static final String COLUMN_NAME_ORZECHY = "orzechy";
+
     }
 
 
@@ -33,8 +43,15 @@ public final class Product {
     public static final String SQL_USER_CREATE_ENTRIES =
             "CREATE TABLE " + UserEntry.TABLE_NAME + " (" +
                     UserEntry._ID + " INTEGER PRIMARY KEY," +
-                    UserEntry.COLUMN_NAME_USER_NAME + " TEXT)";
-
+                    UserEntry.COLUMN_NAME_USER_NAME + " TEXT," +
+                    UserEntry.COLUMN_NAME_WODA + " INTEGER DEFAULT 0," +
+                    UserEntry.COLUMN_NAME_INNE + " INTEGER DEFAULT 0," +
+                    UserEntry.COLUMN_NAME_WARZYWA + " INTEGER DEFAULT 0," +
+                    UserEntry.COLUMN_NAME_OWOCE + " INTEGER DEFAULT 0," +
+                    UserEntry.COLUMN_NAME_ZBOZA + " INTEGER DEFAULT 0," +
+                    UserEntry.COLUMN_NAME_RYBY + " INTEGER DEFAULT 0," +
+                    UserEntry.COLUMN_NAME_NABIAL + " INTEGER DEFAULT 0," +
+                    UserEntry.COLUMN_NAME_ORZECHY + " INTEGER DEFAULT 0)";
 
     public static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + ProductEntry.TABLE_NAME;
