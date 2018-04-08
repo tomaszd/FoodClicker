@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FoodClicker</string>
+    <string name="woda_ok_string">"         Woda, ziola,\n         herbata owocowa,\n        kompot, kawa"</string>
+    <string name="woda_notok_string">"         Gazowane napoje,\n        slodzone soki,\n        napoje energetyczne"</string>
+    <string name="inne_ok_string">"           Rekomendowana przerwa\n        pomiedzy posilkami"</string>
+    <string name="inne_notok_string">"        Ostatni posilek\n         przed snem"</string>
+    <string name="main_title">" Gdy jesz lub pijesz \n kliknij w ikony"</string>
+    <string name="dowiedz_sie_wiecej_kliknij_w_ikonki">"by dowiedziec sie wiecej \nkliknij w ikony"</string>
+    <string name="title_activity_log">LogActivity</string>
+    <string name="add_user">Dodaj uzytkownika</string>
+    <string name="choose_user">Wybierz uzytkownika</string>
+    <string name="tabela">Tablica</string>
+    <string name="piramida">Piramida</string>
+    <string name="nutrition_facts">Fakty zywieniowe</string>
+    <string name="food_diary">Dziennik zywieniowy</string>
+    <string name="best_time_to_eat">"        Najlepsza pora\n        do jedzenia"</string>
+    <string name="maximum_daily_intake">"        maxymalna dzienna\n        dawka"</string>
+    <string name="recommended_daily_intake">"        Rekomendowana\n        dzienna dawka"</string>
+    <string name="oil_olive_butter_nuts">"         Olej, oliwa,\n         maslo, orzechy"</string>
+    <string name="recommended_amount_of_intakes_3_main_2_snacks">"            Rekomendowana ilosc\n        posilkow.\n         (3 glowne + 2 przekaski)"</string>
+    <string name="nabial_cart">"          Milk, yogurt,\n           buttermilk, cheese"</string>
+    <string name="intake_nabial">"          Rekomendowana dzienna\n           dawka\n         (e.g. 2 szklanki mleka)"</string>
+    <string name="surfeit">      Przejedzenie</string>
+    <string name="recommended_daily_intake_1_portion_80g_100g">"        Rekomendowana\n        dzienna dawka\n          (1 porcja 80g-100g)</string>
+    <string name="cereals_products">"         Chleb, makaron,\n        platki, maka,\n rosliny straczkowe"</string>
+    <string name="approximate_weight_of_the_portion">"      Orientacyjna  waga\n          porcji"</string>
+    <string name="minimal_daily_intake">"        Minimalna\n       dzienna dawka"</string>
+    <string name="hours_before_sleep_for_last_meal">"        liczbe godzin\n        przed snem\n"</string>
+    <string name="recommended_weight_ratio_of_vegetables_to_the_rest_of_the_meals">"        Rekomendowana proporcja\n  wagowa warzyw\n  do reszty posilkow"</string>
+    <string name="recommended_daily_intake_about_6_glasses">"          Rekomendowana dzienna\n        dawka\n        (okolo 6 szklanek)"</string>
+    <string name="informacja">Informacja</string>
+</resources>
