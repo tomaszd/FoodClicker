@@ -7,7 +7,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,6 +34,7 @@ public class AddProfileActivity extends AppCompatActivity {
         TextView textViewAddNewuser = (TextView) findViewById(R.id.textViewAddNewuser);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom_font2.ttf");
         textViewAddNewuser.setTypeface(typeface);
+        setupBottomNavigationView();
 
         buttonAddNewUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +84,32 @@ public class AddProfileActivity extends AppCompatActivity {
                 Toast toast1 = Toast.makeText(getApplicationContext(), "User addition Canceled", Toast.LENGTH_LONG);
                 toast1.show();
                 onBackPressed();
+            }
+        });
+    }
+
+    private void setupBottomNavigationView() {
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.action_home:
+                        Intent myIntent = new Intent(AddProfileActivity.this, MainActivity.class);
+
+                        AddProfileActivity.this.startActivity(myIntent);
+                        break;
+                    case R.id.action_info:
+                        Intent myIntent2 = new Intent(AddProfileActivity.this, TabelaActivity.class);
+
+                        AddProfileActivity.this.startActivity(myIntent2);
+                        break;
+                    case R.id.action_piramid:
+                        Intent myIntent3 = new Intent(AddProfileActivity.this, PiramidActivity.class);
+                        AddProfileActivity.this.startActivity(myIntent3);
+                        break;
+                }
+                return true;
             }
         });
     }

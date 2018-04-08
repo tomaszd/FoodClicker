@@ -10,7 +10,10 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.BaseColumns;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -36,7 +39,7 @@ public class SelectUserActivity extends AppCompatActivity {
         final Button buttonCancel = (Button) findViewById(R.id.buttonCancel);
         final Button buttonDelete = (Button) findViewById(R.id.buttonDelete);
         final LinearLayout lytDelete = (LinearLayout) findViewById(R.id.lytDelete);
-
+        setupBottomNavigationView();
 
         final TextView textUser1 = (TextView) findViewById(R.id.textUser1);
         final TextView textUser2 = (TextView) findViewById(R.id.textUser2);
@@ -221,7 +224,6 @@ public class SelectUserActivity extends AppCompatActivity {
 
     }
 
-
     private void selectActiveColor(TextView textUserSelected, TextView[] allTextViews) {
 
         for (TextView tv : allTextViews) {
@@ -232,5 +234,31 @@ public class SelectUserActivity extends AppCompatActivity {
         textUserSelected.setTextColor(getResources().getColor(R.color.tlo));
         userSelected = String.valueOf(textUserSelected.getText());
 
+    }
+
+    private void setupBottomNavigationView() {
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.action_home:
+                        Intent myIntent = new Intent(SelectUserActivity.this, MainActivity.class);
+
+                        SelectUserActivity.this.startActivity(myIntent);
+                        break;
+                    case R.id.action_info:
+                        Intent myIntent2 = new Intent(SelectUserActivity.this, TabelaActivity.class);
+
+                        SelectUserActivity.this.startActivity(myIntent2);
+                        break;
+                    case R.id.action_piramid:
+                        Intent myIntent3 = new Intent(SelectUserActivity.this, PiramidActivity.class);
+                        SelectUserActivity.this.startActivity(myIntent3);
+                        break;
+                }
+                return true;
+            }
+        });
     }
 }
