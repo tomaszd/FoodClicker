@@ -301,7 +301,11 @@ public class TabelaActivity extends AppCompatActivity {
                                 myIntent5.putExtra("orzechy", orzech_value); //Optional parameters
                                 TabelaActivity.this.startActivity(myIntent5);
                                 break;
-
+                            case R.id.nav_tutorial_view:
+                                Intent myIntent6 = new Intent(TabelaActivity.this, WelcomeActivity.class);
+                                myIntent6.putExtra("explicitCall", true); //Optional parameters
+                                TabelaActivity.this.startActivity(myIntent6);
+                                break;
 
                         }
                         // set item as selected to persist highlight

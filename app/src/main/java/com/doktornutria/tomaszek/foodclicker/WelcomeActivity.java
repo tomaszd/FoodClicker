@@ -33,12 +33,19 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         // Checking for first time launch - before calling setContentView()
-        prefManager = new PreferenceManagerie(this);
-        if (!prefManager.isFirstTimeLaunch()) {
-            launchHomeScreen();
-            finish();
-        }
 
+        Intent intent = getIntent();
+        //when this is true do not check if the app is run first time just show it
+        Boolean explitiCallintent = intent.getBooleanExtra("explicitCall", false);
+        prefManager = new PreferenceManagerie(this);
+
+        if (explitiCallintent) {
+        } else {
+            if (!prefManager.isFirstTimeLaunch()) {
+                launchHomeScreen();
+                finish();
+            }
+        }
         // Making notification bar transparent
         if (Build.VERSION.SDK_INT >= 21) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);

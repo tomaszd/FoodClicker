@@ -551,6 +551,11 @@ public class MainActivity extends AppCompatActivity {
                                 myIntent5.putExtra("orzechy", orzech_value); //Optional parameters
                                 MainActivity.this.startActivity(myIntent5);
                                 break;
+                            case R.id.nav_tutorial_view:
+                                Intent myIntent6 = new Intent(MainActivity.this, WelcomeActivity.class);
+                                myIntent6.putExtra("explicitCall", true); //Optional parameters
+                                MainActivity.this.startActivity(myIntent6);
+                                break;
 
 
                         }
