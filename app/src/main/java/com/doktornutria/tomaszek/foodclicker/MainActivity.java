@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Checking for first time launch - before calling setContentView()
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitleTextColor(getResources().getColor(R.color.colorWhite));
@@ -548,6 +550,11 @@ public class MainActivity extends AppCompatActivity {
                                 myIntent5.putExtra("nabial", nabial_value); //Optional parameters
                                 myIntent5.putExtra("orzechy", orzech_value); //Optional parameters
                                 MainActivity.this.startActivity(myIntent5);
+                                break;
+                            case R.id.nav_tutorial_view:
+                                Intent myIntent6 = new Intent(MainActivity.this, WelcomeActivity.class);
+                                myIntent6.putExtra("explicitCall", true); //Optional parameters
+                                MainActivity.this.startActivity(myIntent6);
                                 break;
 
 

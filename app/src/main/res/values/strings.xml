@@ -29,4 +29,19 @@
     <string name="recommended_weight_ratio_of_vegetables_to_the_rest_of_the_meals">"        Recommended weight\n        ratio of vegetables\n            to the rest of the meals"</string>
     <string name="recommended_daily_intake_about_6_glasses">"          Recommended daily\n          intake\n        (about 6 glasses)"</string>
     <string name="informacja">Information</string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+    <string name="slide_1_title">Daily Workout</string>
+    <string name="slide_1_desc">Set your daily workout routine by the help of trainer</string>
+    <string name="slide_2_title">Meditation Techniques </string>
+    <string name="slide_2_desc">Learn about the different meditation techniques and practice them</string>
+    <string name="slide_3_title">Diet Chart</string>
+    <string name="slide_3_desc">Make your diet chart by the help of health experts</string>
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+    <string name="title_activity_welocme">WelocmeActivity</string>
+    <string name="app_intro">App intro</string>
 </resources>
