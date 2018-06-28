@@ -6,7 +6,9 @@
     <dimen name="dots_height">30dp</dimen>
     <dimen name="dots_margin_bottom">20dp</dimen>
     <dimen name="img_width_height">350dp</dimen>
-    <dimen name="slide_title">30dp</dimen>
+    <dimen name="slide_title">24dp</dimen>
     <dimen name="slide_desc">16dp</dimen>
     <dimen name="desc_padding">40dp</dimen>
+    <dimen name="tutorial_image_width">280dp</dimen>
+    <dimen name="tutorial_image_height">360dp</dimen>
 </resources>

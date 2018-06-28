@@ -21,8 +21,8 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:layout_width="250dp"
-            android:layout_height="400dp"
+            android:layout_width="@dimen/tutorial_image_width"
+            android:layout_height="@dimen/tutorial_image_height"
             android:src="@drawable/tutorial4" />
 
         <TextView
