@@ -47,9 +47,9 @@
     <string name="slide_3_desc"></string>
     <string name="slide_4_title">To delete ALL the records click on BIN icon</string>
     <string name="slide_4_desc"></string>
-    <string name="slide_5_title">You can choose between 2 different views: classic (TABLE) and PYRAMID</string>
+    <string name="slide_5_title">\nYou can choose between 2 different views: classic (TABLE) and PYRAMID</string>
     <string name="slide_5_desc"></string>
-    <string name="slide_6_title">To ADD or DELETE any product in the PYRAMID view just SHORT or LONG click as before</string>
+    <string name="slide_6_title">\nTo ADD or DELETE any product in the PYRAMID view just SHORT or LONG click as before</string>
     <string name="slide_6_desc"></string>
     <string name="slide_7_title">If your intake is excessive the icon becomes red</string>
     <string name="slide_7_desc"></string>
