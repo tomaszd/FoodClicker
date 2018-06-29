@@ -27,6 +27,7 @@
         <item>@color/dot_active_screen2</item>
         <item>@color/dot_active_screen2</item>
         <item>@color/dot_active_screen2</item>
+        <item>@color/dot_active_screen2</item>
         <item>@color/dot_active_screen3</item>
         <item>@color/dot_active_screen3</item>
         <item>@color/dot_active_screen3</item>
@@ -36,6 +37,7 @@
         <item>@color/dot_inactive_screen1</item>
         <item>@color/dot_inactive_screen1</item>
         <item>@color/dot_inactive_screen1</item>
+        <item>@color/dot_inactive_screen2</item>
         <item>@color/dot_inactive_screen2</item>
         <item>@color/dot_inactive_screen2</item>
         <item>@color/dot_inactive_screen2</item>
