@@ -61,6 +61,7 @@ public class WelcomeActivity extends AppCompatActivity {
         // layouts of all welcome sliders
         // add few more layouts if you want
         layouts = new int[]{
+                R.layout.slide_screen0,
                 R.layout.slide_screen1,
                 R.layout.slide_screen2,
                 R.layout.slide_screen3,
