@@ -3,7 +3,7 @@
     <string name="woda_ok_string">"         Water, herb,\n         fruit tea,\n        compote, coffee"</string>
     <string name="woda_notok_string">"         Carbonated drinks,\n        sweetened juices,\n        energy drinks"</string>
     <string name="inne_ok_string">"           Recommended break\n        between meals"</string>
-    <string name="inne_notok_string">"        Last meal\n         before sleep time"</string>
+    <string name="inne_notok_string">"        Last meal\n         before sleep"</string>
     <string name="main_title">" When you eat or drink \n Click on the icons"</string>
     <string name="dowiedz_sie_wiecej_kliknij_w_ikonki">"To know more \nclick on icons"</string>
     <string name="title_activity_log">LogActivity</string>
@@ -20,8 +20,8 @@
     <string name="recommended_amount_of_intakes_3_main_2_snacks">"            Recommended amount\n        of intakes.\n         (3 main + 2 snacks)"</string>
     <string name="nabial_cart">"          Milk, yogurt,\n           buttermilk, cheese"</string>
     <string name="intake_nabial">"          Recommended daily\n           intake\n         (e.g. 2 cups of milk)"</string>
-    <string name="surfeit">      Surfeit</string>
-    <string name="recommended_daily_intake_1_portion_80g_100g">"        Recommended\n        daily intake\n          (1 portion 80g-100g)</string>
+    <string name="surfeit">      Overbundance</string>
+    <string name="recommended_daily_intake_1_portion_80g_100g">"        Recommended\n        daily intake\n         </string>
     <string name="cereals_products">"         Bread, pasta,\n        cereal, flour,\n        legumes"</string>
     <string name="approximate_weight_of_the_portion">"           Approximate weight\n          of the portion"</string>
     <string name="minimal_daily_intake">"        Minimal\n         daily intake"</string>
@@ -49,13 +49,13 @@
     <string name="slide_4_desc"></string>
     <string name="slide_5_title">\nYou can choose between 2 different views: classic (TABLE) and PYRAMID</string>
     <string name="slide_5_desc"></string>
-    <string name="slide_6_title">\nTo ADD or DELETE any product in the PYRAMID view just SHORT or LONG click as before</string>
+    <string name="slide_6_title">\nTo ADD or DELETE any product just SHORT or LONG click as before (PYRAMID view)</string>
     <string name="slide_6_desc"></string>
     <string name="slide_7_title">If your intake is excessive the icon becomes red</string>
     <string name="slide_7_desc"></string>
     <string name="slide_8_title">To check your FOOD DIARY click on the icon on side panel.</string>
     <string name="slide_8_desc"></string>
-    <string name="slide_9_title">For more info about the size of the portion use side panel.</string>
+    <string name="slide_9_title">Use side panel.\n (Nutrition facts)</string>
     <string name="slide_9_desc"></string>
     <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
     <string name="play_again">Play Again</string>
