@@ -41,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="1"
-                    android:fontFamily="cursive"
+
                     android:text="  "
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -51,7 +51,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="4"
-                    android:fontFamily="cursive"
+
                     android:text="     "
                     android:textAlignment="center"
                     android:textSize="28sp"
@@ -69,10 +69,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
-                    android:textColor="@color/colorWhite"
                     android:layout_weight="1"
-                    android:fontFamily="cursive"
+
                     android:text="  "
+                    android:textColor="@color/colorWhite"
                     android:textSize="28sp"
                     android:textStyle="bold" />
 
@@ -89,12 +89,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
-                    android:textColor="@color/colorWhite"
                     android:layout_weight="4"
-                    android:fontFamily="cursive"
                     android:text="DRINK     "
                     android:textAlignment="center"
-
+                    android:textColor="@color/colorWhite"
                     android:textSize="28sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -110,7 +108,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="1"
-                    android:fontFamily="cursive"
+
                     android:text="  "
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -128,13 +126,13 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:textColor="@color/colorWhite"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="4"
-                    android:fontFamily="cursive"
+
                     android:text="MEAL     "
                     android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
                     android:textSize="28sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -150,7 +148,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="1"
-                    android:fontFamily="cursive"
+
                     android:text="  "
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -168,13 +166,13 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:textColor="@color/colorWhite"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="4"
-                    android:fontFamily="cursive"
+
                     android:text="DIARY     "
                     android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
 
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -191,7 +189,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="1"
-                    android:fontFamily="cursive"
+
                     android:text="  "
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -209,13 +207,13 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:textColor="@color/colorWhite"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="4"
-                    android:fontFamily="cursive"
+
                     android:text="WHEAT     "
                     android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
 
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -232,7 +230,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="1"
-                    android:fontFamily="cursive"
+
                     android:text="  "
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -250,13 +248,13 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:textColor="@color/colorWhite"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="4"
-                    android:fontFamily="cursive"
+
                     android:text="MEAT + FISH  "
                     android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
 
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -273,7 +271,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="1"
-                    android:fontFamily="cursive"
+
                     android:text="  "
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -291,13 +289,13 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:textColor="@color/colorWhite"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="4"
-                    android:fontFamily="cursive"
+
                     android:text="VEGETABLES  "
                     android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
 
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -314,7 +312,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="1"
-                    android:fontFamily="cursive"
+
                     android:text="  "
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -332,13 +330,13 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:textColor="@color/colorWhite"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="4"
-                    android:fontFamily="cursive"
+
                     android:text="OIL + NUTS  "
                     android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
 
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -355,7 +353,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="1"
-                    android:fontFamily="cursive"
+
                     android:text="  "
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -373,13 +371,13 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:textColor="@color/colorWhite"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="4"
-                    android:fontFamily="cursive"
+
                     android:text="FRUITS     "
                     android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
 
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -397,7 +395,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="1"
-                    android:fontFamily="cursive"
+
                     android:text="  "
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -407,7 +405,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="4"
-                    android:fontFamily="cursive"
+
                     android:text="     "
                     android:textAlignment="center"
 
