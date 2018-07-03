@@ -90,6 +90,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="4"
+                    android:fontFamily="casual"
                     android:text="DRINK     "
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
@@ -130,6 +131,7 @@
                     android:layout_gravity="start|center"
                     android:layout_weight="4"
 
+                    android:fontFamily="casual"
                     android:text="MEAL     "
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
@@ -170,10 +172,10 @@
                     android:layout_gravity="start|center"
                     android:layout_weight="4"
 
+                    android:fontFamily="casual"
                     android:text="DIARY     "
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
-
                     android:textSize="28sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -211,10 +213,10 @@
                     android:layout_gravity="start|center"
                     android:layout_weight="4"
 
+                    android:fontFamily="casual"
                     android:text="WHEAT     "
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
-
                     android:textSize="28sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -230,7 +232,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="1"
-
                     android:text="  "
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -242,7 +243,6 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-
                     android:src="@drawable/ryba"
                     android:text="Ryby" />
 
@@ -251,11 +251,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="4"
-
+                    android:fontFamily="casual"
                     android:text="MEAT + FISH  "
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
-
                     android:textSize="28sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -271,7 +270,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="1"
-
                     android:text="  "
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -293,10 +291,10 @@
                     android:layout_gravity="start|center"
                     android:layout_weight="4"
 
+                    android:fontFamily="casual"
                     android:text="VEGETABLES  "
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
-
                     android:textSize="28sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -334,10 +332,10 @@
                     android:layout_gravity="start|center"
                     android:layout_weight="4"
 
+                    android:fontFamily="casual"
                     android:text="OIL + NUTS  "
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
-
                     android:textSize="28sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -374,11 +372,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center"
                     android:layout_weight="4"
-
+                    android:fontFamily="casual"
                     android:text="FRUITS     "
                     android:textAlignment="center"
                     android:textColor="@color/colorWhite"
-
                     android:textSize="28sp"
                     android:textStyle="bold" />
 
