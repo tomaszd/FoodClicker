@@ -22,12 +22,12 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@drawable/tutorial_background"
-            android:gravity="center"
             android:fontFamily="casual"
+            android:gravity="center"
             android:text="@string/slide_01_title"
             android:textAlignment="center"
             android:textColor="@android:color/white"
-            android:textSize="30sp"
+            android:textSize="26sp"
             android:textStyle="bold" />
         <Space
             android:layout_width="fill_parent"

@@ -25,6 +25,7 @@ public class InneDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inne_details);
+        setupBottomNavigationView();
         Intent intent = getIntent();
         woda_value = intent.getIntExtra("woda", 0);
         inne_value = intent.getIntExtra("inne", 0);

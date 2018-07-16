@@ -50,7 +50,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:background="@drawable/once_ribeye"
+        android:background="@drawable/twice_ribeye"
         android:text="@string/recommended_daily_intake" />
 
     <Button
@@ -77,7 +77,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:background="@drawable/before_twelve"
+            android:background="@drawable/ok_ribeye"
             android:text="@string/best_time_to_eat" />
 
     </LinearLayout>

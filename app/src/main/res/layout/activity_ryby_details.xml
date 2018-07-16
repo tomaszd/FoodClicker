@@ -23,25 +23,16 @@
             android:src="@drawable/piramida_logo"
             android:text="KOSZ" />
 
-        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/btnSettings"
 
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ryba" />
-
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_gravity="center|bottom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="FISH"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        </FrameLayout>
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ryba_wst" />
 
         <ImageView
             android:id="@+id/btnTabela"
@@ -69,7 +60,7 @@
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:background="@drawable/cart_ribeye"
-        android:text="@string/cereals_products" />
+        android:text="@string/fish_products" />
 
 
     <LinearLayout
@@ -86,7 +77,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:background="@drawable/eighty_hundred_ribeye"
+            android:background="@drawable/i_ribeye"
             android:text="@string/approximate_weight_of_the_portion" />
 
     </LinearLayout>
