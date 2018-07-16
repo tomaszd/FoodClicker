@@ -31,4 +31,35 @@
     <string name="recommended_weight_ratio_of_vegetables_to_the_rest_of_the_meals">"        Rekomendowana proporcja\n  wagowa warzyw\n  do reszty posilkow"</string>
     <string name="recommended_daily_intake_about_6_glasses">"          Rekomendowana dzienna\n        dawka\n        (okolo 6 szklanek)"</string>
     <string name="informacja">Informacja</string>
+
+    <string name="next">NASTEPNY</string>
+    <string name="skip">OK</string>
+    <string name="start">START</string>
+    <string name="title_activity_welcome">Ekran Powitalny</string>
+    <string name="slide_0_title">Produkty sa podzielone na 8 kategorii</string>
+    <string name="slide_0_desc"></string>
+
+    <string name="slide_01_title">\nFood Clicker kontroluje twoje spozycie plynow i pokarmow.\nBazuje na piramidzie zywieniowej by twoja dieta byla zbilansowana</string>
+    <string name="slide_1_title">\nNp. SPAGHETTI BOLOGNESE to POSILEK, ZBOZE , MIESO, WARZYWA + OLEJ </string>
+    <string name="slide_1_desc"></string>
+    <string name="slide_2_title">By DODAC- krotko wcisnij ikonke.</string>
+    <string name="slide_2_desc"></string>
+    <string name="slide_3_title">By USUNAC- dlugo wcsinij ikonke.</string>
+    <string name="slide_3_desc"></string>
+    <string name="slide_4_title">By usunac wszystkie wpisy- wcisnij na KOSZ</string>
+    <string name="slide_4_desc"></string>
+    <string name="slide_5_title">\nWybierasz miedzy 2 widokami PIRAMIDA i TABELA (klasyczny)</string>
+    <string name="slide_5_desc"></string>
+    <string name="slide_6_title">\nW widoku PIRAMIDY by dodac/usunac wcisnij krotko/dlugo</string>
+    <string name="slide_6_desc"></string>
+    <string name="slide_7_title">Jezeli spozycie jakiejs grupy produkotw jest nadmiarowe ikona staje sie czerwona</string>
+    <string name="slide_7_desc"></string>
+    <string name="slide_8_title">By sprawdzic dziennik zywieniowy wcisnij ikonke w panelu bocznym</string>
+    <string name="slide_8_desc"></string>
+    <string name="slide_9_title">By dowiedziec sie wiecej informacji wcisnij ikonke w panelu bocznym</string>
+    <string name="slide_9_desc"></string>
+    <string name="play_again_desc">By zobaczyc poradnik wcisnij  Panel Boczny i wybierz poradnik</string>
+    <string name="play_again">Zagraj ponownie</string>
+    <string name="title_activity_welocme">Ekran powitalny</string>
+    <string name="app_intro">App intro</string>
 </resources>
