@@ -16,22 +16,24 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:fontFamily="casual"
-            android:text="@string/slide_3_title"
+            android:layout_marginBottom="@dimen/slide_title"
+            android:text="@string/slide_7_title"
             android:textColor="@android:color/white"
             android:textSize="@dimen/slide_title"
-            android:layout_marginBottom="@dimen/slide_title"
             android:textStyle="bold" />
 
         <ImageView
             android:layout_width="@dimen/tutorial_image_width"
             android:layout_height="@dimen/tutorial_image_height"
-            android:src="@drawable/tutorial3" />
+            android:src="@drawable/tutorial7" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-             android:text="@string/slide_3_desc"
+            android:paddingLeft="@dimen/desc_padding"
+            android:paddingRight="@dimen/desc_padding"
+            android:text="@string/slide_7_desc"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="@dimen/slide_desc" />
