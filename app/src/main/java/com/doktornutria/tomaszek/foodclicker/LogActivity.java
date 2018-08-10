@@ -183,7 +183,7 @@ public class LogActivity extends AppCompatActivity {
         textLog.setText((String) when);
         if (added.equals("1")) {
             //0xFF00FF00 is green http://www.javascripter.net/faq/rgbtohex.htm 0xFF00FF00 DARK GREEN
-            int ADD_COLOR=0xFF006400;
+            int ADD_COLOR=0xFF008000;
             textLog.setTextColor(ADD_COLOR);
             btnSign.setImageResource(R.drawable.plus);
         } else {
