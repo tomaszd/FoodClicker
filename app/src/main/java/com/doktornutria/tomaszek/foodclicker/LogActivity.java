@@ -182,7 +182,9 @@ public class LogActivity extends AppCompatActivity {
     private void setLogInUI(TextView textLog, ImageButton btnLog, ImageButton btnSign, Object what, Object when, Object added) {
         textLog.setText((String) when);
         if (added.equals("1")) {
-            textLog.setTextColor(Color.GREEN);
+            //0xFF00FF00 is green http://www.javascripter.net/faq/rgbtohex.htm 0xFF00FF00 DARK GREEN
+            int ADD_COLOR=0xFF006400;
+            textLog.setTextColor(ADD_COLOR);
             btnSign.setImageResource(R.drawable.plus);
         } else {
             textLog.setTextColor(Color.RED);
