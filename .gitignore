@@ -7,3 +7,7 @@
 /build
 /captures
 .externalNativeBuild
+/.idea/sonarIssues.xml
+.idea/sonarIssues.xml
+app/src/main/assets/fonts/SeasideResortNF/
+app/src/main/res/values-fr/
