@@ -30,15 +30,12 @@
     <string name="recommended_weight_ratio_of_vegetables_to_the_rest_of_the_meals">"        Recommended weight\n        ratio of vegetables\n            to the rest of the meals"</string>
     <string name="recommended_daily_intake_about_6_glasses">"          Recommended daily\n          intake\n        (about 6 glasses)"</string>
     <string name="informacja">Information</string>
-
     <string name="title_activity_welcome">Home Screen</string>
     <string name="next">NEXT</string>
     <string name="skip">SKIP</string>
     <string name="start">GOT IT</string>
-
     <string name="slide_0_title">The products are divided into 8 categories</string>
     <string name="slide_0_desc"></string>
-
     <string name="slide_01_title">\nFood Clicker is\n created to keep \n track of your \nfood and drinks.\n\nThis app is \n working on base \n of nutritional \n pyramid to keep\n your diet \n balanced.\n</string>
     <string name="slide_1_title">\nFor example SPAGHETTI BOLOGNESE is MEAL, WHEAT , MEAT, VEGETABLE + OIL </string>
     <string name="slide_1_desc"></string>
